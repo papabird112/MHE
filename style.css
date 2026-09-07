@@ -584,6 +584,11 @@ html[lang="th"] .eq .tag { font-family: var(--thai); }
 
 /* -------------------------------------------------------------- responsive */
 
+/* The department line is long enough to wrap the header on mid-width screens */
+@media (max-width: 1150px) {
+  .logo-text small { display: none; }
+}
+
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: minmax(0, 1fr);
