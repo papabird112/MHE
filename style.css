@@ -1,0 +1,613 @@
+/* ==========================================================================
+   Materials Handling Engineering — OpenCourseWare style sheet
+   ========================================================================== */
+
+:root {
+  --ink:        #191919;
+  --ink-2:      #4a4a4a;
+  --ink-3:      #6f6f6f;
+  --rule:       #d8d8d8;
+  --rule-soft:  #ececec;
+  --bg:         #ffffff;
+  --bg-alt:     #f4f4f4;
+  --bg-panel:   #f7f7f7;
+  --brand:      #a31f34;
+  --brand-dark: #7d1727;
+  --link:       #0b5ea8;
+  --link-hover: #a31f34;
+  --black:      #0d0d0d;
+  --note:       #1f6f5c;
+  --warn:       #8a5a00;
+
+  --sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --thai: "Noto Sans Thai", "IBM Plex Sans Thai", Sarabun, "Leelawadee UI", Tahoma, var(--sans);
+  --mathfont: "Cambria Math", Cambria, "Times New Roman", Georgia, serif;
+  --mono: "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
+
+  --maxw: 1220px;
+  --sidebar: 300px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+/* ---------------------------------------------------------------- topbar */
+
+.topbar {
+  background: var(--black);
+  color: #fff;
+  border-bottom: 3px solid var(--brand);
+}
+
+.topbar-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .2px;
+  font-size: 1.02rem;
+}
+.logo:hover { color: #fff; text-decoration: none; }
+
+.logo-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 34px; height: 34px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 800;
+  font-size: .82rem;
+  letter-spacing: .5px;
+  border-radius: 2px;
+}
+
+.logo-text small {
+  display: block;
+  font-weight: 400;
+  font-size: .68rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #b9b9b9;
+}
+
+.topbar-spacer { flex: 1 1 auto; }
+
+.topbar-nav {
+  display: flex;
+  gap: 20px;
+  font-size: .85rem;
+}
+.topbar-nav a { color: #d9d9d9; }
+.topbar-nav a:hover { color: #fff; }
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid #4d4d4d;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.lang-switch a {
+  padding: 6px 13px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: #cfcfcf;
+  line-height: 1.5;
+}
+.lang-switch a + a { border-left: 1px solid #4d4d4d; }
+.lang-switch a:hover { background: #2b2b2b; color: #fff; text-decoration: none; }
+.lang-switch a.active { background: #fff; color: #111; }
+.lang-switch a.active:hover { background: #fff; color: #111; }
+
+.btn-give {
+  background: var(--brand);
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 2px;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.btn-give:hover { background: var(--brand-dark); color: #fff; text-decoration: none; }
+
+/* -------------------------------------------------------- course masthead */
+
+.masthead {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 26px 24px 24px;
+}
+
+.eyebrow {
+  font-size: .78rem;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.eyebrow span { color: var(--brand); }
+
+.masthead h1 {
+  margin: 8px 0 0;
+  font-size: 2.35rem;
+  line-height: 1.15;
+  letter-spacing: -.4px;
+  font-weight: 700;
+}
+
+.masthead .tagline {
+  margin: 10px 0 0;
+  color: var(--ink-2);
+  max-width: 68ch;
+}
+
+/* ----------------------------------------------------------------- layout */
+
+.layout {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  display: grid;
+  grid-template-columns: var(--sidebar) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---------------------------------------------------------------- sidebar */
+
+.sidebar { padding-top: 28px; }
+
+.course-menu { border-top: 2px solid var(--ink); }
+
+.course-menu h2,
+.course-info h2 {
+  font-size: .78rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 14px 0 10px;
+  font-weight: 700;
+}
+
+.course-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course-menu li { border-bottom: 1px solid var(--rule-soft); }
+
+.course-menu a,
+.course-menu .muted {
+  display: block;
+  padding: 11px 4px;
+  font-size: .93rem;
+  color: var(--ink);
+}
+.course-menu a:hover { color: var(--brand); text-decoration: none; }
+
+.course-menu a.active {
+  color: var(--brand);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--brand);
+  padding-left: 12px;
+}
+
+.course-menu .muted {
+  color: #a5a5a5;
+  cursor: default;
+}
+.course-menu .muted em {
+  font-style: normal;
+  font-size: .72rem;
+  color: #b5b5b5;
+  display: block;
+}
+
+.course-info {
+  margin-top: 34px;
+  background: var(--bg-panel);
+  border: 1px solid var(--rule);
+  padding: 18px 18px 6px;
+}
+
+.course-info dl { margin: 0; }
+.course-info dt {
+  font-size: .74rem;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 700;
+  margin-top: 14px;
+}
+.course-info dd {
+  margin: 3px 0 0;
+  font-size: .9rem;
+  color: var(--ink);
+}
+.course-info dd ul {
+  margin: 0; padding: 0; list-style: none;
+}
+.course-info dd li { padding: 1px 0; }
+.course-info .crumbs { color: var(--ink-2); font-size: .86rem; }
+
+/* ----------------------------------------------------------------- content */
+
+.content { padding-top: 32px; min-width: 0; }
+
+.content h2 {
+  font-size: 1.5rem;
+  margin: 42px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--rule);
+  line-height: 1.25;
+  scroll-margin-top: 20px;
+}
+.content > h2:first-child { margin-top: 0; }
+
+.content h3 {
+  font-size: 1.16rem;
+  margin: 30px 0 8px;
+  color: var(--ink);
+  scroll-margin-top: 20px;
+}
+
+.content h4 {
+  font-size: 1rem;
+  margin: 22px 0 6px;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  font-size: .82rem;
+}
+
+.content p { margin: 0 0 14px; }
+
+.content ul, .content ol { margin: 0 0 16px; padding-left: 22px; }
+.content li { margin-bottom: 6px; }
+
+.lead {
+  font-size: 1.08rem;
+  color: var(--ink-2);
+  border-left: 3px solid var(--brand);
+  padding-left: 16px;
+  margin-bottom: 26px;
+}
+
+/* --------------------------------------------------------- in-page toc box */
+
+.toc {
+  background: var(--bg-panel);
+  border: 1px solid var(--rule);
+  padding: 16px 20px;
+  margin-bottom: 30px;
+}
+.toc h2 {
+  border: 0;
+  margin: 0 0 8px;
+  font-size: .8rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0;
+}
+.toc ol {
+  columns: 2;
+  column-gap: 32px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: .9rem;
+}
+.toc li { margin-bottom: 3px; break-inside: avoid; }
+
+/* ------------------------------------------------------------------ tables */
+
+.table-wrap { overflow-x: auto; margin: 0 0 8px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .88rem;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-size: .82rem;
+  color: var(--ink-2);
+  padding-bottom: 8px;
+}
+caption b { color: var(--ink); }
+
+th, td {
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background: var(--bg-panel);
+  border-bottom: 2px solid var(--rule);
+  font-size: .78rem;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+tbody tr:hover { background: #fafafa; }
+
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------- formulas */
+
+.eq {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0;
+  padding: 14px 18px;
+  background: var(--bg-panel);
+  border-left: 3px solid var(--ink);
+  font-family: var(--mathfont);
+  font-size: 1.1rem;
+  overflow-x: auto;
+}
+.eq .body { flex: 1 1 auto; }
+.eq .tag {
+  flex: 0 0 auto;
+  font-family: var(--sans);
+  font-size: .82rem;
+  color: var(--ink-3);
+}
+
+var, .v {
+  font-family: var(--mathfont);
+  font-style: italic;
+}
+
+.frac {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 4px;
+}
+.frac > span { display: block; padding: 0 6px; line-height: 1.3; }
+.frac .den { border-top: 1.4px solid currentColor; }
+
+.units { font-family: var(--sans); font-size: .82rem; color: var(--ink-3); }
+
+/* ---------------------------------------------------------------- callouts */
+
+.callout {
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--note);
+  background: #f6faf9;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: .94rem;
+}
+.callout.warn { border-left-color: var(--warn); background: #fdf9f0; }
+.callout.rule { border-left-color: var(--brand); background: #fbf5f6; }
+.callout p:last-child { margin-bottom: 0; }
+.callout .label {
+  display: block;
+  font-size: .74rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--note);
+  margin-bottom: 5px;
+}
+.callout.warn .label { color: var(--warn); }
+.callout.rule .label { color: var(--brand); }
+
+/* ----------------------------------------------------------------- figures */
+
+figure {
+  margin: 26px 0;
+  border: 1px solid var(--rule);
+  background: #fff;
+  padding: 18px;
+}
+figure svg { display: block; width: 100%; height: auto; }
+figcaption {
+  margin-top: 12px;
+  font-size: .84rem;
+  color: var(--ink-2);
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 10px;
+}
+figcaption b { color: var(--ink); }
+
+/* -------------------------------------------------------- worked example */
+
+.example {
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--ink);
+  padding: 4px 24px 18px;
+  margin: 26px 0;
+  background: #fcfcfc;
+}
+.example h3 { margin-top: 20px; }
+.step {
+  margin: 18px 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--rule);
+}
+.step > h4 { margin-top: 0; color: var(--brand); }
+
+.result {
+  display: inline-block;
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  padding: 6px 14px;
+  font-family: var(--mathfont);
+  font-size: 1.02rem;
+  margin: 6px 0;
+}
+
+/* ------------------------------------------------------------ misc content */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin: 22px 0;
+}
+.card {
+  border: 1px solid var(--rule);
+  padding: 16px 18px;
+  background: #fff;
+}
+.card h3 { margin: 0 0 6px; font-size: 1rem; }
+.card p { font-size: .89rem; color: var(--ink-2); margin: 0; }
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 52px;
+  padding-top: 18px;
+  border-top: 2px solid var(--rule);
+  font-size: .92rem;
+}
+
+.pill {
+  display: inline-block;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 2px 11px;
+  font-size: .76rem;
+  color: var(--ink-2);
+  margin: 0 4px 4px 0;
+}
+
+.refs { font-size: .9rem; }
+.refs li { margin-bottom: 10px; }
+
+/* ------------------------------------------------------------------ footer */
+
+.site-footer {
+  background: var(--black);
+  color: #b7b7b7;
+  padding: 40px 24px 30px;
+  font-size: .86rem;
+}
+.footer-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+.site-footer h3 {
+  color: #fff;
+  font-size: .78rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.site-footer a { color: #cfcfcf; }
+.site-footer a:hover { color: #fff; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: 6px; }
+.footer-bottom {
+  max-width: var(--maxw);
+  margin: 30px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid #333;
+  color: #8d8d8d;
+  font-size: .8rem;
+}
+
+/* ------------------------------------------------------- Thai typography */
+
+html[lang="th"] body {
+  font-family: var(--thai);
+  line-height: 1.9;
+}
+html[lang="th"] .masthead h1 { line-height: 1.35; letter-spacing: 0; }
+html[lang="th"] .content h2,
+html[lang="th"] .content h3 { line-height: 1.5; }
+html[lang="th"] .content li { margin-bottom: 8px; }
+html[lang="th"] table { line-height: 1.75; }
+html[lang="th"] thead th,
+html[lang="th"] .eyebrow,
+html[lang="th"] .course-menu h2,
+html[lang="th"] .course-info dt,
+html[lang="th"] .callout .label,
+html[lang="th"] .content h4,
+html[lang="th"] .site-footer h3 { letter-spacing: .2px; }
+
+/* Latin-script fragments inside Thai pages keep the Latin stack */
+html[lang="th"] .eq,
+html[lang="th"] var,
+html[lang="th"] .v,
+html[lang="th"] .result { font-family: var(--mathfont); }
+html[lang="th"] .units,
+html[lang="th"] .eq .tag { font-family: var(--thai); }
+
+/* -------------------------------------------------------------- responsive */
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .sidebar { order: 2; padding-top: 8px; }
+  .content { order: 1; }
+  .masthead h1 { font-size: 1.85rem; }
+  .toc ol { columns: 1; }
+  .topbar-nav { display: none; }
+}
+
+@media (max-width: 520px) {
+  body { font-size: 15.5px; }
+  .layout, .masthead-inner, .topbar-inner { padding-left: 16px; padding-right: 16px; }
+  .example { padding-left: 14px; padding-right: 14px; }
+}
+
+/* ------------------------------------------------------------------- print */
+
+@media print {
+  .topbar, .sidebar, .site-footer, .chapter-nav, .toc { display: none; }
+  .layout { display: block; padding: 0; }
+  body { font-size: 11pt; }
+  figure, table, .eq, .example { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+}

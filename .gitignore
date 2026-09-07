@@ -1,0 +1,11 @@
+# Python tooling caches
+.ruff_cache/
+__pycache__/
+*.pyc
+
+# Editor / OS cruft
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store

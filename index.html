@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MHE 301 | Materials Handling Engineering</title>
+<meta name="description" content="Undergraduate course on materials handling engineering: bulk solids conveying, belt conveyors, unit-load handling, and storage systems.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">MHE</span>
+      <span class="logo-text">OpenCourseWare<small>Faculty of Engineering</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-nav">
+      <a href="index.html">About</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="chapter1.html">Lecture Notes</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html" class="active">EN</a>
+      <a href="index-th.html" lang="th">ไทย</a>
+    </div>
+    <a class="btn-give" href="chapter1.html">Start Chapter 1</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MHE 301 <span>|</span> Semester 1, 2026 <span>|</span> Undergraduate</p>
+    <h1>Materials Handling Engineering</h1>
+    <p class="tagline">The engineering of moving, storing, protecting and controlling materials throughout
+      manufacture, distribution and disposal &mdash; from bulk solids on belt conveyors to unit loads in
+      automated warehouses.</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="course-menu">
+      <h2>Course Menu</h2>
+      <ul>
+        <li><a href="index.html" class="active">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Ch.&nbsp;1 &mdash; Belt Conveyors</a></li>
+        <li><span class="muted">Ch.&nbsp;2 &mdash; Chain &amp; Apron Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;3 &mdash; Screw Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;4 &mdash; Bucket Elevators<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;5 &mdash; Pneumatic Conveying<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;6 &mdash; Cranes &amp; Hoists<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;7 &mdash; Industrial Trucks &amp; AGVs<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;8 &mdash; Storage &amp; Warehousing<em>Not yet published</em></span></li>
+      </ul>
+    </nav>
+
+    <section class="course-info">
+      <h2>Course Info</h2>
+      <dl>
+        <dt>Instructor</dt>
+        <dd>Prof. [Instructor Name]</dd>
+
+        <dt>Department</dt>
+        <dd>Mechanical / Industrial Engineering</dd>
+
+        <dt>Term</dt>
+        <dd>Semester 1, Academic Year 2026</dd>
+
+        <dt>Level</dt>
+        <dd>Undergraduate</dd>
+
+        <dt>Credits</dt>
+        <dd>3 (3&ndash;0&ndash;6)</dd>
+
+        <dt>Topics</dt>
+        <dd class="crumbs">Engineering &gt; Mechanical Engineering &gt; Materials Handling</dd>
+        <dd class="crumbs">Engineering &gt; Industrial Engineering &gt; Logistics</dd>
+
+        <dt>Learning Resource Types</dt>
+        <dd>
+          <ul>
+            <li>Lecture Notes</li>
+            <li>Worked Design Examples</li>
+            <li>Problem Sets</li>
+            <li>Design Charts &amp; Tables</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <figure>
+      <svg viewBox="0 0 860 300" role="img" aria-label="Schematic of an inclined troughed belt conveyor">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f7f7f7"/><stop offset="1" stop-color="#ffffff"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="860" height="300" fill="url(#sky)"/>
+
+        <!-- support structure -->
+        <g stroke="#c9c9c9" stroke-width="3">
+          <line x1="150" y1="215" x2="150" y2="268"/>
+          <line x1="300" y1="185" x2="300" y2="268"/>
+          <line x1="450" y1="155" x2="450" y2="268"/>
+          <line x1="600" y1="125" x2="600" y2="268"/>
+          <line x1="720" y1="101" x2="720" y2="268"/>
+        </g>
+        <line x1="40" y1="268" x2="820" y2="268" stroke="#9a9a9a" stroke-width="3"/>
+
+        <!-- belt loop -->
+        <g fill="none" stroke="#333" stroke-width="7" stroke-linecap="round">
+          <line x1="100" y1="228" x2="762" y2="96"/>
+          <line x1="104" y1="252" x2="766" y2="120"/>
+        </g>
+        <path d="M 762 96 A 22 22 0 0 1 766 120" fill="none" stroke="#333" stroke-width="7"/>
+        <path d="M 100 228 A 22 22 0 0 0 104 252" fill="none" stroke="#333" stroke-width="7"/>
+
+        <!-- pulleys -->
+        <circle cx="766" cy="108" r="20" fill="#a31f34" stroke="#7d1727" stroke-width="3"/>
+        <circle cx="100" cy="240" r="20" fill="#767676" stroke="#5a5a5a" stroke-width="3"/>
+
+        <!-- material load on belt -->
+        <g fill="#c9a97a" stroke="#8a6f47" stroke-width="1.5">
+          <path d="M 190 206 q 26 -22 52 -10.4 z"/>
+          <path d="M 280 188 q 26 -22 52 -10.4 z"/>
+          <path d="M 370 170 q 26 -22 52 -10.4 z"/>
+          <path d="M 460 152 q 26 -22 52 -10.4 z"/>
+          <path d="M 550 134 q 26 -22 52 -10.4 z"/>
+          <path d="M 640 116 q 26 -22 52 -10.4 z"/>
+        </g>
+
+        <!-- idlers -->
+        <g fill="#5f5f5f">
+          <circle cx="170" cy="222" r="5"/><circle cx="260" cy="204" r="5"/>
+          <circle cx="350" cy="186" r="5"/><circle cx="440" cy="168" r="5"/>
+          <circle cx="530" cy="150" r="5"/><circle cx="620" cy="132" r="5"/>
+          <circle cx="710" cy="114" r="5"/>
+          <circle cx="300" cy="221" r="5"/><circle cx="520" cy="177" r="5"/>
+        </g>
+
+        <!-- loading chute -->
+        <path d="M 96 150 L 150 150 L 132 216 L 108 216 Z" fill="#d8d8d8" stroke="#8f8f8f" stroke-width="2"/>
+        <path d="M 110 120 q 12 -22 26 0 z" fill="#8a6f47"/>
+
+        <!-- discharge -->
+        <g fill="#8a6f47">
+          <circle cx="800" cy="130" r="4"/><circle cx="812" cy="152" r="4"/>
+          <circle cx="796" cy="168" r="4"/><circle cx="810" cy="188" r="4"/>
+          <circle cx="798" cy="208" r="4"/>
+        </g>
+
+        <!-- drive -->
+        <rect x="742" y="150" width="52" height="26" rx="3" fill="#333"/>
+        <text x="768" y="168" font-family="Segoe UI, sans-serif" font-size="11" fill="#fff" text-anchor="middle">M</text>
+
+        <!-- labels -->
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#4a4a4a">
+          <text x="60" y="130">Loading chute</text>
+          <text x="700" y="70">Head / drive pulley</text>
+          <text x="40" y="300">Tail pulley</text>
+          <text x="400" y="255">Troughed carrying idlers</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 0.1.</b> A troughed belt conveyor &mdash; the workhorse of bulk materials handling
+        and the subject of Chapter&nbsp;1.</figcaption>
+    </figure>
+
+    <h2>Course Description</h2>
+    <p>Materials handling accounts for a large share of the total cost of manufacturing and distribution, yet it
+      adds no value to the product itself. The engineer's task is therefore to move material with the least cost,
+      the least damage and the least risk to people, while meeting a required throughput.</p>
+
+    <p>This course develops the analysis and design of the principal classes of materials handling equipment. It
+      begins with continuous conveying of bulk solids &mdash; belt, chain, screw, bucket and pneumatic conveyors
+      &mdash; then moves to discrete unit-load handling with cranes, hoists, industrial trucks and automated
+      guided vehicles, and closes with storage system design and the economic justification of handling
+      investments.</p>
+
+    <p>Emphasis throughout is on <em>quantitative design</em>: computing capacity, resistances, power, tensions
+      and component ratings from recognised standards (ISO&nbsp;5048, DIN&nbsp;22101, CEMA), and then selecting
+      real hardware against those numbers.</p>
+
+    <h2>Learning Outcomes</h2>
+    <p>On successful completion of this course a student will be able to:</p>
+    <ol>
+      <li>Characterise a bulk or unit material and select an appropriate class of handling equipment for a
+        given duty.</li>
+      <li>Compute the required capacity, cross-sectional loading and belt speed of a continuous conveyor.</li>
+      <li>Determine motion resistances, drive power, belt tensions and take-up requirements using standard
+        methods.</li>
+      <li>Select belts, idlers, pulleys, drives and safety devices from manufacturers' data.</li>
+      <li>Lay out a handling system, including transfer points, and evaluate it against safety and maintenance
+        requirements.</li>
+      <li>Justify a materials handling investment on a life-cycle cost basis.</li>
+    </ol>
+
+    <h2>Course Structure</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Part I &mdash; Bulk Solids</h3>
+        <p>Chapters 1&ndash;5. Continuous conveying: belt, chain, screw, bucket and pneumatic systems.</p>
+      </div>
+      <div class="card">
+        <h3>Part II &mdash; Unit Loads</h3>
+        <p>Chapters 6&ndash;7. Cranes, hoists, industrial trucks, AGVs and unit-load formation.</p>
+      </div>
+      <div class="card">
+        <h3>Part III &mdash; Systems</h3>
+        <p>Chapter 8. Storage, warehousing, layout and economic evaluation.</p>
+      </div>
+    </div>
+
+    <h2>Lecture Notes</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Chapter</th><th>Topic</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><a href="chapter1.html">Belt Conveyors</a></td><td>Published</td></tr>
+          <tr><td>2</td><td>Chain and Apron Conveyors</td><td>In preparation</td></tr>
+          <tr><td>3</td><td>Screw Conveyors</td><td>In preparation</td></tr>
+          <tr><td>4</td><td>Bucket Elevators</td><td>In preparation</td></tr>
+          <tr><td>5</td><td>Pneumatic Conveying</td><td>In preparation</td></tr>
+          <tr><td>6</td><td>Cranes and Hoists</td><td>In preparation</td></tr>
+          <tr><td>7</td><td>Industrial Trucks and AGVs</td><td>In preparation</td></tr>
+          <tr><td>8</td><td>Storage and Warehousing</td><td>In preparation</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Prerequisites</h2>
+    <p>Engineering Mechanics (statics and dynamics), Mechanics of Materials, and Machine Design or an equivalent
+      course covering shafts, bearings, belts and gearing. Familiarity with basic fluid mechanics is helpful for
+      the pneumatic conveying chapter.</p>
+
+    <div class="callout rule">
+      <span class="label">Start here</span>
+      <p><a href="syllabus.html">Read the syllabus</a> for grading and policies, then begin with
+        <a href="chapter1.html">Chapter 1: Belt Conveyors</a>.</p>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Course</h3>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Chapter 1: Belt Conveyors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Standards Referenced</h3>
+      <ul>
+        <li>ISO 5048 &mdash; Belt conveyors, design calculation</li>
+        <li>DIN 22101 &mdash; Belt conveyors for bulk materials</li>
+        <li>CEMA &mdash; Belt Conveyors for Bulk Materials</li>
+        <li>ISO 22721 &mdash; Conveyor belt specification</li>
+      </ul>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Open lecture notes for MHE 301. Layout inspired by open courseware sites; content and branding are
+        original to this course.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    MHE 301 Materials Handling Engineering &mdash; course notes, Semester 1 / 2026. Free to use for teaching and
+    study with attribution.
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
