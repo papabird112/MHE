@@ -3,21 +3,33 @@
    ========================================================================== */
 
 :root {
-  --ink:        #191919;
-  --ink-2:      #4a4a4a;
-  --ink-3:      #6f6f6f;
-  --rule:       #d8d8d8;
-  --rule-soft:  #ececec;
+  /* Brand palette. The two bright accents fail contrast as text on white
+     (#FF9100 = 2.3:1, #00B7CD = 2.4:1), so each has a darkened twin used
+     wherever the colour carries words rather than decoration. */
+  --red:        #DF301C;
+  --red-dark:   #B22616;
+  --orange:     #FF9100;
+  --orange-ink: #A85E00;
+  --cream:      #FFF1D1;
+  --cream-soft: #FFF9EC;
+  --cyan:       #00B7CD;
+  --cyan-ink:   #00788A;
+
+  --ink:        #1c1917;
+  --ink-2:      #4b4540;
+  --ink-3:      #726b64;
+  --rule:       #e3dac7;
+  --rule-soft:  #f2ecdd;
   --bg:         #ffffff;
-  --bg-alt:     #f4f4f4;
-  --bg-panel:   #f7f7f7;
-  --brand:      #a31f34;
-  --brand-dark: #7d1727;
-  --link:       #0b5ea8;
-  --link-hover: #a31f34;
-  --black:      #0d0d0d;
-  --note:       #1f6f5c;
-  --warn:       #8a5a00;
+  --bg-alt:     var(--cream);
+  --bg-panel:   var(--cream-soft);
+  --brand:      var(--red);
+  --brand-dark: var(--red-dark);
+  --link:       var(--cyan-ink);
+  --link-hover: var(--red);
+  --black:      #17120f;
+  --note:       var(--cyan-ink);
+  --warn:       var(--orange-ink);
 
   --sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --thai: "Noto Sans Thai", "IBM Plex Sans Thai", Sarabun, "Leelawadee UI", Tahoma, var(--sans);
@@ -157,7 +169,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
   color: var(--ink-3);
   font-weight: 600;
 }
-.eyebrow span { color: var(--brand); }
+.eyebrow span { color: var(--orange); }
 
 .masthead h1 {
   margin: 8px 0 0;
@@ -368,7 +380,7 @@ thead th {
   white-space: nowrap;
 }
 
-tbody tr:hover { background: #fafafa; }
+tbody tr:hover { background: var(--cream-soft); }
 
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
@@ -381,7 +393,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   margin: 18px 0;
   padding: 14px 18px;
   background: var(--bg-panel);
-  border-left: 3px solid var(--ink);
+  border-left: 3px solid var(--cyan);
   font-family: var(--mathfont);
   font-size: 1.1rem;
   overflow-x: auto;
@@ -414,14 +426,14 @@ var, .v {
 
 .callout {
   border: 1px solid var(--rule);
-  border-left: 4px solid var(--note);
-  background: #f6faf9;
+  border-left: 4px solid var(--cyan);
+  background: #f0fafc;
   padding: 14px 18px;
   margin: 20px 0;
   font-size: .94rem;
 }
-.callout.warn { border-left-color: var(--warn); background: #fdf9f0; }
-.callout.rule { border-left-color: var(--brand); background: #fbf5f6; }
+.callout.warn { border-left-color: var(--orange); background: #fff6e4; }
+.callout.rule { border-left-color: var(--brand); background: #fdf1ef; }
 .callout p:last-child { margin-bottom: 0; }
 .callout .label {
   display: block;
@@ -457,10 +469,10 @@ figcaption b { color: var(--ink); }
 
 .example {
   border: 1px solid var(--rule);
-  border-top: 4px solid var(--ink);
+  border-top: 4px solid var(--cyan);
   padding: 4px 24px 18px;
   margin: 26px 0;
-  background: #fcfcfc;
+  background: #fffdf8;
 }
 .example h3 { margin-top: 20px; }
 .step {
