@@ -1,0 +1,104 @@
+Copyright (c) 2026 [Instructor Name]. All rights reserved.
+สงวนลิขสิทธิ์ พ.ศ. 2569 [ชื่ออาจารย์ผู้สอน]
+
+MHE 301 - Materials Handling Engineering / วิศวกรรมการขนถ่ายวัสดุ
+Course website, lecture notes, figures, tables, worked examples and problem sets.
+
+
+================================================================================
+ENGLISH
+================================================================================
+
+ALL RIGHTS RESERVED. THIS IS NOT OPEN SOURCE.
+
+This repository contains two kinds of copyrighted work, and both are covered by
+this notice:
+
+  1. Course content - the explanatory text, tables, figures, diagrams, worked
+     design examples and problem sets.
+  2. Website source code - the HTML, CSS and JavaScript files.
+
+YOU MAY:
+  - View and read this material.
+  - Link to it.
+
+YOU MAY NOT, without prior written permission from the copyright holder:
+  - Copy, reproduce, republish, mirror or host this material, in whole or in
+    part, anywhere other than its original location.
+  - Modify, adapt, translate or create derivative works from it.
+  - Redistribute or share copies of it.
+  - Use it for any commercial purpose, including paid teaching, tutoring,
+    training or consulting.
+  - Use it as training data for machine learning or artificial intelligence
+    systems.
+
+NOTE ON PUBLIC HOSTING ON GITHUB
+  If this repository is public on GitHub, GitHub's Terms of Service grant every
+  GitHub user a limited right to view and to fork it within GitHub. That right
+  comes from GitHub's Terms, not from this file, and this file cannot revoke it.
+  If you need to prevent forking entirely, set the repository to private.
+
+THIRD-PARTY MATERIAL
+  Standards referred to in the text - ISO 5048, DIN 22101, CEMA and others -
+  remain the property of their respective publishers. The standards themselves
+  are not reproduced here; only representative values are cited for teaching
+  purposes. Anyone performing real design work must obtain the current official
+  standards.
+
+NO WARRANTY
+  This material is provided for education only. Every design calculation must be
+  independently verified against the current official standards and against the
+  data of the actual equipment manufacturer before being used in practice. The
+  author accepts no liability for any loss or damage arising from use of this
+  material.
+
+PERMISSION REQUESTS
+  Contact: [instructor e-mail]
+
+
+================================================================================
+ภาษาไทย
+================================================================================
+
+สงวนลิขสิทธิ์ทุกประการ เอกสารชุดนี้ไม่ใช่ซอฟต์แวร์เสรีหรือสื่อเปิด
+
+คลังข้อมูลนี้ประกอบด้วยงานอันมีลิขสิทธิ์สองส่วน และทั้งสองส่วนอยู่ภายใต้ประกาศนี้
+
+  1. เนื้อหาบทเรียน ได้แก่ คำอธิบาย ตาราง รูปภาพ แผนภาพ ตัวอย่างการออกแบบ
+     และแบบฝึกหัด
+  2. ซอร์สโค้ดของเว็บไซต์ ได้แก่ ไฟล์ HTML, CSS และ JavaScript
+
+สิ่งที่ทำได้
+  - เข้าชมและอ่านเนื้อหา
+  - ทำลิงก์มายังเว็บไซต์นี้
+
+สิ่งที่ห้ามทำ เว้นแต่ได้รับอนุญาตเป็นลายลักษณ์อักษรจากเจ้าของลิขสิทธิ์ก่อน
+  - ทำซ้ำ คัดลอก เผยแพร่ซ้ำ ทำสำเนา หรือนำไปติดตั้งไว้ที่อื่น ไม่ว่าทั้งหมด
+    หรือบางส่วน
+  - ดัดแปลง แก้ไข แปล หรือสร้างงานต่อเนื่องจากเนื้อหานี้
+  - แจกจ่ายหรือส่งต่อสำเนาให้ผู้อื่น
+  - นำไปใช้เพื่อการค้าทุกรูปแบบ รวมถึงการสอนพิเศษ การติว การอบรม
+    และงานที่ปรึกษาที่มีค่าตอบแทน
+  - นำไปใช้เป็นข้อมูลฝึกสอนระบบปัญญาประดิษฐ์หรือการเรียนรู้ของเครื่อง
+
+หมายเหตุเรื่องการเผยแพร่แบบสาธารณะบน GitHub
+  หากตั้งคลังข้อมูลนี้เป็นแบบสาธารณะ ข้อกำหนดการให้บริการของ GitHub จะให้สิทธิ์
+  ผู้ใช้ GitHub ทุกคนในการเข้าชมและ fork ภายในระบบ GitHub ได้อย่างจำกัด
+  สิทธิ์ดังกล่าวมาจากข้อกำหนดของ GitHub ไม่ได้มาจากไฟล์นี้ และไฟล์นี้ไม่สามารถ
+  ยกเลิกสิทธิ์นั้นได้ หากต้องการป้องกันการ fork โดยเด็ดขาด ให้ตั้งคลังข้อมูล
+  เป็นแบบส่วนตัว
+
+เนื้อหาของบุคคลภายนอก
+  มาตรฐานที่อ้างถึงในเอกสาร ได้แก่ ISO 5048, DIN 22101, CEMA และอื่น ๆ
+  ยังคงเป็นทรัพย์สินของผู้จัดพิมพ์มาตรฐานนั้น ๆ เอกสารนี้ไม่ได้ทำซ้ำตัวมาตรฐาน
+  แต่อ้างอิงเฉพาะค่าที่เป็นตัวแทนเพื่อการเรียนการสอน ผู้ที่นำไปใช้ออกแบบงานจริง
+  ต้องจัดหามาตรฐานฉบับทางการที่เป็นปัจจุบันด้วยตนเอง
+
+ข้อจำกัดความรับผิด
+  เอกสารนี้จัดทำขึ้นเพื่อการศึกษาเท่านั้น การคำนวณออกแบบทุกรายการต้องได้รับ
+  การตรวจสอบซ้ำโดยอิสระกับมาตรฐานฉบับทางการที่เป็นปัจจุบัน และกับข้อมูลของ
+  ผู้ผลิตอุปกรณ์จริง ก่อนนำไปใช้งาน ผู้จัดทำไม่รับผิดชอบต่อความเสียหายใด ๆ
+  ที่เกิดจากการนำเอกสารนี้ไปใช้
+
+การขออนุญาต
+  ติดต่อ: [อีเมลผู้สอน]
