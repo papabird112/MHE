@@ -42,15 +42,23 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* Every size below is in rem, so the root drives the whole page. Thai gets a
+   little more than Latin at the same nominal size: its glyphs sit smaller and
+   the tone marks above and below need the extra room. Percentages rather than
+   px so a reader's own browser font setting still applies. */
+html {
+  scroll-behavior: smooth;
+  font-size: 112%;
+}
+html[lang="th"] { font-size: 118%; }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.62;
+  font-size: 1rem;
+  line-height: 1.72;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -225,7 +233,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 .course-menu .muted {
   display: block;
   padding: 11px 4px;
-  font-size: .93rem;
+  font-size: .97rem;
   color: var(--ink);
 }
 .course-menu a:hover { color: var(--brand); text-decoration: none; }
@@ -266,7 +274,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 }
 .course-info dd {
   margin: 3px 0 0;
-  font-size: .9rem;
+  font-size: .95rem;
   color: var(--ink);
 }
 .course-info dd ul {
@@ -302,16 +310,23 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
   color: var(--ink-2);
   text-transform: uppercase;
   letter-spacing: .6px;
-  font-size: .82rem;
+  font-size: .87rem;
 }
 
-.content p { margin: 0 0 14px; }
+.content p { margin: 0 0 17px; }
 
-.content ul, .content ol { margin: 0 0 16px; padding-left: 22px; }
-.content li { margin-bottom: 6px; }
+.content ul, .content ol { margin: 0 0 18px; padding-left: 24px; }
+.content li { margin-bottom: 8px; }
+
+/* Cap the measure. At the larger base size the column would otherwise run to
+   nearly 100 characters per line, which tires the eye as much as small type. */
+.content p,
+.content ul,
+.content ol { max-width: 76ch; }
+.toc ol { max-width: none; }
 
 .lead {
-  font-size: 1.08rem;
+  font-size: 1.1rem;
   color: var(--ink-2);
   border-left: 3px solid var(--brand);
   padding-left: 16px;
@@ -340,7 +355,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
   column-gap: 32px;
   margin: 0;
   padding-left: 20px;
-  font-size: .9rem;
+  font-size: .95rem;
 }
 .toc li { margin-bottom: 3px; break-inside: avoid; }
 
@@ -351,13 +366,13 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: .88rem;
+  font-size: .93rem;
 }
 
 caption {
   caption-side: top;
   text-align: left;
-  font-size: .82rem;
+  font-size: .88rem;
   color: var(--ink-2);
   padding-bottom: 8px;
 }
@@ -365,7 +380,7 @@ caption b { color: var(--ink); }
 
 th, td {
   border-bottom: 1px solid var(--rule-soft);
-  padding: 8px 12px;
+  padding: 11px 14px;
   text-align: left;
   vertical-align: top;
 }
@@ -373,7 +388,7 @@ th, td {
 thead th {
   background: var(--bg-panel);
   border-bottom: 2px solid var(--rule);
-  font-size: .78rem;
+  font-size: .82rem;
   letter-spacing: .4px;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -395,7 +410,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   background: var(--bg-panel);
   border-left: 3px solid var(--cyan);
   font-family: var(--mathfont);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   overflow-x: auto;
 }
 .eq .body { flex: 1 1 auto; }
@@ -420,7 +435,7 @@ var, .v {
 .frac > span { display: block; padding: 0 6px; line-height: 1.3; }
 .frac .den { border-top: 1.4px solid currentColor; }
 
-.units { font-family: var(--sans); font-size: .82rem; color: var(--ink-3); }
+.units { font-family: var(--sans); font-size: .86rem; color: var(--ink-3); }
 
 /* ---------------------------------------------------------------- callouts */
 
@@ -430,7 +445,7 @@ var, .v {
   background: #f0fafc;
   padding: 14px 18px;
   margin: 20px 0;
-  font-size: .94rem;
+  font-size: 1rem;
 }
 .callout.warn { border-left-color: var(--orange); background: #fff6e4; }
 .callout.rule { border-left-color: var(--brand); background: #fdf1ef; }
@@ -458,7 +473,7 @@ figure {
 figure svg { display: block; width: 100%; height: auto; }
 figcaption {
   margin-top: 12px;
-  font-size: .84rem;
+  font-size: .9rem;
   color: var(--ink-2);
   border-top: 1px solid var(--rule-soft);
   padding-top: 10px;
@@ -488,7 +503,7 @@ figcaption b { color: var(--ink); }
   border: 1.5px solid var(--ink);
   padding: 6px 14px;
   font-family: var(--mathfont);
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   margin: 6px 0;
 }
 
@@ -506,7 +521,7 @@ figcaption b { color: var(--ink); }
   background: #fff;
 }
 .card h3 { margin: 0 0 6px; font-size: 1rem; }
-.card p { font-size: .89rem; color: var(--ink-2); margin: 0; }
+.card p { font-size: .94rem; color: var(--ink-2); margin: 0; }
 
 .chapter-nav {
   display: flex;
@@ -515,7 +530,7 @@ figcaption b { color: var(--ink); }
   margin-top: 52px;
   padding-top: 18px;
   border-top: 2px solid var(--rule);
-  font-size: .92rem;
+  font-size: .96rem;
 }
 
 .pill {
@@ -529,7 +544,7 @@ figcaption b { color: var(--ink); }
   margin: 0 4px 4px 0;
 }
 
-.refs { font-size: .9rem; }
+.refs { font-size: .95rem; }
 .refs li { margin-bottom: 10px; }
 
 /* ------------------------------------------------------------------ footer */
@@ -538,7 +553,7 @@ figcaption b { color: var(--ink); }
   background: var(--black);
   color: #b7b7b7;
   padding: 40px 24px 30px;
-  font-size: .86rem;
+  font-size: .9rem;
 }
 .footer-inner {
   max-width: var(--maxw);
@@ -614,9 +629,12 @@ html[lang="th"] .eq .tag { font-family: var(--thai); }
 }
 
 @media (max-width: 520px) {
-  body { font-size: 15.5px; }
+  /* Ease off at phone width, but stay above the old 16px baseline */
+  html { font-size: 106%; }
+  html[lang="th"] { font-size: 112%; }
   .layout, .masthead-inner, .topbar-inner { padding-left: 16px; padding-right: 16px; }
   .example { padding-left: 14px; padding-right: 14px; }
+  th, td { padding: 9px 10px; }
 }
 
 /* ------------------------------------------------------------------- print */
