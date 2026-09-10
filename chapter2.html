@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 2: Handling Equipment and Selection | MHE 301 Materials Handling Engineering</title>
+<meta name="description" content="The five categories of materials handling equipment, the unit load concept, the bulk material code, lift truck load capacity, and the two-stage method for selecting equipment.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">MHE</span>
+      <span class="logo-text">BAE-MHE<small>Biosystem and Agricultural Engineering, KMITL</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-nav">
+      <a href="index.html">About</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="chapter2.html">Lecture Notes</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="chapter2.html" class="active">EN</a>
+      <a href="chapter2-th.html" lang="th">ไทย</a>
+    </div>
+    <a class="btn-give" href="#s20">Worked Example</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MHE 301 <span>|</span> Chapter 2 <span>|</span> Lecture Notes</p>
+    <h1>Handling Equipment and Selection</h1>
+    <p class="tagline">The five categories of materials handling equipment, the unit load concept that
+      underpins most of them, and the two-stage method for choosing between roughly fifty equipment types
+      for a given move.</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="course-menu">
+      <h2>Course Menu</h2>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Ch.&nbsp;1 &mdash; Belt Conveyors</a></li>
+        <li><a href="quiz1.html">Ch.&nbsp;1 &mdash; Self-Check</a></li>
+        <li><a href="chapter2.html" class="active">Ch.&nbsp;2 &mdash; Equipment &amp; Selection</a></li>
+        <li><a href="quiz2.html">Ch.&nbsp;2 &mdash; Self-Check</a></li>
+        <li><span class="muted">Ch.&nbsp;3 &mdash; Chain &amp; Apron Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;4 &mdash; Screw Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;5 &mdash; Bucket Elevators<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;6 &mdash; Pneumatic Conveying<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;7 &mdash; Cranes &amp; Hoists<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;8 &mdash; Industrial Trucks &amp; AGVs<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;9 &mdash; Storage &amp; Warehousing<em>Not yet published</em></span></li>
+      </ul>
+    </nav>
+
+    <section class="course-info">
+      <h2>Chapter Info</h2>
+      <dl>
+        <dt>Weeks</dt><dd>5&ndash;6</dd>
+        <dt>Problem Sets</dt><dd>PS 4</dd>
+        <dt>Primary Source</dt>
+        <dd>
+          <ul>
+            <li>Kay, <em>Material Handling Equipment</em>, NCSU</li>
+            <li>CIC-MHE ten principles</li>
+            <li>ISO 5048 material code</li>
+          </ul>
+        </dd>
+        <dt>Key Skills</dt>
+        <dd>
+          <span class="pill">Classification</span>
+          <span class="pill">Unit load</span>
+          <span class="pill">Material code</span>
+          <span class="pill">Load capacity</span>
+          <span class="pill">Selection</span>
+        </dd>
+      </dl>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <p class="lead">Chapter 1 designed one machine in depth. This chapter does the opposite: it lays out the
+      whole catalogue &mdash; five categories, roughly seventy equipment types &mdash; and gives you a
+      disciplined way to narrow that catalogue down to the right machine for a given move, before any
+      sizing calculation begins.</p>
+
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">What Handling Is, and Whether It Adds Value</a></li>
+        <li><a href="#s2">The Materials Handling Equation</a></li>
+        <li><a href="#s3">Which Cost Should Be Minimised</a></li>
+        <li><a href="#s4">Material Characteristics and Categories</a></li>
+        <li><a href="#s5">The Bulk Material Code</a></li>
+        <li><a href="#s6">The Unit Load Concept</a></li>
+        <li><a href="#s7">The Five Equipment Categories</a></li>
+        <li><a href="#s8">Conveyor, Crane or Truck?</a></li>
+        <li><a href="#s9">Unit Load Formation Equipment</a></li>
+        <li><a href="#s10">Pallets</a></li>
+        <li><a href="#s11">Positioning Equipment</a></li>
+        <li><a href="#s12">Conveyors</a></li>
+        <li><a href="#s13">Cranes</a></li>
+        <li><a href="#s14">Industrial Trucks</a></li>
+        <li><a href="#s15">Lift Truck Load Capacity</a></li>
+        <li><a href="#s16">Automated Guided Vehicles</a></li>
+        <li><a href="#s17">Storage Equipment</a></li>
+        <li><a href="#s18">Identification and Control</a></li>
+        <li><a href="#s19">Selecting the Equipment</a></li>
+        <li><a href="#s20">Worked Selection Example</a></li>
+        <li><a href="#s21">Nomenclature</a></li>
+        <li><a href="#s22">Problems</a></li>
+        <li><a href="#s23">References</a></li>
+      </ol>
+    </nav>
+
+    <!-- ============================================================ 2.1 -->
+    <h2 id="s1">2.1 What Handling Is, and Whether It Adds Value</h2>
+
+    <p>Materials handling is <b>&ldquo;short-distance movement that usually takes place within the confines
+      of a building such as a plant or a warehouse, and between a building and a transportation
+      agency.&rdquo;</b> The distance qualifier is what separates handling from transportation: moving a
+      pallet across a warehouse is handling, shipping the same pallet across the country is transport.</p>
+
+    <p>Economists describe what a process adds in terms of <b>utility</b>. Manufacturing creates
+      <b>form utility</b> &mdash; it changes the shape, form and makeup of the material. Handling, storage
+      and control create <b>time and place utility</b> &mdash; they put the material where it is wanted, when
+      it is wanted, without changing what it is.</p>
+
+    <div class="callout rule">
+      <span class="label">A refinement of Chapter 1</span>
+      <p>Chapter&nbsp;1 stated flatly that handling adds no value. That is the traditional teaching, and as a
+        <em>design attitude</em> it is useful &mdash; it stops you gold-plating a conveyor. But it is not
+        strictly true, and it is worth knowing why. Time and place utility can add real value:</p>
+      <ul>
+        <li>The value to a customer of overnight delivery is at least equal to what they pay for it,
+          otherwise they would have used ordinary post.</li>
+        <li>The value of storing parts beside a bottleneck machine is the gain from higher machine
+          utilisation, less the cost of storing them there.</li>
+      </ul>
+      <p>So handling <em>can</em> add value. The reason we still design it as a cost is practical, not
+        philosophical: the benefits are hard to identify and quantify, while the costs &mdash; equipment,
+        indirect labour, floor space &mdash; are easy. That asymmetry, not a claim about value, is what
+        drives the cost-minimising approach in &sect;2.3.</p>
+    </div>
+
+    <h3>The ten principles</h3>
+    <p>The ten principles of the College-Industry Council on Material Handling Education apply here exactly as
+      they did in Chapter&nbsp;1, and are not repeated: see <a href="chapter1.html#s1">&sect;1.1, Table 1.1</a>.
+      Three of them do most of the work in this chapter. The <b>Unit Load</b> principle (&sect;2.6) governs how
+      material is presented to the equipment. The <b>Standardisation</b> principle argues against the very
+      variety catalogued here &mdash; every extra equipment type is another set of spares and another training
+      course. And the <b>Life Cycle Cost</b> principle is what turns a technical shortlist into a single
+      choice in &sect;2.19.</p>
+
+    <!-- ============================================================ 2.2 -->
+    <h2 id="s2">2.2 The Materials Handling Equation</h2>
+
+    <p>Before any equipment can be chosen, six questions have to be answered in order. Together they are known
+      as the materials handling equation.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.1.</b> The six questions, and what each one settles.</caption>
+        <thead><tr><th class="num">#</th><th>Question</th><th>What it establishes</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Why</b> is the material moved?</td>
+              <td>Whether the move is needed at all. The Work principle says the cheapest move is the one you delete.</td></tr>
+          <tr><td class="num">2</td><td><b>What</b> is moved?</td>
+              <td>The material: state, size, weight, shape, lump size, flowability, abrasiveness (&sect;2.4, &sect;2.5).</td></tr>
+          <tr><td class="num">3</td><td><b>Where</b> from and <b>where</b> to?</td>
+              <td>The route: distance, level changes, curves, branches, fixed or variable path (&sect;2.8).</td></tr>
+          <tr><td class="num">4</td><td><b>When</b>, and how often?</td>
+              <td>The rate: tonnes or units per hour, continuous or intermittent, peak versus average.</td></tr>
+          <tr><td class="num">5</td><td><b>How</b> is it moved?</td>
+              <td>The method and the equipment &mdash; an <em>answer</em>, not a question you start from.</td></tr>
+          <tr><td class="num">6</td><td><b>Who</b> moves it?</td>
+              <td>Operator, semi-automated or fully automated, and the labour cost that follows.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 860 260" role="img" aria-label="The materials handling equation: what plus where plus when equals how plus who">
+        <rect x="0" y="0" width="860" height="260" fill="#ffffff"/>
+
+        <!-- left group: the givens -->
+        <g>
+          <rect x="30" y="46" width="124" height="52" rx="3" fill="#FFF1D1" stroke="#e3dac7" stroke-width="2"/>
+          <text x="92" y="70" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">WHAT</text>
+          <text x="92" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">the material</text>
+
+          <text x="172" y="78" font-family="Segoe UI, sans-serif" font-size="22" fill="#726b64" text-anchor="middle">+</text>
+
+          <rect x="190" y="46" width="124" height="52" rx="3" fill="#FFF1D1" stroke="#e3dac7" stroke-width="2"/>
+          <text x="252" y="70" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">WHERE</text>
+          <text x="252" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">the route</text>
+
+          <text x="332" y="78" font-family="Segoe UI, sans-serif" font-size="22" fill="#726b64" text-anchor="middle">+</text>
+
+          <rect x="350" y="46" width="124" height="52" rx="3" fill="#FFF1D1" stroke="#e3dac7" stroke-width="2"/>
+          <text x="412" y="70" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">WHEN</text>
+          <text x="412" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">the rate</text>
+        </g>
+
+        <text x="500" y="80" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#DF301C" text-anchor="middle">=</text>
+
+        <!-- right group: the answers -->
+        <g>
+          <rect x="530" y="46" width="124" height="52" rx="3" fill="#f0fafc" stroke="#00B7CD" stroke-width="2"/>
+          <text x="592" y="70" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">HOW</text>
+          <text x="592" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">the method</text>
+
+          <text x="672" y="78" font-family="Segoe UI, sans-serif" font-size="22" fill="#726b64" text-anchor="middle">+</text>
+
+          <rect x="690" y="46" width="124" height="52" rx="3" fill="#f0fafc" stroke="#00B7CD" stroke-width="2"/>
+          <text x="752" y="70" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">WHO</text>
+          <text x="752" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">the operator</text>
+        </g>
+
+        <!-- second line: condensed form -->
+        <line x1="30" y1="134" x2="814" y2="134" stroke="#e3dac7" stroke-width="2"/>
+
+        <text x="92"  y="176" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#4b4540" text-anchor="middle">MATERIAL</text>
+        <text x="172" y="176" font-family="Segoe UI, sans-serif" font-size="20" fill="#726b64" text-anchor="middle">+</text>
+        <text x="332" y="176" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#4b4540" text-anchor="middle">MOVE</text>
+        <text x="500" y="178" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#DF301C" text-anchor="middle">=</text>
+        <text x="672" y="176" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#4b4540" text-anchor="middle">METHOD</text>
+
+        <!-- brace-ish underlines -->
+        <line x1="30"  y1="192" x2="474" y2="192" stroke="#DF301C" stroke-width="2"/>
+        <line x1="530" y1="192" x2="814" y2="192" stroke="#00788A" stroke-width="2"/>
+        <text x="252" y="216" font-family="Segoe UI, sans-serif" font-size="13" fill="#DF301C" text-anchor="middle">given by the process and the layout</text>
+        <text x="672" y="216" font-family="Segoe UI, sans-serif" font-size="13" fill="#00788A" text-anchor="middle">what the engineer chooses</text>
+      </svg>
+      <figcaption><b>Figure 2.1.</b> The materials handling equation. The left-hand side is handed to you by
+        the product and the plant layout; only the right-hand side is yours to design. Engineers who start
+        from &ldquo;we need a conveyor&rdquo; have begun on the wrong side of the equals sign.</figcaption>
+    </figure>
+
+    <!-- ============================================================ 2.3 -->
+    <h2 id="s3">2.3 Which Cost Should Be Minimised</h2>
+
+    <p>The usual approach is to treat handling as a cost to be minimised: the production process is designed
+      first, alternative handling systems that satisfy it are then generated, and the cheapest is selected.
+      Whether that is the right criterion depends on how much of the rest of the plant is still open to
+      change.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Situation</th><th>Correct criterion</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>A completely new facility and process is being designed</td>
+            <td><b>Total cost of production</b></td>
+            <td>The cheapest handling system may force a layout that raises production cost by more than it saves. Handling and layout have to be traded against each other.</td>
+          </tr>
+          <tr>
+            <td>The layout and process are fixed and too costly to change</td>
+            <td><b>Handling system cost alone</b></td>
+            <td>Everything else is a constraint, so handling cost is the only variable left.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>In practice even a greenfield design cannot hold every cost component open at once. The aspects with the
+      largest impact get fixed early and become constraints on everything decided afterwards. Recognising
+      <em>which</em> decisions have already been frozen is half of knowing what you are actually allowed to
+      optimise.</p>
+
+    <!-- ============================================================ 2.4 -->
+    <h2 id="s4">2.4 Material Characteristics and Categories</h2>
+
+    <p>The characteristics that affect handling are:</p>
+    <ul>
+      <li><b>Size</b> &mdash; width, depth, height.</li>
+      <li><b>Weight</b> &mdash; per item, or per unit volume.</li>
+      <li><b>Shape</b> &mdash; round, square, long, rectangular, irregular.</li>
+      <li><b>Other</b> &mdash; slippery, fragile, sticky, explosive, frozen, hot, corrosive, hygroscopic.</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.2.</b> Material categories by physical state.</caption>
+        <thead><tr><th>Material category</th><th>Solid</th><th>Liquid</th><th>Gas</th></tr></thead>
+        <tbody>
+          <tr><td><b>Individual units</b></td><td>Part, subassembly</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td><b>Containerised items</b></td><td>Carton, bag, tote, box, pallet, bin</td><td>Barrel</td><td>Cylinder</td></tr>
+          <tr><td><b>Bulk materials</b></td><td>Sand, cement, coal, granular products</td><td>Liquid chemicals, solvents, gasoline</td><td>Oxygen, nitrogen, carbon dioxide</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The category decides the entire design method, through a chain of three implications:</p>
+
+    <div class="eq">
+      <span class="body">
+        Individual units and containerised items &rarr; <b>discrete</b> material flow &rarr; unit loads
+        &rarr; <b>unit handling equipment</b>
+      </span>
+      <span class="tag">(2.1)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        Bulk materials &rarr; <b>continuous</b> material flow &rarr; <b>bulk handling equipment</b>
+      </span>
+      <span class="tag">(2.2)</span>
+    </div>
+
+    <p>Discrete flow is designed from a <em>count and a cycle time</em>; continuous flow is designed from a
+      <em>cross-section and a velocity</em>, exactly as in Chapter&nbsp;1. Note that the same physical
+      substance can be handled either way, and the choice is a real design decision rather than a property of
+      the material.</p>
+
+    <figure>
+      <svg viewBox="0 0 880 470" role="img" aria-label="The same dry bulk material handled two ways: as bagged unit loads, and as bulk">
+        <rect x="0" y="0" width="880" height="470" fill="#ffffff"/>
+
+        <!-- ============ panel 1: unit handling ============ -->
+        <rect x="20" y="18" width="840" height="200" fill="#fffdf8" stroke="#e3dac7" stroke-width="2"/>
+        <text x="36" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C">A &mdash; UNIT HANDLING (bagged, palletised)</text>
+
+        <!-- span dimension -->
+        <g stroke="#726b64" stroke-width="1.4">
+          <line x1="70" y1="62" x2="800" y2="62"/>
+          <path d="M 80 57 L 70 62 L 80 67" fill="none"/>
+          <path d="M 790 57 L 800 62 L 790 67" fill="none"/>
+        </g>
+        <text x="435" y="56" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">60 m</text>
+
+        <!-- floor -->
+        <line x1="60" y1="192" x2="812" y2="192" stroke="#9a9a9a" stroke-width="3"/>
+        <line x1="60" y1="86" x2="700" y2="86" stroke="#cccccc" stroke-width="3"/>
+
+        <!-- mixer -->
+        <circle cx="104" cy="170" r="20" fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2.5"/>
+        <line x1="104" y1="88" x2="104" y2="148" stroke="#8f8f8f" stroke-width="2.5"/>
+        <path d="M 98 140 L 104 152 L 110 140" fill="none" stroke="#8f8f8f" stroke-width="2.5"/>
+        <text x="104" y="212" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">Mixer</text>
+        <text x="96" y="112" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="end">manual feed</text>
+
+        <!-- pallet stacks -->
+        <g fill="#c9a97a" stroke="#8a6f47" stroke-width="1.5">
+          <rect x="196" y="164" width="52" height="12"/><rect x="196" y="150" width="52" height="12"/>
+          <rect x="266" y="164" width="52" height="12"/><rect x="266" y="150" width="52" height="12"/>
+          <rect x="336" y="164" width="52" height="12"/><rect x="336" y="150" width="52" height="12"/>
+        </g>
+        <g fill="#8f8f8f">
+          <rect x="192" y="176" width="60" height="7"/><rect x="262" y="176" width="60" height="7"/>
+          <rect x="332" y="176" width="60" height="7"/>
+        </g>
+        <text x="292" y="212" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">Bagged storage on pallets</text>
+
+        <!-- fork truck -->
+        <g>
+          <rect x="470" y="146" width="46" height="30" rx="3" fill="#DF301C" stroke="#B22616" stroke-width="2"/>
+          <rect x="516" y="132" width="6" height="44" fill="#4b4540"/>
+          <rect x="522" y="166" width="30" height="5" fill="#4b4540"/>
+          <circle cx="482" cy="182" r="9" fill="#3a3a3a"/><circle cx="510" cy="182" r="9" fill="#3a3a3a"/>
+          <rect x="524" y="150" width="34" height="16" fill="#c9a97a" stroke="#8a6f47" stroke-width="1.5"/>
+        </g>
+        <text x="512" y="212" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">Fork truck transport</text>
+
+        <!-- palletising + boxcar -->
+        <text x="646" y="128" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">manual palletising</text>
+        <g fill="#c9a97a" stroke="#8a6f47" stroke-width="1.5">
+          <rect x="620" y="164" width="52" height="12"/><rect x="620" y="150" width="52" height="12"/>
+        </g>
+        <rect x="616" y="176" width="60" height="7" fill="#8f8f8f"/>
+        <rect x="712" y="118" width="76" height="64" rx="4" fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2.5"/>
+        <text x="750" y="156" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">Boxcar</text>
+        <g fill="#3a3a3a"><circle cx="728" cy="188" r="6"/><circle cx="772" cy="188" r="6"/></g>
+
+        <!-- ============ panel 2: bulk handling ============ -->
+        <rect x="20" y="240" width="840" height="212" fill="#f0fafc" stroke="#e3dac7" stroke-width="2"/>
+        <text x="36" y="264" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A">B &mdash; BULK HANDLING (pneumatic)</text>
+
+        <g stroke="#726b64" stroke-width="1.4">
+          <line x1="70" y1="284" x2="800" y2="284"/>
+          <path d="M 80 279 L 70 284 L 80 289" fill="none"/>
+          <path d="M 790 279 L 800 284 L 790 289" fill="none"/>
+        </g>
+        <text x="435" y="278" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">60 m</text>
+
+        <line x1="60" y1="426" x2="812" y2="426" stroke="#9a9a9a" stroke-width="3"/>
+
+        <!-- bulk storage bin -->
+        <path d="M 76 300 L 140 300 L 140 348 L 120 380 L 96 380 L 76 348 Z" fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2.5"/>
+        <text x="108" y="330" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">bulk bin</text>
+        <circle cx="108" cy="392" r="9" fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2"/>
+        <text x="150" y="396" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540">automatic feed</text>
+        <circle cx="108" cy="414" r="12" fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2.5"/>
+        <text x="108" y="450" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">Mixer</text>
+
+        <!-- air line -->
+        <path d="M 108 300 L 108 296 L 700 296 L 700 340 L 736 340" fill="none" stroke="#00B7CD" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M 320 290 L 308 296 L 320 302" fill="none" stroke="#00788A" stroke-width="2"/>
+        <line x1="300" y1="300" x2="300" y2="316" stroke="#00788A" stroke-width="1.2"/>
+        <text x="300" y="330" font-family="Segoe UI, sans-serif" font-size="11" fill="#00788A" text-anchor="middle">air line</text>
+
+        <!-- hopper car -->
+        <rect x="734" y="308" width="76" height="72" rx="4" fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2.5"/>
+        <text x="772" y="342" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">enclosed</text>
+        <text x="772" y="358" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">hopper car</text>
+        <g fill="#3a3a3a"><circle cx="752" cy="392" r="7"/><circle cx="792" cy="392" r="7"/></g>
+        <path d="M 772 380 L 772 406 L 700 406" fill="none" stroke="#00B7CD" stroke-width="5" stroke-linejoin="round"/>
+        <text x="636" y="422" font-family="Segoe UI, sans-serif" font-size="11" fill="#00788A">pick-up point</text>
+      </svg>
+      <figcaption><b>Figure 2.2.</b> The same dry material, over the same distance, handled two ways.
+        Route&nbsp;A treats it as containerised items and needs bags, pallets, a fork truck, a boxcar and two
+        manual operations. Route&nbsp;B treats it as bulk and needs a bin, a blower and a pipe. The choice
+        between them is not dictated by the material &mdash; it is a genuine design decision that trades
+        capital cost against labour, flexibility and packaging.</figcaption>
+    </figure>
+
+    <!-- ============================================================ 2.5 -->
+    <h2 id="s5">2.5 The Bulk Material Code</h2>
+
+    <p>For bulk solids the four or five properties that matter most are compressed into a single alphanumeric
+      code. Chapter&nbsp;1 used bulk density, lump size and abrasiveness one at a time; the code puts them in a
+      fixed order so that a material can be looked up and specified unambiguously.</p>
+
+    <div class="eq">
+      <span class="body">
+        Code = <b>[lump size]</b> <b>[flowability]</b> <b>[abrasiveness]</b> <b>[bulk density]</b>
+        <b>[miscellaneous]</b> &nbsp;<span class="units">e.g. A&nbsp;1&nbsp;6&nbsp;H&nbsp;MPQ</span>
+      </span>
+      <span class="tag">(2.3)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.3.</b> Class based on lump size, the first character of the code.</caption>
+        <thead><tr><th>Class</th><th>Description</th><th class="num">Largest dimension <var>a</var><sub>max</sub></th></tr></thead>
+        <tbody>
+          <tr><td><b>A</b></td><td>Dusty material</td><td class="num">up to 0.05 mm</td></tr>
+          <tr><td><b>B</b></td><td>Powdered material (fine sand)</td><td class="num">0.05&ndash;0.50 mm</td></tr>
+          <tr><td><b>C</b></td><td>Granular material (grain)</td><td class="num">0.5&ndash;10 mm</td></tr>
+          <tr><td><b>D</b></td><td>Small sized lumpy (crushed)</td><td class="num">10&ndash;60 mm</td></tr>
+          <tr><td><b>E</b></td><td>Medium sized lumpy</td><td class="num">60&ndash;200 mm</td></tr>
+          <tr><td><b>F</b></td><td>Large lump material</td><td class="num">200&ndash;500 mm</td></tr>
+          <tr><td><b>G</b></td><td>Especially large lump (stone, boulder)</td><td class="num">over 500 mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.4.</b> The remaining characters. Flowability is judged from the angle of repose,
+          which links this code directly to the surcharge angle used in
+          <a href="chapter1.html#s7">&sect;1.7</a>.</caption>
+        <thead><tr><th>Characteristic</th><th>Description</th><th>Limit</th><th class="num">Class</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="4"><b>Flowability</b><br><span class="units">(angle of repose)</span></td>
+              <td>Very free flowing</td><td>repose up to 30&deg;</td><td class="num">1</td></tr>
+          <tr><td>Free flowing</td><td>repose 30&ndash;45&deg;</td><td class="num">2</td></tr>
+          <tr><td>Average flowability</td><td>repose 45&deg; and above</td><td class="num">3</td></tr>
+          <tr><td>Sluggish</td><td>does not flow unaided</td><td class="num">4</td></tr>
+
+          <tr><td rowspan="4"><b>Abrasiveness</b></td>
+              <td>Non-abrasive</td><td>&mdash;</td><td class="num">6</td></tr>
+          <tr><td>Abrasive</td><td>&mdash;</td><td class="num">7</td></tr>
+          <tr><td>Very abrasive</td><td>&mdash;</td><td class="num">8</td></tr>
+          <tr><td>Very sharp</td><td>cuts or gouges belt covers</td><td class="num">9</td></tr>
+
+          <tr><td rowspan="4"><b>Bulk density</b></td>
+              <td>Light</td><td>up to 0.6 t/m&sup3;</td><td class="num">H</td></tr>
+          <tr><td>Medium</td><td>over 0.6 up to 1.6 t/m&sup3;</td><td class="num">I</td></tr>
+          <tr><td>Heavy</td><td>over 1.6 up to 2.0 t/m&sup3;</td><td class="num">J</td></tr>
+          <tr><td>Very heavy</td><td>over 2.0 up to 4.0 t/m&sup3;</td><td class="num">K</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The final group is the miscellaneous characteristics, of which more than one may apply. The letters most
+      often seen are:</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.5.</b> Miscellaneous characteristic classes, and what each one forces you to do
+          about it.</caption>
+        <thead><tr><th class="num">Class</th><th>Characteristic</th><th>Design consequence</th></tr></thead>
+        <tbody>
+          <tr><td class="num">L</td><td>Aerates, develops fluid characteristics</td><td>Will flood a feeder and leak past seals; needs a rotary airlock rather than a plain gate</td></tr>
+          <tr><td class="num">M</td><td>Contains explosive dust</td><td>Enclosure, dust extraction, earthing, ATEX-rated motors; no open belt</td></tr>
+          <tr><td class="num">N</td><td>Sticky, adhesive</td><td>Carryback; needs aggressive belt cleaners and a V-plough (<a href="chapter1.html#s4">&sect;1.4</a>)</td></tr>
+          <tr><td class="num">P</td><td>Contaminable, affecting use or saleability</td><td>Enclosed conveying, food-grade covers, cleanable transfer points</td></tr>
+          <tr><td class="num">Q</td><td>Degradable, affecting use or saleability</td><td>Low belt speed, low drop heights, gentle transfers (<a href="chapter1.html#s8">&sect;1.8</a>)</td></tr>
+          <tr><td class="num">R</td><td>Gives off harmful fumes or dust</td><td>Extraction and operator protection</td></tr>
+          <tr><td class="num">S / T</td><td>Highly / mildly corrosive</td><td>Stainless or coated components; affects idler and chute life</td></tr>
+          <tr><td class="num">U</td><td>Hygroscopic</td><td>Absorbs moisture and cakes; enclose and control dwell time</td></tr>
+          <tr><td class="num">W</td><td>Oils or chemicals present</td><td>Attacks rubber; specify oil-resistant belt covers</td></tr>
+          <tr><td class="num">X</td><td>Packs under pressure</td><td>Will bridge in a hopper; needs steep valley angles or live-bottom feeder</td></tr>
+          <tr><td class="num">Y</td><td>Very light and fluffy</td><td>Wind-swept; enclose the carrying run</td></tr>
+          <tr><td class="num">Z</td><td>Elevated temperature</td><td>Heat-resistant belt grades, or steel-pan conveyors instead</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.6.</b> Worked examples of the code for real materials.</caption>
+        <thead>
+          <tr><th>Material</th><th class="num">Bulk density (kg/m&sup3;)</th><th class="num">Repose (&deg;)</th><th class="num">Max incline (&deg;)</th><th>Code</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Alfalfa seed</td><td class="num">160&ndash;240</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>B16N</td></tr>
+          <tr><td>Alumina</td><td class="num">800&ndash;1040</td><td class="num">22</td><td class="num">10&ndash;12</td><td>B27M</td></tr>
+          <tr><td>Aluminium chips</td><td class="num">110&ndash;240</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>E47Y</td></tr>
+          <tr><td>Aluminium oxide</td><td class="num">1100&ndash;1900</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>A17M</td></tr>
+          <tr><td>Aluminium sulphate</td><td class="num">860</td><td class="num">32</td><td class="num">17</td><td>C26</td></tr>
+          <tr><td>Ammonium chloride, crystalline</td><td class="num">832</td><td class="num">30&ndash;35</td><td class="num">16</td><td>B26S</td></tr>
+          <tr><td>Ammonium nitrate</td><td class="num">720&ndash;1000</td><td class="num">25</td><td class="num">13</td><td>C37NUS</td></tr>
+          <tr><td>Ammonium phosphate</td><td class="num">990</td><td class="num">29</td><td class="num">15</td><td>C27</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">How to read a code</span>
+      <p>Take <b>C37NUS</b> for ammonium nitrate. <b>C</b> &mdash; granular, 0.5&ndash;10 mm.
+        <b>3</b> &mdash; average flowability. <b>7</b> &mdash; abrasive. Then the miscellaneous group:
+        <b>N</b> sticky, <b>U</b> hygroscopic, <b>S</b> highly corrosive. Note what the code has already told
+        you before you open a single catalogue: an enclosed conveyor in corrosion-resistant material, with
+        cleaners for the sticky carryback, and no long dwell in humid air. And the 13&deg; maximum incline
+        means a belt cannot climb as steeply as it could with coal.</p>
+    </div>
+
+    <!-- ============================================================ 2.6 -->
+    <h2 id="s6">2.6 The Unit Load Concept</h2>
+
+    <p>A <b>unit load</b> is either a single unit of an item, or multiple units so arranged or restrained that
+      they can be handled as a single unit and maintain their integrity. It is the single most important idea
+      in discrete handling, because it is what converts an unmanageable stream of individual cartons into a
+      countable object that standard equipment can pick up.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>More items handled at once, so fewer trips, and potentially lower handling cost, shorter loading and unloading times, and less product damage</td>
+            <td>Time spent forming and breaking down the load</td>
+          </tr>
+          <tr>
+            <td>Enables the use of standardised handling equipment</td>
+            <td>Cost of the pallets, containers and restraining materials</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Empty pallets and containers may have to be returned to their point of origin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Restraining a unit load</h3>
+    <ul>
+      <li><b>Self-restraining</b> &mdash; one or more units that hold together on their own, such as a single
+        part or interlocking parts. No equipment at all.</li>
+      <li><b>Platforms</b> &mdash; pallets (paper, wood, plastic, metal), skids (metal, plastic).</li>
+      <li><b>Sheets</b> &mdash; slipsheets of plastic, cardboard or plywood.</li>
+      <li><b>Reusable containers</b> &mdash; tote pans, pallet boxes, skid boxes, bins, baskets, bulk
+        containers such as barrels, intermodal containers.</li>
+      <li><b>Disposable containers</b> &mdash; cartons, bags, crates.</li>
+      <li><b>Racks</b>.</li>
+      <li><b>Load stabilisation</b> &mdash; strapping, shrink-wrap, stretch-wrap, glue, tape, wire, rubber
+        bands.</li>
+    </ul>
+
+    <h3>Moving a unit load</h3>
+    <p>There are only four mechanical ways to pick one up, and each one dictates a different family of
+      equipment:</p>
+    <ol>
+      <li><b>A lifting device under the mass of the load</b> &mdash; a pallet and fork truck.</li>
+      <li><b>Inserting a lifting element into the body of the load</b> &mdash; a ram through a coil of
+        steel.</li>
+      <li><b>Squeezing the load between two lifting surfaces</b> &mdash; carton clamps on a lift truck, or
+        your own two hands.</li>
+      <li><b>Suspending the load</b> &mdash; a hoist and crane.</li>
+    </ol>
+
+    <h3>Sizing the load</h3>
+    <p>Unit load design means settling three things: the type, size, weight and configuration of the load; the
+      equipment and method that will handle it; and the methods of forming and breaking it down. For
+      <b>in-process</b> handling the size is bounded above by the batch structure of the plant:</p>
+
+    <div class="eq">
+      <span class="body">
+        Single part &le; Unit load size &le; Transfer batch size &le; Production batch size
+      </span>
+      <span class="tag">(2.4)</span>
+    </div>
+
+    <p>A unit load larger than the production batch would have to wait for the next batch of that part to be
+      scheduled &mdash; possibly weeks &mdash; before it could travel. Within that bound, short moves favour
+      smaller unit loads and long moves favour larger ones. When two operations are adjacent, the unit load may
+      legitimately be a single part.</p>
+
+    <p>For <b>distribution</b> the size is bounded by things entirely outside the plant: standard pallet and
+      container sizes, the internal dimensions of truck trailers, rail boxcars and aircraft cargo bays, the
+      existing rack configuration in the warehouse, and the carton sizes and shelf restrictions of the
+      customer. Very little of this is negotiable, which is why distribution unit loads cluster on a handful of
+      standard footprints.</p>
+
+    <!-- ============================================================ 2.7 -->
+    <h2 id="s7">2.7 The Five Equipment Categories</h2>
+
+    <div class="callout warn">
+      <span class="label">Why the catalogue matters</span>
+      <p><em>&ldquo;If the only tool you have is a hammer, it is amazing how quickly all your problems seem to
+        look like nails.&rdquo;</em> An engineer who knows three equipment types will design every system out
+        of those three. The purpose of the next twelve sections is breadth, not depth: you are not expected to
+        size any of these machines yet, only to know that they exist and roughly what each is for.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.7.</b> The five categories. Note that every category has a &ldquo;no
+          equipment&rdquo; entry &mdash; manual handling is always one of the alternatives on the shortlist.</caption>
+        <thead><tr><th class="num">&nbsp;</th><th>Category</th><th>Definition</th><th>Sub-categories</th></tr></thead>
+        <tbody>
+          <tr><td class="num">I</td><td><b>Transport equipment</b></td>
+              <td>Moves material from one location to another</td>
+              <td>Conveyors, cranes, industrial trucks, and manual</td></tr>
+          <tr><td class="num">II</td><td><b>Positioning equipment</b></td>
+              <td>Handles material at a single location, to feed, orient, load, unload or manipulate it into the correct position for what comes next</td>
+              <td>11 types, &sect;2.11</td></tr>
+          <tr><td class="num">III</td><td><b>Unit load formation equipment</b></td>
+              <td>Restrains material so that it keeps its integrity when handled as a single load</td>
+              <td>15 types, &sect;2.9</td></tr>
+          <tr><td class="num">IV</td><td><b>Storage equipment</b></td>
+              <td>Holds or buffers material over a period of time</td>
+              <td>15 types, &sect;2.17</td></tr>
+          <tr><td class="num">V</td><td><b>Identification and control equipment</b></td>
+              <td>Collects and communicates the information that coordinates material flow</td>
+              <td>7 types, &sect;2.18</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The boundaries are not always sharp, and the overlaps are worth noticing. An AS/RS is storage equipment
+      whose S/R machine also transports. A storage carousel does the same. A jib crane is transport equipment
+      that frequently does a positioning job. The category tells you which chapter of the catalogue to open,
+      not what the machine is forbidden to do.</p>
+
+    <!-- ============================================================ 2.8 -->
+    <h2 id="s8">2.8 Conveyor, Crane or Truck?</h2>
+
+    <p>Within transport equipment, the three sub-categories are distinguished by four functional
+      characteristics of the <em>move</em>, not of the machine:</p>
+
+    <ul>
+      <li><b>Path</b> &mdash; <em>fixed</em> (between two specific points) or <em>variable</em> (between a
+        large variety of points).</li>
+      <li><b>Area</b> &mdash; <em>restricted</em> to a limited area, or <em>unrestricted</em>.</li>
+      <li><b>Move frequency</b> &mdash; <em>high</em> number of moves per period, or <em>low</em> and
+        intermittent.</li>
+      <li><b>Adjacent move</b> &mdash; is the move between adjacent activities or not?</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.8.</b> Which category suits which move.</caption>
+        <thead>
+          <tr><th>Path</th><th colspan="3">Fixed</th><th colspan="3">Variable</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Area</th><td colspan="3">Restricted</td><td colspan="2">Restricted</td><td>Unrestricted</td></tr>
+          <tr><th>Frequency</th><td>High</td><td colspan="2">Low</td><td>High</td><td>Low</td><td>&mdash;</td></tr>
+          <tr><th>Adjacent</th><td>&mdash;</td><td>Yes</td><td>No</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><th>Equipment</th>
+              <td><b>Conveyor</b></td>
+              <td><b>Conveyor</b></td>
+              <td><b>Truck<br>or crane</b></td>
+              <td><b>Industrial<br>truck</b></td>
+              <td><b>Crane</b></td>
+              <td><b>Industrial<br>truck</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Reading the table across gives a hierarchy of flexibility that is worth committing to memory:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>&nbsp;</th><th>Conveyor</th><th>Crane</th><th>Industrial truck</th></tr></thead>
+        <tbody>
+          <tr><th>Path</th><td>Fixed</td><td>Variable within a volume</td><td>Variable</td></tr>
+          <tr><th>Area</th><td>Restricted</td><td>Restricted</td><td>Unrestricted</td></tr>
+          <tr><th>Flow volume needed</th><td>High, to justify the fixed investment</td><td>Intermittent</td><td>Intermittent</td></tr>
+          <tr><th>Flexibility</th><td>Least</td><td>More than a conveyor</td><td>Most</td></tr>
+          <tr><th>Variety of loads</th><td>Least</td><td>More varied in shape and weight</td><td>Most</td></tr>
+          <tr><th>Labour</th><td>None per move</td><td>Operator per move</td><td>Operator per move</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout rule">
+      <span class="label">The recurring trade-off</span>
+      <p>Flexibility and cost per move run in opposite directions. A conveyor has a large fixed cost and a
+        near-zero cost per move; a fork truck has a small fixed cost and a significant cost per move, most of
+        it the operator's wages. That is why the deciding question is almost always <em>flow volume</em>: below
+        some break-even the truck wins, above it the conveyor does. Conveyors are used when there is
+        <em>sufficient flow volume to justify the fixed investment</em> &mdash; and that sentence, not any
+        property of the material, is the real selection rule.</p>
+    </div>
+
+    <!-- ============================================================ 2.9 -->
+    <h2 id="s9">2.9 Unit Load Formation Equipment</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.9.</b> The fifteen types of unit load formation equipment.</caption>
+        <thead><tr><th class="num">#</th><th>Type</th><th>Reusable?</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Self-restraining</td><td>&mdash;</td><td>No equipment; single or interlocking parts</td></tr>
+          <tr><td class="num">2</td><td>Pallets</td><td>Usually</td><td>See &sect;2.10</td></tr>
+          <tr><td class="num">3</td><td>Skids</td><td>Yes</td><td>Typically metal; greater clearance than a pallet, so a platform truck can drive underneath. Used for heavier loads and where stacking is not required</td></tr>
+          <tr><td class="num">4</td><td>Slipsheets</td><td>No</td><td>Thick paper, corrugated fibre or plastic; handled by a push/pull attachment</td></tr>
+          <tr><td class="num">5</td><td>Tote pans</td><td>Yes</td><td>In-process handling; nest for compact storage when empty</td></tr>
+          <tr><td class="num">6</td><td>Pallet / skid boxes</td><td>Yes</td><td>Pallet box also called a &ldquo;bin pallet&rdquo;</td></tr>
+          <tr><td class="num">7</td><td>Bins, baskets, racks</td><td>Yes</td><td>&nbsp;</td></tr>
+          <tr><td class="num">8</td><td>Cartons</td><td>No</td><td>Dimensions always quoted Length &times; Width &times; Depth</td></tr>
+          <tr><td class="num">9</td><td>Bags</td><td>No</td><td>For bulk material; 1 mil light to 6 mil heavy; flat or gusseted</td></tr>
+          <tr><td class="num">10</td><td>Bulk load containers</td><td>Yes</td><td>Barrels, cylinders; distribution and in-process</td></tr>
+          <tr><td class="num">11</td><td>Crates</td><td>No</td><td>Protects discrete items in distribution</td></tr>
+          <tr><td class="num">12</td><td>Intermodal containers</td><td>Yes</td><td>20 or 40 ft long, 8 ft wide, 8 / 8.5 / 9.5 ft high</td></tr>
+          <tr><td class="num">13</td><td>Strapping, tape, glue</td><td>No</td><td>Load stabilisation; steel or plastic straps</td></tr>
+          <tr><td class="num">14</td><td>Shrink-wrap / stretch-wrap</td><td>No</td><td>Stabilises irregular loads</td></tr>
+          <tr><td class="num">15</td><td>Palletisers</td><td>&mdash;</td><td>Machines that build the load; see below</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Slipsheets versus pallets</h3>
+    <p>A slipsheet costs 10&ndash;30&nbsp;% of a pallet and weighs 1&ndash;5&nbsp;% as much, which makes it
+      very attractive for long-distance shipping where the pallet would otherwise be paid for as freight and
+      then thrown away. The price is slower handling, greater load damage inside the facility, and a push/pull
+      attachment that reduces the lift truck's own load capacity.</p>
+
+    <h3>Shrink-wrap versus stretch-wrap</h3>
+    <p>In shrink-wrapping a film or bag is placed over the load and heat is applied to shrink it. In
+      stretch-wrapping the film is wound around the load while being stretched. Stretch-wrapping has lower
+      material, labour and energy costs, and has replaced shrink-wrap in most applications.</p>
+
+    <h3>Palletisers</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.10.</b> The three ways of building a unit load, and when each is right.</caption>
+        <thead><tr><th>Method</th><th class="num">Capacity</th><th>Flexibility</th><th>Suits</th></tr></thead>
+        <tbody>
+          <tr><td><b>Manual palletising</b></td><td class="num">Operator-limited</td><td>Total</td>
+              <td>Low volume, mixed loads. Ergonomics govern: the prime working zone is between knee and chest, reaches over 600&nbsp;mm with a load should be avoided, and a pallet load leveller keeps the working face at about 750&nbsp;mm throughout</td></tr>
+          <tr><td><b>Robotic pick and place</b></td><td class="num">~6 cycles/min</td><td>High</td>
+              <td>The Distributor's Pallet Loading Problem &mdash; a different mix on every pallet. Capacity depends on how many items are gripped per pick</td></tr>
+          <tr><td><b>Stripper plate, right angle</b></td><td class="num">up to 80 items/min</td><td>Moderate</td>
+              <td>Wide variety of case sizes; compact machine</td></tr>
+          <tr><td><b>Stripper plate, in-line</b></td><td class="num">up to 180 items/min</td><td>Low</td>
+              <td>The Manufacturer's Pallet Loading Problem &mdash; identical loads at high speed; needs more floor space</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A stripper plate palletiser assembles a whole layer of cases on an apron, positions the apron over the
+      pallet, then withdraws it so the layer drops as one. That is why its throughput is several times that of
+      a robot placing one or two cases at a time &mdash; and also why it cannot cope with a load whose pattern
+      changes every time.</p>
+
+    <h3>The pallet loading problem</h3>
+    <p>Two distinct optimisation problems share the name:</p>
+    <ul>
+      <li><b>The Manufacturer's Pallet Loading Problem</b> &mdash; load identical items onto a pallet so that
+        the number of items per pallet is maximised. The same answer is reused indefinitely, so it is worth
+        considerable effort to solve well, and it can be executed by a stripper plate palletiser.</li>
+      <li><b>The Distributor's Pallet Loading Problem</b> &mdash; load items of various sizes so that the
+        volume loaded is maximised, or so that the number of pallets needed is minimised. Every pallet needs a
+        fresh solution, so the effort spent per solution must be small, and execution is manual or
+        robotic.</li>
+    </ul>
+    <p>Both are <em>NP</em>-hard even under the usual simplifying assumptions that all items and pallets are
+      rectangular and that items are placed orthogonally. That is not a reason to avoid them; it is the reason
+      good heuristics and pattern libraries exist.</p>
+
+    <!-- ============================================================ 2.10 -->
+    <h2 id="s10">2.10 Pallets</h2>
+
+    <p>A pallet is a platform with enough clearance beneath its top surface for forks to be inserted. It is the
+      most standardised object in the whole of materials handling, and the dimensions of a great deal of other
+      equipment are derived from it.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 330" role="img" aria-label="Elements of a wooden pallet showing deckboards, stringers, notch, depth and width">
+        <rect x="0" y="0" width="760" height="330" fill="#ffffff"/>
+
+        <!-- isometric pallet: top deck -->
+        <g stroke="#8a6f47" stroke-width="1.8">
+          <!-- top deckboards -->
+          <g fill="#d8bd93">
+            <path d="M 150 150 L 470 96 L 560 118 L 240 172 Z"/>
+            <path d="M 168 186 L 488 132 L 578 154 L 258 208 Z"/>
+          </g>
+          <g fill="#c9a97a">
+            <path d="M 159 168 L 479 114 L 569 136 L 249 190 Z"/>
+          </g>
+        </g>
+
+        <!-- stringer front face -->
+        <path d="M 240 172 L 560 118 L 560 152 L 240 206 Z" fill="#b08f5f" stroke="#8a6f47" stroke-width="1.8"/>
+        <!-- notch -->
+        <path d="M 350 190 L 400 181 L 400 199 L 350 208 Z" fill="#ffffff" stroke="#8a6f47" stroke-width="1.8"/>
+
+        <!-- bottom deckboards -->
+        <g fill="#d8bd93" stroke="#8a6f47" stroke-width="1.8">
+          <path d="M 246 208 L 566 154 L 578 157 L 258 211 Z"/>
+        </g>
+
+        <!-- labels -->
+        <text x="740" y="100" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b4540" text-anchor="end">Deckboards</text>
+        <line x1="662" y1="106" x2="556" y2="122" stroke="#4b4540" stroke-width="1.2"/>
+
+        <text x="626" y="186" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b4540">Stringer</text>
+        <line x1="620" y1="182" x2="552" y2="150" stroke="#4b4540" stroke-width="1.2"/>
+
+        <text x="404" y="252" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b4540">Notch (four-way entry)</text>
+        <line x1="400" y1="244" x2="376" y2="206" stroke="#4b4540" stroke-width="1.2"/>
+
+        <!-- depth dimension along stringer direction, offset clear of the pallet -->
+        <g stroke="#DF301C" stroke-width="1.6">
+          <line x1="112" y1="168" x2="200" y2="192"/>
+          <path d="M 122 161 L 112 168 L 121 175" fill="none"/>
+          <path d="M 191 185 L 200 192 L 190 198" fill="none"/>
+        </g>
+        <text x="104" y="216" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C">DEPTH</text>
+        <text x="104" y="234" font-family="Segoe UI, sans-serif" font-size="12" fill="#DF301C">(stringer length)</text>
+
+        <!-- width dimension along deckboard direction -->
+        <g stroke="#00788A" stroke-width="1.6">
+          <line x1="176" y1="118" x2="452" y2="72"/>
+          <path d="M 186 112 L 176 118 L 187 124" fill="none"/>
+          <path d="M 442 66 L 452 72 L 441 78" fill="none"/>
+        </g>
+        <text x="314" y="60" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00788A" text-anchor="middle">WIDTH</text>
+        <text x="314" y="44" font-family="Segoe UI, sans-serif" font-size="12" fill="#00788A" text-anchor="middle">(deckboard length)</text>
+
+        <!-- caption strip -->
+        <text x="380" y="292" font-family="Segoe UI, sans-serif" font-size="14" fill="#1c1917" text-anchor="middle">
+          Size is always quoted <tspan font-weight="700" fill="#DF301C">Depth</tspan> &times; <tspan font-weight="700" fill="#00788A">Width</tspan>
+        </text>
+        <text x="380" y="312" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b4540" text-anchor="middle">
+          so a 48 &times; 40 in. pallet is not the same object as a 40 &times; 48 in. pallet
+        </text>
+      </svg>
+      <figcaption><b>Figure 2.3.</b> Elements of a wooden pallet. The stringers provide the fork clearance;
+        notching them allows entry from all four sides but weakens them, and the notches are too shallow for
+        the wheels of a pallet jack.</figcaption>
+    </figure>
+
+    <h3>Materials and cost</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.11.</b> Pallet materials.</caption>
+        <thead><tr><th>Material</th><th class="num">Cost each</th><th>Life</th><th>Characteristics</th></tr></thead>
+        <tbody>
+          <tr><td><b>Paper</b></td><td class="num">$3&ndash;10</td><td>Expendable</td>
+              <td>2.5 kg and 50 mm high; lighter and smaller than wood. IKEA switched from wood to paper and reported saving $193 million a year</td></tr>
+          <tr><td><b>Wood</b></td><td class="num">$5&ndash;25</td><td>~5 trips</td>
+              <td>Most common. Low initial cost; repair costs about two thirds of a new pallet</td></tr>
+          <tr><td><b>Plastic</b></td><td class="num">$45&ndash;90</td><td>2&ndash;3 years</td>
+              <td>Uniform tare weight, steam cleanable for sanitary applications, durable. Becoming more common as lumber and repair costs rise</td></tr>
+          <tr><td><b>Rubber</b></td><td class="num">&mdash;</td><td>&mdash;</td><td>Spark-free environments</td></tr>
+          <tr><td><b>Metal</b></td><td class="num">&mdash;</td><td>&mdash;</td><td>Heavy loads</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Dimensions</h3>
+    <ul>
+      <li>Size is specified as <b>Depth (stringer length) &times; Width (deckboard length)</b>. Height,
+        typically 125&nbsp;mm, is not quoted.</li>
+      <li>The <b>48 &times; 40 in.</b> (1219 &times; 1016 mm) pallet is by far the most popular in the United
+        States, at 27&nbsp;% of all pallets with no other size above 5&nbsp;%. The reason is dimensional: two
+        fit abreast across the 48 in. dimension in a railroad freight car, and two fit abreast across the
+        40 in. dimension in most trucks.</li>
+      <li>The <b>1200 &times; 800 mm Euro-Pallet</b> is the European standard.</li>
+      <li>The maximum depth of a standard pallet is 48 in. That single fact is why the rated load capacity of
+        counterbalanced lift trucks is defined at a 24 in. load centre &mdash; half of 48 &mdash; as
+        &sect;2.15 will show.</li>
+    </ul>
+
+    <h3>Design features</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.12.</b> The four design choices. The default option is shown in bold.</caption>
+        <thead><tr><th>Choice</th><th>Options</th><th>Trade-off</th></tr></thead>
+        <tbody>
+          <tr><td>Entry</td><td><b>Two-way</b> vs four-way</td>
+              <td>Four-way lets forks and strapping enter any side, increasing flexibility and cost. Four-way is achieved by <b>notching</b> the stringers (cheaper, but pallet jacks still get only two-way entry because their wheels cannot pass the notches) or by <b>block legs</b> (four-way for all fork trucks, and nestable for empty storage)</td></tr>
+          <tr><td>Faces</td><td><b>Single face</b> vs double face</td>
+              <td>Single face is cheaper and nests for empty storage; double face adds strength and stability and spreads the load when pallets are stacked. Most disposable wooden pallets are single face, most reusable ones double face</td></tr>
+          <tr><td>Reversibility</td><td>Reversible vs <b>nonreversible</b></td>
+              <td>A reversible pallet can be loaded either way up, useful where deckboards get soiled &mdash; but pallet jacks and pallet trucks cannot be used, because their front wheels have nowhere to extend to the floor</td></tr>
+          <tr><td>Stringer</td><td><b>Flush</b> vs single wing vs double wing</td>
+              <td>Wings overhang the stringers and are usually the first point of failure. A single wing gives clearance for the outriggers of a narrow-aisle straddle truck; a double wing (&ldquo;stevedore's pallet&rdquo;) leaves room for bar slings so a crane can lift it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The most popular type overall is the <b>two-way, double-face, nonreversible, flush stringer</b> pallet.
+      Not every combination is feasible &mdash; a single-face reversible pallet is a contradiction &mdash; and
+      several feasible ones are structurally weak or offer no benefit.</p>
+
+    <h3>Special-purpose pallets</h3>
+    <ul>
+      <li><b>Take-it-or-leave-it pallet</b> &mdash; fitted with cleats on the top deckboards so forks can pass
+        beneath the load and remove it from the pallet.</li>
+      <li><b>Slave pallet</b> &mdash; a support base for palletised loads inside a rack or conveyor system.</li>
+      <li><b>Captive pallet</b> &mdash; stays within one facility and is never exchanged.</li>
+      <li><b>Exchange pallet</b> &mdash; ownership transfers with the load among a pool of shippers.</li>
+      <li><b>Shipping pallet</b> &mdash; a single one-way trip, then disposed of.</li>
+    </ul>
+
+    <h3>Pallet patterns</h3>
+    <p>The four basic patterns are <b>block</b> (all cases the same way, columns aligned), <b>row</b>,
+      <b>brick</b> and <b>pinwheel</b>. Block stacking gives the highest compressive strength because corner
+      posts line up vertically; interlocked patterns such as brick and pinwheel give a more stable load that is
+      less likely to shed in transit but lose some of that column strength. The choice is a genuine trade-off
+      between stacking height and load stability.</p>
+
+    <!-- ============================================================ 2.11 -->
+    <h2 id="s11">2.11 Positioning Equipment</h2>
+
+    <p>Positioning equipment handles material at a single location. Compared with manual handling it can raise
+      productivity where handling frequency is high, improve quality and limit damage where the item is heavy
+      or awkward, and reduce fatigue and injury where the environment is hazardous or inaccessible. In many
+      cases it is justified by ergonomics alone.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.13.</b> The eleven types of positioning equipment.</caption>
+        <thead><tr><th class="num">#</th><th>Type</th><th>Function and key limit</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Manual</b></td>
+              <td>Under ideal conditions the maximum recommended weight for manual lifting is <b>51 lb (23 kg)</b>, from the NIOSH 1991 lifting equation, which then applies six multipliers that reduce it for less than ideal tasks</td></tr>
+          <tr><td class="num">2</td><td><b>Lift / tilt / turn table</b></td>
+              <td>Lifts, tilts or turns a load to limit a worker's reaching and bending. A <em>pallet load leveller</em> lowers as each layer is added so palletising always happens at about 750&nbsp;mm</td></tr>
+          <tr><td class="num">3</td><td><b>Dock leveller</b></td>
+              <td>Bridges the height difference between a truck bed and the dock</td></tr>
+          <tr><td class="num">4</td><td><b>Ball transfer table</b></td>
+              <td>Manual transfer between conveyors and machines in any direction. Ball friction limits the load to about <b>600 lb (270 kg)</b> because the load is pushed</td></tr>
+          <tr><td class="num">5</td><td><b>Rotary index table</b></td>
+              <td>Synchronous transfer of small parts between stations around a circular table. Because every part indexes at the same instant, it is difficult to put buffers between stations &mdash; one slow station stops all of them</td></tr>
+          <tr><td class="num">6</td><td><b>Parts feeder</b></td>
+              <td>Feeds and orients small identical parts for automatic assembly. Motion from vibration, gravity, centrifugal force, tumbling or air pressure. The <em>vibratory bowl feeder</em> is the most versatile: parts climb a spiral track and wrongly oriented ones fall back for another attempt</td></tr>
+          <tr><td class="num">7</td><td><b>Air film device</b></td>
+              <td>&ldquo;Air pallets&rdquo;. A film of compressed air at 10&ndash;50 psi floats loads up to 300,000 lb so a 1 lb horizontal push moves 1000 lb. Needs a smooth floor to push against; can replace a crane</td></tr>
+          <tr><td class="num">8</td><td><b>Hoist</b></td>
+              <td>Vertical translation, using chain or wire rope. Duty classes H1 (1&ndash;2 lifts per month) through H2 (avg. 75 start/stops per hour), H3 (max. 250 per hour), H4 heavy and H5 severe</td></tr>
+          <tr><td class="num">9</td><td><b>Balancer</b></td>
+              <td>Supports and controls a load so the operator guides an apparently weightless object</td></tr>
+          <tr><td class="num">10</td><td><b>Manipulator</b></td>
+              <td>&ldquo;Muscle multipliers&rdquo; &mdash; counterbalance the load so the operator lifts about 1&nbsp;% of its weight. Rigid-link, articulated jib crane and vacuum types. They fill the gap between hoists and robots: wider range of tasks than a hoist, more flexible than a robot because a human is in the loop</td></tr>
+          <tr><td class="num">11</td><td><b>Industrial robot</b></td>
+              <td>Variable programmed motions. Distinguished from a manipulator not by construction but by <b>who is in control</b>: programmed logic rather than an operator</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 2.12 -->
+    <h2 id="s12">2.12 Conveyors</h2>
+
+    <p>Conveyors are used when material moves frequently between specific points, over a fixed path, and the
+      flow volume justifies the fixed investment. They are classified three ways at once, and it is worth
+      recording all three for every type:</p>
+    <ul>
+      <li><b>Product</b> &mdash; unit load or bulk load</li>
+      <li><b>Location</b> &mdash; in-floor, on-floor or overhead</li>
+      <li><b>Accumulation</b> &mdash; can loads accumulate on the conveyor, or not?</li>
+    </ul>
+
+    <div class="callout">
+      <span class="label">Why accumulation matters</span>
+      <p>Accumulation is the ability of loads to stop and queue on the conveyor while it keeps running. Without
+        it, every stoppage downstream must immediately stop the whole conveyor and everything feeding it. With
+        it, the conveyor itself becomes a buffer. This single property often decides the choice between two
+        otherwise similar conveyors.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.14.</b> The nineteen conveyor types.</caption>
+        <thead><tr><th class="num">#</th><th>Conveyor</th><th>Classification</th><th>Characteristics</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Chute</b></td><td>Unit/Bulk &middot; On-floor &middot; Accumulate</td>
+              <td>Inexpensive; links two handling devices; provides accumulation in shipping; conveys between floors. Position of items is difficult to control</td></tr>
+          <tr><td class="num">2</td><td><b>Wheel</b></td><td>Unit &middot; On-floor &middot; Accumulate</td>
+              <td>Skatewheels on shafts; wheel spacing depends on the load; gravity slope depends on load weight. More economical than roller; light duty; flexible expandable mobile versions</td></tr>
+          <tr><td class="num">3</td><td><b>Roller</b></td><td>Unit &middot; On-floor &middot; Accumulate</td>
+              <td>Powered or gravity. Loads need a rigid riding surface, and at least <b>three rollers</b> must support the smallest load at all times. Tapered rollers on curves keep orientation. <em>Gravity</em>: heavy duty, accumulating. <em>Live</em>: belt or chain driven, force-sensitive transmission disengages rollers for accumulation; merging and sorting; limited incline</td></tr>
+          <tr><td class="num">4</td><td><b>Chain</b></td><td>Unit &middot; In/On-floor &middot; No accumulation</td>
+              <td>Loads carried directly on endless chains. Parallel chains form a pallet conveyor or a pop-up sortation device. A <em>vertical chain conveyor</em> gives continuous high-frequency vertical transfer</td></tr>
+          <tr><td class="num">5</td><td><b>Slat</b></td><td>Unit &middot; In/On-floor &middot; No accumulation</td>
+              <td>Slats on a chain; the load keeps its position and orientation as on a belt. For heavy loads, or loads that would damage a belt. Bottling and canning plants use flat chain or slat because of wet conditions, temperature and cleanliness</td></tr>
+          <tr><td class="num">6</td><td><b>Flat belt</b></td><td>Unit &middot; On-floor &middot; No accumulation</td>
+              <td>Light and medium loads between operations, departments, levels and buildings, and wherever an incline or decline is needed. Considerable control over orientation, but no smooth accumulation, merging or sorting. Roller-bed or slider-bed supported; slider bed for small or irregular items</td></tr>
+          <tr><td class="num">7</td><td><b>Magnetic belt</b></td><td>Bulk &middot; On-floor</td>
+              <td>Steel belt with a magnetic slider bed or pulley; carries ferrous material vertically, upside down and around corners</td></tr>
+          <tr><td class="num">8</td><td><b>Troughed belt</b></td><td>Bulk &middot; On-floor</td>
+              <td>The subject of <a href="chapter1.html">Chapter&nbsp;1</a>. The loaded belt conforms to the shape of the troughing idlers</td></tr>
+          <tr><td class="num">9</td><td><b>Bucket</b></td><td>Bulk &middot; On-floor</td>
+              <td>Vertical or inclined path; buckets on a cable, chain or belt, unloaded automatically at the end of the run</td></tr>
+          <tr><td class="num">10</td><td><b>Vibrating</b></td><td>Bulk &middot; On-floor</td>
+              <td>Trough, bed or tube vibrating at high frequency and small amplitude. Conveys almost all granular free-flowing material. An <em>oscillating conveyor</em> uses lower frequency and larger amplitude &mdash; less gentle &mdash; for larger objects such as hot castings</td></tr>
+          <tr><td class="num">11</td><td><b>Screw</b></td><td>Bulk &middot; On-floor</td>
+              <td>Shaft-mounted helix in a tube or U-trough. One of the most widely used conveyors in process industries, especially agricultural and chemical. Straight-tube version called an &ldquo;auger feed&rdquo;. The water screw dates from about 250 BC</td></tr>
+          <tr><td class="num">12</td><td><b>Pneumatic</b></td><td>Bulk/Unit &middot; Overhead</td>
+              <td>Air pressure through vertical and horizontal tubes. Material fully enclosed and turns are easy. <em>Dilute phase</em>: push systems go from one entry to several discharges, pull (vacuum) systems from several entries to one discharge, push-pull does both. <em>Carrier system</em>: capsules carrying documents or cash</td></tr>
+          <tr><td class="num">13</td><td><b>Vertical</b></td><td>Unit &middot; On-floor &middot; No accumulation</td>
+              <td>Low-frequency intermittent transfer between floors. Differs from a freight elevator in that it is <b>not certified to carry people</b>. Alternative to a chute where the load is fragile or space is tight</td></tr>
+          <tr><td class="num">14</td><td><b>Cart-on-track</b></td><td>Unit &middot; In-floor &middot; Accumulate</td>
+              <td>Carts driven by a rotating tube; the angle between each cart's drive wheel and the tube sets that cart's speed, so carts are independently controlled and accumulate when the wheel is parallel to the tube</td></tr>
+          <tr><td class="num">15</td><td><b>Tow</b></td><td>Unit &middot; In-floor &middot; Accumulate</td>
+              <td>Towline powering wheeled carts along the floor. Each cart regains a variable path when disengaged. Selector-pin or pusher-dog arrangements allow automatic switching onto spurs. For long-distance, high-frequency moves</td></tr>
+          <tr><td class="num">16</td><td><b>Trolley</b></td><td>Unit &middot; Overhead &middot; No accumulation</td>
+              <td>Equally spaced trolleys on a chain in a closed loop. Common in processing, assembly, packaging and storage</td></tr>
+          <tr><td class="num">17</td><td><b>Power-and-free</b></td><td>Unit &middot; Overhead/On-floor &middot; Accumulate</td>
+              <td>Like a trolley conveyor but with <b>two tracks</b>, one powered and one free. Carriers disengage from the power chain to accumulate or switch onto spurs. Called <em>inverted</em> power-and-free when floor mounted</td></tr>
+          <tr><td class="num">18</td><td><b>Monorail</b></td><td>Unit &middot; Overhead &middot; Accumulate</td>
+              <td>Single overhead track or track network; carriers powered or not, from a simple hook to an intelligent vehicle. Called an <em>automated electrified monorail</em> (AEM) when controlled like an AGV system</td></tr>
+          <tr><td class="num">19</td><td><b>Sortation</b></td><td>Unit &middot; On-floor/Overhead</td>
+              <td>Merges, identifies, inducts and separates products to specific destinations. See below</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Sortation systems</h3>
+    <p>Throughput is expressed in <b>cartons per minute (CPM)</b>, and a sortation system always has three
+      subsystems in series:</p>
+    <ol>
+      <li><b>Merge</b> &mdash; items arrive from picking or receiving on several conveyors and are consolidated
+        for presentation at the induct area.</li>
+      <li><b>Induct</b> &mdash; each item's destination is identified, by eye or by scanner, and a correct
+        <em>gap</em> is created between items using short variable-speed conveyors before release to the
+        sorter. Gapping is what actually limits CPM; the sorter itself is rarely the bottleneck.</li>
+      <li><b>Sort</b> &mdash; items are diverted to outbound conveyors for shipping, palletising, staging or a
+        secondary sort.</li>
+    </ol>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.15.</b> The five sortation mechanisms.</caption>
+        <thead><tr><th>Mechanism</th><th>Action</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><b>Diverters</b></td><td>Stationary or movable arms deflect, push or pull the product</td>
+              <td>Never touch the conveyor, so they work with almost any flat-surface conveyor. Simple and low cost</td></tr>
+          <tr><td><b>Pop-up devices</b></td><td>Rows of powered rollers, wheels or chains rise above the conveyor surface to lift and steer the product</td>
+              <td>Only for flat-bottomed items. Pop-up rollers are generally faster than pop-up wheels</td></tr>
+          <tr><td><b>Sliding shoe</b></td><td>Diverter slats slide sideways across the surface to guide the product off</td>
+              <td>Also called a moving slat sorter. Gentle and gradual; diverts to either side</td></tr>
+          <tr><td><b>Tilting device</b></td><td>Trays or slats both carry and sort</td>
+              <td>Can accommodate elevation changes. Tilt tray usually in continuous loops with recirculation; tilt slat handles a wider variety of products</td></tr>
+          <tr><td><b>Cross-belt transfer</b></td><td>Each carriage carries a small belt conveyor, the <em>cell</em>, mounted perpendicular to travel</td>
+              <td>Continuous loop or asynchronous train style. Separates a single line into multiple in-line discharge lines</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">The trend that removes the sorter</span>
+      <p>Sortation exists because a producer ships single-item pallets to a distribution centre, which then has
+        to break them down and rebuild multi-item customer loads. If instead the producer builds a
+        <b>mixed-item pallet per customer</b> at the point of manufacture, the sortation step disappears
+        entirely and cross-docking becomes possible. The cheapest sorter, as with the cheapest move, is the one
+        you eliminate.</p>
+    </div>
+
+    <!-- ============================================================ 2.13 -->
+    <h2 id="s13">2.13 Cranes</h2>
+
+    <p>Cranes move loads over variable horizontal and vertical paths <em>within a restricted area</em>. They
+      are used where flow volume is insufficient or too intermittent to justify a conveyor. They are more
+      flexible than conveyors and less flexible than industrial trucks, and the loads they handle vary far more
+      in shape and weight than anything a conveyor carries. Most use a hoist for the vertical movement, though
+      a manipulator is substituted where precise positioning is needed.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.16.</b> The four crane types.</caption>
+        <thead><tr><th>Crane</th><th>Support</th><th>Characteristics</th></tr></thead>
+        <tbody>
+          <tr><td><b>Jib crane</b></td><td>One stationary vertical column, or a wall</td>
+              <td>Horizontal boom with a hoist that travels along it. Operates like an arm within a work area and can serve as a manipulator for positioning. Arm rotates up to 360&deg;</td></tr>
+          <tr><td><b>Bridge crane</b></td><td>Tracks on opposite walls of the building</td>
+              <td>Full three-dimensional handling over the whole bay. <em>Top riding</em> for heavier loads, <em>underhung</em> for versatility &mdash; an underhung crane can transfer loads to and interface with monorail systems</td></tr>
+          <tr><td><b>Gantry crane</b></td><td>Floor, at one or both ends</td>
+              <td>Like a bridge crane but floor supported, so it spans a smaller portion of the work area. Single-leg, double-leg and mobile types. Can be used outdoors when supported at both ends. Supports may be fixed or travel on runways</td></tr>
+          <tr><td><b>Stacker crane</b></td><td>Rails, like a bridge crane</td>
+              <td>Uses a mast with forks or a platform instead of a hoist &mdash; effectively &ldquo;a fork truck on a rail&rdquo;. Stores and retrieves unit loads in racks, especially high-rise racks over 15&nbsp;m. Remote or cab controlled, and can be rack supported</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 2.14 -->
+    <h2 id="s14">2.14 Industrial Trucks</h2>
+
+    <p>An industrial truck is one that is <em>not licensed to travel on public roads</em>; a vehicle that is so
+      licensed is a commercial truck. Industrial trucks move material over variable horizontal paths with no
+      restriction on the area covered, add vertical movement if they have lifting capability, and are used
+      where flow volume will not justify a conveyor. They are the most flexible of the three transport
+      categories.</p>
+
+    <h3>Six characteristics that describe any truck</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.17.</b> The six binary characteristics. Knowing these six answers identifies
+          almost any truck without memorising the catalogue.</caption>
+        <thead><tr><th class="num">#</th><th>Characteristic</th><th>What follows from each choice</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Pallet / non-pallet</b></td>
+              <td>Forks for pallets, or a flat surface. Non-pallet usually means some other means is required to load the truck</td></tr>
+          <tr><td class="num">2</td><td><b>Manual / powered</b></td>
+              <td>Manual implies walking and the operator supplying the force. Powered means an on-board source, usually batteries</td></tr>
+          <tr><td class="num">3</td><td><b>Walk / ride</b></td>
+              <td>Riding implies powered, and travel faster than walking pace. Walking caps travel speed at walking pace even when powered</td></tr>
+          <tr><td class="num">4</td><td><b>Stack / no stack</b></td>
+              <td>Stacking capability costs more, and a stacking truck can always be used as a non-stacking one. A no-stack truck may still lift a load a few centimetres to clear the floor</td></tr>
+          <tr><td class="num">5</td><td><b>Narrow aisle</b></td>
+              <td>Small turning radius, or none at all. Costs more and usually means a standing operator, in exchange for less aisle space. Load support then comes from a straddle or a reaching mechanism rather than counterbalance</td></tr>
+          <tr><td class="num">6</td><td><b>Automated</b></td>
+              <td>Non-automated means the operator's wage is by far the largest operating cost. Semi-automated keeps the operator for loading but automates transport. Fully automated is an AGV: no direct labour, higher equipment cost</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.18.</b> Six standard trucks compared on the four basic parameters.</caption>
+        <thead>
+          <tr><th>Truck</th><th>Pallet</th><th>Stacking</th><th>Manual / powered</th><th>Walk / ride</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hand truck</td><td>No</td><td>No</td><td>Manual</td><td>Walk</td></tr>
+          <tr><td>Platform truck</td><td>No</td><td>No</td><td>Powered</td><td>Walk or ride</td></tr>
+          <tr><td>Pallet jack</td><td>Yes</td><td>No</td><td>Manual or powered</td><td>Walk</td></tr>
+          <tr><td>Walkie stacker</td><td>Yes</td><td>Yes</td><td>Manual or powered</td><td>Walk</td></tr>
+          <tr><td>Pallet truck</td><td>Yes</td><td>No</td><td>Powered</td><td>Ride</td></tr>
+          <tr><td>Counterbalanced lift truck</td><td>Yes</td><td>Yes</td><td>Powered</td><td>Ride</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Narrow-aisle trucks</h3>
+    <p>Aisle width is floor space, and floor space is money, so a family of trucks exists purely to reduce it.
+      The progression below is the single most useful table in this section.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.19.</b> Minimum aisle width and stacking height by truck type.</caption>
+        <thead><tr><th>Truck</th><th class="num">Min. aisle</th><th class="num">Stack height</th><th>How the load is supported</th></tr></thead>
+        <tbody>
+          <tr><td>Sit-down counterbalanced</td><td class="num">12&ndash;13 ft<br>3.7&ndash;4.0 m</td><td class="num">&ndash;</td><td>Counterbalance; operator sits</td></tr>
+          <tr><td>Stand-up counterbalanced</td><td class="num">9&ndash;11 ft<br>2.7&ndash;3.4 m</td><td class="num">~25 ft</td><td>Counterbalance; standing operator gives narrow-aisle capability, and faster loading than straddle or reach trucks</td></tr>
+          <tr><td>NA reach truck</td><td class="num">8&ndash;10 ft<br>2.4&ndash;3.0 m</td><td class="num">~25 ft</td><td>Outrigger arms during transport, then a pantograph reaches the load into the rack. Arms need only exceed half the load depth</td></tr>
+          <tr><td>NA straddle truck</td><td class="num">7&ndash;8 ft<br>2.1&ndash;2.4 m</td><td class="num">~25 ft</td><td>Outriggers straddle the load. Cheapest of the narrow-aisle family, but clearance between loads must be left for the arms</td></tr>
+          <tr><td>Turret truck, operator-down</td><td class="num">5&ndash;6 ft<br>1.5&ndash;1.8 m</td><td class="num">~40 ft</td><td>Forks rotate instead of the truck. A <em>swingmast</em> rotates the whole mast, so it can serve only one side of the aisle</td></tr>
+          <tr><td>Turret truck, operator-up</td><td class="num">5&ndash;7 ft<br>1.5&ndash;2.1 m</td><td class="num">~40 ft</td><td>Operator rises with the load for precise stacking and picking; a &ldquo;hybrid storage/retrieval vehicle&rdquo;</td></tr>
+          <tr><td>Sideloader</td><td class="num">5&ndash;6 ft<br>1.5&ndash;1.8 m</td><td class="num">&ndash;</td><td>Forks perpendicular to travel; handles loads longer than a pallet, such as bar stock</td></tr>
+          <tr><td>Order picker</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td>Operator rises with the load for <em>less-than-unit-load</em> picking. A &ldquo;belly switch&rdquo; protects the operator while picking</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Straddle versus reach &mdash; a subtle comparison</span>
+      <p>The reach truck needs a slightly <em>wider</em> aisle than the straddle truck, because its outriggers
+        do not enter the rack. In exchange it does not need arm clearance between loads in the rack. Which wins
+        depends on whether aisle space or rack space is scarcer &mdash; and arm clearance is still required
+        whenever the truck must enter a storage lane, as in block stacking or drive-in racks.</p>
+    </div>
+
+    <h3>Power, tyres and attachments</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Choice</th><th>Options and consequences</th></tr></thead>
+        <tbody>
+          <tr><td><b>Power source</b></td>
+              <td>Internal combustion, gradability <b>15&nbsp;%</b>: diesel outside only; LPG outside and in ventilated interiors, about 80&nbsp;% of IC trucks; petrol no longer manufactured. Electric, gradability <b>10&nbsp;%</b>: battery, inside operation, requires a recharge station</td></tr>
+          <tr><td><b>Tyres</b></td>
+              <td>Pneumatic for rough outdoor terrain; cushion for smooth surfaces indoors and out; solid for indoors</td></tr>
+          <tr><td><b>Carriage attachments</b></td>
+              <td>Sideshifter (shifts forks without repositioning the truck), fork positioner, rotators for dumping with barrel clamps, push/pull for slipsheets</td></tr>
+          <tr><td><b>Fork attachments</b></td>
+              <td>Enhancements: blades (platens), altered fork length. Replacements: slipsheet blades, clamps (carton, bale, roll, barrel), ram for coils, shovel, block forks for unpalletised loads such as bricks</td></tr>
+          <tr><td><b>Other</b></td>
+              <td>Trailer hitch, RF data modem, extra counterweight, camera between the forks for high stacking</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A lift truck has up to <b>five degrees of freedom</b>: horizontal translation (drive wheels), horizontal
+      rotation (steering), vertical lift (forks along the mast), mast tilt (forward to load, back to travel)
+      and fork translation (to suit different load widths).</p>
+
+    <!-- ============================================================ 2.15 -->
+    <h2 id="s15">2.15 Lift Truck Load Capacity</h2>
+
+    <p>This is the one calculation in this chapter, and it matters because getting it wrong tips the truck
+      over. The principle is a simple moment balance: the weight of the vehicle and operator <em>behind</em>
+      the front wheels counterbalances the weight of the load and the part of the vehicle <em>beyond</em> the
+      front wheels. The front wheels are the fulcrum.</p>
+
+    <figure>
+      <svg viewBox="0 0 800 366" role="img" aria-label="Side view of a counterbalanced lift truck showing the moment balance about the front axle">
+        <rect x="0" y="0" width="800" height="366" fill="#ffffff"/>
+
+        <!-- ground -->
+        <line x1="40" y1="250" x2="770" y2="250" stroke="#9a9a9a" stroke-width="3"/>
+
+        <!-- truck body -->
+        <path d="M 400 250 L 400 150 L 430 150 L 448 108 L 560 108 L 578 150 L 640 150 L 640 250 Z"
+              fill="#e6e6e6" stroke="#8f8f8f" stroke-width="2.5"/>
+        <!-- overhead guard -->
+        <rect x="440" y="98" width="130" height="10" fill="#8f8f8f"/>
+        <!-- seat -->
+        <path d="M 470 150 L 470 122 L 500 122 L 500 150 Z" fill="#8f8f8f"/>
+        <!-- counterweight -->
+        <rect x="600" y="170" width="42" height="60" fill="#4b4540"/>
+        <text x="621" y="206" font-family="Segoe UI, sans-serif" font-size="11" fill="#fff" text-anchor="middle">CB</text>
+
+        <!-- mast -->
+        <rect x="376" y="80" width="14" height="170" fill="#4b4540"/>
+        <!-- forks -->
+        <rect x="300" y="238" width="80" height="8" fill="#4b4540"/>
+        <rect x="372" y="150" width="10" height="96" fill="#4b4540"/>
+
+        <!-- load -->
+        <rect x="296" y="160" width="82" height="78" fill="#c9a97a" stroke="#8a6f47" stroke-width="2"/>
+
+        <!-- wheels -->
+        <circle cx="412" cy="250" r="26" fill="#3a3a3a"/>
+        <circle cx="412" cy="250" r="9" fill="#8f8f8f"/>
+        <circle cx="616" cy="250" r="18" fill="#3a3a3a"/>
+
+        <!-- fulcrum -->
+        <path d="M 412 262 L 402 282 L 422 282 Z" fill="#DF301C"/>
+        <text x="412" y="352" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">fulcrum (front axle)</text>
+        <line x1="412" y1="282" x2="412" y2="336" stroke="#DF301C" stroke-width="1.1" stroke-dasharray="3 3"/>
+
+        <!-- fork face line -->
+        <line x1="382" y1="70" x2="382" y2="318" stroke="#726b64" stroke-width="1.3" stroke-dasharray="5 5"/>
+        <text x="382" y="62" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">fork face</text>
+        <!-- load centre line -->
+        <line x1="337" y1="140" x2="337" y2="318" stroke="#00788A" stroke-width="1.3" stroke-dasharray="5 5"/>
+        <!-- truck load centre line -->
+        <line x1="560" y1="148" x2="560" y2="318" stroke="#726b64" stroke-width="1.3" stroke-dasharray="5 5"/>
+        <text x="560" y="128" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">truck load centre</text>
+
+        <!-- dimension L -->
+        <g stroke="#00788A" stroke-width="1.6">
+          <line x1="337" y1="310" x2="382" y2="310"/>
+          <path d="M 345 305 L 337 310 L 345 315" fill="none"/>
+          <path d="M 374 305 L 382 310 L 374 315" fill="none"/>
+        </g>
+        <text x="352" y="302" font-family="Segoe UI, sans-serif" font-size="15" font-style="italic" fill="#00788A" text-anchor="middle">L</text>
+
+        <!-- dimension F -->
+        <g stroke="#DF301C" stroke-width="1.6">
+          <line x1="382" y1="310" x2="412" y2="310"/>
+          <path d="M 390 305 L 382 310 L 390 315" fill="none"/>
+          <path d="M 404 305 L 412 310 L 404 315" fill="none"/>
+        </g>
+        <text x="397" y="302" font-family="Segoe UI, sans-serif" font-size="15" font-style="italic" fill="#DF301C" text-anchor="middle">F</text>
+
+        <!-- dimension B -->
+        <g stroke="#726b64" stroke-width="1.6">
+          <line x1="412" y1="310" x2="560" y2="310"/>
+          <path d="M 420 305 L 412 310 L 420 315" fill="none"/>
+          <path d="M 552 305 L 560 310 L 552 315" fill="none"/>
+        </g>
+        <text x="486" y="302" font-family="Segoe UI, sans-serif" font-size="15" font-style="italic" fill="#726b64" text-anchor="middle">B</text>
+
+        <!-- force arrows -->
+        <g stroke="#00788A" stroke-width="2.5" fill="none">
+          <line x1="337" y1="160" x2="337" y2="126"/>
+          <path d="M 331 134 L 337 122 L 343 134"/>
+        </g>
+        <text x="337" y="114" font-family="Segoe UI, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#00788A" text-anchor="middle">W</text>
+
+        <g stroke="#726b64" stroke-width="2.5" fill="none">
+          <line x1="560" y1="180" x2="560" y2="210"/>
+          <path d="M 554 202 L 560 214 L 566 202"/>
+        </g>
+        <text x="578" y="200" font-family="Segoe UI, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#726b64">G</text>
+
+        <text x="700" y="196" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b4540" text-anchor="middle">extra</text>
+        <text x="700" y="212" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b4540" text-anchor="middle">counterweight</text>
+        <line x1="666" y1="200" x2="646" y2="200" stroke="#4b4540" stroke-width="1.2"/>
+      </svg>
+      <figcaption><b>Figure 2.4.</b> The moment balance of a sit-down counterbalanced lift truck.
+        <var>W</var> acts at the load centre, a distance <var>L</var> ahead of the fork face;
+        <var>G</var> acts at the truck load centre, a distance <var>B</var> behind the front axle. Everything
+        in &sect;2.15 follows from taking moments about the fulcrum.</figcaption>
+    </figure>
+
+    <div class="eq">
+      <span class="body">
+        <var>W</var> =
+        <span class="frac"><span class="num"><var>G</var><var>B</var></span><span class="den"><var>F</var> + <var>L</var></span></span>
+        =
+        <span class="frac"><span class="num"><var>M</var></span><span class="den"><var>F</var> + <var>L</var></span></span>
+        =
+        <span class="frac"><span class="num"><var>W</var><sub>0</sub>(<var>F</var> + <var>L</var><sub>0</sub>)</span><span class="den"><var>F</var> + <var>L</var></span></span>
+      </span>
+      <span class="tag">(2.5)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Quantity</th></tr></thead>
+        <tbody>
+          <tr><td><var>G</var></td><td>Empty truck weight</td></tr>
+          <tr><td><var>B</var></td><td>Front axle to truck load centre distance</td></tr>
+          <tr><td><var>F</var></td><td>Front axle to fork face distance</td></tr>
+          <tr><td><var>L</var></td><td>Actual load centre, from fork face to the load's centre of gravity</td></tr>
+          <tr><td><var>L</var><sub>0</sub></td><td>Rated load centre = 24 in. (500 mm)</td></tr>
+          <tr><td><var>M</var></td><td>Load moment, <var>G</var><var>B</var></td></tr>
+          <tr><td><var>W</var><sub>0</sub></td><td>Rated load capacity, quoted at <var>L</var><sub>0</sub></td></tr>
+          <tr><td>ULD</td><td>Unit load depth</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>L</var> =
+        <span class="frac"><span class="num">ULD</span><span class="den">2</span></span>
+        &nbsp;<span class="units">for a constant-density rectangular load</span>
+      </span>
+      <span class="tag">(2.6)</span>
+    </div>
+
+    <div class="callout rule">
+      <span class="label">Why 24 inches</span>
+      <p>The maximum depth of a standard pallet is 48 in. (&sect;2.10). A constant-density load on it has its
+        centre of gravity at 24 in. from the fork face &mdash; so the rated load centre is simply half of the
+        deepest standard pallet. Rated capacities run from 1,000 to 100,000 lb, quoted at
+        <var>L</var><sub>0</sub> = 24 in. and lift heights up to 13 ft. A truck could equally be specified by
+        its load moment <var>M</var>, which would be more fundamental, but a weight in kilograms is easier for
+        an operator to relate to than a moment in newton-metres.</p>
+    </div>
+
+    <h3>Derating and rerating</h3>
+    <p>Two different adjustments arise:</p>
+    <ul>
+      <li><b>Derating</b> (<var>W</var> &lt; <var>W</var><sub>0</sub>) &mdash; the permissible load weight when
+        the load's centre of gravity exceeds the 24 in. rated centre. The truck has not changed; the load
+        has.</li>
+      <li><b>Rerating</b> (a new <var>W</var><sub>0</sub> at <var>L</var> = <var>L</var><sub>0</sub>) &mdash;
+        a change to the truck itself: extra counterweight, a fork attachment, an extended mast.</li>
+    </ul>
+
+    <div class="eq">
+      <span class="body">
+        <var>W</var><sub>0</sub>&prime; =
+        <span class="frac"><span class="num"><var>M</var> &plusmn; &Delta;<var>M</var></span><span class="den"><var>F</var>&prime; + <var>L</var><sub>0</sub></span></span>
+      </span>
+      <span class="tag">(2.7)</span>
+    </div>
+
+    <p>A further correction applies to lift height: the rated load moment should be reduced by
+      <b>4,800 in&middot;lb for every foot of lift above 13 ft</b>. Masts reach up to 40 ft in single, double,
+      triple and quad-stage forms; the <em>free lift</em> is the fork movement before the mast itself begins to
+      extend, which is what matters when driving through a doorway or inside a trailer.</p>
+
+    <div class="example">
+      <h3>Example 2.1 &mdash; Derating for a deep load</h3>
+      <p>A truck rated <var>W</var><sub>0</sub> = 3,000 lb has <var>F</var> = 12 in. What can it carry if the
+        unit load is 60 in. deep and of constant density?</p>
+      <div class="step">
+        <h4>Step 1 &mdash; Find the actual load centre</h4>
+        <p><var>L</var> = ULD / 2 = 60 / 2 = <b>30 in.</b>, which exceeds the 24 in. rated centre, so the truck
+          must be derated.</p>
+      </div>
+      <div class="step">
+        <h4>Step 2 &mdash; Apply Eq. 2.5</h4>
+        <p><var>W</var> = 3,000(12 + 24) / (12 + 30) = 108,000 / 42</p>
+        <p class="result"><var>W</var> = 2,571 lb</p>
+        <p>The truck has lost 14&nbsp;% of its rated capacity purely because the load sits further forward. The
+          load moment 108,000 in&middot;lb is unchanged &mdash; only its distribution has moved.</p>
+      </div>
+    </div>
+
+    <div class="example">
+      <h3>Example 2.2 &mdash; Rerating by adding counterweight</h3>
+      <p>The same truck (<var>F</var> = 12 in., <var>W</var><sub>0</sub> = 3,000 lb) has a 500 lb counterweight
+        bolted to the rear at 72 in. from the front axle. What is the new rated capacity?</p>
+      <div class="step">
+        <h4>Step 1 &mdash; Original and added moment</h4>
+        <p><var>M</var> = <var>W</var><sub>0</sub>(<var>F</var> + <var>L</var><sub>0</sub>)
+          = 3,000(12 + 24) = 108,000 in&middot;lb<br>
+          &Delta;<var>M</var> = 500 &times; 72 = 36,000 in&middot;lb</p>
+      </div>
+      <div class="step">
+        <h4>Step 2 &mdash; Apply Eq. 2.7</h4>
+        <p><var>W</var><sub>0</sub>&prime; = (108,000 + 36,000) / (12 + 24) = 144,000 / 36</p>
+        <p class="result"><var>W</var><sub>0</sub>&prime; = 4,000 lb</p>
+        <p>500 lb of counterweight bought 1,000 lb of capacity, because it acts at twice the lever arm of the
+          load. That leverage is the whole idea of a counterbalanced truck &mdash; but note that the tyres,
+          axle and brakes must also be rated for the extra 1,500 lb now standing on them.</p>
+      </div>
+    </div>
+
+    <div class="example">
+      <h3>Example 2.3 &mdash; Rerating for a fork attachment</h3>
+      <p>A truck is rated 2,500 lb with <var>F</var> = 12 in. Its forks are replaced by carton clamps. The
+        clamps weigh 225 lb with their centre of gravity 30 in. from the front axle; the forks they replace
+        weighed 100 lb at 42 in. The distance from the front axle to the clamp face is 15 in. Find the new
+        rated capacity.</p>
+      <div class="step">
+        <h4>Step 1 &mdash; Original moment</h4>
+        <p><var>M</var> = 2,500(12 + 24) = <b>90,000 in&middot;lb</b></p>
+      </div>
+      <div class="step">
+        <h4>Step 2 &mdash; Net moment change from the swap</h4>
+        <p>The clamps add moment; the removed forks take moment away.<br>
+          &Delta;<var>M</var> = (225 &times; 30) &minus; (100 &times; 42) = 6,750 &minus; 4,200
+          = <b>2,550 in&middot;lb</b> of <em>lost</em> counterbalance</p>
+      </div>
+      <div class="step">
+        <h4>Step 3 &mdash; Apply Eq. 2.7 with the new fork face distance</h4>
+        <p><var>W</var><sub>0</sub>&prime; = (90,000 &minus; 2,550) / (15 + 24) = 87,450 / 39</p>
+        <p class="result"><var>W</var><sub>0</sub>&prime; = 2,242 lb</p>
+        <p>The truck has lost 10&nbsp;% of its capacity, from two causes at once: the attachment is heavier than
+          what it replaced and sits further forward, and it pushes the load face 3 in. further out. Both effects
+          work the same way. This is why a lift truck must be re-plated whenever an attachment is fitted, and
+          why an operator working from the original data plate would be overloading it.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================ 2.16 -->
+    <h2 id="s16">2.16 Automated Guided Vehicles</h2>
+
+    <p>AGVs remove the operator, and with him the largest single operating cost of a non-automated truck. They
+      suit high labour cost, hazardous or environmentally sensitive settings such as clean rooms, and are best
+      matched to <b>low-to-medium volume, medium-to-long distance, random</b> material flow &mdash; transport
+      between work cells in a flexible manufacturing system is the classic case. The first appeared in the
+      1950s.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.20.</b> The two guidance philosophies.</caption>
+        <thead><tr><th>&nbsp;</th><th>Fixed path</th><th>Free-ranging</th></tr></thead>
+        <tbody>
+          <tr><th>Guidance</th><td>Physical guidepath in or on the floor: wire, tape, paint</td><td>No physical guidepath; dead reckoning corrected by laser or optical sensing</td></tr>
+          <tr><th>Changing the route</th><td>Expensive &mdash; the floor must be altered</td><td>Cheap &mdash; a software change</td></tr>
+          <tr><th>Congestion</th><td>Vehicles cannot pass on a path, so one-way paths are typical</td><td>Vehicles manoeuvre around each other</td></tr>
+          <tr><th>Position error</th><td>Not an issue; the path is physical</td><td>Grows over time with dead reckoning, so absolute position fixes are essential</td></tr>
+          <tr><th>Analogy</th><td>An &ldquo;on-the-floor&rdquo; automated electrified monorail</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.21.</b> The five AGV types.</caption>
+        <thead><tr><th>Type</th><th>Capacity / fleet</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><b>Tow AGV</b></td><td>Train of trailers</td><td>The automated tractor-trailer. Trailers usually loaded manually. An early type, little used today</td></tr>
+          <tr><td><b>Unit load AGV</b></td><td>Typically 1.2 &times; 1.2 m, 450&ndash;900 kg; usually fewer than 10 vehicles</td><td>Decks loaded manually or automatically; the deck may carry its own conveyor or lift mechanism</td></tr>
+          <tr><td><b>Assembly AGV</b></td><td>Typically 50&ndash;100 vehicles</td><td>The vehicle is the assembly platform &mdash; car chassis, engines, appliances. Developed hardest in the 1980s as an alternative to overhead monorails</td></tr>
+          <tr><td><b>Light load AGV</b></td><td>Under 500 lb (230 kg)</td><td>Components and tools; electronics assembly and office environments</td></tr>
+          <tr><td><b>Fork AGV</b></td><td>&mdash;</td><td>Counterbalanced, narrow-aisle straddle and sideloading versions. Infrared or similar sensors on the forks for pallet interfacing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 2.17 -->
+    <h2 id="s17">2.17 Storage Equipment</h2>
+
+    <p>Storage equipment holds or buffers material over time. Some of it also transports &mdash; the S/R
+      machine of an AS/RS, or a carousel. If loads are block stacked on the floor, no equipment is needed at
+      all. Racks exist to support a load, to make it accessible, or both.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.22.</b> The fifteen storage types.</caption>
+        <thead><tr><th class="num">#</th><th>Type</th><th>Advantage</th><th>Disadvantage</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Block stacking</b></td>
+              <td>Easy, flexible, no storage medium so no investment. 2&ndash;10 rows deep</td>
+              <td>Honeycomb loss &mdash; on average half a lane sits empty per item. LIFO only unless there is a rear aisle. Lane width is set by the <em>vehicle</em>, not the load</td></tr>
+          <tr><td class="num">2a</td><td><b>Single-deep rack</b></td>
+              <td>Complete and fast access to every load; no honeycomb loss. The most popular rack</td>
+              <td>Low cube utilisation because of aisle space, which depends on the truck chosen</td></tr>
+          <tr><td class="num">2b</td><td><b>Double-deep rack</b></td>
+              <td>More loads reachable from the same side, so better cube utilisation</td>
+              <td>Needs an extended reach mechanism. Used when inventory per item is at least five, or loads move in multiples of two pallets</td></tr>
+          <tr><td class="num">3</td><td><b>Drive-in rack</b></td>
+              <td>High-density pallet storage; trucks drive between the uprights onto rails</td>
+              <td>Uniform load sizes only; slow storage and retrieval because of the care needed inside the rack. Closed at one end, so LIFO</td></tr>
+          <tr><td class="num">4</td><td><b>Drive-through rack</b></td>
+              <td>Open both ends, so FIFO. Good for staging in a flow-through fashion</td>
+              <td>Same handling difficulties as drive-in</td></tr>
+          <tr><td class="num">5</td><td><b>Push-back rack</b></td>
+              <td>Deep-reach storage without any extended reach mechanism; loads roll on an incline. Highly accessible</td>
+              <td>LIFO in each lane. Costs more than double-deep. Maximum depth about 5 loads</td></tr>
+          <tr><td class="num">6a</td><td><b>Carton-flow rack</b></td>
+              <td>Large volume accessible from a small pick face, supporting high pick rates. Replenishment does not interfere with picking. Takes pick-to-light displays</td>
+              <td>More expensive than bin shelving</td></tr>
+          <tr><td class="num">6b</td><td><b>Pallet-flow rack</b></td>
+              <td>FIFO in each lane; depths of 40&ndash;50 loads possible; replenishment separate from picking</td>
+              <td>Needs twice the aisle space of push-back, though total density can still be higher</td></tr>
+          <tr><td class="num">7</td><td><b>Sliding (mobile) rack</b></td>
+              <td>The aisle itself moves. High cube utilisation with complete accessibility, and improved security</td>
+              <td>Expensive; slow, since only one lane is open at a time; depends on reliable power. Library stacks, vaults, refrigerated rooms</td></tr>
+          <tr><td class="num">8</td><td><b>Cantilever rack</b></td>
+              <td>Arms supported at one end only, giving a clear shelf with no front uprights</td>
+              <td>For long loads: bar stock, pipe, lumber</td></tr>
+          <tr><td class="num">9</td><td><b>Stacking frame</b></td>
+              <td>Interlocking frames let crushable loads be stacked; disassemble when idle. $100&ndash;300 each and leasable for seasonal peaks</td>
+              <td>&mdash;</td></tr>
+          <tr><td class="num">10</td><td><b>Bin shelving</b></td>
+              <td>Lowest cost way to store small loose items</td>
+              <td>Excessive picker travel; top shelves hard to reach; replenishment interferes with picking. Mezzanines allow up to about four picking levels</td></tr>
+          <tr><td class="num">11</td><td><b>Storage drawers</b></td>
+              <td>Better security than shelving; easy to install at point of use; good for low, infrequent demand</td>
+              <td>Space underutilised without discipline; contents invisible, so labelling is critical</td></tr>
+          <tr><td class="num">12</td><td><b>Storage carousel</b></td>
+              <td>Horizontal or vertical revolving bins; high pick rate. One operator serves 2&ndash;4 carousels, a &ldquo;pod&rdquo;, to avoid waiting</td>
+              <td>Replenishment cannot happen during picking &mdash; it needs a separate shift or an interleaved window</td></tr>
+          <tr><td class="num">13</td><td><b>Vertical lift module</b></td>
+              <td>Trays in a multi-bay enclosure delivered by a servo lift. High-bay dense storage, tray heights vary to suit contents, and all picking happens at an adjustable waist height</td>
+              <td>High cost; needs reliable power</td></tr>
+          <tr><td class="num">14</td><td><b>A-frame</b></td>
+              <td>Very high pick rate; items dispensed automatically from angled channels onto a belt. Fully automated piece picking, popular in pharmaceutical distribution</td>
+              <td>Only for small, rigid, uniform, non-fragile items. Replenishment is manual</td></tr>
+          <tr><td class="num">15</td><td><b>AS/RS</b></td>
+              <td>Fewer handlers, better material control and security, efficient use of space</td>
+              <td>High capital and maintenance cost; hard to modify later</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>AS/RS in more detail</h3>
+    <p>An AS/RS integrates the storage medium, a transport mechanism and controls. The <b>S/R machine</b> works
+      in a narrow aisle serving racks on both sides, and travels horizontally and vertically
+      <em>simultaneously</em> &mdash; which is why its cycle time is governed by the larger of the two travel
+      times, not their sum. It is usually captive to one aisle; where throughput does not justify one machine
+      per aisle, a transfer car moves it between aisles. Racks run 40&ndash;80 ft or higher and demand tight
+      tolerances and level floors, which is what makes them costly; they may be freestanding or
+      <em>rack-supported</em>, carrying the building itself.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.23.</b> The four AS/RS types.</caption>
+        <thead><tr><th>Type</th><th class="num">Load</th><th class="num">Height</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><b>Unit load</b></td><td class="num">over 500 lb</td><td class="num">up to 130 ft<br>most 60&ndash;85 ft</td><td>Palletised or unitised loads; 5&ndash;6 ft aisles; single- or double-deep racks</td></tr>
+          <tr><td><b>Miniload</b></td><td class="num">100&ndash;750 lb per bin</td><td class="num">12&ndash;20 ft</td><td>Small parts in bins or drawers, picked at the end of the aisle. Not usually used for order picking because of long cycle times and cost. Called a <em>microload</em> below 100 lb</td></tr>
+          <tr><td><b>Man-on-board</b></td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>In-aisle picking: the operator rides and picks from shelves, bins or drawers. The S/R machine resembles an order picker or turret truck, rail-guided when in the aisle</td></tr>
+          <tr><td><b>Deep-lane</b></td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>A rack-entry vehicle, a &ldquo;mole&rdquo;, detaches from the S/R machine and runs into the lane. Called an <em>automated item retrieval system</em> when items are pushed forward by a rear-mounted bar for automatic picking at the lane front</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Choosing a pallet storage type</h3>
+    <p>The comparison below is the practical decision table. Read it with the rule of thumb that a stock item
+      occupies roughly two lanes:</p>
+
+    <div class="eq">
+      <span class="body">
+        Lanes per item =
+        <span class="frac"><span class="num">Inventory level per item</span><span class="den">Storage depth per lane</span></span>
+        &asymp; 2
+      </span>
+      <span class="tag">(2.8)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.24.</b> Pallet storage comparison. Investment cost is a ratio relative to
+          single-deep racking.</caption>
+        <thead>
+          <tr><th>Rack type</th><th class="num">Block<br>stacking</th><th class="num">Single<br>deep</th><th class="num">Double<br>deep</th><th class="num">Drive<br>in</th><th class="num">Drive<br>through</th><th class="num">Push<br>back</th><th class="num">Pallet<br>flow</th><th class="num">Sliding</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Investment cost per position</th><td class="num">&mdash;</td><td class="num">1</td><td class="num">1.1</td><td class="num">1.4</td><td class="num">1.4</td><td class="num">3</td><td class="num">5</td><td class="num">7</td></tr>
+          <tr><th>Storage depth per lane</th><td class="num">2&ndash;10</td><td class="num">1</td><td class="num">2</td><td class="num">5&ndash;10</td><td class="num">5&ndash;10</td><td class="num">2&ndash;5</td><td class="num">2&ndash;5</td><td class="num">1</td></tr>
+          <tr><th>Inventory level per SKU</th><td class="num">&ge; 5</td><td class="num">&lt; 3</td><td class="num">&ge; 5</td><td class="num">&ge; 20</td><td class="num">&ge; 20</td><td class="num">3&ndash;10</td><td class="num">3&ndash;10</td><td class="num">&lt; 3</td></tr>
+          <tr><th>All loads accessible</th><td class="num">No</td><td class="num">Yes</td><td class="num">No</td><td class="num">No</td><td class="num">No</td><td class="num">No</td><td class="num">No</td><td class="num">Yes</td></tr>
+          <tr><th>S/R throughput</th><td class="num">Good</td><td class="num">Good</td><td class="num">Average</td><td class="num">Average</td><td class="num">Average</td><td class="num">Good</td><td class="num">Excellent</td><td class="num">Poor</td></tr>
+          <tr><th>FIFO retrieval possible</th><td class="num">Yes</td><td class="num">Yes</td><td class="num">No</td><td class="num">No</td><td class="num">Yes</td><td class="num">No</td><td class="num">Yes</td><td class="num">Yes</td></tr>
+          <tr><th>Vertical honeycomb loss</th><td class="num">Yes</td><td class="num">No</td><td class="num">No</td><td class="num">Yes</td><td class="num">Yes</td><td class="num">No</td><td class="num">No</td><td class="num">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">How to use Table 2.24</span>
+      <p>Enter it with the <b>inventory level per SKU</b>, which is a fact about the business rather than about
+        the warehouse. Fewer than three pallets per item and only single-deep or sliding racks make sense
+        &mdash; anything deeper would leave lanes half empty. Twenty or more and drive-in or drive-through
+        becomes affordable. Then check <b>FIFO</b>: if the product has a shelf life, half the columns are
+        eliminated at a stroke.</p>
+    </div>
+
+    <!-- ============================================================ 2.18 -->
+    <h2 id="s18">2.18 Identification and Control</h2>
+
+    <p>The fifth category is the information layer. It moves no material at all, but without it none of the
+      other four can be coordinated.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.25.</b> The seven identification and control types.</caption>
+        <thead><tr><th class="num">#</th><th>Type</th><th>Characteristics</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Manual</b></td><td>Paper lists and human reading. No equipment cost, highest error rate</td></tr>
+          <tr><td class="num">2</td><td><b>Bar codes</b></td>
+              <td>The default. One-dimensional symbologies carry a licence-plate number that indexes a database; two-dimensional symbologies carry the data itself. Needs line of sight and a reasonably clean label</td></tr>
+          <tr><td class="num">3</td><td><b>RFID tags</b></td>
+              <td>No line of sight, and many tags read at once. Passive tags draw power from the reader and are cheap; active tags carry a battery, read further and cost far more. The economics turn on tag cost against the value of the item, which is why RFID took hold at pallet and container level long before item level</td></tr>
+          <tr><td class="num">4</td><td><b>Voice recognition</b></td>
+              <td>Voice-directed picking leaves the picker's hands and eyes free, which typically raises both rate and accuracy over a hand-held terminal</td></tr>
+          <tr><td class="num">5</td><td><b>Magnetic stripes</b></td>
+              <td>Contact reading; largely displaced by bar codes and RFID in handling applications</td></tr>
+          <tr><td class="num">6</td><td><b>Machine vision</b></td>
+              <td>Reads codes, measures dimensions and verifies orientation. Increasingly does the identification and the quality check in one pass</td></tr>
+          <tr><td class="num">7</td><td><b>Portable data terminals</b></td>
+              <td>Hand-held or truck-mounted, linked by radio, putting the warehouse system in the operator's hand at the point of work</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Above the devices sit two layers of software that the equipment selection must be compatible with. A
+      <b>warehouse management system (WMS)</b> decides <em>what</em> should happen &mdash; where to put a
+      pallet, which orders to release, what to pick next. A <b>warehouse control system (WCS)</b> decides
+      <em>how</em> the machinery does it &mdash; which diverter fires, which S/R machine takes the job. Buying
+      an A-frame or a sortation conveyor without asking which system will drive it is a common and expensive
+      omission.</p>
+
+    <!-- ============================================================ 2.19 -->
+    <h2 id="s19">2.19 Selecting the Equipment</h2>
+
+    <p>With roughly seventy types catalogued, the selection problem is one of narrowing. The first decision is
+      the <em>level of classification</em> you start from.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.26.</b> Choosing the level to start from.</caption>
+        <thead><tr><th>Level</th><th>Example</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td><b>High</b> &mdash; categories</td><td>Conveyors, cranes, industrial trucks, positioning equipment</td><td>Does not narrow the choice enough</td></tr>
+          <tr><td><b>Intermediate</b> &mdash; types within categories</td><td>Chute or roller conveyor; pallet jack or pallet truck</td><td><b>The right starting point</b> &mdash; reduces the problem to choosing among 15&ndash;50 types</td></tr>
+          <tr><td><b>Low</b> &mdash; models within a type</td><td>An Acme Model X diesel counterbalanced lift truck rated 5,000 lb</td><td>Far too many possibilities to evaluate</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 840 340" role="img" aria-label="Two-stage equipment selection: technical feasibility then economic feasibility">
+        <rect x="0" y="0" width="840" height="340" fill="#ffffff"/>
+
+        <!-- inputs -->
+        <rect x="24" y="60" width="150" height="58" rx="28" fill="#FFF1D1" stroke="#e3dac7" stroke-width="2"/>
+        <text x="99" y="84" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1c1917" text-anchor="middle">Material flow</text>
+        <text x="99" y="102" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1c1917" text-anchor="middle">requirements</text>
+
+        <rect x="666" y="60" width="150" height="58" rx="28" fill="#FFF1D1" stroke="#e3dac7" stroke-width="2"/>
+        <text x="741" y="84" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1c1917" text-anchor="middle">MH equipment</text>
+        <text x="741" y="102" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1c1917" text-anchor="middle">database</text>
+
+        <!-- stage 1 -->
+        <rect x="300" y="58" width="240" height="62" fill="#f0fafc" stroke="#00B7CD" stroke-width="2.5"/>
+        <text x="420" y="84" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">1. Technical feasibility</text>
+        <text x="420" y="104" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">can it do the job at all?</text>
+
+        <!-- arrows into stage 1 -->
+        <g stroke="#4b4540" stroke-width="2" fill="none">
+          <line x1="174" y1="102" x2="292" y2="102"/><path d="M 284 96 L 294 102 L 284 108"/>
+          <line x1="666" y1="102" x2="548" y2="102"/><path d="M 556 96 L 546 102 L 556 108"/>
+        </g>
+        <text x="232" y="72" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">selection</text>
+        <text x="232" y="86" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">parameters</text>
+        <text x="608" y="72" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">basic</text>
+        <text x="608" y="86" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">characteristics</text>
+
+        <!-- alternatives -->
+        <g stroke="#DF301C" stroke-width="2" fill="none">
+          <line x1="360" y1="120" x2="360" y2="190"/><path d="M 354 182 L 360 194 L 366 182"/>
+          <line x1="420" y1="120" x2="420" y2="190"/><path d="M 414 182 L 420 194 L 426 182"/>
+          <line x1="480" y1="120" x2="480" y2="190"/><path d="M 474 182 L 480 194 L 486 182"/>
+        </g>
+        <text x="556" y="162" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C">technically feasible alternatives</text>
+
+        <!-- stage 2 -->
+        <rect x="300" y="196" width="240" height="62" fill="#fdf1ef" stroke="#DF301C" stroke-width="2.5"/>
+        <text x="420" y="222" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1c1917" text-anchor="middle">2. Economic feasibility</text>
+        <text x="420" y="242" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">which one costs least over its life?</text>
+
+        <!-- detailed data arrows -->
+        <g stroke="#4b4540" stroke-width="2" fill="none">
+          <line x1="99" y1="118" x2="99" y2="227"/><line x1="99" y1="227" x2="292" y2="227"/><path d="M 284 221 L 294 227 L 284 233"/>
+          <line x1="741" y1="118" x2="741" y2="227"/><line x1="741" y1="227" x2="548" y2="227"/><path d="M 556 221 L 546 227 L 556 233"/>
+        </g>
+        <text x="190" y="219" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">detailed flow data</text>
+        <text x="650" y="219" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">detailed equipment data</text>
+
+        <!-- output -->
+        <g stroke="#00788A" stroke-width="2.5" fill="none">
+          <line x1="420" y1="258" x2="420" y2="286"/><path d="M 413 278 L 420 292 L 427 278"/>
+        </g>
+        <rect x="330" y="294" width="180" height="34" fill="#00788A"/>
+        <text x="420" y="317" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Selected handling system</text>
+      </svg>
+      <figcaption><b>Figure 2.5.</b> The two-stage selection process. Stage&nbsp;1 is a filter that uses only
+        basic characteristics; stage&nbsp;2 is a comparison that needs detailed cost data. Doing them in this
+        order means detailed data is only ever gathered for the few options that survive.</figcaption>
+    </figure>
+
+    <h3>Stage 1: technical feasibility</h3>
+    <p>Select the equipment types that can satisfy the material flow requirements <em>at all</em>, from a purely
+      technological point of view. A pallet jack is not technically feasible for stacking pallets into racks,
+      no matter how cheap it is. This stage is a filter, and it should be brutal: anything that cannot do the
+      job is removed before any cost is estimated.</p>
+
+    <p>The parameters that do the filtering are the ones assembled in &sect;&sect;2.2&ndash;2.5 and 2.8:
+      material state and code, distance, rate, level change, path fixity, area, and lump size. The table below
+      collects typical operating envelopes for continuous conveyors, which is where most technical filtering
+      happens in bulk handling.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 2.27.</b> Typical operating envelopes for continuous bulk conveyors. Use for
+          first-pass screening only; confirm against manufacturers' data before committing.</caption>
+        <thead>
+          <tr><th>Equipment</th><th class="num">Distance (m)</th><th class="num">Capacity (t/h)</th><th class="num">Max lump (mm)</th><th class="num">Max temp. (&deg;C)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Screw conveyor</td><td class="num">0.5&ndash;10</td><td class="num">2&ndash;300</td><td class="num">30</td><td class="num">300</td></tr>
+          <tr><td>Vibrating trough</td><td class="num">2&ndash;15</td><td class="num">0.4&ndash;200</td><td class="num">30</td><td class="num">80*</td></tr>
+          <tr><td>Belt conveyor</td><td class="num">5&ndash;2000</td><td class="num">5&ndash;6000</td><td class="num">&mdash;</td><td class="num">80*</td></tr>
+          <tr><td>Chain conveyor</td><td class="num">2&ndash;200</td><td class="num">1&ndash;300</td><td class="num">50</td><td class="num">300</td></tr>
+          <tr><td>Bucket elevator</td><td class="num">10&ndash;60</td><td class="num">1&ndash;600</td><td class="num">100</td><td class="num">80</td></tr>
+          <tr><td>Pneumatic conveyor</td><td class="num">20&ndash;1500</td><td class="num">0.5&ndash;600</td><td class="num">30</td><td class="num">600</td></tr>
+          <tr><td>Hydraulic conveyor</td><td class="num">50&ndash;10000</td><td class="num">10&ndash;200</td><td class="num">30</td><td class="num">80</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="units">* Rubber-lined equipment is limited to about 80&nbsp;&deg;C; steel-lined versions of the
+      same equipment reach about 300&nbsp;&deg;C.</p>
+
+    <h3>Stage 2: economic feasibility</h3>
+    <p>From among the technically feasible types, choose the one that is most cost effective for the given
+      requirements. The classic illustration: a pallet jack and a pallet truck are both technically feasible for
+      a long-distance move, but the pallet truck &mdash; although it costs more to buy &mdash; is more cost
+      effective, because the operator rides and so travels faster, and operator time is the dominant cost. The
+      cheaper machine loses on total cost.</p>
+
+    <div class="callout rule">
+      <span class="label">Where students most often go wrong</span>
+      <p>Two errors recur. The first is skipping stage&nbsp;1 and comparing costs of options that cannot do the
+        job. The second is running stage&nbsp;2 on purchase price rather than life-cycle cost &mdash; which is
+        principle&nbsp;10 of <a href="chapter1.html#s1">&sect;1.1</a>, and which for non-automated equipment is
+        dominated not by the machine at all but by the operator's wages over ten years.</p>
+    </div>
+
+    <!-- ============================================================ 2.20 -->
+    <h2 id="s20">2.20 Worked Selection Example</h2>
+
+    <div class="example">
+      <h3>Problem statement</h3>
+      <p>A rice mill receives paddy in 50&nbsp;kg bags and must move it from an intake shed to a cleaning plant
+        45&nbsp;m away, with a 6&nbsp;m rise into the cleaner's feed hopper. Management is considering whether
+        to keep handling the paddy in bags or to switch to bulk. Required throughput is 25&nbsp;t/h during a
+        harvest campaign of 90 days a year, two shifts a day. Paddy is granular, 5&ndash;10&nbsp;mm, bulk
+        density 560&nbsp;kg/m&sup3;, angle of repose about 36&deg;, non-abrasive but dusty.</p>
+
+      <div class="step">
+        <h4>Step 1 &mdash; Answer the handling equation (&sect;2.2)</h4>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><th>Why</th><td>The cleaner must be fed continuously; the intake shed is where trucks can discharge</td></tr>
+              <tr><th>What</th><td>Paddy &mdash; granular, light, dusty, non-abrasive</td></tr>
+              <tr><th>Where</th><td>45 m horizontal, 6 m rise, fixed route between two fixed points</td></tr>
+              <tr><th>When</th><td>25 t/h, continuous during campaign, 1,440 h/year</td></tr>
+              <tr><th>How</th><td><em>To be determined</em></td></tr>
+              <tr><th>Who</th><td><em>To be determined</em></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Note that <b>where</b> and <b>when</b> together already point strongly at a conveyor: a fixed path,
+          a restricted area and a high move frequency is the top-left cell of Table&nbsp;2.8.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 2 &mdash; Classify the material (&sect;2.4, &sect;2.5)</h4>
+        <p>Paddy is a <b>bulk material</b> in the solid state, so by Eq.&nbsp;2.2 it implies continuous flow and
+          bulk handling equipment &mdash; <em>if</em> we choose to handle it as bulk. In bags it becomes a
+          containerised item and Eq.&nbsp;2.1 applies instead. Both routes are open, exactly as in
+          Figure&nbsp;2.2.</p>
+        <p>Building the material code: lump size 5&ndash;10 mm &rarr; <b>C</b>. Angle of repose 36&deg; &rarr;
+          free flowing &rarr; <b>2</b>. Non-abrasive &rarr; <b>6</b>. Bulk density 0.56 t/m&sup3; &rarr; light
+          &rarr; <b>H</b>. Dusty and degradable (broken grain is worth less) &rarr; <b>LQ</b>.</p>
+        <p class="result">Material code: C 2 6 H LQ</p>
+        <p>The <b>Q</b> immediately warns that belt speed and drop heights must be kept modest
+          (<a href="chapter1.html#s8">&sect;1.8</a>), and the <b>L</b> warns that a plain gate will flood.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 3 &mdash; Stage 1, technical feasibility (&sect;2.19)</h4>
+        <p>Screen the intermediate-level types against distance 45 m, rise 6 m, 25 t/h, lump 10 mm, using
+          Table&nbsp;2.27:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Candidate</th><th>Verdict</th><th>Reason</th></tr></thead>
+            <tbody>
+              <tr><td>Screw conveyor</td><td>Reject</td><td>Distance limit 10 m; 45 m needs four in series, and screws degrade grain</td></tr>
+              <tr><td>Vibrating trough</td><td>Reject</td><td>Distance limit 15 m</td></tr>
+              <tr><td>Belt conveyor</td><td><b>Feasible</b></td><td>45 m and 25 t/h sit comfortably inside 5&ndash;2000 m and 5&ndash;6000 t/h; 6 m over 45 m is 7.6&deg;, well under the limit for grain</td></tr>
+              <tr><td>Chain conveyor</td><td><b>Feasible</b></td><td>Within envelope, and en-masse chain conveyors are common in grain</td></tr>
+              <tr><td>Bucket elevator</td><td>Partly</td><td>Handles the 6 m rise well but not the 45 m run; would need a horizontal conveyor as well</td></tr>
+              <tr><td>Pneumatic conveyor</td><td><b>Feasible</b></td><td>Within envelope, fully enclosed &mdash; attractive given the dust</td></tr>
+              <tr><td>Fork truck with bagged pallets</td><td><b>Feasible</b></td><td>Variable path, unrestricted area &mdash; Table 2.8 says this is a truck's territory only if frequency is low, which it is not</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="result">Shortlist: troughed belt, en-masse chain, dilute-phase pneumatic, bagged fork truck</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 4 &mdash; Check the unit load alternative honestly (&sect;2.6)</h4>
+        <p>At 25 t/h in 50 kg bags the plant must form and break <b>500 bags per hour</b>. On a 48&nbsp;&times;
+          40&nbsp;in. pallet at, say, 40 bags per pallet, that is 12.5 pallets per hour, so roughly one fork
+          truck round trip every five minutes plus two manual palletising stations. The bags themselves,
+          consumed at 500/h for 1,440 h/year, are 720,000 bags a year.</p>
+        <p>That is the real cost of the unit load route, and it is exactly the disadvantage listed in
+          &sect;2.6: the time spent forming and breaking down the load, plus the cost of the load-restraining
+          material. Bagging is justified when the paddy must be stored by lot, traded, or moved by a variable
+          path &mdash; none of which applies to a fixed 45 m link into a cleaner.</p>
+        <p class="result">Reject the bagged route on economic grounds, not technical ones</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 5 &mdash; Stage 2, economic comparison of the three bulk options</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>&nbsp;</th><th>Troughed belt</th><th>En-masse chain</th><th>Pneumatic</th></tr></thead>
+            <tbody>
+              <tr><th>Capital</th><td>Moderate</td><td>Moderate</td><td>Low to moderate</td></tr>
+              <tr><th>Energy per tonne</th><td><b>Lowest</b></td><td>Moderate</td><td><b>Highest</b> &mdash; typically several times a belt</td></tr>
+              <tr><th>Grain damage</th><td><b>Least</b></td><td>Some at the return bend</td><td>Highest, at bends and the receiver</td></tr>
+              <tr><th>Dust containment</th><td>Poor unless covered</td><td>Good &mdash; enclosed</td><td><b>Best</b> &mdash; fully sealed</td></tr>
+              <tr><th>Maintenance</th><td>Idlers and belt tracking</td><td>Chain wear</td><td>Bend wear, filter</td></tr>
+              <tr><th>Flexibility of route</th><td>Straight runs only</td><td>Straight runs only</td><td><b>Turns easily</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Over 1,440 operating hours a year the energy difference is real but not overwhelming, so the decision
+          turns on the two qualitative columns. The route is straight and the rise is gentle, so pneumatic
+          conveying's one decisive advantage &mdash; easy turns &mdash; is not needed here, while its
+          disadvantages of energy and grain damage both are. Between belt and chain, the enclosed chain
+          conveyor answers the <b>L</b> and <b>Q</b> in the material code directly.</p>
+        <p class="result">Select an enclosed en-masse chain conveyor, with a covered belt as the fallback if
+          capital cost governs</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 6 &mdash; Record what the selection assumed</h4>
+        <p>A selection is only as good as its stated assumptions. Here they are: 25 t/h is a firm peak, not an
+          average; the route stays straight; the campaign is genuinely only 90 days, so annual energy cost is
+          modest; and no requirement exists to store paddy by lot between intake and cleaning. If any of these
+          changes &mdash; particularly the last, which would reintroduce the case for bags &mdash; the
+          selection must be revisited.</p>
+      </div>
+
+      <h3>Design summary</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Outcome</th></tr></thead>
+          <tbody>
+            <tr><td>Material code</td><td>C 2 6 H LQ</td></tr>
+            <tr><td>Flow type</td><td>Continuous bulk, not unit load</td></tr>
+            <tr><td>Transport category</td><td>Conveyor &mdash; fixed path, restricted area, high frequency</td></tr>
+            <tr><td>Equipment type</td><td>Enclosed en-masse chain conveyor</td></tr>
+            <tr><td>Rejected, and why</td><td>Screw and vibrating (distance); bucket elevator alone (horizontal run); pneumatic (energy and grain damage); bagged fork truck (500 bags/h of forming and breaking)</td></tr>
+            <tr><td>Next step</td><td>Size the chain conveyor in Chapter&nbsp;3, using the framework established in Chapter&nbsp;1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ============================================================ 2.21 -->
+    <h2 id="s21">2.21 Nomenclature</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Quantity</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td><var>B</var></td><td>Front axle to truck load centre distance</td><td>in. (mm)</td></tr>
+          <tr><td><var>F</var></td><td>Front axle to fork face distance</td><td>in. (mm)</td></tr>
+          <tr><td><var>G</var></td><td>Empty truck weight</td><td>lb (kg)</td></tr>
+          <tr><td><var>L</var></td><td>Actual load centre, fork face to load centre of gravity</td><td>in. (mm)</td></tr>
+          <tr><td><var>L</var><sub>0</sub></td><td>Rated load centre, 24 in.</td><td>in. (mm)</td></tr>
+          <tr><td><var>M</var></td><td>Load moment</td><td>in&middot;lb (N&middot;m)</td></tr>
+          <tr><td>&Delta;<var>M</var></td><td>Change in load moment from a truck modification</td><td>in&middot;lb (N&middot;m)</td></tr>
+          <tr><td>ULD</td><td>Unit load depth</td><td>in. (mm)</td></tr>
+          <tr><td><var>W</var></td><td>Allowable load capacity at the actual load centre</td><td>lb (kg)</td></tr>
+          <tr><td><var>W</var><sub>0</sub></td><td>Rated load capacity, at <var>L</var><sub>0</sub></td><td>lb (kg)</td></tr>
+          <tr><td><var>W</var><sub>0</sub>&prime;</td><td>Rerated load capacity after a modification</td><td>lb (kg)</td></tr>
+          <tr><td>AEM</td><td>Automated electrified monorail</td><td>&mdash;</td></tr>
+          <tr><td>AGV</td><td>Automated guided vehicle</td><td>&mdash;</td></tr>
+          <tr><td>AS/RS</td><td>Automatic storage and retrieval system</td><td>&mdash;</td></tr>
+          <tr><td>CB</td><td>Counterbalanced (lift truck)</td><td>&mdash;</td></tr>
+          <tr><td>CPM</td><td>Cartons per minute, sortation throughput</td><td>cartons/min</td></tr>
+          <tr><td>FMS</td><td>Flexible manufacturing system</td><td>&mdash;</td></tr>
+          <tr><td>MHS</td><td>Materials handling system</td><td>&mdash;</td></tr>
+          <tr><td>NA</td><td>Narrow aisle</td><td>&mdash;</td></tr>
+          <tr><td>P/D</td><td>Pick-up and delivery station</td><td>&mdash;</td></tr>
+          <tr><td>S/R</td><td>Storage and retrieval (machine)</td><td>&mdash;</td></tr>
+          <tr><td>SKU</td><td>Stock keeping unit</td><td>&mdash;</td></tr>
+          <tr><td>WMS / WCS</td><td>Warehouse management / control system</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 2.22 -->
+    <h2 id="s22">2.22 Problems</h2>
+
+    <div class="callout rule">
+      <span class="label">Check yourself first</span>
+      <p>Before working these, try the <a href="quiz2.html">40-question self-check</a>. It marks each answer
+        immediately and links back to the section the question came from.</p>
+    </div>
+
+    <ol>
+      <li><b>The handling equation.</b> A bakery moves trays of dough from a mixing room to twelve proving
+        cabinets scattered around a 40 &times; 25 m production hall, roughly 90 times a shift, with the
+        destination varying each time. Answer all six questions of &sect;2.2, then use Table&nbsp;2.8 to
+        identify the equipment category. Justify why a conveyor is the wrong answer here despite the high move
+        frequency.</li>
+
+      <li><b>Material code.</b> Build the code for each material and state one design consequence of each
+        character: (a) Portland cement, dusty, repose 39&deg;, abrasive, 1500 kg/m&sup3;;
+        (b) wood chips, 40 mm, repose 45&deg;, non-abrasive, 300 kg/m&sup3;, light and fluffy;
+        (c) crushed limestone from <a href="chapter1.html#s16">&sect;1.16</a>, 100 mm lumps, repose 38&deg;,
+        abrasive, 1600 kg/m&sup3;.</li>
+
+      <li><b>Reading a code.</b> A supplier quotes a material as <b>D 3 8 J MSX</b>. Without being told what
+        the material is, list every conclusion you can draw about the conveyor that will handle it, and name
+        one candidate material that would fit the code.</li>
+
+      <li><b>Unit load or bulk?</b> For each case decide whether the material should be handled as a unit load
+        or as bulk, and give the deciding reason: (a) cement from a silo to a mixer 30 m away;
+        (b) cement sold in 40 kg bags to builders' merchants; (c) fertiliser from a ship to a store 800 m
+        away; (d) 20 kg boxes of frozen prawns moving between two adjacent freezer rooms.</li>
+
+      <li><b>Unit load sizing.</b> A machine shop runs production batches of 600 parts. Transfer batches are
+        150 parts and a tote pan holds 25. Check the inequality of Eq.&nbsp;2.4 and state what would go wrong
+        if management standardised on a tote holding 800 parts.</li>
+
+      <li><b>Pallet choice.</b> Explain which pallet design features are required for each situation, using
+        Table&nbsp;2.12: (a) loads are handled by a narrow-aisle straddle truck with the pallet on the floor;
+        (b) drums occasionally leak onto the deck; (c) loads must be lifted by crane using bar slings;
+        (d) pallets are used once and shipped abroad.</li>
+
+      <li><b>Pallet dimensions.</b> Explain why a 48 &times; 40 in. pallet is not the same object as a
+        40 &times; 48 in. pallet, and why 48 &times; 40 became the dominant size in the United States. Then
+        explain the connection between the 48 in. maximum standard pallet depth and the 24 in. rated load
+        centre of a lift truck.</li>
+
+      <li><b>Derating.</b> A truck rated 4,000 lb has <var>F</var> = 14 in. What can it lift if the unit load
+        is 72 in. deep and of constant density? <em>[Answer: 3,040 lb]</em></li>
+
+      <li><b>Rerating, added counterweight.</b> A truck rated 5,000 lb with <var>F</var> = 12 in. has an
+        800 lb counterweight added at 66 in. from the front axle. Find the new rated capacity, and state two
+        components that must be checked before the truck is used at that rating.
+        <em>[Answer: 6,467 lb]</em></li>
+
+      <li><b>Rerating, attachment.</b> A truck rated 3,500 lb with <var>F</var> = 12 in. has its 120 lb forks
+        (centre of gravity 44 in. from the front axle) replaced by a 340 lb roll clamp (centre of gravity 28 in.
+        from the front axle). The clamp face is 17 in. from the front axle. Find the new rated capacity and
+        express the loss as a percentage.</li>
+
+      <li><b>Combined.</b> Using the truck from Problem 10 after rerating, what is the heaviest paper roll
+        1.2 m in diameter it may carry, assuming the clamp grips it centrally? State every assumption.</li>
+
+      <li><b>Lift height.</b> A truck is rated 3,500 lb at a 24 in. load centre with <var>F</var> = 12 in.,
+        so its rated load moment is 126,000 in&middot;lb, valid to a 13 ft lift. What is its allowable
+        capacity at a 24 in. load centre when lifting to 20 ft? <em>[Hint: reduce the rated moment by
+        4,800 in&middot;lb per foot above 13 ft. Answer: 2,567 lb]</em></li>
+
+      <li><b>Conveyor classification.</b> For each of these duties, name a conveyor type and give its
+        Unit/Bulk, location and accumulation classification: (a) cartons must queue before a labelling machine;
+        (b) hot castings must move 8 m from a shakeout; (c) car bodies must hang above the floor through a
+        paint shop; (d) cash must travel between a bank counter and a drive-in stall.</li>
+
+      <li><b>Accumulation.</b> Explain why a flat belt conveyor cannot accumulate and a live roller conveyor
+        can, and describe one situation in which the inability to accumulate would shut down a production
+        line.</li>
+
+      <li><b>Sortation.</b> A distribution centre must sort 90 cartons per minute to 24 destinations. Which
+        sortation mechanisms from Table&nbsp;2.15 are candidates, and which subsystem would you expect to limit
+        throughput? Then explain the circumstances under which the whole sorter could be eliminated.</li>
+
+      <li><b>Narrow aisle economics.</b> A warehouse has 12 aisles, each 60 m long. Changing from a sit-down
+        counterbalanced truck to a narrow-aisle reach truck reduces aisle width from 3.9 m to 2.7 m. How much
+        floor area is released, and what could it hold? What must be checked before assuming the change is
+        worth making?</li>
+
+      <li><b>Storage selection.</b> Use Table&nbsp;2.24 to choose a storage type for each: (a) 40 pallets per
+        SKU, no shelf life, throughput must be high; (b) 2 pallets per SKU, 900 SKUs, every load must be
+        accessible; (c) 8 pallets per SKU of a product with a 30-day shelf life; (d) archived documents in a
+        space-constrained basement.</li>
+
+      <li><b>Honeycomb loss.</b> Explain what honeycomb loss is, why block stacking and drive-in racks suffer
+        from it while push-back racks do not, and estimate the loss for an item held at 12 pallets in lanes
+        6 deep.</li>
+
+      <li><b>AS/RS cycle time.</b> An S/R machine travels horizontally at 3 m/s and vertically at 1 m/s. A slot
+        is 60 m along the aisle and 18 m up. How long does the machine take to reach it, and why is the answer
+        <em>not</em> the sum of the two travel times?</li>
+
+      <li><b>Two-stage selection.</b> A vaccine manufacturer must move sealed trays of vials 25 m between two
+        cleanrooms of different classifications, 40 times an hour. Work through both stages of &sect;2.19,
+        stating the technical filters first and the economic comparison second, and identify which
+        identification and control equipment from &sect;2.18 the choice implies.</li>
+    </ol>
+
+    <!-- ============================================================ 2.23 -->
+    <h2 id="s23">2.23 References</h2>
+
+    <ul class="refs">
+      <li>Kay, M. G., 2012. <em>Material Handling Equipment</em>. Fitts Department of Industrial and Systems
+        Engineering, North Carolina State University. &mdash; The principal source for this chapter: the five
+        categories, the equipment tables, the lift truck capacity equations and the two-stage selection
+        method.</li>
+      <li>Chu, H. K., Egbelu, P. J. and Wu, C. T., 1995. &ldquo;ADVISOR: A computer-aided material handling
+        equipment selection system&rdquo;, <em>International Journal of Production Research</em>,
+        33(12):3311&ndash;3329. &mdash; Origin of the five-category classification.</li>
+      <li>MHI, 2000. <em>The Ten Principles of Material Handling</em>. Charlotte, NC: Material Handling
+        Institute. &mdash; See also <a href="chapter1.html#s1">&sect;1.1</a>.</li>
+      <li>Coyle, J. J. et&nbsp;al., 1992. <em>Management of Business Logistics</em>, 5th ed. West. &mdash;
+        Source of the definition in &sect;2.1.</li>
+      <li>Apple, J. M., 1972. <em>Material Handling System Design</em>. New York: Ronald. &mdash; Time, place
+        and form utility; the materials handling equation.</li>
+      <li>Kulwiec, R. A. (ed.), 1985. <em>Materials Handling Handbook</em>, 2nd ed. New York: Wiley.</li>
+      <li>Frazelle, E., 2002. <em>World-Class Warehousing and Material Handling</em>. McGraw-Hill. &mdash;
+        Storage selection and the inventory-level rules in Table&nbsp;2.24.</li>
+      <li>Bartholdi, J. J. and Hackman, S. T., 2011. <em>Warehouse &amp; Distribution Science</em>. &mdash;
+        Storage and order-picking analysis.</li>
+      <li>Kano, 1991, as tabulated in Thai course notes. &mdash; Operating envelopes in Table&nbsp;2.27.</li>
+      <li>ISO 5048 and CEMA. &mdash; The bulk material code of &sect;2.5; see also
+        <a href="chapter1.html#s19">&sect;1.19</a>.</li>
+      <li>NIOSH, 1991. <em>Revised Lifting Equation</em>. &mdash; The 51 lb manual lifting limit in
+        &sect;2.11.</li>
+      <li>ANSI/ITSDF B56.1. <em>Safety Standard for Low Lift and High Lift Trucks</em>. &mdash; Rating,
+        re-plating and operator requirements referred to in &sect;2.15.</li>
+    </ul>
+
+    <div class="chapter-nav">
+      <span><a href="quiz1.html">&larr; Chapter 1 Self-Check</a></span>
+      <span><a href="quiz2.html">Chapter 2 Self-Check &rarr;</a></span>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Course</h3>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Chapter 1: Belt Conveyors</a></li>
+        <li><a href="chapter2.html">Chapter 2: Equipment &amp; Selection</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Chapter 2 Sections</h3>
+      <ul>
+        <li><a href="#s6">The Unit Load Concept</a></li>
+        <li><a href="#s8">Conveyor, Crane or Truck?</a></li>
+        <li><a href="#s15">Lift Truck Load Capacity</a></li>
+        <li><a href="#s19">Selecting the Equipment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Lecture notes for MHE 301. All rights reserved. Layout inspired by open courseware sites; content, branding
+        and code are original to this course.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Charatchai Yenphayab. All rights reserved. MHE 301 Materials Handling Engineering &mdash; course
+    notes, Semester 1 / 2026. No part of this site may be reproduced, adapted or redistributed without prior
+    written permission.
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
