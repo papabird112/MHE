@@ -26,7 +26,7 @@
       <a href="chapter3.html" class="active">EN</a>
       <a href="chapter3-th.html" lang="th">ไทย</a>
     </div>
-    <a class="btn-give" href="#s16">Worked Example</a>
+    <a class="btn-give" href="#s13">Worked Example</a>
   </div>
 </header>
 
@@ -66,8 +66,8 @@
     <section class="course-info">
       <h2>Chapter Info</h2>
       <dl>
-        <dt>Weeks</dt><dd>1&ndash;4</dd>
-        <dt>Problem Sets</dt><dd>PS 1, PS 2, PS 3</dd>
+        <dt>Weeks</dt><dd>5&ndash;7</dd>
+        <dt>Problem Sets</dt><dd>PS 3, PS 4, PS 5</dd>
         <dt>Design Basis</dt>
         <dd>
           <ul>
@@ -98,98 +98,27 @@
     <nav class="toc">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#s1">Materials Handling: Scope and Principles</a></li>
-        <li><a href="#s2">Classification of Handling Equipment</a></li>
-        <li><a href="#s3">The Belt Conveyor</a></li>
-        <li><a href="#s4">Principal Components</a></li>
-        <li><a href="#s5">Belt Construction and Selection</a></li>
-        <li><a href="#s6">Idlers, Pulleys and Drives</a></li>
-        <li><a href="#s7">Capacity Calculation</a></li>
-        <li><a href="#s8">Belt Speed Selection</a></li>
-        <li><a href="#s9">Motion Resistances and Power</a></li>
-        <li><a href="#s10">Belt Tension Analysis</a></li>
-        <li><a href="#s11">Belt Sag and Take-up</a></li>
-        <li><a href="#s12">Belt Strength Selection</a></li>
-        <li><a href="#s13">Conveyor Geometry</a></li>
-        <li><a href="#s14">Belt Tracking and Troubleshooting</a></li>
-        <li><a href="#s15">Safety and Maintenance</a></li>
-        <li><a href="#s16">Worked Design Example</a></li>
-        <li><a href="#s17">Nomenclature</a></li>
-        <li><a href="#s18">Problems</a></li>
-        <li><a href="#s19">References</a></li>
+        <li><a href="#s1">The Belt Conveyor and Its Components</a></li>
+        <li><a href="#s2">Belt Construction and Selection</a></li>
+        <li><a href="#s3">Idlers, Pulleys and Drives</a></li>
+        <li><a href="#s4">Capacity Calculation</a></li>
+        <li><a href="#s5">Belt Speed Selection</a></li>
+        <li><a href="#s6">Motion Resistances and Power</a></li>
+        <li><a href="#s7">Belt Tension Analysis</a></li>
+        <li><a href="#s8">Belt Sag and Take-up</a></li>
+        <li><a href="#s9">Belt Strength Selection</a></li>
+        <li><a href="#s10">Conveyor Geometry</a></li>
+        <li><a href="#s11">Belt Tracking and Troubleshooting</a></li>
+        <li><a href="#s12">Safety and Maintenance</a></li>
+        <li><a href="#s13">Worked Design Example</a></li>
+        <li><a href="#s14">Nomenclature</a></li>
+        <li><a href="#s15">Problems</a></li>
+        <li><a href="#s16">References</a></li>
       </ol>
     </nav>
 
     <!-- ============================================================ 3.1 -->
-    <h2 id="s1">3.1 Materials Handling: Scope and Principles</h2>
-
-    <p><b>Materials handling</b> is the movement, storage, protection and control of materials throughout
-      manufacturing, warehousing, distribution, consumption and disposal. Note what the definition does
-      <em>not</em> say: it does not say that handling changes the product. Handling adds cost, time and risk of
-      damage, but no value. In a typical process plant it consumes 20&ndash;50&nbsp;% of operating cost and is
-      responsible for a disproportionate share of lost-time injuries.</p>
-
-    <p>The design objective follows directly: <b>move the required tonnage at the lowest total cost per tonne,
-      with acceptable risk to people and product.</b> Everything in this course is a means to that end.</p>
-
-    <h3>The ten principles of materials handling</h3>
-    <p>The College-Industry Council on Material Handling Education states ten principles. They are not
-      equations, but they are the checklist a design review will hold you to.</p>
-
-    <div class="table-wrap">
-      <table>
-        <caption><b>Table 3.1.</b> The ten principles and their practical test.</caption>
-        <thead><tr><th class="num">#</th><th>Principle</th><th>What it means in practice</th></tr></thead>
-        <tbody>
-          <tr><td class="num">1</td><td>Planning</td><td>Define the method, the material, the move and the required performance <em>before</em> selecting hardware.</td></tr>
-          <tr><td class="num">2</td><td>Standardisation</td><td>Fewer equipment types and fewer spare part numbers; commonality across the plant.</td></tr>
-          <tr><td class="num">3</td><td>Work</td><td>Minimise handling work = flow &times; distance. The cheapest move is the one you eliminate.</td></tr>
-          <tr><td class="num">4</td><td>Ergonomic</td><td>Fit the task to the person; eliminate repetitive manual lifting.</td></tr>
-          <tr><td class="num">5</td><td>Unit load</td><td>Handle many items as one load (pallet, container, bulk stream) rather than individually.</td></tr>
-          <tr><td class="num">6</td><td>Space utilisation</td><td>Use the cube, not just the floor. Storage height is usually the cheapest capacity.</td></tr>
-          <tr><td class="num">7</td><td>System</td><td>Handling, storage, production and transport are one system; local optima do not add up.</td></tr>
-          <tr><td class="num">8</td><td>Automation</td><td>Automate where volume, repetition and consistency justify it &mdash; not by default.</td></tr>
-          <tr><td class="num">9</td><td>Environmental</td><td>Energy use, dust, noise, spillage and end-of-life disposal are design inputs.</td></tr>
-          <tr><td class="num">10</td><td>Life-cycle cost</td><td>Judge on capital + energy + maintenance + downtime over the whole life, not purchase price.</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout">
-      <span class="label">Why this matters for Chapter 3</span>
-      <p>Principles 3, 5 and 10 explain why belt conveyors dominate bulk handling. A belt conveys a continuous
-        "unit load", the path is fixed and short, and its energy consumption per tonne-kilometre is roughly an
-        order of magnitude below that of trucking the same material.</p>
-    </div>
-
-    <!-- ============================================================ 3.2 -->
-    <h2 id="s2">3.2 Classification of Handling Equipment</h2>
-
-    <div class="table-wrap">
-      <table>
-        <caption><b>Table 3.2.</b> Principal classes of materials handling equipment.</caption>
-        <thead><tr><th>Class</th><th>Sub-class</th><th>Examples</th></tr></thead>
-        <tbody>
-          <tr><td rowspan="3"><b>Transport</b></td><td>Conveyors (continuous, fixed path)</td><td>Belt, chain, apron, roller, screw, vibrating, bucket elevator, pneumatic</td></tr>
-          <tr><td>Cranes and hoists (intermittent, 3-D within a volume)</td><td>Overhead bridge, gantry, jib, monorail, chain and wire-rope hoists</td></tr>
-          <tr><td>Industrial trucks (intermittent, variable path)</td><td>Counterbalance forklift, reach truck, pallet jack, tow tractor, AGV</td></tr>
-          <tr><td><b>Positioning</b></td><td>Fixed workplace handling</td><td>Lift tables, tilters, manipulators, balancers, industrial robots</td></tr>
-          <tr><td><b>Unit-load formation</b></td><td>Load carriers and forming equipment</td><td>Pallets, skids, ISO containers, palletisers, stretch and shrink wrappers</td></tr>
-          <tr><td><b>Storage</b></td><td>Static and dynamic</td><td>Block stacking, selective and drive-in racking, flow racks, AS/RS, carousels, silos and bunkers</td></tr>
-          <tr><td><b>Identification &amp; control</b></td><td>Information layer</td><td>Barcode, RFID, machine vision, weighing, WMS and WCS software</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Bulk versus unit load</h3>
-    <p>The single most important early decision is whether the material behaves as a <b>bulk solid</b> (a
-      divisible stream characterised statistically: coal, grain, ore, cement) or as a <b>unit load</b> (a
-      discrete, countable item: cartons, pallets, coils). Bulk material is handled by cross-section and mass
-      flow rate; unit loads are handled by count and cycle time. Belt conveyors serve both, but the design
-      methods differ, and this chapter treats the bulk case.</p>
-
-    <!-- ============================================================ 3.3 -->
-    <h2 id="s3">3.3 The Belt Conveyor</h2>
+    <h2 id="s1">3.1 The Belt Conveyor and Its Components</h2>
 
     <p>A belt conveyor carries material on the upper surface of an endless flexible belt that runs over a
       series of idler rollers between two terminal pulleys. One pulley is driven; friction between that pulley
@@ -353,8 +282,6 @@
     </div>
 
     <!-- ============================================================ 3.4 -->
-    <h2 id="s4">3.4 Principal Components</h2>
-
     <h3>The belt</h3>
     <p>The belt performs three jobs at once: it carries the load, it transmits the tension, and it forms the
       trough that contains the material. It is normally 30&ndash;50&nbsp;% of the capital cost of the conveyor,
@@ -412,14 +339,14 @@
     </ul>
 
     <!-- ============================================================ 3.5 -->
-    <h2 id="s5">3.5 Belt Construction and Selection</h2>
+    <h2 id="s2">3.2 Belt Construction and Selection</h2>
 
     <p>A conveyor belt has a <b>carcass</b>, which carries the tension, and <b>covers</b>, which protect the
       carcass and provide the friction surface.</p>
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.3.</b> Carcass types.</caption>
+        <caption><b>Table 3.1.</b> Carcass types.</caption>
         <thead><tr><th>Type</th><th>Designation</th><th>Strength range</th><th>Characteristics</th></tr></thead>
         <tbody>
           <tr><td>Polyester&ndash;polyamide fabric</td><td>EP (e.g. EP&nbsp;400/3)</td><td>200&ndash;2000&nbsp;N/mm</td>
@@ -458,7 +385,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.4.</b> Standard belt widths and matching three-roll idler roll length
+        <caption><b>Table 3.2.</b> Standard belt widths and matching three-roll idler roll length
           <var>l</var><sub>3</sub>.</caption>
         <thead><tr><th><var>B</var> (mm)</th><th class="num">500</th><th class="num">650</th><th class="num">800</th><th class="num">1000</th><th class="num">1200</th><th class="num">1400</th><th class="num">1600</th><th class="num">1800</th><th class="num">2000</th></tr></thead>
         <tbody>
@@ -477,7 +404,7 @@
     </div>
 
     <!-- ============================================================ 3.6 -->
-    <h2 id="s6">3.6 Idlers, Pulleys and Drives</h2>
+    <h2 id="s3">3.3 Idlers, Pulleys and Drives</h2>
 
     <h3>Idler spacing</h3>
     <p>Carrying idler spacing <var>a</var><sub>o</sub> is a compromise: closer spacing reduces belt sag and
@@ -486,7 +413,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.5.</b> Typical carrying idler spacing <var>a</var><sub>o</sub> (m).</caption>
+        <caption><b>Table 3.3.</b> Typical carrying idler spacing <var>a</var><sub>o</sub> (m).</caption>
         <thead>
           <tr><th>Belt width <var>B</var> (mm)</th><th class="num">&rho; &lt; 800 kg/m&sup3;</th><th class="num">800&ndash;1600</th><th class="num">&gt; 1600</th></tr>
         </thead>
@@ -509,7 +436,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.6.</b> Friction coefficient <var>&mu;</var> between belt and drive pulley.</caption>
+        <caption><b>Table 3.4.</b> Friction coefficient <var>&mu;</var> between belt and drive pulley.</caption>
         <thead><tr><th>Pulley surface</th><th class="num">Dry</th><th class="num">Wet (clean)</th><th class="num">Wet and dirty</th></tr></thead>
         <tbody>
           <tr><td>Bare steel</td><td class="num">0.35&ndash;0.40</td><td class="num">0.10</td><td class="num">0.05&ndash;0.10</td></tr>
@@ -530,7 +457,7 @@
     </div>
 
     <!-- ============================================================ 3.7 -->
-    <h2 id="s7">3.7 Capacity Calculation</h2>
+    <h2 id="s4">3.4 Capacity Calculation</h2>
 
     <p>Capacity is the product of the material cross-section on the belt and the belt speed. Everything hinges
       on computing that cross-section correctly.</p>
@@ -549,7 +476,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.7.</b> Representative bulk material data. Always confirm against a site sample.</caption>
+        <caption><b>Table 3.5.</b> Representative bulk material data. Always confirm against a site sample.</caption>
         <thead>
           <tr><th>Material</th><th class="num">&rho; (kg/m&sup3;)</th><th class="num">&phi; (&deg;)</th><th class="num">&theta; (&deg;)</th><th class="num">Max incline (&deg;)</th><th>Abrasiveness</th></tr>
         </thead>
@@ -719,7 +646,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.8.</b> Slope factor <var>k</var> as a function of conveyor inclination
+        <caption><b>Table 3.6.</b> Slope factor <var>k</var> as a function of conveyor inclination
           <var>&delta;</var>.</caption>
         <thead><tr><th><var>&delta;</var> (&deg;)</th><th class="num">2</th><th class="num">4</th><th class="num">6</th><th class="num">8</th><th class="num">10</th><th class="num">12</th><th class="num">14</th><th class="num">16</th><th class="num">18</th><th class="num">20</th></tr></thead>
         <tbody>
@@ -729,7 +656,7 @@
     </div>
 
     <!-- ============================================================ 3.8 -->
-    <h2 id="s8">3.8 Belt Speed Selection</h2>
+    <h2 id="s5">3.5 Belt Speed Selection</h2>
 
     <p>For a given tonnage, a faster belt can be narrower &mdash; and narrower belts are much cheaper. But speed
       costs elsewhere: more wear, more dust and spillage, more degradation of friable material, higher impact at
@@ -738,7 +665,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.9.</b> Recommended maximum belt speed <var>v</var> (m/s).</caption>
+        <caption><b>Table 3.7.</b> Recommended maximum belt speed <var>v</var> (m/s).</caption>
         <thead>
           <tr><th>Belt width (mm)</th><th class="num">Light, free-flowing<br>(grain, fine coal)</th><th class="num">Medium abrasive<br>(sized coal, limestone)</th><th class="num">Heavy abrasive<br>(ore, crushed rock)</th></tr>
         </thead>
@@ -765,7 +692,7 @@
     </div>
 
     <!-- ============================================================ 3.9 -->
-    <h2 id="s9">3.9 Motion Resistances and Power</h2>
+    <h2 id="s6">3.6 Motion Resistances and Power</h2>
 
     <p>The drive must overcome four categories of resistance. ISO 5048 and DIN 22101 group them as follows.</p>
 
@@ -810,7 +737,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.10.</b> Length coefficient <var>C</var>. Short conveyors are dominated by terminal
+        <caption><b>Table 3.8.</b> Length coefficient <var>C</var>. Short conveyors are dominated by terminal
           losses, hence the large values.</caption>
         <thead><tr><th><var>L</var> (m)</th><th class="num">20</th><th class="num">40</th><th class="num">60</th><th class="num">80</th><th class="num">100</th><th class="num">120</th><th class="num">150</th><th class="num">200</th><th class="num">300</th><th class="num">500</th><th class="num">1000</th></tr></thead>
         <tbody>
@@ -821,7 +748,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.11.</b> Artificial friction coefficient <var>f</var>.</caption>
+        <caption><b>Table 3.9.</b> Artificial friction coefficient <var>f</var>.</caption>
         <thead><tr><th>Operating condition</th><th class="num"><var>f</var></th></tr></thead>
         <tbody>
           <tr><td>Favourable: well aligned, clean, good quality idlers, ambient temperature</td><td class="num">0.016</td></tr>
@@ -864,7 +791,7 @@
     </div>
 
     <!-- ============================================================ 3.10 -->
-    <h2 id="s10">3.10 Belt Tension Analysis</h2>
+    <h2 id="s7">3.7 Belt Tension Analysis</h2>
 
     <p>The peripheral force <var>F</var><sub>U</sub> is transmitted by friction over the wrap of the drive
       pulley. The classical capstan (Euler&ndash;Eytelwein) relation sets the limit:</p>
@@ -940,7 +867,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.12.</b> Wrap factor <var>C</var><sub>w</sub>&nbsp;=&nbsp;1/(e<sup><var>&mu;&theta;</var></sup>&nbsp;&minus;&nbsp;1).</caption>
+        <caption><b>Table 3.10.</b> Wrap factor <var>C</var><sub>w</sub>&nbsp;=&nbsp;1/(e<sup><var>&mu;&theta;</var></sup>&nbsp;&minus;&nbsp;1).</caption>
         <thead><tr><th>Wrap <var>&theta;</var></th><th class="num">&mu; = 0.25</th><th class="num">&mu; = 0.30</th><th class="num">&mu; = 0.35</th><th class="num">&mu; = 0.40</th></tr></thead>
         <tbody>
           <tr><td>180&deg; (3.14 rad)</td><td class="num">0.84</td><td class="num">0.62</td><td class="num">0.50</td><td class="num">0.40</td></tr>
@@ -967,7 +894,7 @@
     </div>
 
     <!-- ============================================================ 3.11 -->
-    <h2 id="s11">3.11 Belt Sag and Take-up</h2>
+    <h2 id="s8">3.8 Belt Sag and Take-up</h2>
 
     <p>Between two idler sets the loaded belt hangs as a catenary. Too much sag and the material is repeatedly
       lifted and dropped at every idler: energy is wasted, material spills, and the belt flexes itself to death.
@@ -1017,7 +944,7 @@
     </ul>
 
     <!-- ============================================================ 3.12 -->
-    <h2 id="s12">3.12 Belt Strength Selection</h2>
+    <h2 id="s9">3.9 Belt Strength Selection</h2>
 
     <p>The belt is selected on tension per unit width at the highest-tension point (normally
       <var>T</var><sub>1</sub> at the drive):</p>
@@ -1033,7 +960,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.13.</b> Safety factor SF on belt breaking strength.</caption>
+        <caption><b>Table 3.11.</b> Safety factor SF on belt breaking strength.</caption>
         <thead><tr><th>Belt and splice</th><th class="num">SF</th></tr></thead>
         <tbody>
           <tr><td>Fabric belt, vulcanised splice, steady duty</td><td class="num">8&ndash;10</td></tr>
@@ -1055,11 +982,11 @@
     </ol>
 
     <!-- ============================================================ 3.13 -->
-    <h2 id="s13">3.13 Conveyor Geometry</h2>
+    <h2 id="s10">3.10 Conveyor Geometry</h2>
 
     <h3>Maximum inclination</h3>
     <p>The limit is material sliding back on the belt, not motor power. Practical maxima are given in
-      Table&nbsp;3.7; as a guide, take the surcharge angle <var>&theta;</var> as an approximate upper bound for
+      Table&nbsp;3.5; as a guide, take the surcharge angle <var>&theta;</var> as an approximate upper bound for
       a smooth belt. Lumpy, rounded, wet or dusty material must be de-rated further.</p>
 
     <h3>Transition distance</h3>
@@ -1088,7 +1015,7 @@
       Both cases must ultimately be checked against the manufacturer's data.</p>
 
     <!-- ============================================================ 3.14 -->
-    <h2 id="s14">3.14 Belt Tracking and Troubleshooting</h2>
+    <h2 id="s11">3.11 Belt Tracking and Troubleshooting</h2>
 
     <p>A belt runs toward the side it reaches first. That single sentence explains most mistracking: any
       misalignment, buildup or asymmetric load steers the belt. Correct in this order &mdash; structure first,
@@ -1096,7 +1023,7 @@
 
     <div class="table-wrap">
       <table>
-        <caption><b>Table 3.14.</b> Common faults, causes and remedies.</caption>
+        <caption><b>Table 3.12.</b> Common faults, causes and remedies.</caption>
         <thead><tr><th>Symptom</th><th>Probable cause</th><th>Remedy</th></tr></thead>
         <tbody>
           <tr><td>Belt runs off at one point only</td><td>Idler or pulley out of square at that point; material buildup on a roll</td><td>Square the offending idler; clean the roll; check frame level</td></tr>
@@ -1108,13 +1035,13 @@
           <tr><td>Top cover cuts and gouges</td><td>Impact from large lumps; tramp metal; excessive drop height</td><td>Impact idlers, impact bed, reduce drop height, fit magnet or metal detector</td></tr>
           <tr><td>Longitudinal rip</td><td>Trapped object at chute or tail; failed idler shell</td><td>Rip detection, chute redesign, idler inspection programme</td></tr>
           <tr><td>Idler bearing failures</td><td>Water and fines ingress; overload; incorrect spacing</td><td>Better seals, correct spacing, condition monitoring</td></tr>
-          <tr><td>Excessive belt stretch, take-up bottomed out</td><td>Undersized belt or nylon carcass with insufficient take-up travel</td><td>Re-splice to shorten; verify take-up travel against Section&nbsp;3.11</td></tr>
+          <tr><td>Excessive belt stretch, take-up bottomed out</td><td>Undersized belt or nylon carcass with insufficient take-up travel</td><td>Re-splice to shorten; verify take-up travel against Section&nbsp;3.8</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- ============================================================ 3.15 -->
-    <h2 id="s15">3.15 Safety and Maintenance</h2>
+    <h2 id="s12">3.12 Safety and Maintenance</h2>
 
     <h3>Required safety provisions</h3>
     <ul>
@@ -1152,7 +1079,7 @@
     </div>
 
     <!-- ============================================================ 3.16 -->
-    <h2 id="s16">3.16 Worked Design Example</h2>
+    <h2 id="s13">3.13 Worked Design Example</h2>
 
     <div class="example">
       <h3>Problem statement</h3>
@@ -1176,7 +1103,7 @@
         <h4>Step 1 &mdash; Inclination and slope factor</h4>
         <p>sin&nbsp;<var>&delta;</var> = <var>H</var>/<var>L</var> = 12/120 = 0.100, so
           <var>&delta;</var> = 5.74&deg;, cos&nbsp;<var>&delta;</var> = 0.995.</p>
-        <p>From Table&nbsp;3.8, <var>k</var> &asymp; 0.99. From Table&nbsp;3.7 the maximum incline for crushed
+        <p>From Table&nbsp;3.6, <var>k</var> &asymp; 0.99. From Table&nbsp;3.5 the maximum incline for crushed
           limestone is about 18&deg;, so 5.74&deg; is comfortably acceptable.</p>
         <p class="result"><var>&delta;</var> = 5.74&deg; &nbsp;&nbsp; <var>k</var> = 0.99</p>
       </div>
@@ -1187,7 +1114,7 @@
           <var>B</var>&nbsp;&ge;&nbsp;3.3(100)&nbsp;+&nbsp;200&nbsp;=&nbsp;530&nbsp;mm. Try
           <b><var>B</var> = 800 mm</b>, which satisfies this with margin.</p>
         <p>Usable width, Eq.&nbsp;3.2: <var>b</var> = 0.9(0.8) &minus; 0.05 = <b>0.670 m</b>.<br>
-           Idler roll length, Table&nbsp;3.4: <var>l</var><sub>3</sub> = <b>0.315 m</b>.<br>
+           Idler roll length, Table&nbsp;3.2: <var>l</var><sub>3</sub> = <b>0.315 m</b>.<br>
            So <var>b</var> &minus; <var>l</var><sub>3</sub> = 0.355 m.</p>
         <p>Chord width, Eq.&nbsp;3.3:<br>
           <var>w</var> = 0.315 + 0.355(cos&nbsp;35&deg;) = 0.315 + 0.355(0.8192) = <b>0.6058 m</b></p>
@@ -1205,7 +1132,7 @@
         <p>Rearranging Eq.&nbsp;3.8 for the required speed:</p>
         <p><var>v</var> = <var>Q</var> / (3.6 <var>S</var> <var>&rho;</var> <var>k</var>)
           = 500 / (3.6 &times; 0.0691 &times; 1600 &times; 0.99) = 1.27 m/s</p>
-        <p>The next preferred speed is 1.6&nbsp;m/s. Table&nbsp;3.9 permits up to 2.5&nbsp;m/s for an 800&nbsp;mm
+        <p>The next preferred speed is 1.6&nbsp;m/s. Table&nbsp;3.7 permits up to 2.5&nbsp;m/s for an 800&nbsp;mm
           belt on medium-abrasive material, so 1.6&nbsp;m/s is acceptable.</p>
         <p>Rated capacity at this speed:<br>
           <var>Q</var><sub>rated</sub> = 3.6(0.0691)(1.6)(1600)(0.99) = <b>631 t/h</b></p>
@@ -1220,7 +1147,7 @@
           <var>q</var><sub>G</sub> = 500 / (3.6 &times; 1.6) = <b>86.8 kg/m</b></p>
         <p>Belt: trial EP 400/3 with 4 + 2 mm covers, 800 mm wide &rarr;
           <var>q</var><sub>B</sub> &asymp; <b>13 kg/m</b></p>
-        <p>Carrying idlers: 21 kg per set at <var>a</var><sub>o</sub> = 1.2 m (Table&nbsp;3.5) &rarr;
+        <p>Carrying idlers: 21 kg per set at <var>a</var><sub>o</sub> = 1.2 m (Table&nbsp;3.3) &rarr;
           <var>q</var><sub>RO</sub> = 21/1.2 = <b>17.5 kg/m</b></p>
         <p>Return idlers: 13 kg per set at <var>a</var><sub>u</sub> = 3.0 m &rarr;
           <var>q</var><sub>RU</sub> = 13/3.0 = <b>4.3 kg/m</b></p>
@@ -1228,8 +1155,8 @@
 
       <div class="step">
         <h4>Step 5 &mdash; Main and secondary resistance</h4>
-        <p>From Table&nbsp;3.10 at <var>L</var> = 120 m, <var>C</var> = 1.70. Outdoor abrasive duty, well
-          maintained: <var>f</var> = 0.020 (Table&nbsp;3.11).</p>
+        <p>From Table&nbsp;3.8 at <var>L</var> = 120 m, <var>C</var> = 1.70. Outdoor abrasive duty, well
+          maintained: <var>f</var> = 0.020 (Table&nbsp;3.9).</p>
         <p>Bracket term:<br>
           <var>q</var><sub>RO</sub> + <var>q</var><sub>RU</sub> + (2<var>q</var><sub>B</sub> + <var>q</var><sub>G</sub>)cos&nbsp;<var>&delta;</var><br>
           = 17.5 + 4.3 + (26 + 86.8)(0.995) = 21.8 + 112.2 = 134.0 kg/m</p>
@@ -1261,10 +1188,10 @@
 
       <div class="step">
         <h4>Step 8 &mdash; Belt tensions</h4>
-        <p>Drive pulley: rubber lagged, wet outdoor service &rarr; <var>&mu;</var> = 0.35 (Table&nbsp;3.6).
+        <p>Drive pulley: rubber lagged, wet outdoor service &rarr; <var>&mu;</var> = 0.35 (Table&nbsp;3.4).
           Snub pulley gives a wrap of 210&deg; = 3.665 rad.</p>
         <p>e<sup><var>&mu;&theta;</var></sup> = e<sup>0.35(3.665)</sup> = e<sup>1.283</sup> = 3.61, so
-          <var>C</var><sub>w</sub> = 1/(3.61 &minus; 1) = 0.383 (agrees with Table&nbsp;3.12).</p>
+          <var>C</var><sub>w</sub> = 1/(3.61 &minus; 1) = 0.383 (agrees with Table&nbsp;3.10).</p>
         <p>No-slip requirement:<br>
           <var>T</var><sub>2</sub> = 16&nbsp;530(0.383) = <b>6.34 kN</b></p>
         <p>Sag requirement on the carrying run, Eq.&nbsp;3.16 at 2&nbsp;% sag:<br>
@@ -1282,7 +1209,7 @@
       <div class="step">
         <h4>Step 9 &mdash; Belt selection</h4>
         <p>Tension per unit width: <var>T</var><sub>max</sub>/<var>B</var> = 23.9/0.8 = 29.9 kN/m = 29.9 N/mm</p>
-        <p>Fabric belt with a vulcanised splice, SF = 10 (Table&nbsp;3.13):<br>
+        <p>Fabric belt with a vulcanised splice, SF = 10 (Table&nbsp;3.11):<br>
           <var>k</var><sub>req</sub> = 29.9 &times; 10 = <b>299 N/mm</b></p>
         <p>The next standard fabric belt is EP 315/3. Selecting one size up for cover-wear margin and to match
           the mass assumed in Step 4:</p>
@@ -1332,7 +1259,7 @@
     </div>
 
     <!-- ============================================================ 3.17 -->
-    <h2 id="s17">3.17 Nomenclature</h2>
+    <h2 id="s14">3.14 Nomenclature</h2>
 
     <div class="table-wrap">
       <table>
@@ -1377,7 +1304,7 @@
     </div>
 
     <!-- ============================================================ 3.18 -->
-    <h2 id="s18">3.18 Problems</h2>
+    <h2 id="s15">3.15 Problems</h2>
 
     <div class="callout rule">
       <span class="label">Check yourself first</span>
@@ -1400,7 +1327,7 @@
 
       <li><b>Width selection.</b> A plant must move 1200&nbsp;t/h of iron ore
         (<var>&rho;</var> = 2600 kg/m&sup3;, <var>&theta;</var> = 20&deg;, max lump 200&nbsp;mm) on a 35&deg;
-        trough. Select a belt width and a preferred speed, and justify both against Table&nbsp;3.9 and the lump
+        trough. Select a belt width and a preferred speed, and justify both against Table&nbsp;3.7 and the lump
         size rule.</li>
 
       <li><b>Power.</b> A horizontal conveyor is 250&nbsp;m long and moves 800&nbsp;t/h at 2.5&nbsp;m/s.
@@ -1432,13 +1359,13 @@
 
       <li><b>Design synthesis.</b> A quarry must lift 350&nbsp;t/h of crushed granite
         (<var>&rho;</var> = 1500 kg/m&sup3;, max lump 150&nbsp;mm) through 22&nbsp;m of height over a horizontal
-        distance of 95&nbsp;m. Carry out a complete design following Section&nbsp;3.16 and state every assumption
-        you make. Check the inclination against Table&nbsp;3.7 before you begin &mdash; if it fails, propose and
+        distance of 95&nbsp;m. Carry out a complete design following Section&nbsp;3.13 and state every assumption
+        you make. Check the inclination against Table&nbsp;3.5 before you begin &mdash; if it fails, propose and
         size an alternative arrangement.</li>
     </ol>
 
     <!-- ============================================================ 3.19 -->
-    <h2 id="s19">3.19 References</h2>
+    <h2 id="s16">3.16 References</h2>
 
     <ul class="refs">
       <li>Conveyor Equipment Manufacturers Association. <em>Belt Conveyors for Bulk Materials</em>, 7th ed.
@@ -1480,10 +1407,10 @@
     <div>
       <h3>Chapter 3 Sections</h3>
       <ul>
-        <li><a href="#s7">Capacity Calculation</a></li>
-        <li><a href="#s9">Motion Resistances and Power</a></li>
-        <li><a href="#s10">Belt Tension Analysis</a></li>
-        <li><a href="#s16">Worked Design Example</a></li>
+        <li><a href="#s4">Capacity Calculation</a></li>
+        <li><a href="#s6">Motion Resistances and Power</a></li>
+        <li><a href="#s7">Belt Tension Analysis</a></li>
+        <li><a href="#s13">Worked Design Example</a></li>
       </ul>
     </div>
     <div>

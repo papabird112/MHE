@@ -147,7 +147,7 @@ window.QUIZ = {
     revise: "Sections worth another look:",
     band90: "Excellent. You can classify a handling problem and defend an equipment choice. Move on to the written problems.",
     band70: "A solid grasp. Re-read the sections listed below, then try the questions you missed again.",
-    band50: "The framework is there but the detail is not settled yet. Work through the sections below with Tables 1.8 and 1.24 beside you.",
+    band50: "The framework is there but the detail is not settled yet. Work through the sections below with Tables 1.9 and 1.25 beside you.",
     band0: "Read the chapter again before going further. Start with the five categories (&sect;1.7) and the conveyor-crane-truck table (&sect;1.8), since the rest of the chapter hangs off them."
   },
   questions: [
@@ -279,7 +279,7 @@ window.QUIZ = {
     ],
     a: 1,
     ref: "1.5", href: "chapter1.html#s5",
-    why: "Flowability is judged from the angle of repose: up to 30&deg; is very free flowing, 30 to 45&deg; is free flowing, 45&deg; and above is average flowability, and material that will not flow unaided is sluggish. At 38&deg; the material sits in the middle band. This is the same repose angle that drives the surcharge angle used to compute belt cross-section in &sect;3.7, so the code and the capacity calculation are reading the same physical property."
+    why: "Flowability is judged from the angle of repose: up to 30&deg; is very free flowing, 30 to 45&deg; is free flowing, 45&deg; and above is average flowability, and material that will not flow unaided is sluggish. At 38&deg; the material sits in the middle band. This is the same repose angle that drives the surcharge angle used to compute belt cross-section in &sect;3.4, so the code and the capacity calculation are reading the same physical property."
   },
   {
     q: "A material is coded with the miscellaneous letter N. What does that force you to do about it?",
@@ -291,7 +291,7 @@ window.QUIZ = {
     ],
     a: 2,
     ref: "1.5", href: "chapter1.html#s5",
-    why: "N means sticky and adhesive, which produces carryback: material that clings to the belt past the discharge and returns on the underside. The remedy is aggressive belt cleaners plus a V-plough ahead of the tail pulley (&sect;3.4). Explosive dust is M, oils and chemicals present is W, and degradable material is Q &mdash; each letter names a different problem and a different fix, which is why the miscellaneous group so often carries several letters at once."
+    why: "N means sticky and adhesive, which produces carryback: material that clings to the belt past the discharge and returns on the underside. The remedy is aggressive belt cleaners plus a V-plough ahead of the tail pulley (&sect;3.1). Explosive dust is M, oils and chemicals present is W, and degradable material is Q &mdash; each letter names a different problem and a different fix, which is why the miscellaneous group so often carries several letters at once."
   },
 
   /* ---------------- 2.6 The unit load concept ---------------- */
@@ -343,12 +343,12 @@ window.QUIZ = {
     ],
     a: 0,
     ref: "1.7", href: "chapter1.html#s7",
-    why: "Transport equipment has four sub-categories, and manual handling is one of them. Every category in Table&nbsp;1.7 has a no-equipment entry, which matters: manual handling is always one of the alternatives on the shortlist and must be costed rather than dismissed. Positioning and storage are separate categories in their own right, and hoists belong to positioning equipment."
+    why: "Transport equipment has four sub-categories, and manual handling is one of them. Every category in Table&nbsp;1.8 has a no-equipment entry, which matters: manual handling is always one of the alternatives on the shortlist and must be costed rather than dismissed. Positioning and storage are separate categories in their own right, and hoists belong to positioning equipment."
   },
 
   /* ---------------- 2.8 Conveyor, crane or truck ---------------- */
   {
-    q: "Material must move between two specific points in a restricted area, with a high number of moves per shift. Which transport category does Table 1.8 indicate?",
+    q: "Material must move between two specific points in a restricted area, with a high number of moves per shift. Which transport category does Table 1.9 indicate?",
     opts: [
       "Industrial truck",
       "Crane",
@@ -357,7 +357,7 @@ window.QUIZ = {
     ],
     a: 3,
     ref: "1.8", href: "chapter1.html#s8",
-    why: "Fixed path, restricted area and high move frequency is the conveyor cell of Table&nbsp;1.8, and it is the clearest case in the whole table. The high frequency is what justifies the conveyor's large fixed investment; a truck would need an operator for every one of those moves. Lower the frequency and the same fixed path may still suit a conveyor if the activities are adjacent, but a non-adjacent low-frequency move points to a truck or a crane instead."
+    why: "Fixed path, restricted area and high move frequency is the conveyor cell of Table&nbsp;1.9, and it is the clearest case in the whole table. The high frequency is what justifies the conveyor's large fixed investment; a truck would need an operator for every one of those moves. Lower the frequency and the same fixed path may still suit a conveyor if the activities are adjacent, but a non-adjacent low-frequency move points to a truck or a crane instead."
   },
   {
     q: "Material must move over variable paths within a restricted area, but the flow is intermittent. Which transport category suits it?",
@@ -618,7 +618,7 @@ window.QUIZ = {
     why: "A lane assigned to one item cannot accept another until it is completely empty, so on average about half a lane per item stands idle. That is honeycomb loss, and it is why block stacking and drive-in racks lose cube while single-deep and push-back racks do not. Aisle space is a separate loss and is the reason single-deep racking has poor cube utilisation despite having no honeycomb loss at all."
   },
   {
-    q: "An item is held at two pallets per SKU across 900 SKUs, and every load must be accessible. Which storage type does Table 1.24 point to?",
+    q: "An item is held at two pallets per SKU across 900 SKUs, and every load must be accessible. Which storage type does Table 1.25 point to?",
     opts: [
       "Drive-in rack",
       "Push-back rack",
@@ -627,7 +627,7 @@ window.QUIZ = {
     ],
     a: 2,
     ref: "1.17", href: "chapter1.html#s17",
-    why: "Enter Table&nbsp;1.24 with the inventory level per SKU, a fact about the business rather than the warehouse. Fewer than three pallets per item leaves only single-deep and sliding racks, and single-deep is also the only one of the four options where every load is accessible with good S/R throughput. Anything deeper &mdash; push-back at 3 to 10 pallets, drive-in at 20 or more &mdash; would leave lanes half empty and sacrifice the accessibility the requirement demands."
+    why: "Enter Table&nbsp;1.25 with the inventory level per SKU, a fact about the business rather than the warehouse. Fewer than three pallets per item leaves only single-deep and sliding racks, and single-deep is also the only one of the four options where every load is accessible with good S/R throughput. Anything deeper &mdash; push-back at 3 to 10 pallets, drive-in at 20 or more &mdash; would leave lanes half empty and sacrifice the accessibility the requirement demands."
   },
 
   /* ---------------- 2.18 Identification and control ---------------- */
