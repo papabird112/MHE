@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3: Screw Conveyors | MHE 301 Materials Handling Engineering</title>
+<meta name="description" content="Screw conveyor components, the CEMA material code, capacity by the table and metric methods, lump size limits, power, torque, deflection, inclined and vertical screws, and screw feeders.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">MHE</span>
+      <span class="logo-text">BAE-MHE<small>Biosystem and Agricultural Engineering, KMITL</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-nav">
+      <a href="index.html">About</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="chapter3.html">Lecture Notes</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="chapter3.html" class="active">EN</a>
+      <a href="chapter3-th.html" lang="th">ไทย</a>
+    </div>
+    <a class="btn-give" href="#s21">Worked Example</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MHE 301 <span>|</span> Chapter 3 <span>|</span> Lecture Notes</p>
+    <h1>Screw Conveyors</h1>
+    <p class="tagline">The oldest conveyor still in service, and the one an agricultural engineer meets most
+      often. Capacity, power, torque and deflection, worked in both the CEMA table method and the metric
+      method &mdash; and the reason the two agree on capacity but not on power.</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="course-menu">
+      <h2>Course Menu</h2>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Ch.&nbsp;1 &mdash; Belt Conveyors</a></li>
+        <li><a href="quiz1.html">Ch.&nbsp;1 &mdash; Self-Check</a></li>
+        <li><a href="chapter2.html">Ch.&nbsp;2 &mdash; Equipment &amp; Selection</a></li>
+        <li><a href="quiz2.html">Ch.&nbsp;2 &mdash; Self-Check</a></li>
+        <li><a href="chapter3.html" class="active">Ch.&nbsp;3 &mdash; Screw Conveyors</a></li>
+        <li><a href="quiz3.html">Ch.&nbsp;3 &mdash; Self-Check</a></li>
+        <li><span class="muted">Ch.&nbsp;4 &mdash; Chain &amp; Apron Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;5 &mdash; Bucket Elevators<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;6 &mdash; Pneumatic Conveying<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;7 &mdash; Cranes &amp; Hoists<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;8 &mdash; Industrial Trucks &amp; AGVs<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;9 &mdash; Storage &amp; Warehousing<em>Not yet published</em></span></li>
+      </ul>
+    </nav>
+
+    <section class="course-info">
+      <h2>Chapter Info</h2>
+      <dl>
+        <dt>Weeks</dt><dd>7, 9</dd>
+        <dt>Problem Sets</dt><dd>PS 5</dd>
+        <dt>Standards</dt>
+        <dd>
+          <ul>
+            <li>CEMA 350 &mdash; Screw conveyors</li>
+            <li>DIN 15261/15262</li>
+            <li>ISO 7119</li>
+            <li>ANSI/CEMA B20.1 safety</li>
+          </ul>
+        </dd>
+        <dt>Key Skills</dt>
+        <dd>
+          <span class="pill">Material code</span>
+          <span class="pill">Capacity</span>
+          <span class="pill">Power</span>
+          <span class="pill">Torque</span>
+          <span class="pill">Deflection</span>
+        </dd>
+      </dl>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <p class="lead">A screw conveyor is a helix turning inside a trough. That is the whole machine. It has
+      no belt to track, no chain to stretch and no air to compress &mdash; which is why the design dating back
+      more than two thousand years is still specified by the thousand every year, and why almost every feed
+      mill, rice mill and grain store you will ever walk into contains several.</p>
+
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">What a Screw Conveyor Is</a></li>
+        <li><a href="#s2">Advantages, Limitations and the Design Procedure</a></li>
+        <li><a href="#s3">Anatomy of a Screw Conveyor</a></li>
+        <li><a href="#s4">Screw Geometry: Diameter, Pitch and Hand</a></li>
+        <li><a href="#s5">Flight Types and What Each Is For</a></li>
+        <li><a href="#s6">Sectional versus Helicoid; Pipe and Clad Pipe</a></li>
+        <li><a href="#s7">Troughs, Covers and Shrouds</a></li>
+        <li><a href="#s8">Hangers and Hanger Bearings</a></li>
+        <li><a href="#s9">Shaft Seals and End Bearings</a></li>
+        <li><a href="#s10">The Material Classification Code</a></li>
+        <li><a href="#s11">Trough Loading and Component Groups</a></li>
+        <li><a href="#s12">Capacity &mdash; the CEMA Table Method</a></li>
+        <li><a href="#s13">Capacity &mdash; the Metric Method</a></li>
+        <li><a href="#s14">Lump Size Limitation</a></li>
+        <li><a href="#s15">Power &mdash; the CEMA Method</a></li>
+        <li><a href="#s16">Power &mdash; the Metric Method</a></li>
+        <li><a href="#s17">Torque and Component Sizing</a></li>
+        <li><a href="#s18">Deflection, Thermal Expansion and Abrasion</a></li>
+        <li><a href="#s19">Inclined and Vertical Screw Conveyors</a></li>
+        <li><a href="#s20">Screw Feeders and Live Bottoms</a></li>
+        <li><a href="#s21">Worked Example</a></li>
+        <li><a href="#s22">Nomenclature</a></li>
+        <li><a href="#s23">Problems</a></li>
+        <li><a href="#s24">References</a></li>
+      </ol>
+    </nav>
+
+    <!-- ============================================================ 3.1 -->
+    <h2 id="s1">3.1 What a Screw Conveyor Is</h2>
+
+    <p>A screw conveyor moves bulk material along a trough by rotating a helical flight fixed to a central
+      pipe. The material does not turn with the screw. Friction against the trough wall holds it back from
+      rotating, so the flight face pushes it forward &mdash; in exactly the way a nut advances along a bolt
+      when it is prevented from spinning. That single sentence explains most of the machine's behaviour,
+      including why it needs more power as the trough gets rougher, why it stops working if the trough is
+      polished too smooth, and why a vertical screw must run fast enough to press the material against the
+      casing by centrifugal force before it will lift anything at all.</p>
+
+    <p>The design is the oldest in continuous use in the whole of materials handling. The water screw
+      attributed to Archimedes dates from about 250 BC, and the machine entered general industrial use a little
+      over a century ago for moving grain and fine coal. It is now one of the most widely used conveyors in
+      the process industries, and by far the most common in agricultural and chemical plant.</p>
+
+    <div class="callout">
+      <span class="label">Where this chapter sits</span>
+      <p>Chapter&nbsp;1 designed a belt conveyor and Chapter&nbsp;2 gave the method for choosing between
+        equipment types. <a href="chapter2.html#s19">Table&nbsp;2.27</a> puts the screw conveyor's operating
+        envelope at 0.5&ndash;10&nbsp;m distance, 2&ndash;300&nbsp;t/h, lumps to 30&nbsp;mm and material
+        temperatures to 300&nbsp;&deg;C. This chapter is what happens after that table has selected a screw:
+        how to size it, how much power it needs, and what will break if you get it wrong.</p>
+    </div>
+
+    <h3>Screw conveyor against belt conveyor</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.1.</b> The two continuous conveyors compared. Neither is better; they fail in
+          different directions.</caption>
+        <thead><tr><th>&nbsp;</th><th>Screw conveyor</th><th>Belt conveyor (<a href="chapter1.html">Ch.&nbsp;1</a>)</th></tr></thead>
+        <tbody>
+          <tr><th>Economic distance</th><td>Up to about 10&nbsp;m per unit; longer runs are built in series</td><td>Tens of metres to kilometres in one flight</td></tr>
+          <tr><th>Capacity</th><td>Typically under 300&nbsp;t/h</td><td>To 6000&nbsp;t/h and beyond</td></tr>
+          <tr><th>Path</th><td>Horizontal, inclined to 45&deg;, or fully vertical</td><td>Horizontal or inclined to about 20&deg;</td></tr>
+          <tr><th>Enclosure</th><td>Inherently enclosed &mdash; dust, fumes and moisture all controlled</td><td>Open by default; enclosure is an added cost</td></tr>
+          <tr><th>Energy per tonne-metre</th><td>Higher &mdash; material is dragged, not carried</td><td>Lower &mdash; material rides</td></tr>
+          <tr><th>Effect on product</th><td>Shearing and attrition; poor for fragile material</td><td>Gentle; degradation only at transfer points</td></tr>
+          <tr><th>Doubles as</th><td>Mixer, cooler, drier, feeder, press</td><td>Weigher, sorter</td></tr>
+          <tr><th>Wear</th><td>Concentrated on flight tips and trough bottom</td><td>Spread over belt cover and idlers</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 3.2 -->
+    <h2 id="s2">3.2 Advantages, Limitations and the Design Procedure</h2>
+
+    <h3>What the screw conveyor does well</h3>
+    <ul>
+      <li><b>Compact</b> &mdash; adapts easily to congested plant, since the trough occupies little more than
+        the swept volume of the screw itself.</li>
+      <li><b>Meters</b> &mdash; volume delivered per revolution is fixed by geometry, so the screw controls
+        the flow of material in operations that depend on accurate batching. This is the basis of the screw
+        feeder in &sect;3.20.</li>
+      <li><b>Versatile in attitude</b> &mdash; horizontal, inclined and vertical installations all work.</li>
+      <li><b>Mixes</b> &mdash; used as a mixer or agitator to blend dry or fluid ingredients, to promote
+        crystallisation or coagulation, or to keep solids in suspension.</li>
+      <li><b>Seals</b> &mdash; can be closed tightly to stop dust or fumes escaping, or to stop dust and
+        moisture getting in.</li>
+      <li><b>Heats and cools</b> &mdash; a jacketed trough carrying hot or cold water or low-pressure steam
+        turns the conveyor into a drier or a cooler.</li>
+      <li><b>Tolerates hostile material</b> &mdash; can be built from whatever alloy resists the corrosion,
+        abrasion or temperature involved.</li>
+      <li><b>Discharges anywhere</b> &mdash; multiple discharge points along the trough, each with its own
+        gate.</li>
+    </ul>
+
+    <div class="callout warn">
+      <span class="label">And what it does badly</span>
+      <ul>
+        <li><b>Long distances.</b> Torque is transmitted through the pipe and the coupling bolts, and both
+          have hard limits (&sect;3.17). Beyond roughly 10&nbsp;m per drive, a second conveyor in series is
+          cheaper than a bigger shaft.</li>
+        <li><b>Fragile material.</b> Everything conveyed is sheared between the flight and the trough. A screw
+          is the wrong machine for material coded <b>Q</b>, degradable.</li>
+        <li><b>Large lumps.</b> Lump size is limited by the radial clearance between pipe and trough
+          (&sect;3.14), which is a small fraction of the screw diameter.</li>
+        <li><b>Sticky material.</b> Standard flighting packs solid at the pipe. Ribbon or interrupted
+          flighting exists precisely for this (&sect;3.5).</li>
+        <li><b>Energy.</b> The material is dragged the whole way. Over a long run a belt will always use less
+          power.</li>
+      </ul>
+    </div>
+
+    <h3>The seven design steps</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.2.</b> The design procedure, and where each step is covered.</caption>
+        <thead><tr><th class="num">Step</th><th>What you do</th><th>Section</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Establish the conveying requirement: material, required flow, distance, incline</td><td>&sect;3.2</td></tr>
+          <tr><td class="num">2</td><td>Identify the material and its classification code</td><td><a href="#s10">&sect;3.10</a></td></tr>
+          <tr><td class="num">3</td><td>Determine capacity, screw size and speed</td><td><a href="#s12">&sect;3.12</a>, <a href="#s13">&sect;3.13</a></td></tr>
+          <tr><td class="num">4</td><td>Calculate the required power and select a motor</td><td><a href="#s15">&sect;3.15</a>, <a href="#s16">&sect;3.16</a></td></tr>
+          <tr><td class="num">5</td><td>Determine the recommended size of components</td><td><a href="#s11">&sect;3.11</a></td></tr>
+          <tr><td class="num">6</td><td>Check the torsional ratings of shafts, pipe and coupling bolts</td><td><a href="#s17">&sect;3.17</a></td></tr>
+          <tr><td class="num">7</td><td>Check deflection, thermal expansion and abrasion</td><td><a href="#s18">&sect;3.18</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Step&nbsp;1 needs only four facts to begin, and they are the same four the handling equation of
+      <a href="chapter2.html#s2">&sect;2.2</a> asks for: <b>what</b> is to be conveyed, <b>how much</b> per hour
+      (in mass or volume), <b>how far</b>, and <b>at what angle</b>. Everything else in the design follows from
+      those.</p>
+
+    <!-- ============================================================ 3.3 -->
+    <h2 id="s3">3.3 Anatomy of a Screw Conveyor</h2>
+
+    <figure>
+      <svg viewBox="0 0 880 430" role="img" aria-label="Cutaway of a screw conveyor showing the numbered components">
+        <rect x="0" y="0" width="880" height="430" fill="#ffffff"/>
+
+        <!-- trough body -->
+        <path d="M 120 150 L 760 150 L 760 250 Q 760 300 710 300 L 170 300 Q 120 300 120 250 Z"
+              fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+        <!-- trough top flanges -->
+        <rect x="104" y="140" width="32" height="10" fill="#d8d3c8" stroke="#8f8f8f" stroke-width="2"/>
+        <rect x="744" y="140" width="32" height="10" fill="#d8d3c8" stroke="#8f8f8f" stroke-width="2"/>
+
+        <!-- cover -->
+        <rect x="230" y="112" width="330" height="12" fill="#e6e2d8" stroke="#8f8f8f" stroke-width="2"/>
+        <line x1="230" y1="124" x2="230" y2="140" stroke="#8f8f8f" stroke-width="2"/>
+        <line x1="560" y1="124" x2="560" y2="140" stroke="#8f8f8f" stroke-width="2"/>
+
+        <!-- inlet -->
+        <path d="M 150 60 L 232 60 L 232 140 L 150 140 Z" fill="#FFF1D1" stroke="#8f8f8f" stroke-width="2.5"/>
+        <circle cx="170" cy="86" r="4" fill="#c9a97a"/><circle cx="192" cy="96" r="5" fill="#c9a97a"/>
+        <circle cx="212" cy="80" r="4" fill="#c9a97a"/><circle cx="182" cy="116" r="5" fill="#c9a97a"/>
+        <circle cx="208" cy="112" r="4" fill="#c9a97a"/>
+
+        <!-- discharge -->
+        <path d="M 600 300 L 680 300 L 668 356 L 612 356 Z" fill="#FFF1D1" stroke="#8f8f8f" stroke-width="2.5"/>
+        <circle cx="626" cy="322" r="4" fill="#c9a97a"/><circle cx="650" cy="330" r="5" fill="#c9a97a"/>
+        <circle cx="638" cy="346" r="4" fill="#c9a97a"/>
+
+        <!-- centre pipe -->
+        <rect x="140" y="216" width="600" height="20" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+
+        <!-- flights: half-helix arcs above and below the pipe -->
+        <g fill="#dcdcdc" stroke="#6f6f6f" stroke-width="1.8">
+          <path d="M 200 216 q 26 -60 52 0 z"/>
+          <path d="M 252 236 q 26 60 52 0 z"/>
+          <path d="M 304 216 q 26 -60 52 0 z"/>
+          <path d="M 356 236 q 26 60 52 0 z"/>
+          <path d="M 408 216 q 26 -60 52 0 z"/>
+          <path d="M 460 236 q 26 60 52 0 z"/>
+          <path d="M 512 216 q 26 -60 52 0 z"/>
+          <path d="M 564 236 q 26 60 52 0 z"/>
+          <path d="M 616 216 q 26 -60 52 0 z"/>
+          <path d="M 668 236 q 26 60 52 0 z"/>
+        </g>
+
+        <!-- hanger -->
+        <rect x="418" y="140" width="72" height="10" fill="#4b4540"/>
+        <rect x="448" y="150" width="12" height="52" fill="#4b4540"/>
+        <rect x="436" y="202" width="36" height="30" rx="4" fill="#c98b3a" stroke="#8a5f22" stroke-width="2"/>
+
+        <!-- end plates -->
+        <rect x="112" y="140" width="10" height="166" fill="#8f8f8f"/>
+        <rect x="758" y="140" width="10" height="166" fill="#8f8f8f"/>
+
+        <!-- drive shaft + bearing + drive -->
+        <rect x="768" y="220" width="72" height="12" fill="#a8a8a8" stroke="#7a7a7a" stroke-width="1.6"/>
+        <rect x="772" y="208" width="26" height="36" rx="3" fill="#00B7CD" stroke="#00788A" stroke-width="2"/>
+        <rect x="806" y="196" width="46" height="60" rx="4" fill="#4b4540"/>
+        <text x="829" y="231" font-family="Segoe UI, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">M</text>
+
+        <!-- tail shaft + bearing -->
+        <rect x="52" y="220" width="62" height="12" fill="#a8a8a8" stroke="#7a7a7a" stroke-width="1.6"/>
+        <rect x="66" y="208" width="26" height="36" rx="3" fill="#00B7CD" stroke="#00788A" stroke-width="2"/>
+
+        <!-- feet -->
+        <path d="M 250 300 L 290 300 L 284 330 L 256 330 Z" fill="#b9b4a8" stroke="#8f8f8f" stroke-width="2"/>
+        <path d="M 470 300 L 510 300 L 504 330 L 476 330 Z" fill="#b9b4a8" stroke="#8f8f8f" stroke-width="2"/>
+        <line x1="150" y1="332" x2="740" y2="332" stroke="#9a9a9a" stroke-width="3"/>
+
+        <!-- badges -->
+        <g font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+          <circle cx="191" cy="48" r="12" fill="#DF301C"/><text x="191" y="53" fill="#fff">1</text>
+          <circle cx="330" cy="100" r="12" fill="#DF301C"/><text x="330" y="105" fill="#fff">2</text>
+          <circle cx="454" cy="126" r="12" fill="#DF301C"/><text x="454" y="131" fill="#fff">3</text>
+          <circle cx="454" cy="252" r="12" fill="#DF301C"/><text x="454" y="257" fill="#fff">4</text>
+          <circle cx="590" cy="192" r="12" fill="#DF301C"/><text x="590" y="197" fill="#fff">5</text>
+          <circle cx="278" cy="268" r="12" fill="#DF301C"/><text x="278" y="273" fill="#fff">6</text>
+          <circle cx="640" cy="378" r="12" fill="#DF301C"/><text x="640" y="383" fill="#fff">7</text>
+          <circle cx="86" cy="186" r="12" fill="#DF301C"/><text x="86" y="191" fill="#fff">8</text>
+          <circle cx="786" cy="182" r="12" fill="#DF301C"/><text x="786" y="187" fill="#fff">9</text>
+          <circle cx="829" cy="276" r="12" fill="#DF301C"/><text x="829" y="281" fill="#fff">10</text>
+          <circle cx="270" cy="348" r="12" fill="#DF301C"/><text x="270" y="353" fill="#fff">11</text>
+          <circle cx="117" cy="120" r="12" fill="#DF301C"/><text x="117" y="125" fill="#fff">12</text>
+        </g>
+        <line x1="454" y1="138" x2="454" y2="146" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="454" y1="240" x2="454" y2="232" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="590" y1="204" x2="590" y2="216" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="278" y1="256" x2="278" y2="240" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="640" y1="366" x2="640" y2="352" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="86" y1="198" x2="80" y2="214" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="786" y1="194" x2="786" y2="206" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="829" y1="264" x2="829" y2="256" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="270" y1="336" x2="270" y2="326" stroke="#DF301C" stroke-width="1.6"/>
+        <line x1="129" y1="120" x2="146" y2="128" stroke="#DF301C" stroke-width="1.6"/>
+      </svg>
+      <figcaption><b>Figure 3.1.</b> Cutaway of a horizontal screw conveyor with an intermediate hanger.
+        <b>1</b> inlet &middot; <b>2</b> trough cover &middot; <b>3</b> hanger &middot; <b>4</b> hanger bearing
+        &middot; <b>5</b> screw: helical flight on centre pipe &middot; <b>6</b> trough &middot;
+        <b>7</b> discharge &middot; <b>8</b> tail (end) shaft and end bearing &middot; <b>9</b> drive shaft,
+        seal and end bearing &middot; <b>10</b> drive: motor and reducer &middot; <b>11</b> flange foot
+        &middot; <b>12</b> trough end plate.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.3.</b> The parts list, and what each part exists to do.</caption>
+        <thead><tr><th>Component</th><th>Function</th><th>Where it is discussed</th></tr></thead>
+        <tbody>
+          <tr><td><b>Screw</b> (flight + pipe)</td><td>Pushes the material forward; transmits the whole drive torque</td><td>&sect;3.4&ndash;3.6</td></tr>
+          <tr><td><b>Trough</b></td><td>Contains the material and provides the friction that stops it rotating</td><td>&sect;3.7</td></tr>
+          <tr><td><b>Cover</b></td><td>Encloses the conveyor; a required safety guard, not an option</td><td>&sect;3.7</td></tr>
+          <tr><td><b>Drive shaft</b></td><td>Carries torque from the reducer into the first screw section</td><td>&sect;3.17</td></tr>
+          <tr><td><b>Coupling shaft</b></td><td>Joins one screw section to the next, and is supported by a hanger</td><td>&sect;3.8</td></tr>
+          <tr><td><b>End (tail) shaft</b></td><td>Locates the far end of the screw in its bearing</td><td>&sect;3.9</td></tr>
+          <tr><td><b>Internal collar / bushing</b></td><td>Adapts the shaft diameter to the pipe bore and carries the coupling bolts</td><td>&sect;3.17</td></tr>
+          <tr><td><b>Coupling bolts</b></td><td>Transmit torque in <em>shear</em> between shaft and pipe &mdash; usually the weakest link</td><td>&sect;3.17</td></tr>
+          <tr><td><b>Hanger</b></td><td>Supports an intermediate joint from above without blocking the flow</td><td>&sect;3.8</td></tr>
+          <tr><td><b>Hanger bearing</b></td><td>The sacrificial plain bearing running inside the material stream</td><td>&sect;3.8</td></tr>
+          <tr><td><b>Shaft seal</b></td><td>Keeps material in and contamination out where the shaft leaves the trough</td><td>&sect;3.9</td></tr>
+          <tr><td><b>End bearings</b></td><td>Carry radial load, and at the drive end the thrust from conveying</td><td>&sect;3.9</td></tr>
+          <tr><td><b>Inlet / discharge</b></td><td>Connect the conveyor to the rest of the plant</td><td>&sect;3.7</td></tr>
+          <tr><td><b>Trough end plate, feet</b></td><td>Close the trough and transfer load to the structure</td><td>&sect;3.7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 3.4 -->
+    <h2 id="s4">3.4 Screw Geometry: Diameter, Pitch and Hand</h2>
+
+    <figure>
+      <svg viewBox="0 0 840 380" role="img" aria-label="Screw geometry: diameter, pitch, flight thickness, pipe OD and radial clearance">
+        <rect x="0" y="0" width="840" height="380" fill="#ffffff"/>
+
+        <!-- side elevation -->
+        <rect x="90" y="150" width="500" height="22" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+        <g fill="#dcdcdc" stroke="#6f6f6f" stroke-width="1.8">
+          <path d="M 130 150 q 30 -64 60 0 z"/>
+          <path d="M 190 172 q 30 64 60 0 z"/>
+          <path d="M 250 150 q 30 -64 60 0 z"/>
+          <path d="M 310 172 q 30 64 60 0 z"/>
+          <path d="M 370 150 q 30 -64 60 0 z"/>
+          <path d="M 430 172 q 30 64 60 0 z"/>
+          <path d="M 490 150 q 30 -64 60 0 z"/>
+        </g>
+
+        <!-- screw dia dimension -->
+        <g stroke="#DF301C" stroke-width="1.6">
+          <line x1="74" y1="86" x2="74" y2="236"/>
+          <path d="M 69 96 L 74 86 L 79 96" fill="none"/>
+          <path d="M 69 226 L 74 236 L 79 226" fill="none"/>
+          <line x1="74" y1="86" x2="130" y2="86" stroke-width="0.9" stroke-dasharray="3 3"/>
+          <line x1="74" y1="236" x2="130" y2="236" stroke-width="0.9" stroke-dasharray="3 3"/>
+        </g>
+        <text x="60" y="140" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C" text-anchor="end">D</text>
+        <text x="60" y="158" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="end">screw dia.</text>
+
+        <!-- pitch dimension -->
+        <g stroke="#00788A" stroke-width="1.6">
+          <line x1="250" y1="268" x2="370" y2="268"/>
+          <path d="M 260 263 L 250 268 L 260 273" fill="none"/>
+          <path d="M 360 263 L 370 268 L 360 273" fill="none"/>
+        </g>
+        <line x1="250" y1="150" x2="250" y2="272" stroke="#00788A" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="370" y1="150" x2="370" y2="272" stroke="#00788A" stroke-width="1" stroke-dasharray="4 4"/>
+        <text x="310" y="290" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00788A" text-anchor="middle">S &mdash; pitch</text>
+        <text x="310" y="308" font-family="Segoe UI, sans-serif" font-size="11" fill="#00788A" text-anchor="middle">(one full turn of the helix)</text>
+
+        <!-- pipe OD -->
+        <g stroke="#726b64" stroke-width="1.5">
+          <line x1="560" y1="150" x2="560" y2="172"/>
+          <path d="M 555 156 L 560 150 L 565 156" fill="none"/>
+          <path d="M 555 166 L 560 172 L 565 166" fill="none"/>
+          <line x1="560" y1="172" x2="552" y2="206" stroke-dasharray="3 3"/>
+        </g>
+        <text x="548" y="218" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="end">d &mdash; pipe OD</text>
+
+        <!-- flight thickness callout -->
+        <line x1="520" y1="104" x2="560" y2="76" stroke="#4b4540" stroke-width="1.2"/>
+        <text x="566" y="72" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">t &mdash; flight thickness</text>
+
+        <!-- cross-section, right -->
+        <g transform="translate(690,190)">
+          <path d="M -84 -78 L -84 0 A 84 84 0 0 0 84 0 L 84 -78" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+          <circle cx="0" cy="0" r="70" fill="none" stroke="#6f6f6f" stroke-width="2" stroke-dasharray="5 4"/>
+          <circle cx="0" cy="0" r="22" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+          <!-- radial clearance arrow -->
+          <g stroke="#DF301C" stroke-width="1.6">
+            <line x1="0" y1="-22" x2="0" y2="-84"/>
+            <path d="M -5 -30 L 0 -22 L 5 -30" fill="none"/>
+            <path d="M -5 -76 L 0 -84 L 5 -76" fill="none"/>
+          </g>
+          <text x="0" y="-92" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">radial clearance</text>
+          <text x="0" y="116" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">section through the trough</text>
+          <text x="0" y="132" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">flight tip runs about 12 mm off the trough</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 3.2.</b> The four dimensions that define a screw: outside diameter <var>D</var>,
+        pitch <var>S</var>, flight thickness <var>t</var> and centre pipe outside diameter <var>d</var>. The
+        radial clearance between the pipe and the trough wall is what limits lump size (&sect;3.14); the small
+        clearance between the flight tip and the trough, about 12&nbsp;mm on a standard machine, is what limits
+        how fine a material can be handled without leaking past.</figcaption>
+    </figure>
+
+    <h3>Standard sizes</h3>
+    <p>Screw diameters are standardised at 6, 9, 10, 12, 14, 16, 18, 20, 24, 30 and 36&nbsp;in.
+      (150&ndash;900&nbsp;mm), with larger sizes made to order. Working in whole inches is not affectation:
+      troughs, hangers, covers, end plates, inlets and discharges are all stocked to those diameters, so a
+      screw specified at any other size is a special.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.4.</b> Pitch classes and what each is for.</caption>
+        <thead><tr><th>Pitch</th><th>Definition</th><th class="num">Capacity factor <var>CF</var><sub>1</sub></th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><b>Standard (full)</b></td><td><var>S</var> = <var>D</var></td><td class="num">1.00</td><td>The default. Horizontal conveying of free-flowing material</td></tr>
+          <tr><td><b>Short</b></td><td><var>S</var> = &#8532;&nbsp;<var>D</var></td><td class="num">1.50</td><td>Inclines above about 20&deg;, and under flood-fed inlets</td></tr>
+          <tr><td><b>Half</b></td><td><var>S</var> = &frac12;&nbsp;<var>D</var></td><td class="num">2.00</td><td>Steep inclines and vertical screws; very free-flowing or fluidising material</td></tr>
+          <tr><td><b>Long</b></td><td><var>S</var> = 1&frac12;&nbsp;<var>D</var></td><td class="num">0.67</td><td>Free-flowing material where agitation is wanted, and some feeder duties</td></tr>
+          <tr><td><b>Variable</b></td><td>Pitch increases along the inlet</td><td class="num">&mdash;</td><td>Screw feeders, to draw material evenly across the whole inlet (&sect;3.20)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The capacity factor is the number the required capacity is <em>multiplied</em> by before the screw is
+      selected, so a larger factor means a larger screw. Halving the pitch halves the volume advanced per
+      revolution, so <var>CF</var><sub>1</sub> = 2.00 &mdash; the arithmetic is exactly what you would expect.</p>
+
+    <h3>Right hand and left hand</h3>
+    <p>A screw is right hand or left hand according to the direction the helix wraps, judged by looking at the
+      end of the screw: a <b>right hand</b> helix wraps clockwise away from you, a <b>left hand</b> helix
+      counter-clockwise. Screws are right hand unless something requires otherwise. Hand and rotation together
+      decide which way the material travels, and the pairing is worth committing to memory because getting it
+      wrong on site is embarrassingly common:</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.5.</b> Hand, rotation and the resulting direction of travel, viewed from the drive
+          end.</caption>
+        <thead><tr><th>Flight hand</th><th>Screw rotation</th><th>Material travels</th></tr></thead>
+        <tbody>
+          <tr><td>Right hand</td><td>Clockwise</td><td>Away from the viewer</td></tr>
+          <tr><td>Right hand</td><td>Counter-clockwise</td><td>Towards the viewer</td></tr>
+          <tr><td>Left hand</td><td>Clockwise</td><td>Towards the viewer</td></tr>
+          <tr><td>Left hand</td><td>Counter-clockwise</td><td>Away from the viewer</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Two hands on one shaft</span>
+      <p>A single screw can carry right hand flighting on one half and left hand on the other. With the two
+        halves meeting in the middle the conveyor <b>collects</b> from both ends to a central discharge; with
+        them starting in the middle it <b>distributes</b> from a central inlet to both ends. The same trick
+        with a short reverse-pitch section immediately before a discharge is used to hold material back and
+        force it out of the opening instead of carrying it past.</p>
+    </div>
+
+    <!-- ============================================================ 3.5 -->
+    <h2 id="s5">3.5 Flight Types and What Each Is For</h2>
+
+    <p>The flight does not have to be a plain continuous helix. Eleven variants are standard, and each exists
+      because plain flighting failed at something.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.6.</b> Standard screw types.</caption>
+        <thead><tr><th class="num">#</th><th>Type</th><th>What it is for</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Standard sectional flight</b></td><td>The default. Conveys a wide variety of products</td></tr>
+          <tr><td class="num">2</td><td><b>Ribbon flight</b></td><td>Sticky, gummy or viscous material, and anything that packs against the pipe. The helix is a ribbon standing off the pipe on supports, so there is no inner corner to pack. Available integral or post-mounted</td></tr>
+          <tr><td class="num">3</td><td><b>Cut flight</b></td><td>Notches cut in the flight periphery. For light, fine, granular or flaky material; also mixes in transit and scalps grit and dirt out of grain or cottonseed</td></tr>
+          <tr><td class="num">4</td><td><b>Cut and folded flight</b></td><td>Cut, then the tabs folded to form lifting paddles. Creates a lifting motion that aerates and agitates while mixing</td></tr>
+          <tr><td class="num">5</td><td><b>Sectional flight with paddles</b></td><td>Standard flighting with paddles between the turns to mix while conveying. Paddles welded fixed, or bolted so their pitch can be adjusted</td></tr>
+          <tr><td class="num">6</td><td><b>Paddle screw</b></td><td>Paddles only, no flight. For complete mixing or stirring rather than conveying</td></tr>
+          <tr><td class="num">7</td><td><b>Short pitch</b></td><td>Inclined and hopper-fed duty, where pitch is less than diameter</td></tr>
+          <tr><td class="num">8</td><td><b>Interrupted flight</b></td><td>Like a ribbon, for sticky material, but with better throughput and more consistent flow</td></tr>
+          <tr><td class="num">9</td><td><b>Cone screw</b></td><td>Tapering pipe under a hopper, to produce mass flow &mdash; uniform discharge across the whole opening</td></tr>
+          <tr><td class="num">10</td><td><b>Shaftless screw</b></td><td>No centre pipe at all. For sticky and stringy material that would wrap around a pipe; common on sludge and on fibrous agricultural residues</td></tr>
+          <tr><td class="num">11</td><td><b>Press screw</b></td><td>Runs inside a screen. Squeezes moisture out of the product rather than conveying it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.7.</b> Flight modification capacity factor <var>CF</var><sub>2</sub>. Read at the
+          trough loading you intend to use. &ldquo;NR&rdquo; means the combination is not recommended.</caption>
+        <thead><tr><th>Type of flight</th><th class="num">15&nbsp;%</th><th class="num">30&nbsp;%</th><th class="num">45&nbsp;%</th></tr></thead>
+        <tbody>
+          <tr><td>Standard</td><td class="num">1.00</td><td class="num">1.00</td><td class="num">1.00</td></tr>
+          <tr><td>Cut flight</td><td class="num">1.95</td><td class="num">1.57</td><td class="num">1.43</td></tr>
+          <tr><td>Cut and folded</td><td class="num">NR</td><td class="num">3.75</td><td class="num">2.54</td></tr>
+          <tr><td>Ribbon</td><td class="num">1.04</td><td class="num">1.37</td><td class="num">1.62</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.8.</b> Mixing paddle capacity factor <var>CF</var><sub>3</sub>, for standard
+          paddles set at 45&deg; reverse pitch.</caption>
+        <thead><tr><th>Paddles per pitch</th><th class="num">None</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th></tr></thead>
+        <tbody>
+          <tr><th><var>CF</var><sub>3</sub></th><td class="num">1.00</td><td class="num">1.08</td><td class="num">1.16</td><td class="num">1.24</td><td class="num">1.32</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">Mixing is not free</span>
+      <p>Every one of these factors is greater than 1.00, and each is a penalty: a cut-and-folded screw at
+        30&nbsp;% loading needs <b>3.75 times</b> the capacity rating of a plain screw for the same throughput,
+        which in practice means a much larger machine. The corresponding power factors in
+        <a href="#s15">Table&nbsp;3.16</a> rise as well. You are buying agitation with capacity and with
+        power, and it is worth asking whether a separate mixer downstream would be cheaper.</p>
+    </div>
+
+    <!-- ============================================================ 3.6 -->
+    <h2 id="s6">3.6 Sectional versus Helicoid; Pipe and Clad Pipe</h2>
+
+    <p>Flighting is manufactured in one of two ways, and the difference matters more than it first appears.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.9.</b> The two ways of making a flight.</caption>
+        <thead><tr><th>&nbsp;</th><th>Helicoid</th><th>Sectional</th></tr></thead>
+        <tbody>
+          <tr><th>How it is made</th><td>A flat bar or strip is rolled into a continuous helix</td><td>Individual annular plates are formed, then welded end to end</td></tr>
+          <tr><th>Thickness</th><td><b>Tapers</b> from base to tip, because the outer edge is stretched</td><td><b>Constant</b> from base to tip</td></tr>
+          <tr><th>Maximum thickness</th><td>Limited; only light gauges can be rolled</td><td>Any plate thickness, to 3/4&nbsp;in. and beyond</td></tr>
+          <tr><th>Cost</th><td>Lower</td><td>Higher</td></tr>
+          <tr><th>Use</th><td>Light duty, non-abrasive service only</td><td>Standard and heavy duty; anything abrasive</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout rule">
+      <span class="label">Why the taper matters</span>
+      <p>Wear is concentrated at the flight tip, which is exactly where a helicoid flight is thinnest. A
+        helicoid flight whose base is 3/16&nbsp;in. may be only 3/32&nbsp;in. at the tip &mdash; half the
+        metal, in the place that wears first. That is the whole reason helicoid screws are restricted to
+        non-abrasive, light-duty applications. Where the material code carries a <b>6</b> or <b>7</b> for
+        abrasiveness (&sect;3.10), specify sectional flighting and do not be talked out of it.</p>
+    </div>
+
+    <h3>The centre pipe</h3>
+    <p>The pipe does three jobs: it carries the flight, it transmits the entire drive torque to the far end of
+      the machine, and it resists the bending caused by the weight of the screw. Standard choices are schedule
+      40 and schedule 80 pipe in carbon or stainless steel. A third option, <b>clad pipe</b>, is schedule 80
+      carbon steel pipe surrounded by a schedule 10 stainless sleeve.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.10.</b> Why clad pipe exists.</caption>
+        <thead><tr><th>Property</th><th>Effect of cladding</th></tr></thead>
+        <tbody>
+          <tr><td>Torque capacity</td><td>Thicker combined wall carries more torque than stainless of the same nominal size</td></tr>
+          <tr><td>Fatigue resistance</td><td>Carbon steel resists fatigue far better than stainless. Stainless screws develop stress cracks after a certain number of revolutions; the carbon core postpones that while the sleeve keeps the corrosion resistance</td></tr>
+          <tr><td>Deflection</td><td>Structurally more rigid, so mid-span deflection falls &mdash; which lowers fatigue stress again and reduces the risk of the screw touching the trough</td></tr>
+          <tr><td>Price</td><td>Often <em>lower</em> than solid stainless in heavy-duty sizes, since stainless prices have risen</td></tr>
+          <tr><td>Limitation</td><td>Not recommended where highly corrosive vapours are present, especially hot &mdash; the carbon core is exposed at every cut end</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Weld finish</h3>
+    <p>Where the flight meets the pipe there is a corner that can trap product. For most duty a stitch weld is
+      enough. Food, pharmaceutical and contaminable service (code <b>P</b>) calls for a continuous weld, and
+      often for that weld to be ground. &ldquo;Ground smooth&rdquo; and &ldquo;food grade&rdquo; are vague
+      terms, so the CEMA finish classes exist to make the specification precise:</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.11.</b> CEMA weld finish classes.</caption>
+        <thead><tr><th>Operation</th><th class="num">I</th><th class="num">II</th><th class="num">III</th><th class="num">IV</th><th class="num">V</th></tr></thead>
+        <tbody>
+          <tr><td>Weld spatter and slag removed</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">&#10003;</td></tr>
+          <tr><td>Rough grind, 40&ndash;50 grit</td><td class="num">&mdash;</td><td class="num">&#10003;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+          <tr><td>Medium grind, some pits allowed, 80&ndash;100 grit</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&#10003;</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+          <tr><td>Fine grind, no pits or crevices, 140&ndash;150 grit</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&#10003;</td><td class="num">&#10003;</td></tr>
+          <tr><td>Polish to bright uniform finish, 150+ grit</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&#10003;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 3.7 -->
+    <h2 id="s7">3.7 Troughs, Covers and Shrouds</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.12.</b> Trough types.</caption>
+        <thead><tr><th>Trough</th><th>Description and use</th></tr></thead>
+        <tbody>
+          <tr><td><b>Formed flange U-trough</b></td><td>Top flanges formed from the same sheet as the trough. One-piece construction, easy to seal, the most economical and most widely used</td></tr>
+          <tr><td><b>Double formed flange U-trough</b></td><td>As above with an extra vertical bend in the side flange for stiffness. The most common type in small and medium sizes</td></tr>
+          <tr><td><b>Angle flange U-trough</b></td><td>Structural angle welded to the top of the trough. The usual choice in large sizes</td></tr>
+          <tr><td><b>Rectangular trough</b></td><td>For highly abrasive material. The square bottom corners let a stationary bed of product build up, so the moving product runs on itself rather than on the steel</td></tr>
+          <tr><td><b>Flared trough</b></td><td>Sides splayed outward. For material that bridges over the screw</td></tr>
+          <tr><td><b>Tube trough</b></td><td>A full cylinder. Minimises fallback on inclines. Available with formed or angle flanges so it can be split for cleaning, or solid and cheaper but requiring the screw to be drawn out of the end</td></tr>
+          <tr><td><b>Drop bottom / channel trough</b></td><td>Structural channel at the top for long unsupported spans; the bottom half unbolts for cleaning or replacement when worn</td></tr>
+          <tr><td><b>Jacketed trough</b></td><td>A jacket for hot or cold water or low-pressure steam, turning the conveyor into a drier or cooler</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Covers</h3>
+    <p>A cover is not an accessory. The safety rules of &sect;3.23 require the moving screw to be completely
+      enclosed, so the cover is a guard that happens also to keep the weather out.</p>
+    <ul>
+      <li><b>Flanged</b> &mdash; the most common, more rigid than flat and seals better.</li>
+      <li><b>Flat or semi-flanged</b> &mdash; works with spring clamps but supports less weight and seals less
+        well. <b>A safety hazard unless properly bolted down</b>, so recommended only in special cases.</li>
+      <li><b>Hip-roof (ridged)</b> &mdash; sheds rain and snow outdoors; flanged both sides for weatherproofing.</li>
+      <li><b>Shroud</b> &mdash; a curved inner cover that follows the screw. Used when a tube trough is wanted
+        but cannot be fitted, and to restrict a flood-fed inlet so material cannot flow over the top of the
+        screw.</li>
+      <li><b>Dam</b> &mdash; a plate that performs the same flood-control job as a shroud. Works well with
+        granular material, less well with anything that clumps.</li>
+    </ul>
+    <p>Clamps are fitted at 600&nbsp;mm intervals unless specified otherwise: spring clamps for flat and
+      semi-flanged covers, screw clamps for flanged covers, and heavy-duty toggle clamps where a tight seal
+      must be broken often. Gaskets of neoprene, nitrile, silicone, Viton or PTFE are added at trough joints
+      and under covers where dust or liquid must be contained; otherwise silicone caulk at the joints is the
+      standard seal.</p>
+
+    <!-- ============================================================ 3.8 -->
+    <h2 id="s8">3.8 Hangers and Hanger Bearings</h2>
+
+    <p>A screw longer than one standard section &mdash; about 3&nbsp;m &mdash; must be supported somewhere in
+      the middle, and the support can only come from above, because the bottom of the trough is full of
+      material. That is the hanger: a bracket spanning the trough, carrying a plain bearing that the coupling
+      shaft runs in.</p>
+
+    <div class="callout warn">
+      <span class="label">The hanger bearing is the weak point of the machine</span>
+      <p>It is a plain bearing running submerged in the product it is conveying, usually without a seal,
+        frequently without lubrication, and always in the one place nobody can see. It is designed to be
+        sacrificial. Nearly every screw conveyor that fails in service fails here, and almost always because
+        the bearing was allowed to wear through and the shaft then cut into the hanger. The three things that
+        prevent it are choosing the right bearing material, lubricating on schedule, and being able to change
+        the bearing quickly enough that people actually do it.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.13.</b> Hanger styles.</caption>
+        <thead><tr><th>Style</th><th>Mounting</th><th>Characteristics</th></tr></thead>
+        <tbody>
+          <tr><td><b>226</b></td><td>Flush with the top of the trough, bolted through the trough sides</td><td>Gives a level base for the covers, so they seal better. Allows both vertical and horizontal adjustment. The usual choice</td></tr>
+          <tr><td><b>220</b></td><td>On top of the trough flanges</td><td>Easier to install, but covers are harder to seal. Horizontal adjustment only</td></tr>
+          <tr><td><b>216 / 230</b></td><td>Flush (216) or top (230) mount, wide rigid frame</td><td>For cement and other heavy abrasive material. Uses hard iron bearings and requires a hardened shaft</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Within the 226 style the variants differ in how fast the bearing can be changed: a
+      <b>quick-change</b> hanger separates the body from the T-bars; a <b>heavy-duty</b> hanger adds a cast
+      bottom cap for long life; and a <b>low-profile</b> hanger reduces the structure standing in the product
+      stream, which matters with stainless because stainless handles fatigue from repeated product surges far
+      less well than carbon steel. Some hangers offer a <b>wear indicator</b> &mdash; a spring-loaded flag that
+      pops out when the bearing reaches about 80&nbsp;% wear, replacing guesswork with a signal.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.14.</b> Hanger bearing materials. The HP factor <var>F</var><sub>b</sub> is used in
+          the power calculation of &sect;3.15 &mdash; note how much of the friction power the bearing choice
+          controls.</caption>
+        <thead><tr><th>Material</th><th class="num">Max temp.</th><th>FDA</th><th>Lubrication</th><th class="num"><var>F</var><sub>b</sub></th><th>Typical use</th></tr></thead>
+        <tbody>
+          <tr><td>Ball bearing</td><td class="num">&mdash;</td><td>&mdash;</td><td>Sealed</td><td class="num">1.0</td><td>Clean, light duty; the only rolling-element option</td></tr>
+          <tr><td>Babbitt</td><td class="num">130&nbsp;&deg;F / 54&nbsp;&deg;C</td><td>No</td><td>Self</td><td class="num">1.7</td><td>Grain, feed, processing</td></tr>
+          <tr><td>Bronze</td><td class="num">200&ndash;600&nbsp;&deg;F</td><td>No</td><td>Optional</td><td class="num">1.7</td><td>Grain, feed; high quality and load capacity</td></tr>
+          <tr><td>Bronze with graphite plugs</td><td class="num">200&ndash;600&nbsp;&deg;F</td><td>No</td><td>Optional</td><td class="num">1.7</td><td>As bronze, with backup lubrication built in</td></tr>
+          <tr><td>Ceramic</td><td class="num">1000&nbsp;&deg;F / 538&nbsp;&deg;C</td><td>&mdash;</td><td>Optional</td><td class="num">&mdash;</td><td>Chemical, cement; very long life</td></tr>
+          <tr><td>Hard iron</td><td class="num">500&nbsp;&deg;F / 260&nbsp;&deg;C</td><td>No</td><td>Optional</td><td class="num">4.4</td><td>Chemical, cement. Requires hardened shafts; noisy, low speed</td></tr>
+          <tr><td>Ertalyte</td><td class="num">210&nbsp;&deg;F / 99&nbsp;&deg;C</td><td>Yes</td><td>Optional</td><td class="num">2.5</td><td>Food processing; recommended for sugar</td></tr>
+          <tr><td>Melamine</td><td class="num">250&nbsp;&deg;F / 121&nbsp;&deg;C</td><td>Yes</td><td>Self</td><td class="num">3.5</td><td>Food; recommended for sugar</td></tr>
+          <tr><td>Nylon / Nylatron</td><td class="num">160&nbsp;&deg;F / 71&nbsp;&deg;C</td><td>Available</td><td>Optional</td><td class="num">2.0</td><td>Dry applications</td></tr>
+          <tr><td>UHMW polyethylene</td><td class="num">170&nbsp;&deg;F / 77&nbsp;&deg;C</td><td>Yes</td><td>Self</td><td class="num">2.0</td><td>Food; good in wet applications</td></tr>
+          <tr><td>Wood, oil impregnated</td><td class="num">160&nbsp;&deg;F / 71&nbsp;&deg;C</td><td>&mdash;</td><td>Self</td><td class="num">1.7</td><td>Grain, feed, fertiliser; general purpose</td></tr>
+          <tr><td>Graphite</td><td class="num">750&nbsp;&deg;F / 399&nbsp;&deg;C</td><td>No</td><td>Self</td><td class="num">&mdash;</td><td>High temperature, grain and feed processing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Two conclusions follow directly from the <var>F</var><sub>b</sub> column. First, a hard iron bearing
+      costs <b>4.4 times</b> the friction power of a ball bearing &mdash; which is why it is reserved for
+      material that would destroy anything softer. Second, the difference between bronze at 1.7 and melamine at
+      3.5 is a real operating cost, so a food-grade bearing should be chosen because the duty genuinely
+      requires FDA compliance, not by default.</p>
+
+    <p>Where the bearing must be greased, a <b>grease tube</b> is run from the hanger up through the cover so
+      it can be reached without opening the conveyor. Fitting them is almost always worth it: the maintenance
+      that actually gets done is the maintenance that is easy.</p>
+
+    <!-- ============================================================ 3.9 -->
+    <h2 id="s9">3.9 Shaft Seals and End Bearings</h2>
+
+    <p>Wherever a shaft passes through a trough end plate there is a hole, and through that hole the product
+      wants to escape and the atmosphere wants to enter. Screw conveyor shafts run out and deflect far more
+      than a pump shaft, so mechanical seals &mdash; which cannot tolerate run-out &mdash; are essentially
+      never used. What is used instead:</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.15.</b> Shaft seals.</caption>
+        <thead><tr><th>Seal</th><th>Sealing</th><th>Run-out tolerated</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><b>Plate seal with lip</b></td><td>Poor</td><td>Poor</td><td>The cheapest and most common. A plate carrying a lip seal, mounted between trough end and bearing</td></tr>
+          <tr><td><b>Waste packing seal</b></td><td>Poor</td><td>Poor</td><td>Packed with waste, felt or a lip seal; repackable through an opening in the top</td></tr>
+          <tr><td><b>Grease purge seal</b></td><td>Excellent</td><td>Excellent</td><td>The best general-purpose choice. Self-adjusting, handles run-out and thermal growth, needs only occasional greasing. Available in high-temperature and split versions</td></tr>
+          <tr><td><b>Air purge seal</b></td><td>Good</td><td>Excellent</td><td>Best for dry powders; purged with air or inert gas. Loss of purge air usually means loss of seal</td></tr>
+          <tr><td><b>Split gland seal</b></td><td>Fair</td><td>Slight only</td><td>Compression packing adjusted by two bolts; easy to replace without removing the conveyor, but grooves the shaft over time</td></tr>
+          <tr><td><b>Flanged gland seal</b></td><td>Excellent when adjusted</td><td>Slight only</td><td>The most positive seal and the choice where pressure must be held. Needs a pedestal end plate and frequent accurate adjustment; ruins shafts eventually</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Reading a seal comparison honestly</span>
+      <p>The gland seals seal best on paper and are the worst choice on most screw conveyors, because their
+        rated performance assumes an adjustment discipline that plants do not sustain and a shaft run-out that
+        screw conveyors do not deliver. The grease purge seal wins in practice not by sealing better than a
+        packed gland but by still sealing after two years of being ignored. That distinction &mdash; between
+        best-case performance and realistic-case performance &mdash; is worth carrying into every component
+        selection you make.</p>
+    </div>
+
+    <h3>End bearings</h3>
+    <p>End bearings sit outside the trough, clear of the product. They come as flange-mounted or pillow block,
+      in ball, roller or spherical roller form, and the choice follows one rule:</p>
+    <ul>
+      <li><b>Drive end</b> &mdash; a bearing that takes <b>combined thrust and radial load</b> and does
+        <em>not</em> allow axial float, because the conveying force pushes the screw backwards against it.
+        A roller bearing.</li>
+      <li><b>Tail end</b> &mdash; a bearing that takes radial load and <b>allows expansion</b>, so the screw
+        can grow with temperature without being forced against its own bearings. A ball or spherical bearing.</li>
+    </ul>
+    <p>Pillow block versions on a pedestal end plate move the bearing further from the trough, which is what
+      you want when the product is hot or contaminating. Where thrust exceeds the bearing's capability &mdash;
+      long inclined conveyors especially &mdash; snap rings are added to the drive shaft.</p>
+
+    <!-- ============================================================ 3.10 -->
+    <h2 id="s10">3.10 The Material Classification Code</h2>
+
+    <p>Everything in the design depends on the material, so before any sizing begins the material is reduced
+      to a code. The system is CEMA's, and it differs from the ISO&nbsp;5048 bulk code used for belt conveyors
+      in <a href="chapter2.html#s5">&sect;2.5</a>: it puts <b>density first as a number</b>, and it has a much
+      longer list of miscellaneous characteristics. Read the two side by side once and the difference will not
+      catch you out again.</p>
+
+    <div class="eq">
+      <span class="body">
+        Code = <b>[bulk density]</b> <b>[size]</b> <b>[flowability]</b> <b>[abrasiveness]</b>
+        <b>[other characteristics]</b>
+      </span>
+      <span class="tag">(3.1)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.16.</b> The CEMA material classification code.</caption>
+        <thead><tr><th>Category</th><th>Description</th><th class="num">Code</th></tr></thead>
+        <tbody>
+          <tr><td><b>Density</b></td><td>Average bulk density</td><td class="num">lb/ft&sup3;</td></tr>
+
+          <tr><td rowspan="5"><b>Size</b></td><td>Very fine &mdash; 100 mesh and under</td><td class="num">A</td></tr>
+          <tr><td>Fine &mdash; 1/8&nbsp;in. (3&nbsp;mm) and under</td><td class="num">B</td></tr>
+          <tr><td>Granular &mdash; 1/2&nbsp;in. (13&nbsp;mm) and under</td><td class="num">C</td></tr>
+          <tr><td>Lumpy &mdash; containing lumps over 1/2&nbsp;in.</td><td class="num">D</td></tr>
+          <tr><td>Irregular &mdash; fibrous, stringy</td><td class="num">E</td></tr>
+
+          <tr><td rowspan="4"><b>Flowability</b></td><td>Very free flowing</td><td class="num">1</td></tr>
+          <tr><td>Free flowing</td><td class="num">2</td></tr>
+          <tr><td>Average flowability</td><td class="num">3</td></tr>
+          <tr><td>Sluggish</td><td class="num">4</td></tr>
+
+          <tr><td rowspan="3"><b>Abrasiveness</b></td><td>Mildly abrasive</td><td class="num">5</td></tr>
+          <tr><td>Moderately abrasive</td><td class="num">6</td></tr>
+          <tr><td>Extremely abrasive</td><td class="num">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.17.</b> Other characteristics, and what each one forces on the design.</caption>
+        <thead><tr><th class="num">Code</th><th>Characteristic</th><th>Design consequence</th></tr></thead>
+        <tbody>
+          <tr><td class="num">F</td><td>Builds up and hardens</td><td>Ribbon or interrupted flighting; provision for cleaning out</td></tr>
+          <tr><td class="num">G</td><td>Generates static electricity</td><td>Bond and earth every component; conductive belting and liners</td></tr>
+          <tr><td class="num">H</td><td>Decomposes, deteriorates in storage</td><td>Avoid dead pockets; no long dwell</td></tr>
+          <tr><td class="num">J</td><td>Flammable</td><td>Non-sparking construction; no hot bearings</td></tr>
+          <tr><td class="num">K</td><td>Becomes plastic or softens</td><td>Watch bearing and trough temperature; consider a cooling jacket</td></tr>
+          <tr><td class="num">L</td><td>Very dusty</td><td>Sealed covers with gaskets; dust extraction at inlet and discharge</td></tr>
+          <tr><td class="num">M</td><td>Aerates and becomes fluid</td><td>Size on the <em>aerated</em> volume and density; slow speed, tight clearances, special flight edging</td></tr>
+          <tr><td class="num">N</td><td>Explosive</td><td>Non-sparking, explosion-proof, tightly sealed; venting where hazardous dust exists</td></tr>
+          <tr><td class="num">O</td><td>Sticky, adhesive</td><td>Ribbon flighting; consider a shaftless screw</td></tr>
+          <tr><td class="num">P</td><td>Contaminable</td><td>Sealed end and hanger bearings of wood, nylon or other dry type; tightly sealed removable covers; internal welds polished</td></tr>
+          <tr><td class="num">Q</td><td>Degradable</td><td>Large diameter at very low speed, to minimise agitation. Consider whether a screw is the right machine at all</td></tr>
+          <tr><td class="num">R</td><td>Gives off harmful or toxic fumes</td><td>Sealed conveyor with extraction; operator protection</td></tr>
+          <tr><td class="num">S</td><td>Highly corrosive</td><td>Alloy selection, not coatings; watch cut edges of clad pipe</td></tr>
+          <tr><td class="num">T</td><td>Mildly corrosive</td><td>Stainless or coated components</td></tr>
+          <tr><td class="num">U</td><td>Hygroscopic</td><td>Absorbs moisture and becomes denser and less free flowing &mdash; allow for it in size, speed and power. Seal against outside air</td></tr>
+          <tr><td class="num">V</td><td>Interlocks, mats or agglomerates</td><td>Cut or cut-and-folded flighting to break the mat</td></tr>
+          <tr><td class="num">W</td><td>Oils present</td><td>Attacks elastomer seals and gaskets; check compatibility</td></tr>
+          <tr><td class="num">X</td><td>Packs under pressure</td><td>Will bridge in the hopper; live bottom or mass-flow feeder screw</td></tr>
+          <tr><td class="num">Y</td><td>Very light and fluffy</td><td>Windswept; enclose fully, and expect low density and high volume</td></tr>
+          <tr><td class="num">Z</td><td>Elevated temperature</td><td>Alloy construction, high-temperature bearings and seals, expansion provision (&sect;3.18)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Reading a code</span>
+      <p>Take <b>40B35P</b>, gluten meal. <b>40</b> &mdash; bulk density 40&nbsp;lb/ft&sup3; (640&nbsp;kg/m&sup3;).
+        <b>B</b> &mdash; fine, 1/8&nbsp;in. mesh and under. <b>3</b> &mdash; average flowability.
+        <b>5</b> &mdash; mildly abrasive. <b>P</b> &mdash; contaminable. From that string alone you already know
+        this needs a modest trough loading, sectional flighting is not strictly necessary for wear but the
+        <b>P</b> demands dry-running sealed bearings, polished internal welds and covers that come off easily
+        for cleaning.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.18.</b> A working extract of the material table. The last three columns are what
+          the design calculations actually consume: <var>F</var><sub>m</sub> is the material factor used in
+          &sect;3.15, and &ldquo;Vert.&rdquo; marks materials that can be conveyed vertically.</caption>
+        <thead>
+          <tr><th>Material</th><th>Code</th><th class="num">Loading</th><th>Component group</th><th class="num">Density (lb/ft&sup3;)</th><th class="num"><var>F</var><sub>m</sub></th><th class="num">Vert.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Alfalfa meal</td><td>18B45WY</td><td class="num">30A</td><td>2D</td><td class="num">14&ndash;22</td><td class="num">0.6</td><td class="num">&#10003;</td></tr>
+          <tr><td>Alfalfa pellets</td><td>42C25</td><td class="num">45</td><td>2D</td><td class="num">41&ndash;43</td><td class="num">0.5</td><td class="num">&mdash;</td></tr>
+          <tr><td>Barley, whole</td><td>42B25N</td><td class="num">45</td><td>1A,1B,1C</td><td class="num">36&ndash;48</td><td class="num">0.5</td><td class="num">&#10003;</td></tr>
+          <tr><td>Bran, rice/rye/wheat</td><td>18B35NY</td><td class="num">30A</td><td>1A,1B,1C</td><td class="num">16&ndash;20</td><td class="num">0.5</td><td class="num">&mdash;</td></tr>
+          <tr><td>Cement, Portland</td><td>94A26M</td><td class="num">30B</td><td>2D</td><td class="num">94</td><td class="num">1.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Coal, bituminous, mined</td><td>50D35LNYX</td><td class="num">30A</td><td>1A,1B</td><td class="num">40&ndash;60</td><td class="num">1.0</td><td class="num">&mdash;</td></tr>
+          <tr><td>Corn, germ, dry</td><td>21B35PY</td><td class="num">30A</td><td>1A,1B,1C</td><td class="num">21</td><td class="num">0.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Corn, shelled</td><td>45C25</td><td class="num">45</td><td>1A,1B,1C</td><td class="num">45</td><td class="num">0.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Cornmeal</td><td>36B35P</td><td class="num">30A</td><td>1A,1B</td><td class="num">32&ndash;40</td><td class="num">0.5</td><td class="num">&#10003;</td></tr>
+          <tr><td>Cottonseed meal, extracted</td><td>38B45HW</td><td class="num">30A</td><td>1A,1B</td><td class="num">35&ndash;40</td><td class="num">0.5</td><td class="num">&#10003;</td></tr>
+          <tr><td>Distiller's grain, spent dry</td><td>30B35</td><td class="num">30A</td><td>2D</td><td class="num">30</td><td class="num">0.5</td><td class="num">&mdash;</td></tr>
+          <tr><td>Flour, wheat</td><td>37A45LP</td><td class="num">30A</td><td>1B</td><td class="num">33&ndash;40</td><td class="num">0.6</td><td class="num">?</td></tr>
+          <tr><td>Fly ash</td><td>38A36M</td><td class="num">30B</td><td>3D</td><td class="num">30&ndash;45</td><td class="num">2.0</td><td class="num">?</td></tr>
+          <tr><td>Gluten meal, dry</td><td>40B35P</td><td class="num">30A</td><td>1B</td><td class="num">40</td><td class="num">0.6</td><td class="num">&mdash;</td></tr>
+          <tr><td>Lime, hydrated</td><td>40B35LM</td><td class="num">30A</td><td>2D</td><td class="num">40</td><td class="num">0.8</td><td class="num">&#10003;</td></tr>
+          <tr><td>Oats</td><td>26C25MN</td><td class="num">45</td><td>1A,1B,1C</td><td class="num">26</td><td class="num">0.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Rice, hulled</td><td>47C25P</td><td class="num">45</td><td>1A,1B,1C</td><td class="num">45&ndash;49</td><td class="num">0.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Rice, hulls</td><td>21B35NY</td><td class="num">30A</td><td>1A,1B,1C</td><td class="num">20&ndash;21</td><td class="num">0.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Rice, rough (paddy)</td><td>34C35N</td><td class="num">30A</td><td>1A,1B,1C</td><td class="num">32&ndash;36</td><td class="num">0.6</td><td class="num">&#10003;</td></tr>
+          <tr><td>Sand, dry silica</td><td>95B27</td><td class="num">15</td><td>3D</td><td class="num">90&ndash;100</td><td class="num">2.0</td><td class="num">&mdash;</td></tr>
+          <tr><td>Sawdust, dry</td><td>12B45UX</td><td class="num">30A</td><td>1A,1B,1C</td><td class="num">10&ndash;13</td><td class="num">0.7</td><td class="num">&mdash;</td></tr>
+          <tr><td>Soybean meal, cold</td><td>40B35</td><td class="num">30A</td><td>1A,1B,1C</td><td class="num">40</td><td class="num">0.5</td><td class="num">&#10003;</td></tr>
+          <tr><td>Soybeans, whole</td><td>48C26NW</td><td class="num">30B</td><td>3D</td><td class="num">45&ndash;50</td><td class="num">1.0</td><td class="num">&mdash;</td></tr>
+          <tr><td>Sugar, refined granulated dry</td><td>53B35PU</td><td class="num">30A</td><td>1B</td><td class="num">50&ndash;55</td><td class="num">1.2</td><td class="num">&#10003;</td></tr>
+          <tr><td>Sugar beet pulp, dry</td><td>14C26</td><td class="num">30B</td><td>2D</td><td class="num">12&ndash;15</td><td class="num">0.9</td><td class="num">&mdash;</td></tr>
+          <tr><td>Wheat</td><td>47C25N</td><td class="num">45</td><td>1A,1B,1C</td><td class="num">45&ndash;48</td><td class="num">0.4</td><td class="num">&#10003;</td></tr>
+          <tr><td>Wood chips, screened</td><td>20D45VY</td><td class="num">30A</td><td>2A,2B</td><td class="num">10&ndash;30</td><td class="num">0.6</td><td class="num">&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="units">A &ldquo;?&rdquo; in the vertical column means the material can sometimes be elevated
+      vertically but needs a closer look and a modified design. For a material not listed, classify it against
+      Table&nbsp;3.16 or work from a listed material similar in weight, particle size and behaviour &mdash; and
+      say in your calculation which one you borrowed from.</p>
+
+    <h3>Special materials</h3>
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.19.</b> What to do about difficult material.</caption>
+        <thead><tr><th>Material behaviour</th><th>Design response</th></tr></thead>
+        <tbody>
+          <tr><td><b>Abrasive</b></td><td>Slower speed and lower trough loading. Thicker flights and troughs, surface hardening or special alloys (&sect;3.18)</td></tr>
+          <tr><td><b>Contaminable</b></td><td>Sealed end bearings; dry-running hanger bearings of wood, nylon or similar; tightly sealed, easily removable covers; internal welds polished to eliminate entrapment</td></tr>
+          <tr><td><b>Degradable</b></td><td>Large diameter, very slow speed, to minimise physical agitation</td></tr>
+          <tr><td><b>Extreme temperature</b></td><td>Alloy construction; jacketed trough to hold the material in a safe range; expansion provision at the non-drive end</td></tr>
+          <tr><td><b>Explosive</b></td><td>Non-sparking and explosion-proof components, tightly sealed, with an exhaust system where hazardous dust exists</td></tr>
+          <tr><td><b>Fluidising</b></td><td>Size the conveyor on the <em>aerated</em> volume and density, because the material will expand. It will also flow through the flight clearances, so use slow speed, low clearance and special flight edging</td></tr>
+          <tr><td><b>Hygroscopic</b></td><td>Becomes denser and less free flowing as it takes up moisture &mdash; account for that in size, speed and power. Seal the conveyor against outside air</td></tr>
+          <tr><td><b>Viscous or sticky</b></td><td>Ribbon flighting to prevent build-up at the pipe; interrupted flighting where throughput matters; shaftless where the product is stringy</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 3.11 -->
+    <h2 id="s11">3.11 Trough Loading and Component Groups</h2>
+
+    <p>A screw conveyor is never run full. The fraction of the trough cross-section occupied by material is
+      the <b>trough loading</b>, and it is set by the material, not by the designer's preference: the rule is
+      that the more difficult the material, the emptier the trough must run, so that the hanger bearings spend
+      less time buried and the flights are less heavily loaded.</p>
+
+    <figure>
+      <svg viewBox="0 0 820 250" role="img" aria-label="Four trough cross-sections showing 15, 30, 45 and 95 percent loading">
+        <rect x="0" y="0" width="820" height="250" fill="#ffffff"/>
+        <g>
+          <!-- 15% -->
+          <g transform="translate(100,100)">
+            <path d="M -60 -56 L -60 0 A 60 60 0 0 0 60 0 L 60 -56" fill="#ffffff" stroke="#8f8f8f" stroke-width="2.5"/>
+            <path d="M -46 22 A 60 60 0 0 0 46 22 Z" fill="#c9a97a"/>
+            <circle cx="0" cy="0" r="16" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+            <text x="0" y="-74" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#DF301C" text-anchor="middle">15 %</text>
+            <text x="0" y="94" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">very abrasive</text>
+            <text x="0" y="110" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">group 3</text>
+          </g>
+          <!-- 30% -->
+          <g transform="translate(280,100)">
+            <path d="M -60 -56 L -60 0 A 60 60 0 0 0 60 0 L 60 -56" fill="#ffffff" stroke="#8f8f8f" stroke-width="2.5"/>
+            <path d="M -60 0 A 60 60 0 0 0 60 0 Z" fill="#c9a97a"/>
+            <circle cx="0" cy="0" r="16" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+            <text x="0" y="-74" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#DF301C" text-anchor="middle">30 %</text>
+            <text x="0" y="94" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">average flow</text>
+            <text x="0" y="110" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">groups 1&ndash;2</text>
+          </g>
+          <!-- 45% -->
+          <g transform="translate(460,100)">
+            <path d="M -60 -56 L -60 0 A 60 60 0 0 0 60 0 L 60 -56" fill="#ffffff" stroke="#8f8f8f" stroke-width="2.5"/>
+            <path d="M -60 -20 L -60 0 A 60 60 0 0 0 60 0 L 60 -20 Z" fill="#c9a97a"/>
+            <circle cx="0" cy="0" r="16" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+            <text x="0" y="-74" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#DF301C" text-anchor="middle">45 %</text>
+            <text x="0" y="94" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">free flowing,</text>
+            <text x="0" y="110" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">non-abrasive</text>
+          </g>
+          <!-- 95% -->
+          <g transform="translate(640,100)">
+            <path d="M -60 -56 L -60 0 A 60 60 0 0 0 60 0 L 60 -56" fill="#ffffff" stroke="#8f8f8f" stroke-width="2.5"/>
+            <path d="M -60 -50 L -60 0 A 60 60 0 0 0 60 0 L 60 -50 Z" fill="#c9a97a"/>
+            <rect x="-62" y="-58" width="124" height="9" fill="#8f8f8f"/>
+            <circle cx="0" cy="0" r="16" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
+            <text x="0" y="-74" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#DF301C" text-anchor="middle">95 %</text>
+            <text x="0" y="94" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">feeder only,</text>
+            <text x="0" y="110" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">flooded inlet</text>
+          </g>
+        </g>
+        <text x="410" y="228" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">
+          the harder the material is on the machine, the emptier the trough must run
+        </text>
+      </svg>
+      <figcaption><b>Figure 3.3.</b> The four standard trough loadings. The 95&nbsp;% case is not a conveyor
+        at all &mdash; it is the flooded inlet of a screw feeder (&sect;3.20), shown here with the shroud that
+        restricts the flooded region to the inlet.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.20.</b> Component groups: how the material's difficulty propagates into the
+          hardware.</caption>
+        <thead><tr><th>Group</th><th>Service</th><th>Typical loading</th><th>Coupling</th><th>Flight thickness</th><th>Trough</th></tr></thead>
+        <tbody>
+          <tr><td><b>1</b> (1A, 1B, 1C)</td><td>Light duty &mdash; free-flowing, non-abrasive: grain, meal, flour</td><td>30&ndash;45&nbsp;%</td><td>2-bolt</td><td>10&nbsp;ga to 1/4&nbsp;in.</td><td>16&nbsp;ga to 10&nbsp;ga</td></tr>
+          <tr><td><b>2</b> (2A&ndash;2D)</td><td>Standard duty &mdash; average flow, mildly to moderately abrasive</td><td>30&nbsp;%</td><td>2- or 3-bolt</td><td>10&nbsp;ga to 3/8&nbsp;in.</td><td>14&nbsp;ga to 3/16&nbsp;in.</td></tr>
+          <tr><td><b>3</b> (3A, 3B, 3D)</td><td>Heavy duty &mdash; sluggish and/or extremely abrasive: sand, ash, cement clinker</td><td>15&nbsp;%</td><td>3-bolt</td><td>3/16 to 1/2&nbsp;in.</td><td>3/16 to 1/4&nbsp;in.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The letter following the group number in the material table is the permitted <b>hanger bearing</b>
+      class: A is a ball bearing, B and C are the softer plain bearings, and D is the hard-iron family that
+      requires a hardened shaft. A material listed as <b>1A,1B,1C</b> may use any of the light-duty bearing
+      families; one listed <b>3D</b> is telling you that nothing softer than hard iron will survive.</p>
+
+    <div class="callout rule">
+      <span class="label">The chain of consequence</span>
+      <p>Follow it once and the rest of the chapter reads more easily. Abrasive material &rarr; group&nbsp;3
+        &rarr; 15&nbsp;% trough loading &rarr; a <em>much larger screw</em> for the same tonnage &rarr; more
+        power, more torque, thicker components, hard iron bearings at
+        <var>F</var><sub>b</sub>&nbsp;=&nbsp;4.4 &rarr; more power again. A single characteristic of the
+        material has multiplied the cost of the machine several times over. This is why &sect;3.10 comes before
+        &sect;3.12, and why guessing the material code to save time never saves time.</p>
+    </div>
+
+    <!-- ============================================================ 3.12 -->
+    <h2 id="s12">3.12 Capacity &mdash; the CEMA Table Method</h2>
+
+    <p>North American practice sizes a screw from a table rather than a formula. The table gives, for each
+      diameter and each trough loading, the volume delivered per revolution and the maximum speed the screw
+      may be run at. Speed then follows from one division:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>N</var> =
+        <span class="frac">
+          <span class="num">Required capacity&nbsp;(ft&sup3;/h)</span>
+          <span class="den">Capacity at 1&nbsp;rpm&nbsp;(ft&sup3;/h)</span>
+        </span>
+        &nbsp;<span class="units">rpm, and never above the maximum recommended speed</span>
+      </span>
+      <span class="tag">(3.2)</span>
+    </div>
+
+    <p>Where the screw is anything other than plain full-pitch flighting, the required capacity is first
+      inflated into an <b>equivalent capacity</b> using the three factors met in &sect;3.4 and &sect;3.5:</p>
+
+    <div class="eq">
+      <span class="body">
+        Equivalent capacity = Required capacity &times; <var>CF</var><sub>1</sub> &times;
+        <var>CF</var><sub>2</sub> &times; <var>CF</var><sub>3</sub>
+      </span>
+      <span class="tag">(3.3)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.21.</b> Screw conveyor capacities. For each loading: maximum recommended speed
+          (rpm) and volume delivered at 1&nbsp;rpm (ft&sup3;/h). Multiply ft&sup3;/h by 0.0283 for
+          m&sup3;/h.</caption>
+        <thead>
+          <tr><th rowspan="2" class="num">Screw dia.<br>(in.)</th>
+              <th colspan="2" class="num">15&nbsp;%</th><th colspan="2" class="num">30&nbsp;% A</th>
+              <th colspan="2" class="num">30&nbsp;% B</th><th colspan="2" class="num">45&nbsp;%</th></tr>
+          <tr><th class="num">max rpm</th><th class="num">per rpm</th>
+              <th class="num">max rpm</th><th class="num">per rpm</th>
+              <th class="num">max rpm</th><th class="num">per rpm</th>
+              <th class="num">max rpm</th><th class="num">per rpm</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">6</td><td class="num">60</td><td class="num">0.8</td><td class="num">120</td><td class="num">1.5</td><td class="num">60</td><td class="num">1.5</td><td class="num">165</td><td class="num">2.2</td></tr>
+          <tr><td class="num">9</td><td class="num">55</td><td class="num">2.7</td><td class="num">100</td><td class="num">5.5</td><td class="num">55</td><td class="num">5.7</td><td class="num">155</td><td class="num">8.2</td></tr>
+          <tr><td class="num">12</td><td class="num">50</td><td class="num">6.5</td><td class="num">90</td><td class="num">12.9</td><td class="num">50</td><td class="num">12.9</td><td class="num">145</td><td class="num">19.4</td></tr>
+          <tr><td class="num">14</td><td class="num">50</td><td class="num">10.4</td><td class="num">85</td><td class="num">20.8</td><td class="num">47</td><td class="num">14.8*</td><td class="num">140</td><td class="num">31.2</td></tr>
+          <tr><td class="num">16</td><td class="num">45</td><td class="num">15.6</td><td class="num">80</td><td class="num">31.2</td><td class="num">44</td><td class="num">31.4</td><td class="num">130</td><td class="num">46.7</td></tr>
+          <tr><td class="num">18</td><td class="num">45</td><td class="num">22.5</td><td class="num">75</td><td class="num">45.0</td><td class="num">41</td><td class="num">44.7</td><td class="num">120</td><td class="num">67.6</td></tr>
+          <tr><td class="num">20</td><td class="num">40</td><td class="num">31.2</td><td class="num">70</td><td class="num">62.5</td><td class="num">38</td><td class="num">62.1</td><td class="num">110</td><td class="num">93.7</td></tr>
+          <tr><td class="num">24</td><td class="num">40</td><td class="num">54.6</td><td class="num">65</td><td class="num">109.0</td><td class="num">36</td><td class="num">109.1</td><td class="num">100</td><td class="num">164.0</td></tr>
+          <tr><td class="num">30</td><td class="num">30</td><td class="num">105.0</td><td class="num">50</td><td class="num">210.0</td><td class="num">27</td><td class="num">210.0</td><td class="num">70</td><td class="num">315.0</td></tr>
+          <tr><td class="num">36</td><td class="num">20</td><td class="num">184.0</td><td class="num">35</td><td class="num">369.0</td><td class="num">19</td><td class="num">360.0</td><td class="num">40</td><td class="num">540.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="units">* The 14&nbsp;in. figure under 30&nbsp;%&nbsp;B is out of line with its neighbours, which
+      track the 30&nbsp;%&nbsp;A column closely. Treat it as suspect and confirm it with the manufacturer
+      before using it &mdash; and treat that habit as general. A published table is evidence, not scripture;
+      check every value you rely on against the trend of the values around it.</p>
+
+    <div class="callout">
+      <span class="label">What the A and B suffixes mean</span>
+      <p>Both are 30&nbsp;% loadings, so the volume per revolution is essentially the same. What differs is the
+        <b>speed ceiling</b>: 30&nbsp;%&nbsp;B caps the screw at roughly half the speed of 30&nbsp;%&nbsp;A.
+        The B group is for materials that are more aggressive or more easily damaged, and the material table
+        (&sect;3.10) tells you which one applies. Because the speed limit is halved, the same tonnage in group
+        B needs a screw one or two sizes larger.</p>
+    </div>
+
+    <h3>Choosing the speed within the limit</h3>
+    <p>Equation&nbsp;3.2 gives the speed a chosen diameter must run at. Two considerations pull that choice in
+      opposite directions:</p>
+    <ul>
+      <li><b>Faster</b> means a smaller, cheaper screw, less trough, fewer hangers and lower capital cost.</li>
+      <li><b>Slower</b> means less wear (the abrasion score of &sect;3.18 is directly proportional to speed),
+        less product degradation, and less power lost to friction &mdash; but a physically bigger machine.</li>
+    </ul>
+    <p>Common practice is to select the smallest diameter whose maximum speed is not exceeded, then check the
+      abrasion score; if it fails, go one size up and repeat. The worked example in &sect;3.21 follows exactly
+      that path.</p>
+
+    <!-- ============================================================ 3.13 -->
+    <h2 id="s13">3.13 Capacity &mdash; the Metric Method</h2>
+
+    <p>European practice (DIN&nbsp;15262, ISO&nbsp;7119) uses a formula rather than a table, and it is worth
+      learning because it makes visible what the table conceals. The volume swept per revolution is the
+      annulus between the flight and the pipe, multiplied by the pitch:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>Q</var><sub>v</sub> = 47.1 &middot; (<var>D</var>&sup2; &minus; <var>d</var>&sup2;) &middot;
+        <var>S</var> &middot; <var>n</var> &middot; &psi; &middot; <var>C</var>
+        &nbsp;<span class="units">m&sup3;/h</span>
+      </span>
+      <span class="tag">(3.4)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>Q</var><sub>m</sub> = <var>Q</var><sub>v</sub> &middot; &rho;
+        &nbsp;<span class="units">t/h</span>
+      </span>
+      <span class="tag">(3.5)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Quantity</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td><var>D</var></td><td>Screw outside diameter</td><td>m</td></tr>
+          <tr><td><var>d</var></td><td>Centre pipe outside diameter</td><td>m</td></tr>
+          <tr><td><var>S</var></td><td>Pitch</td><td>m</td></tr>
+          <tr><td><var>n</var></td><td>Screw speed</td><td>rpm</td></tr>
+          <tr><td>&psi;</td><td>Fill factor (trough loading as a fraction)</td><td>&mdash;</td></tr>
+          <tr><td><var>C</var></td><td>Incline factor</td><td>&mdash;</td></tr>
+          <tr><td>&rho;</td><td>Bulk density</td><td>t/m&sup3;</td></tr>
+          <tr><td>47.1</td><td>60 &times; &pi;/4, the constant that converts m&sup3;/rev at rpm into m&sup3;/h</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.22.</b> Fill factor &psi; and maximum speed by material class. These are the same
+          engineering judgements the CEMA table encodes, written as numbers.</caption>
+        <thead><tr><th>Material class</th><th>Examples</th><th class="num">&psi;</th><th class="num">Typical max <var>n</var> (rpm)</th></tr></thead>
+        <tbody>
+          <tr><td>Light, free flowing, non-abrasive</td><td>Grain, meal, flour, sawdust</td><td class="num">0.40&ndash;0.45</td><td class="num">120&ndash;150</td></tr>
+          <tr><td>Medium, free flowing, mildly abrasive</td><td>Salt, sugar, soda ash</td><td class="num">0.30&ndash;0.32</td><td class="num">70&ndash;100</td></tr>
+          <tr><td>Heavy, moderately abrasive</td><td>Lime, cement, clay</td><td class="num">0.25</td><td class="num">40&ndash;70</td></tr>
+          <tr><td>Heavy, highly abrasive</td><td>Sand, ash, ore, clinker</td><td class="num">0.125&ndash;0.15</td><td class="num">20&ndash;45</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.23.</b> Incline factor <var>C</var>. Capacity falls away sharply with angle
+          because material slides back over the flight; see &sect;3.19.</caption>
+        <thead><tr><th class="num">Incline</th><th class="num">0&deg;</th><th class="num">5&deg;</th><th class="num">10&deg;</th><th class="num">15&deg;</th><th class="num">20&deg;</th><th class="num">25&deg;</th><th class="num">30&deg;</th></tr></thead>
+        <tbody>
+          <tr><th><var>C</var></th><td class="num">1.00</td><td class="num">0.90</td><td class="num">0.80</td><td class="num">0.70</td><td class="num">0.65</td><td class="num">0.58</td><td class="num">0.50</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example">
+      <h3>Example 3.1 &mdash; Do the two methods agree?</h3>
+      <p>Take a 14&nbsp;in. screw on 3&nbsp;in. pipe, full pitch, running at 57.7&nbsp;rpm at 30&nbsp;%
+        loading, horizontal.</p>
+      <div class="step">
+        <h4>By the CEMA table</h4>
+        <p>From Table&nbsp;3.21 at 30&nbsp;%&nbsp;A, a 14&nbsp;in. screw delivers 20.8&nbsp;ft&sup3;/h per rpm.</p>
+        <p>20.8 &times; 57.7 = 1,200&nbsp;ft&sup3;/h = <b>33.98&nbsp;m&sup3;/h</b></p>
+      </div>
+      <div class="step">
+        <h4>By Eq. 3.4</h4>
+        <p><var>D</var> = 14&nbsp;in. = 0.3556&nbsp;m; <var>d</var> = 3.5&nbsp;in. = 0.0889&nbsp;m;
+          <var>S</var> = <var>D</var> = 0.3556&nbsp;m; &psi; = 0.30; <var>C</var> = 1.0</p>
+        <p><var>Q</var><sub>v</sub> = 47.1 &times; (0.3556&sup2; &minus; 0.0889&sup2;) &times; 0.3556 &times;
+          57.7 &times; 0.30</p>
+        <p><var>Q</var><sub>v</sub> = 47.1 &times; 0.11855 &times; 0.3556 &times; 57.7 &times; 0.30
+          = <b>34.37&nbsp;m&sup3;/h</b></p>
+        <p class="result">The two methods agree to 1.1 %</p>
+      </div>
+      <div class="step">
+        <h4>Why this matters</h4>
+        <p>They agree because they are the same physics. The agreement also shows what the pipe term is worth:
+          drop the &minus;<var>d</var>&sup2; and Eq.&nbsp;3.4 returns 36.7&nbsp;m&sup3;/h, an 8&nbsp;% error
+          &mdash; small on a 14&nbsp;in. screw with 3&nbsp;in. pipe, but growing fast on small screws with
+          heavy pipe, where the pipe can occupy a fifth of the trough. Never use the simplified form
+          <var>Q</var> &prop; <var>D</var>&sup2; without checking what fraction the pipe occupies.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================ 3.14 -->
+    <h2 id="s14">3.14 Lump Size Limitation</h2>
+
+    <p>Capacity is not the only thing that sets screw size. A lump that will not pass through the gap between
+      the centre pipe and the trough will jam the machine, and that gap &mdash; the <b>radial clearance</b>
+      &mdash; is much smaller than the screw diameter suggests. How large a lump may be depends not only on its
+      own size but on <em>how many</em> lumps there are, because a few big lumps in a bed of fines will be
+      carried through, while a screw full of nothing but lumps will bridge.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.24.</b> Lump classes.</caption>
+        <thead><tr><th>Class</th><th>Composition</th><th class="num">Class ratio <var>R</var></th></tr></thead>
+        <tbody>
+          <tr><td><b>Class 1</b></td><td>Not more than 10&nbsp;% lumps between maximum size and half maximum; 90&nbsp;% smaller than half maximum</td><td class="num">1.75</td></tr>
+          <tr><td><b>Class 2</b></td><td>Not more than 25&nbsp;% lumps between maximum and half maximum; 75&nbsp;% smaller than half maximum</td><td class="num">2.50</td></tr>
+          <tr><td><b>Class 3</b></td><td>Lumps only &mdash; 95&nbsp;% or more between maximum and half maximum; 5&nbsp;% or less below one tenth of maximum</td><td class="num">4.50</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        Required radial clearance = <var>R</var> &times; maximum lump size
+      </span>
+      <span class="tag">(3.6)</span>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 760 330" role="img" aria-label="Section through a screw conveyor showing radial clearance between pipe and trough and a lump passing through it">
+        <rect x="0" y="0" width="760" height="330" fill="#ffffff"/>
+
+        <g transform="translate(250,160)">
+          <!-- trough -->
+          <path d="M -110 -104 L -110 0 A 110 110 0 0 0 110 0 L 110 -104" fill="#fdfcf9" stroke="#8f8f8f" stroke-width="3"/>
+          <!-- flight circle -->
+          <circle cx="0" cy="0" r="96" fill="none" stroke="#6f6f6f" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <!-- pipe -->
+          <circle cx="0" cy="0" r="30" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2.5"/>
+          <!-- lump -->
+          <path d="M 58 44 l 20 -10 l 16 16 l -8 20 l -22 4 z" fill="#c9a97a" stroke="#8a6f47" stroke-width="2"/>
+
+          <!-- radial clearance dim -->
+          <g stroke="#DF301C" stroke-width="2">
+            <line x1="0" y1="-30" x2="0" y2="-110"/>
+            <path d="M -6 -40 L 0 -30 L 6 -40" fill="none"/>
+            <path d="M -6 -100 L 0 -110 L 6 -100" fill="none"/>
+          </g>
+          <!-- flight tip clearance -->
+          <g stroke="#00788A" stroke-width="2">
+            <line x1="-96" y1="-60" x2="-110" y2="-60"/>
+          </g>
+        </g>
+
+        <text x="250" y="28" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C" text-anchor="middle">radial clearance</text>
+        <text x="250" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#DF301C" text-anchor="middle">= (trough radius) &minus; (pipe radius)</text>
+        <text x="120" y="118" font-family="Segoe UI, sans-serif" font-size="12" fill="#00788A" text-anchor="end">flight tip</text>
+        <text x="120" y="134" font-family="Segoe UI, sans-serif" font-size="12" fill="#00788A" text-anchor="end">clearance ~12 mm</text>
+        <line x1="126" y1="120" x2="142" y2="100" stroke="#00788A" stroke-width="1.3"/>
+
+        <text x="420" y="216" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">largest lump must pass here</text>
+        <line x1="416" y1="212" x2="330" y2="200" stroke="#4b4540" stroke-width="1.3"/>
+
+        <!-- the rule -->
+        <rect x="430" y="60" width="300" height="112" rx="4" fill="#f0fafc" stroke="#00B7CD" stroke-width="2"/>
+        <text x="580" y="88" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#1c1917" text-anchor="middle">Required radial clearance</text>
+        <text x="580" y="116" font-family="Segoe UI, sans-serif" font-size="15" fill="#1c1917" text-anchor="middle">= R &times; (max lump size)</text>
+        <text x="580" y="142" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">R = 1.75 (class 1) &middot; 2.50 (class 2)</text>
+        <text x="580" y="158" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">4.50 (class 3)</text>
+
+        <text x="580" y="230" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">The more lumps in the mix,</text>
+        <text x="580" y="248" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="middle">the larger the clearance each one needs</text>
+      </svg>
+      <figcaption><b>Figure 3.4.</b> Radial clearance is the gap between the centre pipe and the trough wall,
+        and it is what a lump must squeeze through. Note that it is <em>not</em> the same as the flight tip
+        clearance, which is the small gap &mdash; about 12&nbsp;mm &mdash; between the outside of the flight and
+        the trough, and which governs leakage of fines rather than passage of lumps.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.25.</b> Maximum lump size for standard screws, in inches. Radial clearance follows
+          from the screw diameter and the pipe chosen, so a heavier pipe costs lump capacity.</caption>
+        <thead>
+          <tr><th class="num">Screw dia.</th><th class="num">Pipe OD</th><th class="num">Radial clearance</th><th class="num">Class 1<br>(10&nbsp;% lumps)</th><th class="num">Class 2<br>(25&nbsp;% lumps)</th><th class="num">Class 3<br>(95&nbsp;% lumps)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">6</td><td class="num">2&nbsp;3/8</td><td class="num">2&nbsp;5/16</td><td class="num">1&nbsp;1/4</td><td class="num">3/4</td><td class="num">1/2</td></tr>
+          <tr><td class="num">9</td><td class="num">2&nbsp;7/8</td><td class="num">3&nbsp;9/16</td><td class="num">2&nbsp;1/4</td><td class="num">1&nbsp;1/2</td><td class="num">3/4</td></tr>
+          <tr><td class="num">12</td><td class="num">2&nbsp;7/8</td><td class="num">5&nbsp;1/16</td><td class="num">2&nbsp;3/4</td><td class="num">2</td><td class="num">1</td></tr>
+          <tr><td class="num">12</td><td class="num">3&nbsp;1/2</td><td class="num">4&nbsp;3/4</td><td class="num">2&nbsp;3/4</td><td class="num">2</td><td class="num">1</td></tr>
+          <tr><td class="num">14</td><td class="num">3&nbsp;1/2</td><td class="num">5&nbsp;3/4</td><td class="num">3&nbsp;1/4</td><td class="num">2&nbsp;1/2</td><td class="num">1&nbsp;1/4</td></tr>
+          <tr><td class="num">14</td><td class="num">4&nbsp;1/2</td><td class="num">5&nbsp;1/4</td><td class="num">3</td><td class="num">2</td><td class="num">1</td></tr>
+          <tr><td class="num">16</td><td class="num">4</td><td class="num">6&nbsp;1/2</td><td class="num">3&nbsp;3/4</td><td class="num">2&nbsp;3/4</td><td class="num">1&nbsp;1/2</td></tr>
+          <tr><td class="num">18</td><td class="num">4&nbsp;1/2</td><td class="num">7&nbsp;1/4</td><td class="num">4&nbsp;1/4</td><td class="num">3</td><td class="num">1&nbsp;3/4</td></tr>
+          <tr><td class="num">20</td><td class="num">4&nbsp;1/2</td><td class="num">8&nbsp;1/4</td><td class="num">4&nbsp;3/4</td><td class="num">3&nbsp;1/2</td><td class="num">2</td></tr>
+          <tr><td class="num">24</td><td class="num">4&nbsp;1/2</td><td class="num">10&nbsp;1/4</td><td class="num">6</td><td class="num">3&nbsp;3/4</td><td class="num">2&nbsp;1/2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">Capacity and lump size are two separate filters</span>
+      <p>Size the screw for capacity, then check it against lump size, and take <b>whichever is larger</b>.
+        A 12&nbsp;in. screw that satisfies the tonnage is useless if the feed contains 3&nbsp;in. lumps at
+        class&nbsp;2, because that mix demands 2.50&nbsp;&times;&nbsp;3 = 7.5&nbsp;in. of radial clearance and
+        an 18&nbsp;in. screw. Lump size is exactly why <a href="chapter2.html#s19">Table&nbsp;2.27</a> caps the
+        screw conveyor at 30&nbsp;mm lumps in the first-pass selection.</p>
+    </div>
+
+    <!-- ============================================================ 3.15 -->
+    <h2 id="s15">3.15 Power &mdash; the CEMA Method</h2>
+
+    <p>The power a horizontal screw conveyor needs is the sum of two quite different things: the power to
+      overcome friction in the machine itself, which does not depend on how much material is in it, and the
+      power to drag the material along, which does. The sum is then multiplied by an overload factor and
+      divided by the drive efficiency.</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>HP</var><sub>f</sub> =
+        <span class="frac"><span class="num"><var>L</var> <var>N</var> <var>F</var><sub>d</sub> <var>F</var><sub>b</sub></span><span class="den">1,000,000</span></span>
+        &nbsp;<span class="units">friction horsepower</span>
+      </span>
+      <span class="tag">(3.7)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>HP</var><sub>m</sub> =
+        <span class="frac"><span class="num"><var>C</var> <var>L</var> <var>W</var> <var>F</var><sub>m</sub> <var>F</var><sub>f</sub> <var>F</var><sub>p</sub></span><span class="den">1,000,000</span></span>
+        &nbsp;<span class="units">material horsepower</span>
+      </span>
+      <span class="tag">(3.8)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>HP</var><sub>total</sub> =
+        <span class="frac"><span class="num">(<var>HP</var><sub>f</sub> + <var>HP</var><sub>m</sub>) <var>F</var><sub>o</sub></span><span class="den"><var>e</var></span></span>
+      </span>
+      <span class="tag">(3.9)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Quantity</th><th>Unit / source</th></tr></thead>
+        <tbody>
+          <tr><td><var>L</var></td><td>Total conveyor length</td><td>ft</td></tr>
+          <tr><td><var>N</var></td><td>Operating speed</td><td>rpm</td></tr>
+          <tr><td><var>C</var></td><td>Capacity required &mdash; the <em>actual</em> figure, not the equivalent capacity</td><td>ft&sup3;/h</td></tr>
+          <tr><td><var>W</var></td><td>Bulk density of the material as conveyed</td><td>lb/ft&sup3;, Table&nbsp;3.18</td></tr>
+          <tr><td><var>F</var><sub>d</sub></td><td>Conveyor diameter factor</td><td>Table&nbsp;3.26</td></tr>
+          <tr><td><var>F</var><sub>b</sub></td><td>Hanger bearing factor</td><td>Table&nbsp;3.14</td></tr>
+          <tr><td><var>F</var><sub>m</sub></td><td>Material factor</td><td>Table&nbsp;3.18</td></tr>
+          <tr><td><var>F</var><sub>f</sub></td><td>Flight modification factor</td><td>Table&nbsp;3.27</td></tr>
+          <tr><td><var>F</var><sub>p</sub></td><td>Paddle factor</td><td>Table&nbsp;3.28</td></tr>
+          <tr><td><var>F</var><sub>o</sub></td><td>Overload factor</td><td>Eq.&nbsp;3.10</td></tr>
+          <tr><td><var>e</var></td><td>Total drive efficiency, as a decimal</td><td>Table&nbsp;3.29</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout rule">
+      <span class="label">Two traps in these two formulas</span>
+      <ul>
+        <li><b>Use the actual required capacity in Eq.&nbsp;3.8, not the equivalent capacity.</b> The
+          equivalent capacity exists only to pick a screw size in &sect;3.12. The material horsepower depends
+          on how many cubic feet actually move, and the <var>F</var><sub>f</sub> and <var>F</var><sub>p</sub>
+          factors already account for the extra work the modified flighting does.</li>
+        <li><b><var>HP</var><sub>f</sub> does not contain the capacity.</b> An empty screw conveyor still
+          needs its friction horsepower. That is also why a long, fast, large-diameter conveyor with hard iron
+          bearings can need more power empty than a short one needs full.</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.26.</b> Conveyor diameter factor <var>F</var><sub>d</sub>. Note how steeply it
+          climbs &mdash; roughly with the cube of the diameter, because it stands in for the weight and
+          bearing load of the screw itself.</caption>
+        <thead><tr><th class="num">Dia. (in.)</th><th class="num">6</th><th class="num">9</th><th class="num">10</th><th class="num">12</th><th class="num">14</th><th class="num">16</th><th class="num">18</th><th class="num">20</th><th class="num">24</th><th class="num">30</th><th class="num">36</th></tr></thead>
+        <tbody>
+          <tr><th><var>F</var><sub>d</sub></th><td class="num">18</td><td class="num">31</td><td class="num">37</td><td class="num">55</td><td class="num">78</td><td class="num">106</td><td class="num">135</td><td class="num">165</td><td class="num">235</td><td class="num">360</td><td class="num">512</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.27.</b> Flight modification HP factor <var>F</var><sub>f</sub>.</caption>
+        <thead><tr><th>Flighting</th><th class="num">15&nbsp;%</th><th class="num">30&nbsp;%</th><th class="num">45&nbsp;%</th><th class="num">95&nbsp;%</th></tr></thead>
+        <tbody>
+          <tr><td>Standard</td><td class="num">1.00</td><td class="num">1.00</td><td class="num">1.00</td><td class="num">1.00</td></tr>
+          <tr><td>Cut flight</td><td class="num">1.10</td><td class="num">1.15</td><td class="num">1.20</td><td class="num">1.30</td></tr>
+          <tr><td>Cut and folded</td><td class="num">NR</td><td class="num">1.50</td><td class="num">1.70</td><td class="num">2.20</td></tr>
+          <tr><td>Ribbon</td><td class="num">1.05</td><td class="num">1.14</td><td class="num">1.20</td><td class="num">NR</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.28.</b> Paddle HP factor <var>F</var><sub>p</sub>, standard paddles at 45&deg;
+          reverse pitch.</caption>
+        <thead><tr><th>Paddles per pitch</th><th class="num">None</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th></tr></thead>
+        <tbody>
+          <tr><th><var>F</var><sub>p</sub></th><td class="num">1.00</td><td class="num">1.29</td><td class="num">1.58</td><td class="num">1.87</td><td class="num">2.16</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The overload factor</h3>
+    <div class="eq">
+      <span class="body">
+        <var>F</var><sub>o</sub> = 1.0 &nbsp;<span class="units">if (<var>HP</var><sub>f</sub> + <var>HP</var><sub>m</sub>) &ge; 5.2</span><br>
+        <var>F</var><sub>o</sub> = &minus;0.6115 &middot; ln(<var>HP</var><sub>f</sub> + <var>HP</var><sub>m</sub>) + 2.024
+        &nbsp;<span class="units">if below 5.2</span>
+      </span>
+      <span class="tag">(3.10)</span>
+    </div>
+
+    <p>The overload factor is the single most misunderstood number in screw conveyor design. It exists because
+      a small conveyor has almost no inertia and no margin: a momentary surge of material, a cold start with a
+      trough full of product that has settled overnight, or a partial blockage will stall a motor that was
+      sized exactly on the calculated running power. So the smaller the calculated power, the bigger the
+      multiplier &mdash; below about 0.3&nbsp;HP the factor exceeds 2.7, while at 5.2&nbsp;HP and above it
+      disappears entirely, because a machine that size has enough margin in the next standard motor.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.29.</b> Drive efficiencies <var>e</var>. Use a complete arrangement from the upper
+          block, or multiply individual component efficiencies from the lower block.</caption>
+        <thead><tr><th>Drive arrangement</th><th class="num"><var>e</var></th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><b>Direct coupled in-line</b></td><td class="num">0.94</td><td>Motor, reducer and drive shaft in line and coupled. Best for long component life on large conveyors</td></tr>
+          <tr><td><b>Screw conveyor drive</b></td><td class="num">0.88</td><td>Reducer mounted on the trough end with its own shaft, integral thrust bearing and seal; motor on V-belts</td></tr>
+          <tr><td><b>Shaft mount drive</b></td><td class="num">0.88</td><td>As above but the reducer mounts on an extended standard drive shaft, so bearings and seals can be chosen freely</td></tr>
+          <tr><td><b>Gear motor / helical with chain</b></td><td class="num">0.85</td><td>Mounted to the side of the trough on an adapter plate</td></tr>
+          <tr><td colspan="3" class="units"><b>Individual components</b> &mdash; multiply together</td></tr>
+          <tr><td>V-belts and sheaves</td><td class="num">0.94</td><td>&nbsp;</td></tr>
+          <tr><td>Roller chain, open guard / oil-tight casing</td><td class="num">0.93 / 0.94</td><td>&nbsp;</td></tr>
+          <tr><td>Helical reducer, single / double / triple reduction</td><td class="num">0.95 / 0.94 / 0.93</td><td>&nbsp;</td></tr>
+          <tr><td>Worm gear reducer, ratio up to 20:1</td><td class="num">0.90</td><td rowspan="3">Worm drives are compact and self-locking but throw away power catastrophically at high ratio. Check the ratio before accepting a worm reducer on a screw conveyor</td></tr>
+          <tr><td>Worm gear reducer, 20:1 to 60:1</td><td class="num">0.70</td></tr>
+          <tr><td>Worm gear reducer, over 60:1 to 100:1</td><td class="num">0.50</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">What this calculation does not cover</span>
+      <p>Equations 3.7&ndash;3.9 assume a properly installed horizontal conveyor with a uniform, regular feed.
+        They do <b>not</b> include the extra power needed for an inclined conveyor, for a head load of material
+        standing above the inlet, for a drive run on a variable frequency drive at reduced speed, or for
+        material with difficult starting characteristics such as anything that hardens during a shutdown. Each
+        of those is a separate addition, and the first two are dealt with in &sect;3.19 and &sect;3.20.</p>
+    </div>
+
+    <!-- ============================================================ 3.16 -->
+    <h2 id="s16">3.16 Power &mdash; the Metric Method</h2>
+
+    <p>The metric method splits the power three ways instead of two, which makes the inclined case fall out
+      naturally:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>P</var><sub>H</sub> =
+        <span class="frac"><span class="num"><var>Q</var><sub>m</sub> <var>L</var> &lambda;</span><span class="den">367</span></span>
+        &nbsp;<span class="units">kW &mdash; horizontal conveying</span>
+      </span>
+      <span class="tag">(3.11)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        <var>P</var><sub>N</sub> =
+        <span class="frac"><span class="num"><var>D</var> <var>L</var></span><span class="den">20</span></span>
+        &nbsp;<span class="units">kW &mdash; idle (no-load) power</span>
+      </span>
+      <span class="tag">(3.12)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        <var>P</var><sub>St</sub> =
+        <span class="frac"><span class="num"><var>Q</var><sub>m</sub> <var>H</var></span><span class="den">367</span></span>
+        &nbsp;<span class="units">kW &mdash; lifting power</span>
+      </span>
+      <span class="tag">(3.13)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        <var>P</var> =
+        <span class="frac"><span class="num">(<var>P</var><sub>H</sub> + <var>P</var><sub>N</sub> + <var>P</var><sub>St</sub>) &middot; <var>k</var><sub>s</sub></span><span class="den">&eta;</span></span>
+      </span>
+      <span class="tag">(3.14)</span>
+    </div>
+
+    <p>where <var>Q</var><sub>m</sub> is in t/h, <var>L</var> is the conveyor length and <var>H</var> the lift
+      in m, <var>D</var> the screw diameter in m, &eta; the drive efficiency and <var>k</var><sub>s</sub> a
+      service factor, typically 1.25 for a uniform metered feed and 1.5 or more for a flood feed or a duty with
+      frequent starts. The constant 367 is the conversion that turns t/h &times; m into kW
+      (3600&nbsp;s/h &divide; 9.81&nbsp;m/s&sup2; &asymp; 367).</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.30.</b> Progress resistance coefficient &lambda;. This is the metric equivalent of
+          the CEMA material factor <var>F</var><sub>m</sub>, and like it, it must come from the supplier or
+          from test for anything unusual.</caption>
+        <thead><tr><th>Material</th><th class="num">&lambda;</th><th>Material</th><th class="num">&lambda;</th></tr></thead>
+        <tbody>
+          <tr><td>Wheat, barley, rye, oats</td><td class="num">1.2</td><td>Salt</td><td class="num">2.5</td></tr>
+          <tr><td>Flour, meal, bran</td><td class="num">1.2&ndash;1.5</td><td>Soda ash</td><td class="num">2.5</td></tr>
+          <tr><td>Sawdust, wood chips</td><td class="num">1.2</td><td>Coal, fine</td><td class="num">2.5</td></tr>
+          <tr><td>Fertiliser</td><td class="num">1.6</td><td>Lime, hydrated</td><td class="num">2.5</td></tr>
+          <tr><td>Sugar</td><td class="num">1.8</td><td>Gypsum</td><td class="num">2.5</td></tr>
+          <tr><td>Cement</td><td class="num">3.6&ndash;4.0</td><td>Sand, dry</td><td class="num">4.0</td></tr>
+          <tr><td>Fly ash</td><td class="num">4.0</td><td>Clinker</td><td class="num">4.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Why the two methods disagree on power but agree on capacity</span>
+      <p>&sect;3.13 showed the two capacity methods agreeing to about 1&nbsp;%. The power methods will not do
+        that, and the reason is structural rather than physical: <b>the CEMA overload factor
+        <var>F</var><sub>o</sub> is doing the job that the metric method leaves to the service factor
+        <var>k</var><sub>s</sub></b>. Strip <var>F</var><sub>o</sub> out of Eq.&nbsp;3.9 and apply an equal
+        service factor to both, and they converge to within a few per cent, as the worked example in
+        &sect;3.21 demonstrates. If you ever find the two methods differing by a factor of two, that is where
+        to look first.</p>
+    </div>
+
+    <!-- ============================================================ 3.17 -->
+    <h2 id="s17">3.17 Torque and Component Sizing</h2>
+
+    <p>A screw conveyor is limited in length and size not by power but by <b>torque</b>. Every newton-metre
+      applied at the drive shaft has to pass through the drive shaft, then through the coupling bolts into the
+      first screw's internal collar, then along the pipe, then through the next set of coupling bolts, and so
+      on to the far end. The weakest link in that chain sets the limit for the whole machine.</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var> =
+        <span class="frac"><span class="num">63,025 &times; <var>HP</var></span><span class="den"><var>N</var></span></span>
+        &nbsp;<span class="units">in&middot;lb</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>T</var> =
+        <span class="frac"><span class="num">9,550 &times; <var>P</var></span><span class="den"><var>n</var></span></span>
+        &nbsp;<span class="units">N&middot;m, P in kW</span>
+      </span>
+      <span class="tag">(3.15)</span>
+    </div>
+
+    <div class="callout rule">
+      <span class="label">Size the torque on the motor, not on the calculation</span>
+      <p>Use the <b>rated motor power</b> in Eq.&nbsp;3.15, not the calculated requirement. If the calculation
+        says 3.5&nbsp;HP you will fit a 5&nbsp;HP motor, and on the day someone floods the inlet that motor
+        will deliver 5&nbsp;HP into the screw. Every power-transmitting element should be able to handle the
+        full rated motor power safely. This is the standard practice, and it is the reason well-designed screw
+        conveyors fail by tripping the overload rather than by shearing coupling bolts.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.31.</b> Maximum component torque, in&middot;lb &mdash; an extract. Read across: the
+          <em>lowest</em> figure in the row is the machine's limit. Coupling bolts are shown both in shear and
+          in bearing against the pipe wall, with and without bolt pads.</caption>
+        <thead>
+          <tr><th class="num">Shaft</th><th class="num">Pipe</th><th class="num">Shaft<br>SS/1018</th><th class="num">Shaft<br>4140</th><th class="num">Pipe</th><th class="num">Bolt shear<br>2-bolt</th><th class="num">Bolt shear<br>3-bolt</th><th class="num">Bearing, 2-bolt<br>no pads</th><th class="num">Bearing, 2-bolt<br>with pads</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1&nbsp;1/2</td><td class="num">2&quot; sch 40</td><td class="num">2,565</td><td class="num">3,552</td><td class="num">7,288</td><td class="num">3,829</td><td class="num">5,743</td><td class="num">5,016</td><td class="num">16,641</td></tr>
+          <tr><td class="num">2</td><td class="num">2&frac12;&quot; sch 40</td><td class="num">6,354</td><td class="num">8,798</td><td class="num">13,832</td><td class="num">7,977</td><td class="num">11,965</td><td class="num">7,888</td><td class="num">26,170</td></tr>
+          <tr><td class="num">2</td><td class="num">3&quot; sch 40</td><td class="num">6,354</td><td class="num">8,798</td><td class="num">22,413</td><td class="num">7,977</td><td class="num">11,965</td><td class="num">15,345</td><td class="num">35,970</td></tr>
+          <tr><td class="num">2&nbsp;7/16</td><td class="num">3&quot; sch 40</td><td class="num">12,558</td><td class="num">17,388</td><td class="num">22,413</td><td class="num">9,722</td><td class="num">14,582</td><td class="num">11,689</td><td class="num">33,955</td></tr>
+          <tr><td class="num">2&nbsp;7/16</td><td class="num">3&frac12;&quot; sch 40</td><td class="num">12,558</td><td class="num">17,388</td><td class="num">31,120</td><td class="num">9,722</td><td class="num">14,582</td><td class="num">18,709</td><td class="num">42,850</td></tr>
+          <tr><td class="num">3</td><td class="num">3&frac12;&quot; sch 40</td><td class="num">23,693</td><td class="num">32,806</td><td class="num">31,120</td><td class="num">17,230</td><td class="num">25,845</td><td class="num">15,537</td><td class="num">47,037</td></tr>
+          <tr><td class="num">3</td><td class="num">4&quot; sch 40</td><td class="num">23,693</td><td class="num">32,806</td><td class="num">41,788</td><td class="num">17,230</td><td class="num">25,845</td><td class="num">25,085</td><td class="num">58,835</td></tr>
+          <tr><td class="num">3</td><td class="num">4&quot; 80/10 clad</td><td class="num">23,693</td><td class="num">32,806</td><td class="num">78,223</td><td class="num">17,230</td><td class="num">25,845</td><td class="num">30,067</td><td class="num">64,897</td></tr>
+          <tr><td class="num">3&nbsp;7/16</td><td class="num">4&quot; sch 40</td><td class="num">35,490</td><td class="num">49,140</td><td class="num">41,788</td><td class="num">26,872</td><td class="num">40,307</td><td class="num">21,857</td><td class="num">63,529</td></tr>
+          <tr><td class="num">3&nbsp;7/16</td><td class="num">5&quot; sch 40</td><td class="num">35,490</td><td class="num">49,140</td><td class="num">70,791</td><td class="num">26,872</td><td class="num">40,307</td><td class="num">49,884</td><td class="num">97,134</td></tr>
+          <tr><td class="num">3&nbsp;15/16</td><td class="num">6&quot; sch 40</td><td class="num">50,538</td><td class="num">69,975</td><td class="num">110,445</td><td class="num">50,881</td><td class="num">76,322</td><td class="num">95,253</td><td class="num">166,550</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="units">Shaft limits may be increased by 10&nbsp;% if a direct-coupled drive is used, because that
+      removes the bending stress a belt or chain drive imposes on the drive shaft. Note also that 304SS, 316SS
+      and 1018 carbon steel shafting all have the same torque limit &mdash; stainless buys corrosion resistance,
+      not strength.</p>
+
+    <h3>Coupling bolts and bolt pads</h3>
+    <p>Coupling bolts are almost always the weakest element, and two failure modes compete:</p>
+    <ul>
+      <li><b>Shear</b> across the plane between the shaft and the internal collar. Going from a 2-bolt to a
+        3-bolt coupling raises this limit by 50&nbsp;%.</li>
+      <li><b>Bearing</b> of the bolt against the pipe wall, which crushes the hole oval. This is cured by
+        <b>bolt pads</b> &mdash; 1/2&nbsp;in. plates welded over the bolt holes to spread the load. The
+        improvement is dramatic: for a 3&nbsp;in. shaft in 3&frac12;&nbsp;in. pipe, bolt pads take the bearing
+        limit from 15,537 to 47,037&nbsp;in&middot;lb, a threefold gain for a very cheap part.</li>
+    </ul>
+    <div class="eq">
+      <span class="body">
+        Wall thickness =
+        <span class="frac"><span class="num">pipe OD &minus; shaft OD</span><span class="den">2</span></span>
+        &nbsp;&mdash; if this is less than the bolt diameter, fit bolt pads
+      </span>
+      <span class="tag">(3.16)</span>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">Never substitute a hex bolt for a coupling bolt</span>
+      <p>A coupling bolt has a long unthreaded shank, so that the full shank diameter lies in the shear plane.
+        If the thread of an ordinary hex bolt extends into that plane, the shear area drops to the root
+        diameter: a 3/4&nbsp;in. hex bolt has only <b>73&nbsp;%</b> of the shear strength of a 3/4&nbsp;in.
+        coupling bolt. This is the single most common field substitution and the single most common cause of a
+        screw conveyor coming apart internally.</p>
+      <p>Equally, do not over-tighten. Coupling bolts are loaded in shear, not tension. Excessive torque
+        stretches and necks the bolt and permanently weakens it, so the published figures are
+        <em>maximum</em> limits, not targets &mdash; tightening below them extends bolt life. Use an accurate
+        torque wrench, and reduce the figure by 20&nbsp;% for lubricated or plated fasteners, and by
+        30&nbsp;% where anti-seize has been used on stainless.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.32.</b> Coupling bolt maximum torque.</caption>
+        <thead><tr><th class="num">Shaft dia.</th><th>Bolt (UNC)</th><th class="num">316SS (ft&middot;lb)</th><th class="num">Grade 5 CS (ft&middot;lb)</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1&nbsp;1/2</td><td>1/2&quot;&ndash;13</td><td class="num">45</td><td class="num">75</td></tr>
+          <tr><td class="num">2 and 2&nbsp;7/16</td><td>5/8&quot;&ndash;11</td><td class="num">95</td><td class="num">150</td></tr>
+          <tr><td class="num">3</td><td>3/4&quot;&ndash;10</td><td class="num">130</td><td class="num">260</td></tr>
+          <tr><td class="num">3&nbsp;7/16</td><td>7/8&quot;&ndash;9</td><td class="num">200</td><td class="num">430</td></tr>
+          <tr><td class="num">3&nbsp;15/16</td><td>1&nbsp;1/8&quot;&ndash;7</td><td class="num">430</td><td class="num">790</td></tr>
+          <tr><td class="num">4&nbsp;7/16</td><td>1&nbsp;1/4&quot;&ndash;7</td><td class="num">545</td><td class="num">1120</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">A useful trick when the torque check fails</span>
+      <p>If the components are marginal, consider <b>increasing the screw speed</b> rather than enlarging the
+        shaft. Torque is power divided by speed, so for a <em>metered</em> feed the required power barely rises
+        with speed (only the friction term does), and the torque falls. The price is a modest increase in wear
+        from the higher tip speed. The trick does <b>not</b> work on a flood-fed conveyor, where raising the
+        speed raises the throughput and therefore the power in direct proportion, leaving the torque
+        unchanged.</p>
+    </div>
+
+    <!-- ============================================================ 3.18 -->
+    <h2 id="s18">3.18 Deflection, Thermal Expansion and Abrasion</h2>
+
+    <h3>Screw deflection and shaft end angle</h3>
+    <p>A screw is a beam loaded by its own weight, simply supported at its ends. It sags. A standard-length
+      screw rarely sags enough to matter, but a longer section run without an intermediate hanger &mdash; which
+      is common on inclined conveyors, where hangers are removed for a different reason (&sect;3.19) &mdash;
+      can sag enough for the flights to touch the trough.</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>&delta;</var> =
+        <span class="frac"><span class="num"><var>W</var> <var>L</var>&sup3;</span><span class="den">76.8 <var>E</var> <var>I</var></span></span>
+        &nbsp;<span class="units">in. at mid-span, horizontal screw</span>
+      </span>
+      <span class="tag">(3.17)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        Shaft end angle =
+        <span class="frac"><span class="num">180</span><span class="den">&pi;</span></span>
+        &times;
+        <span class="frac"><span class="num">3.2 <var>&delta;</var></span><span class="den"><var>L</var></span></span>
+        =
+        <span class="frac"><span class="num">183 <var>&delta;</var></span><span class="den"><var>L</var></span></span>
+        &nbsp;<span class="units">degrees</span>
+      </span>
+      <span class="tag">(3.18)</span>
+    </div>
+
+    <p>where <var>W</var> is the total screw weight in lb, <var>L</var> the screw length in inches plus the
+      hanger gap, <var>E</var> = 2.9&nbsp;&times;&nbsp;10<sup>7</sup>&nbsp;psi for both carbon and stainless
+      steel, and <var>I</var> the moment of inertia of the pipe.</p>
+
+    <div class="callout">
+      <span class="label">Two checks, not one</span>
+      <p>A short heavy screw can pass the deflection check and fail the end angle check. Deflection is what
+        makes the flights touch the trough; <b>end angle</b> is the angle the shafts are forced to tilt up at
+        the supports, and it is what destroys bearings and coupling bolts, because the shaft is then trying to
+        rotate inside a bearing it is no longer parallel to. Since deflection goes as <var>L</var>&sup3; and
+        end angle as <var>&delta;/L</var>, that is <var>L</var>&sup2; &mdash; the end angle is relatively worse
+        on short spans. Always run both.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.33.</b> Deflection and end angle limits for stainless screws. All limits may be
+          increased by 20&nbsp;% for carbon steel screws, which tolerate fatigue better.</caption>
+        <thead><tr><th>Situation</th><th class="num">Max deflection</th><th class="num">Max end angle, 2-bolt</th><th class="num">Max end angle, 3-bolt</th></tr></thead>
+        <tbody>
+          <tr><td>Standard stainless setup</td><td class="num">0.125&quot;</td><td class="num">0.200&deg;</td><td class="num">0.150&deg;</td></tr>
+          <tr><td>Screw-conveyor-type drive</td><td class="num">0.100&quot;</td><td class="num">0.150&deg;</td><td class="num">0.135&deg;</td></tr>
+          <tr><td>Welded-in or flanged shafts</td><td class="num">0.100&quot;</td><td class="num">0.150&deg;</td><td class="num">0.135&deg;</td></tr>
+          <tr><td>Drive on the inlet end</td><td class="num">0.100&quot;</td><td class="num">0.150&deg;</td><td class="num">0.135&deg;</td></tr>
+          <tr><td>Tight collar tolerances</td><td class="num">0.100&quot;</td><td class="num">0.110&deg;</td><td class="num">0.135&deg;</td></tr>
+          <tr><td>Double end bearings</td><td class="num">0.100&quot;</td><td class="num">0.150&deg;</td><td class="num">0.135&deg;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.34.</b> Moment of inertia of pipe, in<sup>4</sup>.
+          <var>I</var> = (OD<sup>4</sup> &minus; ID<sup>4</sup>) &times; 0.0491.</caption>
+        <thead><tr><th class="num">Nominal size</th><th class="num">Sch 40</th><th class="num">Sch 80</th><th class="num">Sch 80 clad</th></tr></thead>
+        <tbody>
+          <tr><td class="num">2&quot;</td><td class="num">0.667</td><td class="num">0.868</td><td class="num">&mdash;</td></tr>
+          <tr><td class="num">2&frac12;&quot;</td><td class="num">1.53</td><td class="num">1.92</td><td class="num">&mdash;</td></tr>
+          <tr><td class="num">3&quot;</td><td class="num">3.02</td><td class="num">3.89</td><td class="num">6.13</td></tr>
+          <tr><td class="num">3&frac12;&quot;</td><td class="num">4.79</td><td class="num">6.28</td><td class="num">9.57</td></tr>
+          <tr><td class="num">4&quot;</td><td class="num">7.23</td><td class="num">9.61</td><td class="num">14.3</td></tr>
+          <tr><td class="num">5&quot;</td><td class="num">15.2</td><td class="num">20.7</td><td class="num">30.4</td></tr>
+          <tr><td class="num">6&quot;</td><td class="num">28.1</td><td class="num">40.5</td><td class="num">56.8</td></tr>
+          <tr><td class="num">8&quot;</td><td class="num">72.5</td><td class="num">106</td><td class="num">141</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Note what the clad column buys: 4&nbsp;in. clad pipe has almost twice the stiffness of 4&nbsp;in.
+      schedule 40, which halves the deflection for the same screw. That is the structural argument for clad
+      pipe made in &sect;3.6, in numbers.</p>
+
+    <h3>Straightness and run-out</h3>
+    <p>The last operation in making a screw is straightening it, sometimes with laser guidance, so that it
+      turns true about its shafts. Run-out is then measured with a dial indicator 10&nbsp;in. from the centre
+      of the bearing area, and the standard limit is <b>0.010&nbsp;in.</b> for every shaft size. A screw that
+      is straight lasts longer in every component at once &mdash; coupling bolts, hanger bearings, end
+      bearings, shafts, pipe and internal collars &mdash; and the effect is larger with stainless, which
+      handles the cyclic stress of running out of true far less well than carbon steel.</p>
+
+    <h3>Thermal expansion</h3>
+    <p>A long conveyor carrying hot material grows. If both ends are fixed, that growth turns into a thrust
+      that will destroy bearings or buckle the trough.</p>
+
+    <div class="eq">
+      <span class="body">
+        &Delta;<var>L</var> = <var>L</var> (<var>t</var><sub>1</sub> &minus; <var>t</var><sub>2</sub>) <var>C</var>
+      </span>
+      <span class="tag">(3.19)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Material</th><th class="num"><var>C</var> per &deg;F</th><th class="num"><var>C</var> per &deg;C</th></tr></thead>
+        <tbody>
+          <tr><td>Carbon steel, hot rolled</td><td class="num">6.33 &times; 10<sup>&minus;6</sup></td><td class="num">11.4 &times; 10<sup>&minus;6</sup></td></tr>
+          <tr><td>Stainless steel 304 / 316</td><td class="num">9.6 &times; 10<sup>&minus;6</sup></td><td class="num">17.3 &times; 10<sup>&minus;6</sup></td></tr>
+          <tr><td>Aluminium</td><td class="num">12.8 &times; 10<sup>&minus;6</sup></td><td class="num">23.0 &times; 10<sup>&minus;6</sup></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The standard remedy is to <b>fix the drive end and let the rest move</b>: trough end supports that
+      allow the trough to slide, an expansion-type ball or roller bearing at the far end, and expansion hangers
+      where the screw and trough grow at different rates. Where a fixed intermediate inlet or discharge spout
+      is unavoidable, expansion troughs are used. Anything over about 25&nbsp;mm of calculated growth deserves
+      a specialist review rather than a standard arrangement.</p>
+
+    <h3>Abrasion</h3>
+    <p>Trough loading and material factors deal with abrasion in general terms. Where wear is the dominant
+      concern &mdash; sand, ash, clinker, ore &mdash; two scores give a sharper view:</p>
+
+    <div class="eq">
+      <span class="body">
+        Screw tip speed =
+        <span class="frac"><span class="num"><var>D</var> &times; <var>N</var> &times; &pi;</span><span class="den">12</span></span>
+        &nbsp;<span class="units">ft/min, D in in.</span>
+      </span>
+      <span class="tag">(3.20)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        Trough surface speed =
+        <span class="frac"><span class="num"><var>S</var> &times; <var>N</var> &times; (1 &minus; loss)</span><span class="den">12</span></span>
+        &nbsp;<span class="units">ft/min</span>
+      </span>
+      <span class="tag">(3.21)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        Screw abrasion score =
+        <span class="frac"><span class="num">tip speed &times; (<var>A</var> &minus; 4)</span><span class="den">flight thickness</span></span>
+      </span>
+      <span class="tag">(3.22)</span>
+    </div>
+    <div class="eq">
+      <span class="body">
+        Trough abrasion score =
+        <span class="frac"><span class="num">trough surface speed &times; (<var>A</var> &minus; 4) &times; 2.5</span><span class="den">trough thickness</span></span>
+      </span>
+      <span class="tag">(3.23)</span>
+    </div>
+
+    <p>where <var>A</var> is the abrasiveness digit of the material code &mdash; 5, 6 or 7 &mdash; so the
+      term (<var>A</var> &minus; 4) is 1, 2 or 3, and the score for extremely abrasive material is three times
+      that for mildly abrasive. &ldquo;Loss&rdquo; accounts for modified flights, reverse-pitch paddles and
+      incline.</p>
+
+    <div class="callout rule">
+      <span class="label">The 2000 rule</span>
+      <p>An abrasion score above <b>2000</b> means highly accelerated wear. The three remedies, in the order
+        they are usually tried:</p>
+      <ol>
+        <li><b>Reduce the speed</b> &mdash; the score is directly proportional to it. A larger conveyor will
+          be needed to carry the same tonnage, which is the cost of the fix.</li>
+        <li><b>Increase the material thickness</b> of the flighting and the trough &mdash; the score is
+          inversely proportional to it.</li>
+        <li><b>Apply abrasion-resistant materials or coatings</b> &mdash; see below.</li>
+      </ol>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.35.</b> Abrasion-resistant options for screws.</caption>
+        <thead><tr><th>Treatment</th><th>Description</th><th>Strengths</th><th>Weaknesses</th></tr></thead>
+        <tbody>
+          <tr><td><b>Ceramic tile</b></td><td>12&nbsp;mm tiles welded to the carrying face, gaps filled with resistant polymer</td><td>Very high abrasion resistance wet or dry; very thick wear surface; high corrosion resistance; medium cost</td><td>Non-magnetic</td></tr>
+          <tr><td><b>Iron-based weld surfacing</b></td><td>Hardfacing wire welded onto the flight face</td><td>High abrasion resistance dry; magnetic; low to medium cost</td><td>Low abrasion resistance when wet</td></tr>
+          <tr><td><b>Corrosion-resistant weld surfacing</b> (e.g. Stellite)</td><td>Hardfacing wire welded onto the flight face</td><td>High corrosion resistance; machinable to hold a tight flight OD</td><td>Only medium abrasion resistance; high cost</td></tr>
+          <tr><td><b>Fusion spray</b> (tungsten carbide and similar)</td><td>Hard surface fused on with a high-temperature gun</td><td>Very high abrasion resistance</td><td>Medium to high cost; usually non-magnetic</td></tr>
+          <tr><td><b>AR plate flighting</b></td><td>Flight made from AR235 or AR400 steel</td><td>Low cost; combines with other measures</td><td>Only medium resistance dry, low when wet</td></tr>
+          <tr><td><b>Hard chromium</b></td><td>Electrolytic plating</td><td>Low sliding friction; high abrasion resistance; food grade in most cases</td><td>High cost; size restrictions; non-magnetic</td></tr>
+          <tr><td><b>Nickel alloy</b></td><td>Electroless plating</td><td>Very uniform coating; high abrasion resistance; FDA and USDA approved</td><td>High cost; size restrictions; hard to confine to selected areas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>For troughs the options are AR plate, lining with any of the above or with UHMW and similar polymers,
+      and one elegant trick: <b>oversize the trough</b> so the product runs across a stationary bed of its own
+      material rather than against the steel &mdash; a 16&nbsp;in. screw in an 18&nbsp;in. trough. That is the
+      same idea as the rectangular trough in &sect;3.7, and it costs nothing but capacity.</p>
+
+    <!-- ============================================================ 3.19 -->
+    <h2 id="s19">3.19 Inclined and Vertical Screw Conveyors</h2>
+
+    <p>A screw conveyor can convey and elevate at the same time, which covers two operations with one machine
+      and saves space, downtime and maintenance. It is one of the few conveyors that will run at any angle from
+      horizontal to vertical. But capacity falls and power rises steeply with angle, and above about 15&deg;
+      the machine has to be modified rather than merely tilted.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.36.</b> What happens as the angle increases.</caption>
+        <thead><tr><th class="num">Incline</th><th>Behaviour</th><th>Design response</th></tr></thead>
+        <tbody>
+          <tr><td class="num">0&ndash;15&deg;</td><td>A standard conveyor normally works with only a small loss of capacity (Table&nbsp;3.23)</td><td>Add the lifting power of Eq.&nbsp;3.13. No mechanical change needed</td></tr>
+          <tr><td class="num">15&ndash;25&deg;</td><td>Material begins to fall back over the flight in significant quantity; power rises faster than the tonnage</td><td>Short pitch flighting; tube trough or shroud; higher speed; tighter screw-to-trough clearance</td></tr>
+          <tr><td class="num">25&ndash;45&deg;</td><td>Fallback dominates; the conveyor is reconveying much of its own throughput</td><td>Half pitch; full tube; no hangers; substantially more power</td></tr>
+          <tr><td class="num">45&ndash;90&deg;</td><td>Gravity no longer holds the material against the flight at all; the machine only works by centrifugal force pressing the material against the casing</td><td>A vertical screw conveyor &mdash; a different machine with its own rules</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The four modifications</h3>
+    <ul>
+      <li><b>Eliminate the hangers.</b> A hanger creates a dead zone in the flow, and on an incline that dead
+        zone becomes a dam that the material piles against and slides back from. Removing hangers means longer
+        unsupported screw sections, which brings the deflection and end-angle checks of &sect;3.18 to the
+        front of the design.</li>
+      <li><b>Tighten the clearance</b> between screw and trough. Essential with granular free-flowing material
+        such as dry refined sugar, which otherwise runs back through the gap faster than it is conveyed.</li>
+      <li><b>Raise the speed.</b> More forward momentum, less time for material to fall back.</li>
+      <li><b>Shorten the pitch.</b> This improves the angle between the flight surface and the material, so the
+        flight pushes rather than lets the material slide across it. It is the single most effective change.</li>
+      <li><b>Enclose with a tube trough or shroud.</b> Both stop product falling back over the top of the
+        screw, which becomes the dominant loss path as speed is increased.</li>
+    </ul>
+
+    <div class="callout warn">
+      <span class="label">Inclined conveyors need more power for two reasons, not one</span>
+      <p>The obvious one is lifting the material, Eq.&nbsp;3.13. The less obvious one, and often the larger,
+        is <b>reconveying the material that falls back</b>. A conveyor at 30&deg; may be moving half as much
+        again as its rated throughput internally, and all of that costs power. This is why the horizontal power
+        equations of &sect;3.15 explicitly exclude inclined duty, and why past experience with the specific
+        product matters so much here. Particle size and shape and moisture content all change the fallback,
+        and none of them appears in any formula.</p>
+    </div>
+
+    <h3>Vertical screw conveyors</h3>
+    <p>Above about 45&deg; the machine becomes a vertical screw conveyor, and its advantages are distinctive:</p>
+    <ul>
+      <li>A very small footprint &mdash; it elevates in the space of its own diameter.</li>
+      <li>Very few moving parts, so high reliability.</li>
+      <li>Fully enclosed housing, so contamination potential is very low and fully dust-tight and vapour-tight
+        designs are available.</li>
+      <li>Lifts to about 14&nbsp;m (45&nbsp;ft) reliably.</li>
+      <li>Available shaftless for sticky material.</li>
+    </ul>
+    <p>Against that, it must be fed at a controlled rate by a horizontal feed screw, it will not start against
+      a full column of material, and its capacity is sensitive to speed in a way a horizontal screw is not
+      &mdash; below a critical speed it simply churns without lifting. The &ldquo;Vert.&rdquo; column in
+      Table&nbsp;3.18 marks which materials will go up at all; the entries marked &ldquo;?&rdquo; need testing.
+      Full-scale testing with the actual product, which reputable manufacturers offer, is normal practice here
+      rather than a luxury &mdash; and that fact is itself a useful signal about how far the theory can be
+      trusted for this machine.</p>
+
+    <!-- ============================================================ 3.20 -->
+    <h2 id="s20">3.20 Screw Feeders and Live Bottoms</h2>
+
+    <p>A screw <em>conveyor</em> takes material that is fed to it and moves it. A screw <em>feeder</em> sits
+      directly under a bin or hopper and <b>controls the rate</b> at which material leaves. The inlet section
+      runs flooded &mdash; 100&nbsp;% full &mdash; and the screw meters a fixed volume per revolution, so the
+      discharge rate is set by the speed.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.37.</b> Conveyor and feeder compared. They look alike and behave completely
+          differently.</caption>
+        <thead><tr><th>&nbsp;</th><th>Screw conveyor</th><th>Screw feeder</th></tr></thead>
+        <tbody>
+          <tr><th>Inlet</th><td>Fed at a controlled rate</td><td>Flooded, 100&nbsp;% full</td></tr>
+          <tr><th>Trough loading</th><td>15&ndash;45&nbsp;%</td><td>95&nbsp;% at the inlet, falling to normal downstream</td></tr>
+          <tr><th>Speed</th><td>Up to 150&nbsp;rpm and beyond</td><td>Usually below 30&nbsp;rpm</td></tr>
+          <tr><th>Rate is set by</th><td>Whatever feeds it</td><td>The screw speed &mdash; that is the point of it</td></tr>
+          <tr><th>Starting torque</th><td>Close to running torque</td><td>Up to <b>2&frac12; times</b> running torque</td></tr>
+          <tr><th>Restriction</th><td>None needed</td><td>Shroud or tube trough to confine the flooded zone to the inlet</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout rule">
+      <span class="label">Why a feeder needs so much more torque</span>
+      <p>A feeder must overcome a static condition &mdash; material that has been standing and consolidating,
+        possibly overnight &mdash; and it must work against the <b>head load</b>, the downward force of the
+        whole column of material in the bin above, which presses the product into the flights and against the
+        trough and generates frictional resistance in proportion. Because feeders also run slowly, and torque
+        is power divided by speed, the torque at the drive shaft is high for a modest motor. The combination of
+        2&frac12;&times; starting torque and low speed is exactly the condition that shears coupling bolts, so
+        &sect;3.17 matters more on a feeder than on any conveyor.</p>
+    </div>
+
+    <h3>Drawing evenly: the mass flow problem</h3>
+    <p>A feeder with uniform diameter and uniform pitch does <b>not</b> draw material evenly from under the
+      inlet. The first flight it meets is empty, so it fills there and is full for the rest of the opening: the
+      screw takes everything from the <em>rear</em> of the inlet and nothing from the front. The bin then
+      discharges unevenly, material at the front sits in a dead pocket where it can clump, degrade, absorb
+      moisture or spoil, and in a silo the stagnant column may eventually consolidate into a bridge.</p>
+
+    <figure>
+      <svg viewBox="0 0 820 420" role="img" aria-label="Three screw feeder geometries that produce mass flow: variable pitch, tapered diameter and cone screw">
+        <rect x="0" y="0" width="820" height="420" fill="#ffffff"/>
+
+        <!-- uniform (bad) -->
+        <g transform="translate(0,10)">
+          <text x="30" y="18" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C">Uniform pitch &mdash; draws only from the rear</text>
+          <rect x="120" y="28" width="330" height="20" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.6"/>
+          <rect x="30" y="52" width="560" height="46" rx="4" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2"/>
+          <rect x="34" y="70" width="552" height="10" fill="#cfcfcf"/>
+          <g fill="#dcdcdc" stroke="#6f6f6f" stroke-width="1.4">
+            <path d="M 60 70 q 16 -22 32 0 z"/><path d="M 92 80 q 16 22 32 0 z"/>
+            <path d="M 124 70 q 16 -22 32 0 z"/><path d="M 156 80 q 16 22 32 0 z"/>
+            <path d="M 188 70 q 16 -22 32 0 z"/><path d="M 220 80 q 16 22 32 0 z"/>
+            <path d="M 252 70 q 16 -22 32 0 z"/><path d="M 284 80 q 16 22 32 0 z"/>
+            <path d="M 316 70 q 16 -22 32 0 z"/><path d="M 348 80 q 16 22 32 0 z"/>
+            <path d="M 380 70 q 16 -22 32 0 z"/><path d="M 412 80 q 16 22 32 0 z"/>
+            <path d="M 444 70 q 16 -22 32 0 z"/><path d="M 476 80 q 16 22 32 0 z"/>
+            <path d="M 508 70 q 16 -22 32 0 z"/>
+          </g>
+          <!-- draw arrows: only at rear -->
+          <g stroke="#DF301C" stroke-width="2.4" fill="none">
+            <line x1="140" y1="30" x2="140" y2="52"/><path d="M 134 44 L 140 54 L 146 44"/>
+          </g>
+          <text x="470" y="44" font-family="Segoe UI, sans-serif" font-size="12" fill="#DF301C">dead pocket &mdash; nothing moves here</text>
+          <line x1="466" y1="40" x2="400" y2="38" stroke="#DF301C" stroke-width="1.2"/>
+        </g>
+
+        <!-- variable pitch (good) -->
+        <g transform="translate(0,132)">
+          <text x="30" y="18" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A">Variable pitch &mdash; draws evenly</text>
+          <rect x="120" y="28" width="330" height="20" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.6"/>
+          <rect x="30" y="52" width="560" height="46" rx="4" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2"/>
+          <rect x="34" y="70" width="552" height="10" fill="#cfcfcf"/>
+          <g fill="#dcdcdc" stroke="#6f6f6f" stroke-width="1.4">
+            <path d="M 124 70 q 9 -22 18 0 z"/><path d="M 142 80 q 9 22 18 0 z"/>
+            <path d="M 160 70 q 11 -22 22 0 z"/><path d="M 182 80 q 11 22 22 0 z"/>
+            <path d="M 204 70 q 13 -22 26 0 z"/><path d="M 230 80 q 13 22 26 0 z"/>
+            <path d="M 256 70 q 15 -22 30 0 z"/><path d="M 286 80 q 15 22 30 0 z"/>
+            <path d="M 316 70 q 17 -22 34 0 z"/><path d="M 350 80 q 17 22 34 0 z"/>
+            <path d="M 384 70 q 20 -22 40 0 z"/><path d="M 424 80 q 20 22 40 0 z"/>
+            <path d="M 464 70 q 22 -22 44 0 z"/><path d="M 508 80 q 22 22 44 0 z"/>
+          </g>
+          <g stroke="#00788A" stroke-width="2.4" fill="none">
+            <line x1="150" y1="30" x2="150" y2="52"/><path d="M 144 44 L 150 54 L 156 44"/>
+            <line x1="225" y1="30" x2="225" y2="52"/><path d="M 219 44 L 225 54 L 231 44"/>
+            <line x1="300" y1="30" x2="300" y2="52"/><path d="M 294 44 L 300 54 L 306 44"/>
+            <line x1="375" y1="30" x2="375" y2="52"/><path d="M 369 44 L 375 54 L 381 44"/>
+            <line x1="430" y1="30" x2="430" y2="52"/><path d="M 424 44 L 430 54 L 436 44"/>
+          </g>
+        </g>
+
+        <!-- tapered + cone -->
+        <g transform="translate(0,254)">
+          <text x="30" y="18" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A">Tapered diameter, and cone screw &mdash; the same idea by other means</text>
+          <rect x="120" y="28" width="330" height="20" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.6"/>
+          <rect x="30" y="52" width="560" height="52" rx="4" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2"/>
+          <rect x="34" y="72" width="552" height="10" fill="#cfcfcf"/>
+          <path d="M 124 77 L 450 66 L 450 88 L 124 77 Z" fill="#b9b4a8" stroke="#8f8f8f" stroke-width="1.4"/>
+          <g fill="#dcdcdc" stroke="#6f6f6f" stroke-width="1.4">
+            <path d="M 140 74 q 14 -12 28 0 z"/><path d="M 168 80 q 14 14 28 0 z"/>
+            <path d="M 200 72 q 14 -16 28 0 z"/><path d="M 228 82 q 14 18 28 0 z"/>
+            <path d="M 260 71 q 14 -19 28 0 z"/><path d="M 288 83 q 14 21 28 0 z"/>
+            <path d="M 320 70 q 14 -22 28 0 z"/><path d="M 348 84 q 14 24 28 0 z"/>
+            <path d="M 380 69 q 15 -24 30 0 z"/><path d="M 410 85 q 15 26 30 0 z"/>
+            <path d="M 450 68 q 16 -26 32 0 z"/><path d="M 482 86 q 16 28 32 0 z"/>
+          </g>
+          <g stroke="#00788A" stroke-width="2.4" fill="none">
+            <line x1="160" y1="30" x2="160" y2="52"/><path d="M 154 44 L 160 54 L 166 44"/>
+            <line x1="240" y1="30" x2="240" y2="52"/><path d="M 234 44 L 240 54 L 246 44"/>
+            <line x1="320" y1="30" x2="320" y2="52"/><path d="M 314 44 L 320 54 L 326 44"/>
+            <line x1="400" y1="30" x2="400" y2="52"/><path d="M 394 44 L 400 54 L 406 44"/>
+          </g>
+          <text x="620" y="82" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">the free volume per turn</text>
+          <text x="620" y="98" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">grows along the inlet, so</text>
+          <text x="620" y="114" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">every turn can take more</text>
+        </g>
+
+        <text x="600" y="30" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="end">hopper / bin above</text>
+        <line x1="492" y1="26" x2="455" y2="42" stroke="#726b64" stroke-width="1.2"/>
+      </svg>
+      <figcaption><b>Figure 3.5.</b> Mass flow in a screw feeder. A uniform screw fills at the first flight it
+        meets and then carries a full load past the rest of the opening, so it draws only from the rear and
+        leaves a dead pocket. Increasing the free volume along the inlet &mdash; by opening out the pitch, by
+        tapering the flight diameter, or by tapering the pipe into a cone &mdash; lets each successive turn
+        accept more material, so the bin empties evenly across the whole opening.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 3.38.</b> Feeder screw capacity at 95&nbsp;% loading, full pitch standard pipe under
+          the shroud side of the inlet.</caption>
+        <thead><tr><th class="num">Screw dia. (in.)</th><th class="num">6</th><th class="num">9</th><th class="num">12</th><th class="num">14</th><th class="num">16</th><th class="num">18</th><th class="num">20</th><th class="num">24</th><th class="num">30</th><th class="num">36</th></tr></thead>
+        <tbody>
+          <tr><th class="num">ft&sup3;/h per rpm</th><td class="num">4.7</td><td class="num">17.6</td><td class="num">42.0</td><td class="num">68.0</td><td class="num">101</td><td class="num">145</td><td class="num">196</td><td class="num">346</td><td class="num">665</td><td class="num">1139</td></tr>
+          <tr><th class="num">m&sup3;/h per rpm</th><td class="num">0.13</td><td class="num">0.50</td><td class="num">1.19</td><td class="num">1.93</td><td class="num">2.86</td><td class="num">4.11</td><td class="num">5.55</td><td class="num">9.80</td><td class="num">18.8</td><td class="num">32.3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Twin screws and live bottoms</h3>
+    <p>All the single-screw variants are also built as <b>twin screws</b>, which increases capacity and allows
+      a wider inlet and discharge &mdash; often the difference between working and not working with material
+      that is not free flowing. Extending that idea, a <b>live bottom</b> is a bank of feeder screws working in
+      tandem that forms the entire floor of a straight-sided bin, drawing material out equally over its full
+      length and width. Live bottoms earn their cost with materials that pack or bridge, which is to say
+      exactly the materials coded <b>X</b> and <b>V</b> in &sect;3.10.</p>
+
+    <!-- ============================================================ 3.21 -->
+    <h2 id="s21">3.21 Worked Example</h2>
+
+    <div class="example">
+      <h3>Problem statement</h3>
+      <p>A feed mill must move <b>cornmeal</b> from the outlet of a hammer mill surge bin to a mixer
+        <b>30&nbsp;ft (9.1&nbsp;m)</b> away, horizontally, at <b>1,200&nbsp;ft&sup3;/h
+        (34&nbsp;m&sup3;/h)</b>. The feed to the conveyor is metered by a rotary valve, so the inlet is not
+        flooded. Plain conveying only &mdash; no mixing is required. Design the conveyor: size, speed, motor,
+        components, and confirm it will survive.</p>
+
+      <div class="step">
+        <h4>Step 1 &mdash; Establish the requirement</h4>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><th>Material</th><td>Cornmeal</td></tr>
+              <tr><th>Capacity</th><td>1,200&nbsp;ft&sup3;/h (34&nbsp;m&sup3;/h)</td></tr>
+              <tr><th>Length</th><td>30&nbsp;ft (9.1&nbsp;m)</td></tr>
+              <tr><th>Incline</th><td>0&deg; &mdash; horizontal</td></tr>
+              <tr><th>Feed</th><td>Metered, not flooded &mdash; so this is a conveyor, not a feeder</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="step">
+        <h4>Step 2 &mdash; Identify the material</h4>
+        <p>From Table&nbsp;3.18, cornmeal is <b>36B35P</b>:</p>
+        <ul>
+          <li><b>36</b> &mdash; bulk density 36&nbsp;lb/ft&sup3; (577&nbsp;kg/m&sup3;)</li>
+          <li><b>B</b> &mdash; fine, 1/8&nbsp;in. mesh and under. No lump problem (&sect;3.14 does not bind)</li>
+          <li><b>3</b> &mdash; average flowability</li>
+          <li><b>5</b> &mdash; mildly abrasive, so <var>A</var> = 5 in the abrasion check</li>
+          <li><b>P</b> &mdash; contaminable. This drives the bearing, seal and finish specification</li>
+        </ul>
+        <p>The table also gives conveyor loading <b>30&nbsp;%&nbsp;A</b>, component group
+          <b>1A,&nbsp;1B</b> and material factor <var>F</var><sub>m</sub> = <b>0.5</b>.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 3 &mdash; Capacity, size and speed</h4>
+        <p>Plain full-pitch standard flighting with no paddles, so all three capacity factors are 1.00 and the
+          equivalent capacity equals the required capacity, 1,200&nbsp;ft&sup3;/h.</p>
+        <p>Try the smallest screw first. From Table&nbsp;3.21 at 30&nbsp;%&nbsp;A:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th class="num">Dia.</th><th class="num">per rpm</th><th class="num">max rpm</th><th class="num">max capacity</th><th>Verdict</th></tr></thead>
+            <tbody>
+              <tr><td class="num">12&nbsp;in.</td><td class="num">12.9</td><td class="num">90</td><td class="num">1,161&nbsp;ft&sup3;/h</td><td>Reject &mdash; below the 1,200 required even at full speed</td></tr>
+              <tr><td class="num">14&nbsp;in.</td><td class="num">20.8</td><td class="num">85</td><td class="num">1,768&nbsp;ft&sup3;/h</td><td><b>Accept</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><var>N</var> = 1,200 / 20.8</p>
+        <p class="result">14&nbsp;in. screw at <var>N</var> = 57.7 rpm (limit 85 rpm)</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 4 &mdash; Power</h4>
+        <p>The <b>P</b> in the code makes this a food-contact duty, so the hanger bearing is UHMW polyethylene:
+          FDA approved, self-lubricating, good in wet conditions &mdash; and
+          <var>F</var><sub>b</sub> = <b>2.0</b>. From Table&nbsp;3.26, a 14&nbsp;in. screw has
+          <var>F</var><sub>d</sub> = <b>78</b>.</p>
+        <p><var>HP</var><sub>f</sub> = (30 &times; 57.7 &times; 78 &times; 2.0) / 1,000,000 = <b>0.270</b></p>
+        <p><var>HP</var><sub>m</sub> = (1,200 &times; 30 &times; 36 &times; 0.5 &times; 1.0 &times; 1.0) / 1,000,000 = <b>0.648</b></p>
+        <p><var>HP</var><sub>f</sub> + <var>HP</var><sub>m</sub> = 0.918, which is below 5.2, so</p>
+        <p><var>F</var><sub>o</sub> = &minus;0.6115 &times; ln(0.918) + 2.024 = <b>2.076</b></p>
+        <p>A shaft mount reducer with V-belts gives <var>e</var> = 0.88.</p>
+        <p><var>HP</var><sub>total</sub> = (0.918 &times; 2.076) / 0.88 = 2.17&nbsp;HP</p>
+        <p class="result">Select a 3&nbsp;HP (2.2&nbsp;kW) motor</p>
+        <p>Notice that the overload factor more than doubles the answer. Without it the requirement would be
+          1.04&nbsp;HP and a 1.5&nbsp;HP motor would look adequate &mdash; and would stall the first time the
+          rotary valve surged.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 5 &mdash; Metric cross-check</h4>
+        <p><var>Q</var><sub>m</sub> = 34.0&nbsp;m&sup3;/h &times; 0.577&nbsp;t/m&sup3; = 19.6&nbsp;t/h;
+          <var>L</var> = 9.14&nbsp;m; <var>D</var> = 0.356&nbsp;m; &lambda; = 1.5 for meal.</p>
+        <p><var>P</var><sub>H</sub> = (19.6 &times; 9.14 &times; 1.5) / 367 = 0.732&nbsp;kW</p>
+        <p><var>P</var><sub>N</sub> = (0.356 &times; 9.14) / 20 = 0.163&nbsp;kW</p>
+        <p><var>P</var><sub>St</sub> = 0 (horizontal)</p>
+        <p>With a service factor <var>k</var><sub>s</sub> = 1.5 for a valve-fed duty and &eta; = 0.88:</p>
+        <p><var>P</var> = (0.895 &times; 1.5) / 0.88 = 1.53&nbsp;kW = 2.05&nbsp;HP</p>
+        <p class="result">Metric 1.53 kW vs CEMA 1.62 kW &mdash; 5.7 % apart, and both select the same
+          2.2 kW (3 HP) motor</p>
+        <p>This is the reconciliation promised in &sect;3.16. The two methods look completely different, but
+          once the CEMA overload factor and the metric service factor are recognised as doing the same job,
+          they land in the same place.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 6 &mdash; Component sizes</h4>
+        <p>Component group 1 (light duty) at 14&nbsp;in. gives, from Table&nbsp;3.20 and the standard build:</p>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><th>Coupling shaft</th><td>2&nbsp;7/16&nbsp;in., 2-bolt</td></tr>
+              <tr><th>Centre pipe</th><td>3&nbsp;in. schedule 40 (OD 3.500&nbsp;in.)</td></tr>
+              <tr><th>Flight</th><td>3/16&nbsp;in. sectional, stainless</td></tr>
+              <tr><th>Trough</th><td>12&nbsp;ga formed flange U-trough, stainless</td></tr>
+              <tr><th>Cover</th><td>14&nbsp;ga flanged, gasketed, screw clamps at 600&nbsp;mm</td></tr>
+              <tr><th>Screw part number</th><td>14SS512 &mdash; 14&nbsp;in., stainless sectional, 2&nbsp;7/16&nbsp;in. coupling, 3/16&nbsp;in. flight</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Because the material is coded <b>P</b>, add: sealed or dry-running bearings throughout, continuous
+          welds ground to CEMA class&nbsp;IV, and covers that lift off quickly for cleaning.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 7 &mdash; Torque check</h4>
+        <p>Torque on the <b>rated motor</b>, not the calculated power:</p>
+        <p><var>T</var> = 63,025 &times; 3 / 57.7 = <b>3,277&nbsp;in&middot;lb</b></p>
+        <p>From Table&nbsp;3.31, for a 2&nbsp;7/16&nbsp;in. shaft in 3&nbsp;in. schedule 40 pipe:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Element</th><th class="num">Limit (in&middot;lb)</th><th class="num">Ratio to 3,277</th></tr></thead>
+            <tbody>
+              <tr><td>Shaft, SS/1018</td><td class="num">12,558</td><td class="num">3.8&times;</td></tr>
+              <tr><td>Pipe</td><td class="num">22,413</td><td class="num">6.8&times;</td></tr>
+              <tr><td>Coupling bolts, shear, 2-bolt</td><td class="num">9,722</td><td class="num">3.0&times;</td></tr>
+              <tr><td>Coupling bolts, bearing, no pads</td><td class="num">11,689</td><td class="num">3.6&times;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="result">Lowest limit 9,722 in&middot;lb against 3,277 applied &mdash; a factor of 3.0. Passes
+          comfortably</p>
+        <p>Apply the bolt pad rule of Eq.&nbsp;3.16 anyway: wall thickness = (3.500 &minus; 2.4375)/2 =
+          0.531&nbsp;in., against a 5/8&nbsp;in. (0.625&nbsp;in.) bolt. Since 0.531 &lt; 0.625, <b>bolt pads
+          are recommended</b> &mdash; cheap insurance, and the one component most likely to be blamed after a
+          failure.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 8 &mdash; Deflection and end angle</h4>
+        <p>A 14SS512 screw on 3&nbsp;in. schedule 40 weighs 196&nbsp;lb in its standard 11&nbsp;ft&nbsp;9&nbsp;in.
+          (141&nbsp;in.) length; with the hanger gap <var>L</var> = 144&nbsp;in.,
+          <var>I</var> = 3.02&nbsp;in<sup>4</sup> from Table&nbsp;3.34.</p>
+        <p><var>&delta;</var> = (196 &times; 144&sup3;) / (76.8 &times; 2.9&times;10<sup>7</sup> &times; 3.02)
+          = <b>0.087&nbsp;in.</b> against a 0.125&nbsp;in. limit &#10003;</p>
+        <p>End angle = 183 &times; 0.087 / 144 = <b>0.111&deg;</b> against a 0.200&deg; limit &#10003;</p>
+        <p class="result">Both within limits &mdash; a 30 ft conveyor needs two standard screw sections and one
+          intermediate hanger</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 9 &mdash; Abrasion and thermal expansion</h4>
+        <p>Cornmeal is mildly abrasive, so <var>A</var> = 5 and (<var>A</var> &minus; 4) = 1.</p>
+        <p>Tip speed = 14 &times; 57.7 &times; &pi; / 12 = 211.5&nbsp;ft/min</p>
+        <p>Screw abrasion score = 211.5 &times; 1 / 0.1875 = <b>1,128</b> &#10003; (limit 2,000)</p>
+        <p>Trough surface speed = 14 &times; 57.7 / 12 = 67.3&nbsp;ft/min</p>
+        <p>Trough abrasion score = 67.3 &times; 1 &times; 2.5 / 0.1054 = <b>1,596</b> &#10003;</p>
+        <p>Thermal expansion: the material is at ambient, so &Delta;<var>L</var> is negligible and standard
+          fixed supports are fine.</p>
+      </div>
+
+      <h3>Design summary</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>Material code</td><td>36B35P &mdash; loading 30&nbsp;%&nbsp;A, group 1A/1B, <var>F</var><sub>m</sub> = 0.5</td></tr>
+            <tr><td>Screw</td><td>14&nbsp;in. dia., full pitch, standard sectional flight 3/16&nbsp;in. stainless</td></tr>
+            <tr><td>Speed</td><td>57.7&nbsp;rpm (85&nbsp;rpm limit)</td></tr>
+            <tr><td>Pipe / shaft</td><td>3&nbsp;in. sch 40 pipe, 2&nbsp;7/16&nbsp;in. coupling shafts, 2-bolt <b>with bolt pads</b></td></tr>
+            <tr><td>Trough / cover</td><td>12&nbsp;ga U-trough, 14&nbsp;ga flanged gasketed cover</td></tr>
+            <tr><td>Hanger bearing</td><td>UHMW, FDA approved, <var>F</var><sub>b</sub> = 2.0</td></tr>
+            <tr><td>End bearings</td><td>Roller at the drive end (thrust), ball at the tail end (expansion)</td></tr>
+            <tr><td>Seal</td><td>Grease purge, food-grade grease</td></tr>
+            <tr><td>Drive</td><td>Shaft mount reducer with V-belts, <var>e</var> = 0.88</td></tr>
+            <tr><td>Motor</td><td><b>3&nbsp;HP (2.2&nbsp;kW)</b> &mdash; CEMA 2.17&nbsp;HP, metric 2.05&nbsp;HP</td></tr>
+            <tr><td>Torque</td><td>3,277&nbsp;in&middot;lb applied, 9,722&nbsp;in&middot;lb limiting &mdash; factor 3.0</td></tr>
+            <tr><td>Deflection / end angle</td><td>0.087&nbsp;in. / 0.111&deg; &mdash; both within limits</td></tr>
+            <tr><td>Abrasion scores</td><td>1,128 screw and 1,596 trough &mdash; both below 2,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <span class="label">What would change the answer</span>
+        <p>Three plausible changes to the brief would each redesign the machine. If the feed were <b>flooded</b>
+          instead of metered this becomes a feeder (&sect;3.20): 95&nbsp;% loading, under 30&nbsp;rpm, and
+          starting torque up to 2&frac12;&times;. If the duty asked for <b>mixing in transit</b>, cut-and-folded
+          flighting at <var>CF</var><sub>2</sub> = 3.75 would force the screw up to 24&nbsp;in. If the material
+          were <b>sand</b> instead of cornmeal, the loading would drop to 15&nbsp;%, the material factor would
+          rise from 0.5 to 2.0, hard iron bearings would put <var>F</var><sub>b</sub> at 4.4, and the abrasion
+          score would fail &mdash; a different machine entirely, from the same three lines of requirement.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================ 3.22 -->
+    <h2 id="s22">3.22 Nomenclature</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Quantity</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td><var>A</var></td><td>Abrasiveness digit of the material code (5, 6 or 7)</td><td>&mdash;</td></tr>
+          <tr><td><var>C</var></td><td>Capacity required (CEMA method) / incline factor (metric method)</td><td>ft&sup3;/h / &mdash;</td></tr>
+          <tr><td><var>CF</var><sub>1,2,3</sub></td><td>Capacity factors for pitch, flight modification, paddles</td><td>&mdash;</td></tr>
+          <tr><td><var>D</var></td><td>Screw outside diameter</td><td>in. or m</td></tr>
+          <tr><td><var>d</var></td><td>Centre pipe outside diameter</td><td>in. or m</td></tr>
+          <tr><td><var>E</var></td><td>Modulus of elasticity, 2.9&times;10<sup>7</sup>&nbsp;psi for steel</td><td>psi</td></tr>
+          <tr><td><var>e</var>, &eta;</td><td>Drive efficiency</td><td>&mdash;</td></tr>
+          <tr><td><var>F</var><sub>b</sub></td><td>Hanger bearing HP factor</td><td>&mdash;</td></tr>
+          <tr><td><var>F</var><sub>d</sub></td><td>Conveyor diameter HP factor</td><td>&mdash;</td></tr>
+          <tr><td><var>F</var><sub>f</sub></td><td>Flight modification HP factor</td><td>&mdash;</td></tr>
+          <tr><td><var>F</var><sub>m</sub></td><td>Material factor</td><td>&mdash;</td></tr>
+          <tr><td><var>F</var><sub>o</sub></td><td>Overload HP factor</td><td>&mdash;</td></tr>
+          <tr><td><var>F</var><sub>p</sub></td><td>Paddle HP factor</td><td>&mdash;</td></tr>
+          <tr><td><var>H</var></td><td>Vertical lift</td><td>m</td></tr>
+          <tr><td><var>HP</var><sub>f</sub></td><td>Friction horsepower</td><td>HP</td></tr>
+          <tr><td><var>HP</var><sub>m</sub></td><td>Material horsepower</td><td>HP</td></tr>
+          <tr><td><var>I</var></td><td>Moment of inertia of the centre pipe</td><td>in<sup>4</sup></td></tr>
+          <tr><td><var>k</var><sub>s</sub></td><td>Service factor (metric method)</td><td>&mdash;</td></tr>
+          <tr><td><var>L</var></td><td>Conveyor or screw length</td><td>ft, in. or m</td></tr>
+          <tr><td><var>N</var>, <var>n</var></td><td>Screw speed</td><td>rpm</td></tr>
+          <tr><td><var>P</var></td><td>Power</td><td>kW</td></tr>
+          <tr><td><var>P</var><sub>H</sub>, <var>P</var><sub>N</sub>, <var>P</var><sub>St</sub></td><td>Horizontal, idle and lifting power</td><td>kW</td></tr>
+          <tr><td><var>Q</var><sub>v</sub>, <var>Q</var><sub>m</sub></td><td>Volumetric and mass capacity</td><td>m&sup3;/h, t/h</td></tr>
+          <tr><td><var>R</var></td><td>Lump class ratio (1.75, 2.50 or 4.50)</td><td>&mdash;</td></tr>
+          <tr><td><var>S</var></td><td>Pitch</td><td>in. or m</td></tr>
+          <tr><td><var>T</var></td><td>Torque</td><td>in&middot;lb or N&middot;m</td></tr>
+          <tr><td><var>t</var><sub>1</sub>, <var>t</var><sub>2</sub></td><td>Upper and lower temperature limits</td><td>&deg;F or &deg;C</td></tr>
+          <tr><td><var>W</var></td><td>Bulk density (CEMA) / total screw weight (deflection)</td><td>lb/ft&sup3; / lb</td></tr>
+          <tr><td><var>&delta;</var></td><td>Mid-span deflection</td><td>in.</td></tr>
+          <tr><td>&Delta;<var>L</var></td><td>Change in length from thermal expansion</td><td>in. or mm</td></tr>
+          <tr><td>&lambda;</td><td>Progress resistance coefficient (metric)</td><td>&mdash;</td></tr>
+          <tr><td>&rho;</td><td>Bulk density</td><td>t/m&sup3;</td></tr>
+          <tr><td>&psi;</td><td>Fill factor (trough loading as a fraction)</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 3.23 -->
+    <h2 id="s23">3.23 Problems</h2>
+
+    <div class="callout rule">
+      <span class="label">Check yourself first</span>
+      <p>Before working these, try the <a href="quiz3.html">40-question self-check</a>. It marks each answer
+        immediately and links back to the section the question came from.</p>
+    </div>
+
+    <h3>Safety questions &mdash; answer these before any of the design problems</h3>
+    <ol>
+      <li><b>Guarding.</b> A maintenance fitter wants to open a trough cover to look at why the conveyor is
+        running noisily. State, in order, every step that must happen before the cover comes off and before it
+        goes back on. Then explain why &ldquo;the motor was switched off at the starter&rdquo; is not one of
+        the acceptable answers.</li>
+
+      <li><b>Open inlets.</b> An inlet must be left open because the material is fed by front-end loader.
+        State the two permitted arrangements, and give the maximum grating opening size where the screw is less
+        than 100&nbsp;mm from possible bodily or clothing contact. <em>[The answers are in the references at
+        &sect;3.24 under ANSI/CEMA B20.1; the grating limit is 1/2&nbsp;in. &times; 2&nbsp;in.]</em></li>
+    </ol>
+
+    <h3>Material and classification</h3>
+    <ol start="3">
+      <li><b>Reading a code.</b> A supplier quotes a material as <b>55A45XY</b>. Without being told what it
+        is, state everything you can about the conveyor that will handle it: trough loading, likely component
+        group, flight type, bearing choice, and one thing that will go wrong if you ignore the last two
+        letters.</li>
+
+      <li><b>Building a code.</b> Write the CEMA code for each, and give one design consequence of each
+        character: (a) wood chips, 40&nbsp;mm, sluggish, non-abrasive, 300&nbsp;kg/m&sup3;, tends to mat
+        together; (b) hydrated lime, 100&nbsp;mesh, average flow, mildly abrasive, 640&nbsp;kg/m&sup3;, very
+        dusty and aerates; (c) rough rice (paddy) from your own region, measured or estimated.</li>
+
+      <li><b>Two codes for one material.</b> Chapter&nbsp;2 used the ISO&nbsp;5048 code (letter first) and this
+        chapter uses the CEMA code (number first). Write both codes for dry sand and explain, in two sentences,
+        which one you would put on a purchase specification for a screw conveyor and why.</li>
+    </ol>
+
+    <h3>Capacity and size</h3>
+    <ol start="6">
+      <li><b>Straight capacity.</b> A grain store must move <b>900&nbsp;ft&sup3;/h</b> of wheat (47C25N,
+        loading 45&nbsp;%) with plain full-pitch flighting. Select the smallest standard screw and give its
+        speed. <em>[Answer: 9&nbsp;in. at 110&nbsp;rpm]</em></li>
+
+      <li><b>Capacity factors.</b> A conveyor must deliver <b>600&nbsp;ft&sup3;/h</b> while mixing, using
+        short pitch, cut flights at 30&nbsp;% loading, and two 45&deg; reverse-pitch paddles per pitch. Find
+        the equivalent capacity, then select the screw and its speed.
+        <em>[Answers: 1,639&nbsp;ft&sup3;/h; 14&nbsp;in. at 78.8&nbsp;rpm]</em></li>
+
+      <li><b>Metric capacity.</b> A 16&nbsp;in. screw on 4&nbsp;in. pipe, full pitch, runs at 60&nbsp;rpm at
+        30&nbsp;% fill, horizontal, on a material of bulk density 750&nbsp;kg/m&sup3;. Find the capacity in
+        m&sup3;/h and t/h from Eq.&nbsp;3.4, then check it against Table&nbsp;3.21 and state the percentage
+        difference. <em>[Answers: 53.4&nbsp;m&sup3;/h, 40.0&nbsp;t/h; the table gives 53.0&nbsp;m&sup3;/h, a
+        difference of 0.7&nbsp;%]</em></li>
+
+      <li><b>The pipe term.</b> Repeat Problem&nbsp;8 with the pipe term dropped, so
+        <var>Q</var><sub>v</sub> = 47.1&nbsp;<var>D</var>&sup2;<var>Sn</var>&psi;. Then repeat the comparison
+        for a 6&nbsp;in. screw on 2&nbsp;3/8&nbsp;in. pipe. Explain why the error grows as the screw gets
+        smaller, and state the screw diameter below which you would never use the simplified form.</li>
+
+      <li><b>Lump size.</b> A conveyor must handle crushed limestone with a maximum lump of 2&frac12;&nbsp;in.,
+        of which about 25&nbsp;% of the material is lumps between maximum size and half maximum. Find the
+        required radial clearance and the smallest standard screw that provides it.
+        <em>[Answers: 6&frac14;&nbsp;in.; a 16&nbsp;in. screw on 4&nbsp;in. pipe]</em></li>
+
+      <li><b>Two filters.</b> The conveyor of Problem&nbsp;10 needs only 400&nbsp;ft&sup3;/h, for which a
+        9&nbsp;in. screw at 15&nbsp;% loading would be more than adequate. State which filter governs, what
+        size you will build, and what the consequence is for the power calculation.</li>
+    </ol>
+
+    <h3>Power and torque</h3>
+    <ol start="12">
+      <li><b>Full power calculation.</b> A 40&nbsp;ft conveyor moves <b>1,500&nbsp;ft&sup3;/h</b> of cold
+        soybean meal (40B35, 30&nbsp;%&nbsp;A loading, 40&nbsp;lb/ft&sup3;, <var>F</var><sub>m</sub> = 0.5),
+        plain full-pitch flighting, oil-impregnated wood hanger bearings, shaft mount drive. Find the screw
+        size, speed, <var>HP</var><sub>f</sub>, <var>HP</var><sub>m</sub>, <var>F</var><sub>o</sub> and the
+        motor size. <em>[Answers: 14&nbsp;in. at 72.1&nbsp;rpm; 0.383; 1.200; 1.743; 3.13&nbsp;HP, so select
+        5&nbsp;HP]</em></li>
+
+      <li><b>Torque check.</b> For the conveyor of Problem&nbsp;12, find the torque at the drive shaft using
+        the <em>selected motor</em>, and state whether a 2&nbsp;7/16&nbsp;in. shaft in 3&nbsp;in. schedule 40
+        pipe with 2-bolt couplings is adequate. Identify the limiting element.
+        <em>[Answer: 4,370&nbsp;in&middot;lb; the limit is coupling bolt shear at 9,722&nbsp;in&middot;lb, so
+        yes, by a factor of 2.2]</em></li>
+
+      <li><b>The overload factor.</b> Plot or tabulate <var>F</var><sub>o</sub> against
+        (<var>HP</var><sub>f</sub>&nbsp;+&nbsp;<var>HP</var><sub>m</sub>) from 0.2 to 6&nbsp;HP. Then answer:
+        why is the factor largest where the calculated power is smallest, and what would go wrong if a
+        designer applied <var>F</var><sub>o</sub> = 1.0 to a 0.3&nbsp;HP conveyor?</li>
+
+      <li><b>Metric power.</b> A 12&nbsp;m conveyor lifts 25&nbsp;t/h of cement (&lambda; = 3.8) through
+        3&nbsp;m of rise. The screw is 400&nbsp;mm diameter and the drive efficiency is 0.88. Using
+        Eqs.&nbsp;3.11&ndash;3.14 with <var>k</var><sub>s</sub> = 1.25, find the motor power. Then comment on
+        which of the three power terms dominates, and whether that is what you expected.</li>
+
+      <li><b>Worm gear trap.</b> A supplier offers the conveyor of Problem&nbsp;12 with a worm gear reducer
+        at 75:1 instead of the shaft mount drive. Recalculate the motor power, and state the increase as a
+        percentage and as an annual energy cost at 2,000&nbsp;h/year and 4&nbsp;THB/kWh.</li>
+    </ol>
+
+    <h3>Mechanical checks</h3>
+    <ol start="17">
+      <li><b>Deflection.</b> A 20&nbsp;in. screw weighing 340&nbsp;lb is mounted on 4&nbsp;in. schedule 40 pipe
+        over an effective span of 144&nbsp;in. Find the mid-span deflection and the shaft end angle, and state
+        whether each is acceptable for a standard stainless setup.
+        <em>[Answers: 0.063&nbsp;in. and 0.080&deg;; both acceptable]</em></li>
+
+      <li><b>Clad pipe.</b> Repeat Problem&nbsp;17 with 4&nbsp;in. schedule 80 clad pipe in place of schedule
+        40, taking the screw weight as unchanged. State the reduction in deflection as a percentage and explain
+        which two failure modes that reduction postpones.</li>
+
+      <li><b>Thermal expansion.</b> An 18&nbsp;m stainless steel conveyor at an ambient 30&nbsp;&deg;C is fed
+        with product that raises it to 150&nbsp;&deg;C. Find the change in length, and state what must be done
+        about it and at which end. <em>[Answer: about 37&nbsp;mm]</em></li>
+
+      <li><b>Abrasion.</b> A 12&nbsp;in. screw runs at 90&nbsp;rpm on dry silica sand (95B27) with 3/8&nbsp;in.
+        flights in a 1/4&nbsp;in. trough, full pitch. Calculate both abrasion scores.
+        <em>[Answers: 2,262 and 2,700 &mdash; both fail]</em> Then propose <b>two</b> different fixes, work out
+        what each does to the numbers, and say which one you would recommend and why.</li>
+    </ol>
+
+    <!-- ============================================================ 3.24 -->
+    <h2 id="s24">3.24 References</h2>
+
+    <ul class="refs">
+      <li>Conveyor Engineering &amp; Manufacturing Co., 2012. <em>Screw Conveyor Components &amp; Design</em>,
+        version 2.20. Cedar Rapids, Iowa. &mdash; The principal source for this chapter: capacity tables,
+        capacity and horsepower factors, torque limits, deflection, abrasion and the component data throughout.
+        Reproduced here in summary for teaching under fair dealing; the full tables and part numbers remain the
+        property of CEMC.</li>
+      <li>CEMA, 2015. <em>Screw Conveyors for Bulk Materials</em> (Book No. 350), 4th ed. Conveyor Equipment
+        Manufacturers Association. &mdash; The underlying North American standard: material classification
+        code, trough loadings, component groups.</li>
+      <li>ANSI/CEMA B20.1. <em>Safety Standard for Conveyors and Related Equipment</em>. &mdash; Guarding,
+        grating openings, lockout and warning labels; the basis of &sect;3.23 Problems&nbsp;1&ndash;2.</li>
+      <li>DIN 15261-1/-2 and DIN 15262. <em>Schneckenf&ouml;rderer</em> (Screw conveyors). &mdash; The metric
+        capacity and power method of &sect;3.13 and &sect;3.16.</li>
+      <li>ISO 7119. <em>Continuous mechanical handling equipment for loose bulk materials &mdash; Screw
+        conveyors &mdash; Design rules for drive power</em>.</li>
+      <li>Colijn, H., 1985. <em>Mechanical Conveyors for Bulk Solids</em>. Amsterdam: Elsevier.</li>
+      <li>Roberts, A. W., 1999. &ldquo;The influence of granular vortex motion on the volumetric performance of
+        enclosed screw conveyors&rdquo;, <em>Powder Technology</em>, 104(1):56&ndash;67. &mdash; Why vertical
+        and steeply inclined screws behave as they do, and the origin of the critical speed referred to in
+        &sect;3.19.</li>
+      <li>Owen, P. J. and Cleary, P. W., 2009. &ldquo;Prediction of screw conveyor performance using the
+        Discrete Element Method&rdquo;, <em>Powder Technology</em>, 193(3):274&ndash;288. &mdash; Numerical
+        simulation, and a useful check on how far the empirical tables can be trusted.</li>
+      <li>Bortolamasi, M. and Fottner, J., 2001. &ldquo;Design and sizing of screw feeders&rdquo;, <em>Proc.
+        Partec</em>, N&uuml;rnberg. &mdash; Mass flow, head load and starting torque in feeders (&sect;3.20).</li>
+      <li>Kulwiec, R. A. (ed.), 1985. <em>Materials Handling Handbook</em>, 2nd ed. New York: Wiley.</li>
+      <li>Srivastava, A. K., Goering, C. E., Rohrbach, R. P. and Buckmaster, D. R., 2006. <em>Engineering
+        Principles of Agricultural Machines</em>, 2nd ed. ASABE. &mdash; Grain augers and their performance,
+        the agricultural face of this machine.</li>
+      <li>Cross-references within this course: <a href="chapter1.html">Chapter&nbsp;1</a> for the belt
+        conveyor comparison and the bulk material properties in
+        <a href="chapter1.html#s7">&sect;1.7</a>; <a href="chapter2.html#s5">&sect;2.5</a> for the
+        ISO&nbsp;5048 material code; <a href="chapter2.html#s19">&sect;2.27</a> for the selection envelope that
+        chose a screw in the first place.</li>
+    </ul>
+
+    <div class="chapter-nav">
+      <span><a href="quiz2.html">&larr; Chapter 2 Self-Check</a></span>
+      <span><a href="quiz3.html">Chapter 3 Self-Check &rarr;</a></span>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Course</h3>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter2.html">Chapter 2: Equipment &amp; Selection</a></li>
+        <li><a href="chapter3.html">Chapter 3: Screw Conveyors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Chapter 3 Sections</h3>
+      <ul>
+        <li><a href="#s10">The Material Code</a></li>
+        <li><a href="#s12">Capacity</a></li>
+        <li><a href="#s15">Power</a></li>
+        <li><a href="#s21">Worked Example</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Lecture notes for MHE 301. All rights reserved. Layout inspired by open courseware sites; content, branding
+        and code are original to this course.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Charatchai Yenphayab. All rights reserved. MHE 301 Materials Handling Engineering &mdash; course
+    notes, Semester 1 / 2026. No part of this site may be reproduced, adapted or redistributed without prior
+    written permission.
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
