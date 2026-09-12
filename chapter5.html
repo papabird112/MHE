@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 5: Pneumatic Conveying | MHE 301 Materials Handling Engineering</title>
+<meta name="description" content="Pneumatic conveying design: pressure and vacuum systems, dilute and dense phase, the state diagram, saltation velocity, solids loading ratio, pressure drop, air movers, feeders, filtration and explosion risk.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">MHE</span>
+      <span class="logo-text">BAE-MHE<small>Biosystem and Agricultural Engineering, KMITL</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-nav">
+      <a href="index.html">About</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="chapter5.html">Lecture Notes</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="chapter5.html" class="active">EN</a>
+      <a href="chapter5-th.html" lang="th">ไทย</a>
+    </div>
+    <a class="btn-give" href="#s20">Worked Example</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MHE 301 <span>|</span> Chapter 5 <span>|</span> Lecture Notes</p>
+    <h1>Pneumatic Conveying</h1>
+    <p class="tagline">Moving bulk solids in a pipeline with air: pressure and vacuum systems, dilute and
+      dense phase, the velocity that must not be crossed, pressure drop, air movers, feeders, filtration
+      &mdash; and the energy bill that pays for all that freedom.</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="course-menu">
+      <h2>Course Menu</h2>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Ch.&nbsp;1 &mdash; Equipment &amp; Selection</a></li>
+        <li><a href="quiz1.html">Ch.&nbsp;1 &mdash; Self-Check</a></li>
+        <li><a href="chapter2.html">Ch.&nbsp;2 &mdash; Screw Conveyors</a></li>
+        <li><a href="quiz2.html">Ch.&nbsp;2 &mdash; Self-Check</a></li>
+        <li><a href="chapter3.html">Ch.&nbsp;3 &mdash; Belt Conveyors</a></li>
+        <li><a href="quiz3.html">Ch.&nbsp;3 &mdash; Self-Check</a></li>
+        <li><a href="chapter4.html">Ch.&nbsp;4 &mdash; Bucket Elevators</a></li>
+        <li><a href="quiz4.html">Ch.&nbsp;4 &mdash; Self-Check</a></li>
+        <li><a href="chapter5.html" class="active">Ch.&nbsp;5 &mdash; Pneumatic Conveying</a></li>
+        <li><a href="quiz5.html">Ch.&nbsp;5 &mdash; Self-Check</a></li>
+        <li><span class="muted">Ch.&nbsp;6 &mdash; Chain &amp; Apron Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;7 &mdash; Cranes &amp; Hoists<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;8 &mdash; Industrial Trucks &amp; AGVs<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;9 &mdash; Storage &amp; Warehousing<em>Not yet published</em></span></li>
+      </ul>
+    </nav>
+
+    <section class="course-info">
+      <h2>Chapter Info</h2>
+      <dl>
+        <dt>Weeks</dt><dd>10&ndash;11</dd>
+        <dt>Problem Sets</dt><dd>PS 6</dd>
+        <dt>Design Basis</dt>
+        <dd>
+          <ul>
+            <li>VDI 3676 / VDI 2263</li>
+            <li>CEN/TR 15281 (inerting)</li>
+            <li>NFPA 654 / EN 14491</li>
+          </ul>
+        </dd>
+        <dt>Key Skills</dt>
+        <dd>
+          <span class="pill">Loading ratio</span>
+          <span class="pill">Saltation</span>
+          <span class="pill">Pressure drop</span>
+          <span class="pill">Air movers</span>
+          <span class="pill">Filtration</span>
+        </dd>
+      </dl>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <p class="lead">A pneumatic system carries bulk solids inside a pipe, suspended in or pushed by moving
+      air. Nothing else routes material around a plant so freely: a pipeline goes up, along, around a
+      corner and through a wall, with no moving part between the feed point and the discharge. The price is
+      energy &mdash; ten to thirty times what a bucket elevator spends on the same lift &mdash; and a design
+      that is unforgiving about one number: the conveying velocity. This chapter is about getting that
+      number right and then paying for it as little as possible.</p>
+
+    <div class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">What Pneumatic Conveying Is</a></li>
+        <li><a href="#s2">Advantages, Limitations and the Design Procedure</a></li>
+        <li><a href="#s3">System Types: Pressure, Vacuum and Combined</a></li>
+        <li><a href="#s4">Dilute and Dense Phase, and the State Diagram</a></li>
+        <li><a href="#s5">Characterising the Material</a></li>
+        <li><a href="#s6">Minimum Conveying Velocity and Saltation</a></li>
+        <li><a href="#s7">Solids Loading Ratio</a></li>
+        <li><a href="#s8">Gas Expansion Along the Pipeline</a></li>
+        <li><a href="#s9">Pressure Drop: The Components</a></li>
+        <li><a href="#s10">Bends and Equivalent Length</a></li>
+        <li><a href="#s11">Pipeline Sizing and the Stepped Pipeline</a></li>
+        <li><a href="#s12">Air Movers</a></li>
+        <li><a href="#s13">Feeding the Pipeline</a></li>
+        <li><a href="#s14">Air Leakage Through the Feeder</a></li>
+        <li><a href="#s15">Separation and Filtration</a></li>
+        <li><a href="#s16">Dense Phase and Plug Conveying</a></li>
+        <li><a href="#s17">Wear and Product Degradation</a></li>
+        <li><a href="#s18">Static Electricity and Explosion Risk</a></li>
+        <li><a href="#s19">Commissioning and Troubleshooting</a></li>
+        <li><a href="#s20">Worked Design Example</a></li>
+        <li><a href="#s21">Nomenclature</a></li>
+        <li><a href="#s22">Problems</a></li>
+        <li><a href="#s23">References</a></li>
+      </ol>
+    </div>
+
+    <!-- ============================================================ 5.1 -->
+    <h2 id="s1">5.1 What Pneumatic Conveying Is</h2>
+
+    <p>In a pneumatic conveying system the carrier is a gas, almost always air, and the pipeline is the
+      machine. Material is fed into a moving air stream at one end, travels as a suspension or as a series
+      of plugs, and is separated from the air at the other end. There is no belt, no chain, no screw and no
+      bucket: the only moving parts are the air mover, the feeder and the filter cleaning mechanism.</p>
+
+    <p>That is the whole appeal, and it is worth stating precisely. A pipeline can be routed like a service
+      pipe &mdash; up a wall, across a roof, around an obstruction, through a fire barrier &mdash; and it is
+      inherently dust-tight, because the material is inside a closed pipe at a pressure different from the
+      room. One system can pick up from several points and deliver to several more, using diverter valves
+      rather than duplicate machines. Against a belt or a chain conveyor, that flexibility is decisive in a
+      congested plant.</p>
+
+    <p>The cost is energy. Air is a poor carrier: it has to move at 15&nbsp;to&nbsp;30&nbsp;m/s to keep a
+      granular material in suspension, and accelerating the solids, dragging them along the wall and then
+      separating them again all cost work. Where a bucket elevator lifts a tonne 30&nbsp;m for about
+      0.1&nbsp;kWh (<a href="chapter4.html#s20">&sect;4.20</a>), a dilute-phase pneumatic system on a
+      similar duty spends 1&nbsp;to&nbsp;4&nbsp;kWh per tonne. The engineering question is never whether
+      pneumatic conveying is efficient &mdash; it is not &mdash; but whether the flexibility is worth the
+      bill.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.1.</b> Pneumatic conveying against the mechanical alternatives.</caption>
+        <thead>
+          <tr><th>&nbsp;</th><th>Pneumatic</th><th>Belt (<a href="chapter3.html">Ch.&nbsp;3</a>)</th><th>Screw (<a href="chapter2.html">Ch.&nbsp;2</a>)</th><th>Bucket elevator (<a href="chapter4.html">Ch.&nbsp;4</a>)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Routing</th><td>Free: up, along, around corners</td><td>Straight runs, gentle curves</td><td>Straight, to about 10&nbsp;m</td><td>Vertical only</td></tr>
+          <tr><th>Energy per tonne</th><td>Highest: 1&ndash;4&nbsp;kWh/t typical</td><td>Lowest</td><td>Low to moderate</td><td>Very low</td></tr>
+          <tr><th>Dust containment</th><td>Inherent &mdash; closed pipe</td><td>Needs covers and skirts</td><td>Inherent</td><td>Inherent</td></tr>
+          <tr><th>Lump size</th><td>Small: powders and granules only</td><td>Any</td><td>To 30&nbsp;mm</td><td>To a third of bucket projection</td></tr>
+          <tr><th>Product damage</th><td>Significant at high velocity</td><td>Low</td><td>Moderate</td><td>Moderate</td></tr>
+          <tr><th>Capacity</th><td>To about 400&nbsp;t/h, usually far less</td><td>Over 10,000&nbsp;t/h</td><td>To 300&nbsp;t/h</td><td>Over 1,000&nbsp;t/h</td></tr>
+          <tr><th>Multiple sources and destinations</th><td>Easy, with diverter valves</td><td>Needs transfer towers</td><td>One route</td><td>One route</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">The honest position on accuracy</span>
+      <p>Pneumatic conveying is the least exact design subject in this course. The gas-solid flow in a pipe
+        resists closed-form treatment, so every practical method is semi-empirical, and published
+        correlations for saltation velocity and solids friction carry uncertainties of
+        25&nbsp;to&nbsp;40&nbsp;%. That does not make the calculations pointless &mdash; they size the
+        equipment and tell you which variable matters &mdash; but for a new material, a long line or a
+        critical duty, the profession's answer is a conveying trial on a test rig, and every sentence in
+        this chapter should be read with that in mind.</p>
+    </div>
+
+    <!-- ============================================================ 5.2 -->
+    <h2 id="s2">5.2 Advantages, Limitations and the Design Procedure</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.2.</b> What a pneumatic system gives, and what it asks in return.</caption>
+        <thead><tr><th>Advantages</th><th>Limitations</th></tr></thead>
+        <tbody>
+          <tr><td>Routing freedom: the pipeline goes where a pipe can go</td><td>Energy per tonne is an order of magnitude above mechanical conveying</td></tr>
+          <tr><td>Dust-tight by construction; good for toxic, hygroscopic and food products</td><td>Powders and granules only; no lumps, no fragile flakes at high velocity</td></tr>
+          <tr><td>Few moving parts in the conveying line itself</td><td>Wear concentrates at bends, and product degrades by attrition</td></tr>
+          <tr><td>Several pick-up and delivery points on one system</td><td>Blockage is a real failure mode, and clearing a plugged line takes time</td></tr>
+          <tr><td>Small footprint; the pipe can be hung out of the way</td><td>Design is semi-empirical; scale-up without test data is risky</td></tr>
+          <tr><td>Easy to seal for inert-gas operation</td><td>A dust-and-air mixture in a closed pipe is an explosion hazard by definition</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.3.</b> The design procedure, in the order the decisions have to be made.</caption>
+        <thead><tr><th class="num">Step</th><th>Decision</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Material, rate, route length and geometry, and the tolerance for degradation</td><td><a href="#s5">&sect;5.5</a></td></tr>
+          <tr><td class="num">2</td><td>Phase: dilute or dense &mdash; and therefore the pressure range</td><td><a href="#s4">&sect;5.4</a></td></tr>
+          <tr><td class="num">3</td><td>System type: positive pressure, vacuum, combined or closed loop</td><td><a href="#s3">&sect;5.3</a></td></tr>
+          <tr><td class="num">4</td><td>Minimum conveying velocity, then the design velocity with margin</td><td><a href="#s6">&sect;5.6</a></td></tr>
+          <tr><td class="num">5</td><td>Pipe bore and air mass flow, giving the solids loading ratio</td><td><a href="#s7">&sect;5.7</a>, <a href="#s11">&sect;5.11</a></td></tr>
+          <tr><td class="num">6</td><td>Pressure drop, and iterate: the answer changes the air density and so the velocity</td><td><a href="#s9">&sect;5.9</a></td></tr>
+          <tr><td class="num">7</td><td>Air mover, feeder, filter, and the protective measures the dust requires</td><td><a href="#s12">&sect;5.12</a>&ndash;<a href="#s18">&sect;5.18</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Step&nbsp;6 deserves a warning. Pneumatic sizing is <em>iterative by nature</em>: the pressure drop
+      you are trying to find determines the air density, which determines the velocity, which determines the
+      pressure drop. Guess a pressure, work through, and compare. Two or three passes normally converge, and
+      the worked example of <a href="#s20">&sect;5.20</a> shows one.</p>
+
+    <div class="callout">
+      <span class="label">Where this chapter sits</span>
+      <p>Chapters&nbsp;2 to&nbsp;4 moved material with a moving mechanical element. This chapter removes the
+        mechanism from the conveying line altogether and puts the work into the air. The result is the most
+        flexible and the most expensive of the continuous conveyors, and
+        <a href="chapter1.html#s19">&sect;1.19</a> is where the choice between them is actually settled.</p>
+    </div>
+
+    <!-- ============================================================ 5.3 -->
+    <h2 id="s3">5.3 System Types: Pressure, Vacuum and Combined</h2>
+
+    <figure>
+      <svg viewBox="0 0 900 390" role="img" aria-label="Positive-pressure dilute-phase system showing blower, rotary valve feeder, pipeline, bends, receiving vessel and filter">
+        <rect x="0" y="0" width="900" height="390" fill="#ffffff"/>
+
+        <!-- blower -->
+        <rect x="40" y="250" width="70" height="46" rx="4" fill="#4b4540" stroke="#2f2f2f" stroke-width="2"/>
+        <text x="75" y="278" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">blower</text>
+        <!-- air line -->
+        <line x1="110" y1="273" x2="205" y2="273" stroke="#00B7CD" stroke-width="5"/>
+        <path d="M 160 264 L 172 273 L 160 282" fill="#00B7CD"/>
+        <!-- supply hopper -->
+        <path d="M 175 130 L 265 130 L 240 196 L 200 196 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+        <g fill="#c9a97a"><circle cx="200" cy="150" r="3.4"/><circle cx="222" cy="158" r="3"/><circle cx="240" cy="146" r="3.2"/><circle cx="214" cy="176" r="3.2"/></g>
+        <!-- rotary valve -->
+        <rect x="196" y="196" width="48" height="44" rx="3" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2"/>
+        <circle cx="220" cy="218" r="16" fill="#ffffff" stroke="#6f6f6f" stroke-width="2"/>
+        <g stroke="#6f6f6f" stroke-width="2">
+          <line x1="220" y1="202" x2="220" y2="234"/><line x1="204" y1="218" x2="236" y2="218"/>
+          <line x1="209" y1="207" x2="231" y2="229"/><line x1="209" y1="229" x2="231" y2="207"/>
+        </g>
+        <!-- conveying line -->
+        <line x1="205" y1="273" x2="600" y2="273" stroke="#8f8f8f" stroke-width="7"/>
+        <line x1="205" y1="273" x2="600" y2="273" stroke="#f4f1ea" stroke-width="3"/>
+        <path d="M 600 273 q 34 0 34 -34 L 634 150" stroke="#8f8f8f" stroke-width="7" fill="none"/>
+        <path d="M 600 273 q 34 0 34 -34 L 634 150" stroke="#f4f1ea" stroke-width="3" fill="none"/>
+        <line x1="634" y1="150" x2="700" y2="150" stroke="#8f8f8f" stroke-width="7"/>
+        <line x1="634" y1="150" x2="700" y2="150" stroke="#f4f1ea" stroke-width="3"/>
+        <!-- particles in line -->
+        <g fill="#c9a97a">
+          <circle cx="280" cy="273" r="3"/><circle cx="330" cy="270" r="3"/><circle cx="380" cy="276" r="3"/>
+          <circle cx="430" cy="271" r="3"/><circle cx="480" cy="275" r="3"/><circle cx="530" cy="272" r="3"/>
+          <circle cx="628" cy="210" r="3"/><circle cx="660" cy="150" r="3"/>
+        </g>
+        <path d="M 360 254 L 400 254" stroke="#DF301C" stroke-width="1.6"/>
+        <path d="M 394 249 L 404 254 L 394 259" fill="#DF301C"/>
+        <text x="380" y="246" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">air + solids</text>
+
+        <!-- receiving vessel with filter -->
+        <rect x="700" y="80" width="120" height="150" rx="4" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+        <g stroke="#00788A" stroke-width="2.5">
+          <line x1="722" y1="96" x2="722" y2="140"/><line x1="742" y1="96" x2="742" y2="140"/>
+          <line x1="762" y1="96" x2="762" y2="140"/><line x1="782" y1="96" x2="782" y2="140"/><line x1="802" y1="96" x2="802" y2="140"/>
+        </g>
+        <path d="M 706 170 A 60 40 0 0 0 814 170 L 814 196 A 60 30 0 0 1 706 196 Z" fill="#c9a97a" opacity="0.5"/>
+        <path d="M 700 230 L 820 230 L 790 270 L 730 270 Z" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+        <!-- clean air vent -->
+        <line x1="760" y1="80" x2="760" y2="50" stroke="#00B7CD" stroke-width="5"/>
+        <path d="M 751 62 L 760 48 L 769 62" fill="#00B7CD"/>
+
+        <!-- callouts -->
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">
+          <circle cx="60" cy="330" r="11" fill="#DF301C"/><text x="60" y="334" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+          <text x="78" y="334">air mover</text>
+          <circle cx="196" cy="330" r="11" fill="#DF301C"/><text x="196" y="334" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+          <text x="214" y="334">rotary valve feeder</text>
+          <circle cx="392" cy="330" r="11" fill="#DF301C"/><text x="392" y="334" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+          <text x="410" y="334">conveying line</text>
+          <circle cx="560" cy="330" r="11" fill="#DF301C"/><text x="560" y="334" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+          <text x="578" y="334">bend</text>
+          <circle cx="664" cy="330" r="11" fill="#DF301C"/><text x="664" y="334" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+          <text x="682" y="334">receiver and filter</text>
+          <circle cx="838" cy="50" r="11" fill="#DF301C"/><text x="838" y="54" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">6</text>
+          <text x="856" y="54" text-anchor="end">&nbsp;</text>
+          <text x="806" y="36" font-size="11" fill="#726b64" text-anchor="middle">clean air out</text>
+          <circle cx="196" cy="112" r="11" fill="#DF301C"/><text x="196" y="116" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">7</text>
+          <text x="214" y="116">supply hopper</text>
+        </g>
+        <g stroke="#726b64" stroke-width="1.1" fill="none">
+          <line x1="60" y1="318" x2="70" y2="300"/>
+          <line x1="196" y1="318" x2="212" y2="244"/>
+          <line x1="392" y1="318" x2="400" y2="280"/>
+          <line x1="560" y1="318" x2="614" y2="258"/>
+          <line x1="664" y1="318" x2="730" y2="240"/>
+          <line x1="828" y1="50" x2="770" y2="50"/>
+          <line x1="196" y1="124" x2="204" y2="140"/>
+        </g>
+      </svg>
+      <figcaption><b>Figure 5.1.</b> A positive-pressure dilute-phase system. <b>1</b> air mover &middot;
+        <b>2</b> rotary valve feeder &middot; <b>3</b> conveying line &middot; <b>4</b> bend &middot;
+        <b>5</b> receiving vessel with filter &middot; <b>6</b> clean air to atmosphere &middot;
+        <b>7</b> supply hopper. Air enters at the highest pressure in the system and expands all the way to
+        the receiver, so the velocity rises along the line.</figcaption>
+    </figure>
+
+    <figure>
+      <svg viewBox="0 0 840 300" role="img" aria-label="Pressure and vacuum systems compared">
+        <rect x="0" y="0" width="840" height="300" fill="#ffffff"/>
+
+        <!-- pressure system -->
+        <g transform="translate(0,0)">
+          <text x="200" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="middle">Positive pressure &mdash; one source, many destinations</text>
+          <rect x="40" y="110" width="46" height="34" rx="3" fill="#4b4540"/>
+          <text x="63" y="132" font-family="Segoe UI, sans-serif" font-size="10" fill="#fff" text-anchor="middle">blower</text>
+          <line x1="86" y1="127" x2="330" y2="127" stroke="#8f8f8f" stroke-width="6"/>
+          <line x1="86" y1="127" x2="330" y2="127" stroke="#f4f1ea" stroke-width="2.4"/>
+          <path d="M 150 96 l 0 -20 l 28 0 l 0 20 z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.6"/>
+          <line x1="164" y1="96" x2="164" y2="120" stroke="#dcdcdc" stroke-width="8"/>
+          <circle cx="164" cy="110" r="8" fill="#ffffff" stroke="#6f6f6f" stroke-width="1.6"/>
+          <g fill="#faf8f3" stroke="#8f8f8f" stroke-width="2">
+            <rect x="250" y="150" width="54" height="60"/><rect x="320" y="150" width="54" height="60"/>
+          </g>
+          <path d="M 300 127 q 20 0 20 20 l 0 3" stroke="#8f8f8f" stroke-width="6" fill="none"/>
+          <line x1="277" y1="127" x2="277" y2="150" stroke="#8f8f8f" stroke-width="6"/>
+          <text x="200" y="240" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">pressure above atmospheric; feeder must seal against it</text>
+          <text x="200" y="258" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">0.5&ndash;1.0 bar with a blower, to 6 bar with a blow tank</text>
+          <text x="200" y="276" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">a leak blows product out of the pipe</text>
+        </g>
+
+        <!-- vacuum system -->
+        <g transform="translate(420,0)">
+          <text x="200" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="middle">Vacuum &mdash; many sources, one destination</text>
+          <rect x="330" y="110" width="52" height="34" rx="3" fill="#4b4540"/>
+          <text x="356" y="132" font-family="Segoe UI, sans-serif" font-size="10" fill="#fff" text-anchor="middle">exhauster</text>
+          <line x1="60" y1="127" x2="300" y2="127" stroke="#8f8f8f" stroke-width="6"/>
+          <line x1="60" y1="127" x2="300" y2="127" stroke="#f4f1ea" stroke-width="2.4"/>
+          <path d="M 70 96 l 0 -20 l 28 0 l 0 20 z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.6"/>
+          <line x1="84" y1="96" x2="84" y2="124" stroke="#dcdcdc" stroke-width="7"/>
+          <path d="M 150 96 l 0 -20 l 28 0 l 0 20 z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.6"/>
+          <line x1="164" y1="96" x2="164" y2="124" stroke="#dcdcdc" stroke-width="7"/>
+          <rect x="240" y="150" width="60" height="62" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2"/>
+          <line x1="270" y1="127" x2="270" y2="150" stroke="#8f8f8f" stroke-width="6"/>
+          <g stroke="#00788A" stroke-width="2"><line x1="254" y1="158" x2="254" y2="186"/><line x1="270" y1="158" x2="270" y2="186"/><line x1="286" y1="158" x2="286" y2="186"/></g>
+          <line x1="300" y1="127" x2="330" y2="127" stroke="#00B7CD" stroke-width="5"/>
+          <text x="200" y="240" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">pressure below atmospheric; material is drawn in at open points</text>
+          <text x="200" y="258" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">limited to about 0.5 bar of vacuum, so shorter and lighter duty</text>
+          <text x="200" y="276" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">a leak draws air in; nothing escapes</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 5.2.</b> The two basic system types. A pressure system pushes from one feed
+        point to as many destinations as you fit diverter valves; a vacuum system pulls from as many pick-up
+        points as you like into one receiver. The choice follows the plant layout, and the containment
+        argument follows the direction of any leak.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.4.</b> System types and where each belongs.</caption>
+        <thead><tr><th>Type</th><th>Pressure range</th><th>Suits</th><th>Watch out for</th></tr></thead>
+        <tbody>
+          <tr><td><b>Positive pressure</b></td><td>0.5&ndash;1.0&nbsp;bar&nbsp;g with a blower; to 6&nbsp;bar with a blow tank</td>
+              <td>One source to several destinations; long distances; high tonnage</td>
+              <td>The feeder has to seal against line pressure, and leaks push product out</td></tr>
+          <tr><td><b>Vacuum</b></td><td>To about 0.5&nbsp;bar of vacuum</td>
+              <td>Several pick-up points to one receiver; toxic or hazardous dust; short routes</td>
+              <td>Limited pressure difference, so limited distance and tonnage; the air mover handles all the air at low density</td></tr>
+          <tr><td><b>Combined pressure&ndash;vacuum</b></td><td>Vacuum then pressure, one machine</td>
+              <td>Pick up from several points <em>and</em> deliver to several; rail-car unloading</td>
+              <td>Two systems in series, so two sets of losses and one shared air mover to size carefully</td></tr>
+          <tr><td><b>Closed loop</b></td><td>Any</td>
+              <td>Inert-gas operation, toxic products, explosive dusts, moisture-sensitive material</td>
+              <td>Gas cooling and make-up, and a leak-tight system to keep the inert atmosphere</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Two practical rules come out of that table. If the plant has many pick-up points and one silo, think
+      vacuum. If it has one silo and many destinations, think pressure. And if the dust is toxic or
+      pharmaceutically active, vacuum has an argument no pressure system can answer: when a vacuum line
+      leaks, air goes in.</p>
+
+    <!-- ============================================================ 5.4 -->
+    <h2 id="s4">5.4 Dilute and Dense Phase, and the State Diagram</h2>
+
+    <p>Everything about a pneumatic system follows from one question: is the material carried in suspension,
+      or pushed along the bottom of the pipe? The first is <b>dilute phase</b>, the second is
+      <b>dense phase</b>, and they are two different machines that happen to share a pipe.</p>
+
+    <figure>
+      <svg viewBox="0 0 820 430" role="img" aria-label="State diagram of pressure gradient against air velocity for several solids rates, showing the saltation locus and the dilute and dense phase regions">
+        <rect x="0" y="0" width="820" height="430" fill="#ffffff"/>
+
+        <!-- axes -->
+        <line x1="100" y1="350" x2="700" y2="350" stroke="#4b4540" stroke-width="2"/>
+        <line x1="100" y1="350" x2="100" y2="50" stroke="#4b4540" stroke-width="2"/>
+        <path d="M 692 345 L 704 350 L 692 355" fill="#4b4540"/>
+        <path d="M 95 60 L 100 46 L 105 60" fill="#4b4540"/>
+        <text x="400" y="396" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917" text-anchor="middle">superficial air velocity <tspan font-style="italic">U</tspan> &rarr;</text>
+        <text x="40" y="200" font-family="Segoe UI, sans-serif" font-size="13" fill="#1c1917" text-anchor="middle" transform="rotate(-90 40 200)">pressure gradient &Delta;p/L &rarr;</text>
+
+        <!-- air only curve, hugging the bottom -->
+        <path d="M 140 344 Q 380 336 680 296" stroke="#00B7CD" stroke-width="2.4" fill="none"/>
+
+        <!-- constant solids rate curves -->
+        <path d="M 300 92 Q 400 232 500 246 Q 590 258 680 222" stroke="#726b64" stroke-width="2.2" fill="none"/>
+        <path d="M 250 120 Q 330 250 430 268 Q 560 292 680 250" stroke="#726b64" stroke-width="2.2" fill="none"/>
+        <path d="M 205 150 Q 270 262 360 282 Q 520 306 680 278" stroke="#726b64" stroke-width="2.2" fill="none"/>
+
+        <!-- saltation locus -->
+        <path d="M 205 150 Q 300 232 430 268 Q 520 286 560 296" stroke="#DF301C" stroke-width="2.6" fill="none" stroke-dasharray="7 5"/>
+        <g fill="#DF301C">
+          <circle cx="430" cy="268" r="4.5"/><circle cx="500" cy="246" r="4.5"/><circle cx="360" cy="282" r="4.5"/>
+        </g>
+
+        <!-- region labels -->
+        <text x="128" y="84" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#4b4540">DENSE PHASE</text>
+        <text x="128" y="102" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64">moving bed, dunes, plugs</text>
+        <text x="540" y="84" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#4b4540">DILUTE PHASE</text>
+        <text x="540" y="102" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64">fully suspended flow</text>
+        <line x1="470" y1="112" x2="470" y2="350" stroke="#cfcfcf" stroke-width="1.6" stroke-dasharray="6 5"/>
+
+        <!-- saltation locus label, bottom left, clear of both curves -->
+        <text x="112" y="286" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C">saltation locus</text>
+        <text x="112" y="302" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C">the minimum velocity at each rate</text>
+        <text x="112" y="326" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#DF301C">&larr; to the left of it the line blocks</text>
+        <line x1="250" y1="278" x2="298" y2="240" stroke="#DF301C" stroke-width="1"/>
+
+        <!-- design point -->
+        <circle cx="556" cy="252" r="6" fill="none" stroke="#00788A" stroke-width="2.4"/>
+        <text x="572" y="150" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#00788A">design point</text>
+        <text x="572" y="166" font-family="Segoe UI, sans-serif" font-size="11" fill="#00788A">20&ndash;30&nbsp;% above the minimum</text>
+        <line x1="588" y1="174" x2="562" y2="242" stroke="#00788A" stroke-width="1"/>
+
+        <!-- curve labels at the right edge -->
+        <text x="692" y="218" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64">high solids rate</text>
+        <text x="692" y="254" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64">low solids rate</text>
+        <text x="692" y="292" font-family="Segoe UI, sans-serif" font-size="11" fill="#00788A">air only</text>
+      </svg>
+      <figcaption><b>Figure 5.3.</b> The state diagram. Each grey curve is one constant solids rate; the
+        pressure gradient falls as velocity is reduced &mdash; because there is less gas friction &mdash;
+        until the minimum is reached and the material begins to drop out of suspension. Below that the
+        gradient rises steeply and the line will block. The red locus joins the minima, and the design point
+        sits deliberately to the right of it.</figcaption>
+    </figure>
+
+    <p>Read the diagram from right to left, which is the direction a designer thinks in. At high velocity the
+      material is fully suspended and the pressure gradient is dominated by gas friction, which falls as
+      velocity falls. Keep reducing the velocity and the gradient keeps falling &mdash; this is why running
+      a line faster than necessary is simply wasted energy &mdash; until the point where particles start to
+      settle. That is <b>saltation</b>. Past it the pipe partly fills with a moving layer, the free area
+      shrinks, the gradient turns and climbs steeply, and shortly afterwards the line blocks.</p>
+
+    <p>Everything to the right of the saltation locus is dilute phase. Everything to the left of it can only
+      be reached in a controlled way if the material and the pressure will support dense-phase flow
+      (<a href="#s16">&sect;5.16</a>); for most materials that region is simply where lines plug.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.5.</b> Dilute against dense phase.</caption>
+        <thead><tr><th>&nbsp;</th><th>Dilute phase</th><th>Dense phase</th></tr></thead>
+        <tbody>
+          <tr><th>Flow pattern</th><td>Particles fully suspended in the gas</td><td>Moving bed, dunes or discrete plugs along the pipe bottom</td></tr>
+          <tr><th>Velocity</th><td>15&ndash;30&nbsp;m/s</td><td>1&ndash;8&nbsp;m/s</td></tr>
+          <tr><th>Solids loading ratio &mu;</th><td>2&ndash;15</td><td>20&ndash;200</td></tr>
+          <tr><th>Pressure</th><td>To about 1&nbsp;bar with a blower</td><td>1&ndash;6&nbsp;bar, blow tank</td></tr>
+          <tr><th>Air per tonne</th><td>High</td><td>Low &mdash; often a quarter of dilute phase</td></tr>
+          <tr><th>Product damage and wear</th><td>Significant: velocity does the damage</td><td>Low, which is often the whole reason for choosing it</td></tr>
+          <tr><th>Suits</th><td>Almost any powder or granule, in almost any layout</td><td>Materials with the right permeability or air retention; batch operation</td></tr>
+          <tr><th>Control</th><td>Continuous, steady, easy to meter</td><td>Often batch-wise from a blow tank; pressure fluctuates</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 5.5 -->
+    <h2 id="s5">5.5 Characterising the Material</h2>
+
+    <p>In every earlier chapter the material properties that mattered were density, lump size, abrasiveness
+      and flowability. Pneumatic conveying adds two that decide whether the system can work at all:
+      how easily air passes <em>through</em> the bulk material, and how long the material holds air when
+      it is disturbed.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.6.</b> The Geldart classification, and what it means for conveying.</caption>
+        <thead><tr><th>Group</th><th>Typical particles</th><th>Behaviour with air</th><th>Conveying consequence</th></tr></thead>
+        <tbody>
+          <tr><td><b>C</b> &mdash; cohesive</td><td>Under about 30&nbsp;&micro;m: flour, cement, fumed silica, titanium dioxide</td>
+              <td>Cohesive, hard to fluidise, channels</td>
+              <td>Air retention is good, so dense-phase plug flow is often possible; but feeding and de-aeration need care</td></tr>
+          <tr><td><b>A</b> &mdash; aeratable</td><td>30&ndash;100&nbsp;&micro;m: fine alumina, cracking catalyst, many powders</td>
+              <td>Fluidises smoothly, retains air for a long time</td>
+              <td>The best dense-phase candidates: they flow almost like a liquid at low velocity</td></tr>
+          <tr><td><b>B</b> &mdash; sand-like</td><td>100&ndash;800&nbsp;&micro;m: sand, table salt, sugar</td>
+              <td>Bubbles immediately, loses air quickly</td>
+              <td>Poor air retention but high permeability; dilute phase, or plug flow with an air-assist line</td></tr>
+          <tr><td><b>D</b> &mdash; spoutable</td><td>Over about 800&nbsp;&micro;m: grain, pellets, granules</td>
+              <td>Very permeable, does not retain air at all</td>
+              <td>Dilute phase, or low-velocity plug flow if the plugs stay short</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.7.</b> Material data a pneumatic design needs, and where it comes from.</caption>
+        <thead><tr><th>Property</th><th>Why it is needed</th><th>How it is obtained</th></tr></thead>
+        <tbody>
+          <tr><td>Particle size distribution and median size</td><td>Saltation velocity, Geldart group, filter selection</td><td>Sieve or laser diffraction</td></tr>
+          <tr><td>Particle density and bulk density</td><td>Loading ratio, pressure drop, vessel sizing</td><td>Pycnometer; poured and tapped bulk density</td></tr>
+          <tr><td>Permeability</td><td>Whether plug flow is possible</td><td>Permeability cell, from the pressure gradient through a settled bed</td></tr>
+          <tr><td>De-aeration rate / air retention</td><td>Whether dense-phase fluidised flow is possible</td><td>Settling test in a fluidisation column</td></tr>
+          <tr><td>Abrasiveness and hardness</td><td>Bend material and wall thickness, velocity ceiling</td><td>Mineral content, Mohs hardness, abrasion index</td></tr>
+          <tr><td>Friability</td><td>Velocity ceiling for product quality</td><td>Attrition test, or conveying trial with a size check after</td></tr>
+          <tr><td>Moisture and stickiness</td><td>Blockage risk, filter blinding</td><td>Moisture content; wall friction test</td></tr>
+          <tr><td>Dust explosion data: <var>K</var><sub>St</sub>, MIE, MIT</td><td>Explosion protection and earthing design</td><td>20&nbsp;L sphere test, MIE apparatus &mdash; see <a href="#s18">&sect;5.18</a></td></tr>
+          <tr><td>Temperature</td><td>Gas density, pipe expansion, filter medium</td><td>Process data</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The two rows in the middle are the ones that separate this chapter from the others. A permeable
+      material like grain lets air pass through a stationary plug, so a plug can be pushed along by a
+      pressure difference across it. An air-retaining material like a Group&nbsp;A powder stays fluidised
+      for long enough to flow along the pipe bottom almost like a liquid. A material that is neither &mdash;
+      poor permeability and poor air retention &mdash; can usually only be conveyed in dilute phase, and no
+      amount of pressure will make dense phase behave.</p>
+
+    <!-- ============================================================ 5.6 -->
+    <h2 id="s6">5.6 Minimum Conveying Velocity and Saltation</h2>
+
+    <p>The single most important number in a dilute-phase design is the minimum velocity at which the
+      material stays in suspension. Below it the line blocks; far above it, energy, wear and product damage
+      are all wasted. Practice therefore sets the design velocity just above the minimum, with a margin.</p>
+
+    <p>For a first estimate, use experience, expressed as a table of velocities by material class:</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.8.</b> Typical minimum conveying velocities, dilute phase, horizontal pipe.</caption>
+        <thead><tr><th>Material</th><th>Minimum velocity (m/s)</th><th>Design velocity (m/s)</th></tr></thead>
+        <tbody>
+          <tr><td>Fine cohesive powders: cement, flour, fly ash</td><td class="num">8&ndash;12</td><td class="num">11&ndash;15</td></tr>
+          <tr><td>Fine granular: sugar, salt, fine sand</td><td class="num">12&ndash;16</td><td class="num">15&ndash;20</td></tr>
+          <tr><td>Grain: wheat, maize, soybean meal</td><td class="num">14&ndash;18</td><td class="num">18&ndash;23</td></tr>
+          <tr><td>Plastic pellets and granules</td><td class="num">16&ndash;20</td><td class="num">20&ndash;25</td></tr>
+          <tr><td>Coarse or heavy granular: gravel, ore fines</td><td class="num">18&ndash;25</td><td class="num">23&ndash;30</td></tr>
+          <tr><td>Vertical lift, any material</td><td>Add 2&ndash;3&nbsp;m/s to the horizontal figure</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>For a calculated estimate, the standard correlation is Rizk's, which relates the saltation velocity
+      to the solids loading ratio, the particle size and the pipe bore:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>&mu;</var> = <span class="frac"><span class="num">1</span><span class="den">10<sup><var>&alpha;</var></sup></span></span>
+        <span class="frac"><span class="num"><var>U</var><sub>salt</sub></span><span class="den">&radic;(<var>gD</var>)</span></span><sup><var>&beta;</var></sup>
+        &nbsp;<span class="units">with <var>&alpha;</var> = 1440<var>d</var><sub>p</sub> + 1.96 and <var>&beta;</var> = 1100<var>d</var><sub>p</sub> + 2.5, <var>d</var><sub>p</sub> in m</span>
+      </span>
+      <span class="tag">(5.1)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>U</var><sub>salt</sub> = &radic;(<var>gD</var>) &middot; (<var>&mu;</var> &middot; 10<sup><var>&alpha;</var></sup>)<sup>1/<var>&beta;</var></sup>
+      </span>
+      <span class="tag">(5.2)</span>
+    </div>
+
+    <p>and the design velocity follows with a margin:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>U</var><sub>design</sub> = (1.2 to 1.5) <var>U</var><sub>salt</sub>
+        &nbsp;<span class="units">at the point of lowest pressure &mdash; usually the feed point</span>
+      </span>
+      <span class="tag">(5.3)</span>
+    </div>
+
+    <p>Two cautions. First, Eq.&nbsp;5.1 is a correlation fitted to particular test data; treat its answer as
+      an estimate with the 25&nbsp;to&nbsp;40&nbsp;% uncertainty of
+      <a href="#s1">&sect;5.1</a>, and cross-check it against Table&nbsp;5.8. Second, the velocity to design
+      on is the one at the <em>beginning</em> of the line, because that is where the air is densest and
+      slowest; everywhere downstream is faster (<a href="#s8">&sect;5.8</a>).</p>
+
+    <div class="callout">
+      <span class="label">A worked check of Eq. 5.2</span>
+      <p>Polyethylene pellets, <var>d</var><sub>p</sub> = 3&nbsp;mm, in a 100&nbsp;mm pipe at
+        <var>&mu;</var> = 10: <var>&alpha;</var> = 1440(0.003) + 1.96 = 6.28,
+        <var>&beta;</var> = 1100(0.003) + 2.5 = 5.80, &radic;(<var>gD</var>) = &radic;0.981 = 0.99.
+        So <var>U</var><sub>salt</sub> = 0.99&nbsp;&times;&nbsp;(10&nbsp;&times;&nbsp;10<sup>6.28</sup>)<sup>1/5.80</sup>
+        = 0.99&nbsp;&times;&nbsp;18.0 = 17.8&nbsp;m/s, and the design velocity is about
+        21&nbsp;m/s &mdash; which is what Table&nbsp;5.8 says for plastic pellets. When a correlation and
+        experience agree, you may proceed; when they do not, find out why before ordering the blower.</p>
+    </div>
+
+    <!-- ============================================================ 5.7 -->
+    <h2 id="s7">5.7 Solids Loading Ratio</h2>
+
+    <p>The solids loading ratio, also called phase density, is the mass of solids conveyed per unit mass of
+      air. It is dimensionless, it is the first number an experienced engineer asks for, and it tells you
+      immediately which regime you are in:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>&mu;</var> = <span class="frac"><span class="num"><var>m&#775;</var><sub>s</sub></span><span class="den"><var>m&#775;</var><sub>g</sub></span></span>
+        &nbsp;<span class="units">kg of solids per kg of air</span>
+      </span>
+      <span class="tag">(5.4)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.9.</b> Reading the solids loading ratio.</caption>
+        <thead><tr><th><var>&mu;</var></th><th>Regime</th><th>Comment</th></tr></thead>
+        <tbody>
+          <tr><td class="num">2&ndash;5</td><td>Very dilute</td><td>Short lines, low tonnage, or a velocity chosen far above what the material needs. Energy per tonne is poor</td></tr>
+          <tr><td class="num">5&ndash;15</td><td>Dilute phase</td><td>The normal operating band of a blower-based system</td></tr>
+          <tr><td class="num">15&ndash;25</td><td>Medium phase</td><td>A transition region; possible with permeable or air-retentive material at moderate pressure</td></tr>
+          <tr><td class="num">25&ndash;100</td><td>Dense phase</td><td>Blow tank territory, 1&ndash;3&nbsp;bar, low velocity</td></tr>
+          <tr><td class="num">over 100</td><td>Extruded or plug flow</td><td>Very short lines, high pressure, or fluidised dense phase in Group&nbsp;A powders</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The ratio also explains the economics of the chapter. Energy per tonne conveyed falls as
+      <var>&mu;</var> rises, because you are paying the compressor for less air per tonne of product. Every
+      design improvement in pneumatic conveying &mdash; stepping the pipeline, using dense phase, lowering
+      the velocity to just above saltation &mdash; is in the end an attempt to raise <var>&mu;</var> without
+      blocking the line.</p>
+
+    <!-- ============================================================ 5.8 -->
+    <h2 id="s8">5.8 Gas Expansion Along the Pipeline</h2>
+
+    <p>Air is compressible, and in a pneumatic line the pressure changes by a factor of one and a half or
+      more from end to end. Because the mass flow of air is constant along the pipe, the velocity must rise
+      as the pressure falls. This one fact causes most of the surprises in pneumatic conveying.</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>&rho;</var><sub>g</sub> = <span class="frac"><span class="num"><var>p</var></span><span class="den"><var>RT</var></span></span>
+        &nbsp;<span class="units">with <var>R</var> = 287&nbsp;J/(kg&middot;K) for air, <var>p</var> absolute</span>
+      </span>
+      <span class="tag">(5.5)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>U</var> = <span class="frac"><span class="num"><var>m&#775;</var><sub>g</sub></span><span class="den"><var>&rho;</var><sub>g</sub><var>A</var></span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>U</var><sub>2</sub> = <var>U</var><sub>1</sub> <span class="frac"><span class="num"><var>p</var><sub>1</sub></span><span class="den"><var>p</var><sub>2</sub></span></span>
+        &nbsp;<span class="units">isothermal, constant bore</span>
+      </span>
+      <span class="tag">(5.6)</span>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 820 370" role="img" aria-label="Pressure and velocity along a pipeline, with a stepped pipeline compared against a constant bore">
+        <rect x="0" y="0" width="820" height="370" fill="#ffffff"/>
+
+        <line x1="90" y1="300" x2="660" y2="300" stroke="#4b4540" stroke-width="2"/>
+        <line x1="90" y1="300" x2="90" y2="46" stroke="#4b4540" stroke-width="2"/>
+        <path d="M 652 295 L 664 300 L 652 305" fill="#4b4540"/>
+        <path d="M 85 56 L 90 42 L 95 56" fill="#4b4540"/>
+        <text x="370" y="344" font-family="Segoe UI, sans-serif" font-size="12" fill="#1c1917" text-anchor="middle">distance along the line &rarr;</text>
+        <text x="44" y="175" font-family="Segoe UI, sans-serif" font-size="12" fill="#1c1917" text-anchor="middle" transform="rotate(-90 44 175)">pressure and velocity</text>
+
+        <!-- limit lines -->
+        <line x1="90" y1="100" x2="640" y2="100" stroke="#DF301C" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <text x="648" y="104" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C">wear and damage limit</text>
+        <line x1="90" y1="236" x2="640" y2="236" stroke="#4b4540" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <text x="648" y="240" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540">minimum conveying velocity</text>
+
+        <!-- pressure falls -->
+        <path d="M 110 70 Q 360 130 620 250" stroke="#00788A" stroke-width="2.6" fill="none"/>
+        <text x="128" y="62" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#00788A">pressure</text>
+
+        <!-- velocity, constant bore -->
+        <path d="M 110 230 Q 360 196 620 76" stroke="#DF301C" stroke-width="2.6" fill="none"/>
+        <text x="452" y="62" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C">velocity, constant bore</text>
+
+        <!-- velocity, stepped -->
+        <path d="M 110 230 Q 240 206 340 172 L 340 224 Q 460 200 540 166 L 540 214 Q 590 206 620 196"
+              stroke="#726b64" stroke-width="2.4" fill="none" stroke-dasharray="8 5"/>
+        <text x="150" y="272" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#726b64">velocity, stepped pipeline</text>
+
+        <g stroke="#726b64" stroke-width="1.2" fill="none" stroke-dasharray="3 3">
+          <line x1="340" y1="224" x2="340" y2="300"/><line x1="540" y1="214" x2="540" y2="300"/>
+        </g>
+        <text x="340" y="318" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">step 1</text>
+        <text x="540" y="318" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">step 2</text>
+      </svg>
+      <figcaption><b>Figure 5.4.</b> Along a constant-bore line the pressure falls and the velocity rises,
+        so the material is slowest where it is most likely to drop out and fastest where it does the most
+        damage. A stepped pipeline enlarges the bore once or twice on the way, dropping the velocity back
+        towards the minimum each time &mdash; but never below it.</figcaption>
+    </figure>
+
+    <p>The consequence is worth stating twice. The velocity that must not be too <em>low</em> occurs at the
+      feed point, and the velocity that must not be too <em>high</em> occurs at the discharge. In the worked
+      example of <a href="#s20">&sect;5.20</a> the air enters at 20&nbsp;m/s and leaves at 32&nbsp;m/s: the
+      same air stream that is barely able to pick the pellets up at one end is fast enough to be chipping
+      them at the other. Stepping the pipeline (<a href="#s11">&sect;5.11</a>) is the standard answer.</p>
+
+    <!-- ============================================================ 5.9 -->
+    <h2 id="s9">5.9 Pressure Drop: The Components</h2>
+
+    <p>The total pressure drop of a dilute-phase line is the sum of six contributions. Each one is a
+      separate physical effect, and knowing which one dominates tells you what to change.</p>
+
+    <div class="eq">
+      <span class="body">
+        &Delta;<var>p</var><sub>gas,fric</sub> = <var>&lambda;</var>
+        <span class="frac"><span class="num"><var>L</var></span><span class="den"><var>D</var></span></span>
+        <span class="frac"><span class="num"><var>&rho;</var><sub>m</sub><var>U</var><sub>m</sub><sup>2</sup></span><span class="den">2</span></span>
+        &nbsp;<span class="units"><var>&lambda;</var> &asymp; 0.02 for commercial steel pipe in turbulent flow</span>
+      </span>
+      <span class="tag">(5.7)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        &Delta;<var>p</var><sub>sol,fric</sub> = <var>&lambda;</var><sub>s</sub> <var>&mu;</var>
+        <span class="frac"><span class="num"><var>L</var></span><span class="den"><var>D</var></span></span>
+        <span class="frac"><span class="num"><var>&rho;</var><sub>m</sub><var>U</var><sub>m</sub><sup>2</sup></span><span class="den">2</span></span>
+        &nbsp;<span class="units"><var>&lambda;</var><sub>s</sub> = 0.002&ndash;0.008, from Table&nbsp;5.10</span>
+      </span>
+      <span class="tag">(5.8)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        &Delta;<var>p</var><sub>acc,sol</sub> = <span class="frac"><span class="num"><var>m&#775;</var><sub>s</sub><var>U</var><sub>s</sub></span><span class="den"><var>A</var></span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &Delta;<var>p</var><sub>acc,gas</sub> = <span class="frac"><span class="num"><var>&rho;</var><sub>m</sub><var>U</var><sub>m</sub><sup>2</sup></span><span class="den">2</span></span>
+        &nbsp;<span class="units"><var>U</var><sub>s</sub> &asymp; 0.8<var>U</var> for granular material</span>
+      </span>
+      <span class="tag">(5.9)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        &Delta;<var>p</var><sub>lift,sol</sub> = <span class="frac"><span class="num"><var>m&#775;</var><sub>s</sub><var>gH</var></span><span class="den"><var>AU</var><sub>s</sub></span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &Delta;<var>p</var><sub>lift,gas</sub> = <var>&rho;</var><sub>m</sub><var>gH</var>
+        &nbsp;<span class="units"><var>H</var> = net vertical rise</span>
+      </span>
+      <span class="tag">(5.10)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        &Delta;<var>p</var><sub>total</sub> = (&Delta;<var>p</var><sub>gas,fric</sub> + &Delta;<var>p</var><sub>sol,fric</sub>
+        + &Delta;<var>p</var><sub>acc</sub> + &Delta;<var>p</var><sub>lift</sub> + &Delta;<var>p</var><sub>feeder</sub>
+        + &Delta;<var>p</var><sub>filter</sub>) &middot; <var>k</var>
+        &nbsp;<span class="units"><var>k</var> = 1.15&ndash;1.25 design margin</span>
+      </span>
+      <span class="tag">(5.11)</span>
+    </div>
+
+    <p>The mean values <var>&rho;</var><sub>m</sub> and <var>U</var><sub>m</sub> are evaluated at the mean
+      pressure along the line, which for a first pass is the arithmetic mean of the two ends. Because that
+      mean depends on the pressure drop being calculated, the whole thing iterates, as
+      <a href="#s2">&sect;5.2</a> warned.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.10.</b> Indicative solids friction factor <var>&lambda;</var><sub>s</sub> for dilute phase.</caption>
+        <thead><tr><th>Material</th><th><var>&lambda;</var><sub>s</sub></th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Fine powders, cement, fly ash</td><td class="num">0.002&ndash;0.003</td><td>Small particles follow the gas closely, so little is lost to wall collisions</td></tr>
+          <tr><td>Granular: sugar, salt, sand</td><td class="num">0.003&ndash;0.005</td><td>The common middle ground</td></tr>
+          <tr><td>Pellets, grain, coarse granules</td><td class="num">0.004&ndash;0.008</td><td>Heavy particles bounce off the wall and have to be re-accelerated</td></tr>
+          <tr><td>Any material, vertical section</td><td>As above</td><td>The lift term of Eq.&nbsp;5.10 is what dominates the vertical, not friction</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Which term dominates?</span>
+      <p>In the worked example of <a href="#s20">&sect;5.20</a>, of a 0.368&nbsp;bar pipeline loss the
+        solids friction is 47&nbsp;%, the gas friction 25&nbsp;%, the solids acceleration 19&nbsp;% and the
+        lift only 7&nbsp;%. That ranking is typical of a long horizontal dilute-phase line, and it says
+        where to look for savings: the solids friction term carries <var>&mu;</var> and
+        <var>U</var><sup>2</sup>, so <em>reducing the velocity to just above saltation</em> is worth more
+        than anything else you can do to the pipe.</p>
+    </div>
+
+    <!-- ============================================================ 5.10 -->
+    <h2 id="s10">5.10 Bends and Equivalent Length</h2>
+
+    <p>A bend costs far more than its own length. The solids are slowed by the impact and by sliding round
+      the outside of the bend, and then have to be re-accelerated in the straight pipe after it &mdash; and
+      that re-acceleration, not the turn itself, is most of the loss. The standard treatment is to replace
+      each bend with an equivalent length of straight horizontal pipe:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>L</var><sub>eq</sub> = <var>L</var><sub>horiz</sub> + <var>L</var><sub>vert</sub>
+        + <var>&Sigma;</var> <var>L</var><sub>bend</sub>
+        &nbsp;<span class="units">then use <var>L</var><sub>eq</sub> in Eqs. 5.7 and 5.8</span>
+      </span>
+      <span class="tag">(5.12)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.11.</b> Equivalent length of fittings, dilute phase.</caption>
+        <thead><tr><th>Fitting</th><th>Equivalent straight pipe</th><th>Comment</th></tr></thead>
+        <tbody>
+          <tr><td>90&deg; long-radius bend, <var>R</var>/<var>D</var> = 8&ndash;12</td><td class="num">6&ndash;10&nbsp;m</td><td>The standard choice; gentle on the product</td></tr>
+          <tr><td>90&deg; short-radius bend, <var>R</var>/<var>D</var> = 3&ndash;5</td><td class="num">10&ndash;15&nbsp;m</td><td>Compact but harder on product and on itself</td></tr>
+          <tr><td>Blind-tee bend</td><td class="num">12&ndash;20&nbsp;m</td><td>A dead pocket of material takes the impact; wear-resistant, but the highest loss</td></tr>
+          <tr><td>45&deg; bend</td><td class="num">3&ndash;5&nbsp;m</td><td>Two 45&deg; bends cost less than one 90&deg; bend</td></tr>
+          <tr><td>Vertical-up section</td><td>Its own length, plus the lift term</td><td>Eq.&nbsp;5.10 handles the lift separately</td></tr>
+          <tr><td>Diverter valve</td><td class="num">3&ndash;6&nbsp;m</td><td>Depends on the internal geometry</td></tr>
+          <tr><td>Flexible hose</td><td>2&ndash;3 times its length</td><td>Corrugations are a continuous loss; keep hoses short</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Two design rules follow. Use as few bends as the route allows, because in the worked example three
+      bends account for 24&nbsp;m of the 99&nbsp;m equivalent length &mdash; a quarter of the friction loss
+      for 3&nbsp;m of actual pipe. And never put a bend immediately after the feed point or immediately
+      before a second bend: the solids need 5&nbsp;to&nbsp;10&nbsp;m of straight pipe to get back up to
+      speed, and two bends in quick succession give a much larger loss than the table suggests.</p>
+
+    <!-- ============================================================ 5.11 -->
+    <h2 id="s11">5.11 Pipeline Sizing and the Stepped Pipeline</h2>
+
+    <p>The bore follows from the air mass flow and the velocity required at the feed point. Because standard
+      pipe sizes are discrete, the practical method is to choose a bore, compute the resulting velocity and
+      loading ratio, and check both.</p>
+
+    <p>Then comes the expansion problem of <a href="#s8">&sect;5.8</a>. If the inlet velocity is set just
+      above saltation and the pressure ratio is 1.6, the outlet velocity is 1.6 times the inlet &mdash;
+      often well into the region where pellets chip, sugar caramelises on the bend and the bend itself wears
+      out. The remedy is to step the pipeline up one size at one or two points along the route:</p>
+
+    <div class="eq">
+      <span class="body">
+        <span class="frac"><span class="num"><var>A</var><sub>2</sub></span><span class="den"><var>A</var><sub>1</sub></span></span>
+        = <span class="frac"><span class="num"><var>U</var><sub>before step</sub></span><span class="den"><var>U</var><sub>after step</sub></span></span>
+        &nbsp;<span class="units">and <var>U</var><sub>after step</sub> must stay above <var>U</var><sub>salt</sub></span>
+      </span>
+      <span class="tag">(5.13)</span>
+    </div>
+
+    <p>The second half of that equation is the trap. A step that is too generous drops the velocity below the
+      minimum conveying velocity and blocks the line at the step &mdash; which is why a stepped pipeline is
+      designed with the saltation calculation repeated for the new bore, not by eye.</p>
+
+    <div class="callout">
+      <span class="label">A step that would have blocked the line</span>
+      <p>In the worked example the velocity reaches 28&nbsp;m/s when the pressure has fallen to
+        1.14&nbsp;bar&nbsp;abs. Stepping from 100&nbsp;mm to 125&nbsp;mm there would cut the velocity by
+        (100/125)<sup>2</sup> = 0.64, to 17.9&nbsp;m/s &mdash; below the 20&nbsp;m/s those pellets need.
+        Stepping to 110&nbsp;mm instead gives 0.826 &times; 28 = 23.1&nbsp;m/s, comfortably above the
+        minimum and comfortably below the damage limit. One size up, not two.</p>
+    </div>
+
+    <!-- ============================================================ 5.12 -->
+    <h2 id="s12">5.12 Air Movers</h2>
+
+    <p>The air mover is selected on the pressure it must develop and the volume it must deliver &mdash; and
+      the two are usually quoted at different conditions, which is a standing source of error.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.12.</b> Air movers by duty.</caption>
+        <thead><tr><th>Machine</th><th>Pressure range</th><th>Use for</th></tr></thead>
+        <tbody>
+          <tr><td>Centrifugal fan</td><td>To 0.1&nbsp;bar</td><td>Very short dilute lines, dust extraction, air-assist</td></tr>
+          <tr><td>Positive-displacement (Roots) blower</td><td>0.3&ndash;1.0&nbsp;bar&nbsp;g, or to 0.5&nbsp;bar vacuum</td><td>The workhorse of dilute-phase conveying</td></tr>
+          <tr><td>Screw compressor, oil-free</td><td>1&ndash;4&nbsp;bar&nbsp;g</td><td>Dense phase, long lines, blow tanks</td></tr>
+          <tr><td>Reciprocating compressor</td><td>To 7&nbsp;bar&nbsp;g and beyond</td><td>Batch blow-tank systems, very long distance</td></tr>
+          <tr><td>Liquid-ring or claw vacuum pump</td><td>To 0.6&nbsp;bar vacuum</td><td>Vacuum systems needing deeper vacuum than a blower gives</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>For the power, the isothermal expression is accurate enough for a teaching calculation and
+      conservative in the right direction:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>P</var> = <span class="frac"><span class="num"><var>m&#775;</var><sub>g</sub><var>RT</var> ln(<var>p</var><sub>2</sub>/<var>p</var><sub>1</sub>)</span><span class="den"><var>&eta;</var></span></span>
+        &nbsp;<span class="units"><var>&eta;</var> = 0.55&ndash;0.70 for a blower package including drive</span>
+      </span>
+      <span class="tag">(5.14)</span>
+    </div>
+
+    <p>Three practical points. A positive-displacement blower delivers a nearly constant
+      <em>volume</em> regardless of pressure, so its mass flow changes with inlet conditions &mdash; hot
+      weather reduces the air it delivers, which reduces the conveying velocity, which is why some systems
+      block on the hottest afternoon of the year. A blower needs a relief valve, because it will happily
+      generate enough pressure to damage itself against a blocked line. And the discharge air is hot:
+      50&nbsp;to&nbsp;90&nbsp;&deg;C above ambient at 0.8&nbsp;bar, which matters for plastics, sugar and
+      anything that softens.</p>
+
+    <!-- ============================================================ 5.13 -->
+    <h2 id="s13">5.13 Feeding the Pipeline</h2>
+
+    <p>The feeder has to get solids into a moving air stream that is at a different pressure from the
+      hopper above it. Every feeder is a different answer to that one problem.</p>
+
+    <figure>
+      <svg viewBox="0 0 840 280" role="img" aria-label="Three feeder types: rotary valve, venturi and blow tank">
+        <rect x="0" y="0" width="840" height="280" fill="#ffffff"/>
+
+        <!-- rotary valve -->
+        <g transform="translate(0,0)">
+          <text x="140" y="26" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#4b4540" text-anchor="middle">rotary valve</text>
+          <path d="M 100 46 L 180 46 L 162 92 L 118 92 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.8"/>
+          <rect x="112" y="92" width="56" height="50" rx="3" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2"/>
+          <circle cx="140" cy="117" r="19" fill="#ffffff" stroke="#6f6f6f" stroke-width="2"/>
+          <g stroke="#6f6f6f" stroke-width="2">
+            <line x1="140" y1="98" x2="140" y2="136"/><line x1="121" y1="117" x2="159" y2="117"/>
+            <line x1="126" y1="103" x2="154" y2="131"/><line x1="126" y1="131" x2="154" y2="103"/>
+          </g>
+          <line x1="60" y1="160" x2="230" y2="160" stroke="#8f8f8f" stroke-width="7"/>
+          <line x1="60" y1="160" x2="230" y2="160" stroke="#f4f1ea" stroke-width="3"/>
+          <g fill="#c9a97a"><circle cx="160" cy="160" r="3"/><circle cx="190" cy="158" r="3"/><circle cx="214" cy="162" r="3"/></g>
+          <path d="M 60 178 L 100 178" stroke="#00B7CD" stroke-width="2"/>
+          <path d="M 94 173 L 104 178 L 94 183" fill="#00B7CD"/>
+          <text x="140" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">to 1 bar &middot; continuous</text>
+          <text x="140" y="228" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">air leaks back through the pockets</text>
+        </g>
+
+        <!-- venturi -->
+        <g transform="translate(280,0)">
+          <text x="140" y="26" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#4b4540" text-anchor="middle">venturi feeder</text>
+          <path d="M 100 46 L 180 46 L 162 92 L 118 92 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="1.8"/>
+          <line x1="118" y1="92" x2="140" y2="140" stroke="#c9a97a" stroke-width="1.8"/>
+          <line x1="162" y1="92" x2="140" y2="140" stroke="#c9a97a" stroke-width="1.8"/>
+          <path d="M 50 150 L 110 150 L 130 160 L 190 160 L 230 160" stroke="#8f8f8f" stroke-width="7" fill="none"/>
+          <path d="M 50 150 L 110 150 L 130 160 L 190 160 L 230 160" stroke="#f4f1ea" stroke-width="3" fill="none"/>
+          <g fill="#c9a97a"><circle cx="160" cy="160" r="3"/><circle cx="190" cy="158" r="3"/><circle cx="214" cy="162" r="3"/></g>
+          <path d="M 50 132 L 90 132" stroke="#00B7CD" stroke-width="2"/>
+          <path d="M 84 127 L 94 132 L 84 137" fill="#00B7CD"/>
+          <text x="140" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">to 0.15 bar &middot; no moving parts</text>
+          <text x="140" y="228" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">the throat does the sealing</text>
+        </g>
+
+        <!-- blow tank -->
+        <g transform="translate(560,0)">
+          <text x="140" y="26" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#4b4540" text-anchor="middle">blow tank</text>
+          <path d="M 104 46 L 176 46 L 176 110 A 36 30 0 0 1 104 110 Z" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.2"/>
+          <path d="M 108 100 A 32 26 0 0 0 172 100 L 172 112 A 32 22 0 0 1 108 112 Z" fill="#c9a97a" opacity="0.5"/>
+          <path d="M 104 46 L 176 46 L 176 110 A 36 30 0 0 1 104 110 Z" fill="none" stroke="#8f8f8f" stroke-width="2.2"/>
+          <line x1="140" y1="30" x2="140" y2="46" stroke="#dcdcdc" stroke-width="9"/>
+          <line x1="140" y1="140" x2="140" y2="156" stroke="#8f8f8f" stroke-width="6"/>
+          <line x1="120" y1="160" x2="230" y2="160" stroke="#8f8f8f" stroke-width="7"/>
+          <line x1="120" y1="160" x2="230" y2="160" stroke="#f4f1ea" stroke-width="3"/>
+          <g fill="#c9a97a"><circle cx="170" cy="160" r="3"/><circle cx="196" cy="158" r="3"/><circle cx="218" cy="162" r="3"/></g>
+          <path d="M 74 78 L 100 78" stroke="#00B7CD" stroke-width="2"/>
+          <path d="M 94 73 L 104 78 L 94 83" fill="#00B7CD"/>
+          <text x="140" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">to 6 bar &middot; batch-wise</text>
+          <text x="140" y="228" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">no rotating seal at all</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 5.5.</b> Three ways into the pipeline. The rotary valve meters continuously but
+        leaks air back through its pockets; the venturi feeder has no moving parts but works only at low
+        pressure; the blow tank is pressurised and emptied in batches, which removes the sealing problem
+        altogether and is what makes high-pressure dense phase possible.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.13.</b> Feeders compared.</caption>
+        <thead><tr><th>Feeder</th><th>Pressure</th><th>Metering</th><th>Suits</th><th>Weakness</th></tr></thead>
+        <tbody>
+          <tr><td>Rotary valve (drop-through)</td><td>To 1&nbsp;bar</td><td>Good, by speed</td><td>The default for dilute-phase pressure systems</td><td>Air leakage (<a href="#s14">&sect;5.14</a>); wear on abrasive material</td></tr>
+          <tr><td>Venturi</td><td>To 0.15&nbsp;bar</td><td>Poor, by head</td><td>Short lines, gentle products, no moving parts wanted</td><td>Very limited pressure, so very limited length</td></tr>
+          <tr><td>Screw feeder (<a href="chapter2.html#s20">&sect;2.20</a>)</td><td>To 1&nbsp;bar with a choke section</td><td>Good, by speed</td><td>Fine powders that aerate; controlled metering into a line</td><td>Wear; the choke must stay full to seal</td></tr>
+          <tr><td>Blow tank, top discharge</td><td>To 6&nbsp;bar</td><td>Batch</td><td>Dense phase; abrasive or fragile products</td><td>Batch operation; tall installation; pressure cycling</td></tr>
+          <tr><td>Eductor / jet pump</td><td>Vacuum side</td><td>Poor</td><td>Vacuum pick-up wands, rail-car unloading</td><td>Low capacity and low efficiency</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 5.14 -->
+    <h2 id="s14">5.14 Air Leakage Through the Feeder</h2>
+
+    <p>A rotary valve seals by clearance, not by contact, so at every revolution each empty pocket carries
+      compressed air back from the line into the hopper. That leaked air has to be supplied by the blower on
+      top of the conveying air, and it has to escape from the hopper somewhere &mdash; usually through a vent
+      filter, which is why a hopper above a rotary valve almost always has one.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.14.</b> Indicative rotary valve air leakage.</caption>
+        <thead><tr><th>Valve size</th><th>At 0.5&nbsp;bar&nbsp;g</th><th>At 1.0&nbsp;bar&nbsp;g</th></tr></thead>
+        <tbody>
+          <tr><td>150&nbsp;mm</td><td class="num">0.5&ndash;0.9&nbsp;m&sup3;/min</td><td class="num">0.8&ndash;1.4&nbsp;m&sup3;/min</td></tr>
+          <tr><td>200&nbsp;mm</td><td class="num">0.8&ndash;1.4&nbsp;m&sup3;/min</td><td class="num">1.3&ndash;2.2&nbsp;m&sup3;/min</td></tr>
+          <tr><td>250&nbsp;mm</td><td class="num">1.2&ndash;2.0&nbsp;m&sup3;/min</td><td class="num">1.9&ndash;3.2&nbsp;m&sup3;/min</td></tr>
+          <tr><td>300&nbsp;mm</td><td class="num">1.7&ndash;2.8&nbsp;m&sup3;/min</td><td class="num">2.7&ndash;4.5&nbsp;m&sup3;/min</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The numbers are worth putting in proportion. The worked example needs 15.1&nbsp;m&sup3;/min of
+      conveying air; a 250&nbsp;mm valve at 0.6&nbsp;bar leaks roughly 1.5&nbsp;m&sup3;/min, about
+      10&nbsp;%, and the blower must be sized for 16.6&nbsp;m&sup3;/min. Ignore the leakage and the system
+      runs 10&nbsp;% slow, which on a line designed with a 20&nbsp;% velocity margin eats half the margin
+      before anything has worn.</p>
+
+    <p>Worn valves leak far more. A valve whose rotor tips have worn 1&nbsp;mm can pass two or three times
+      its original leakage, and the first symptom is a conveying line that has become unreliable "for no
+      reason". Rotor clearance is a scheduled measurement, not a repair.</p>
+
+    <!-- ============================================================ 5.15 -->
+    <h2 id="s15">5.15 Separation and Filtration</h2>
+
+    <p>At the end of the line the solids must be taken out of the air, and the air must be clean enough to
+      release or recirculate. Two devices do the work, usually in series.</p>
+
+    <ul>
+      <li><b>Cyclone.</b> Centrifugal separation, no moving parts, low maintenance, tolerant of high loading
+        and high temperature. It removes most of the mass but its efficiency falls off sharply below about
+        10&nbsp;&micro;m, so it is a pre-separator rather than a final filter.</li>
+      <li><b>Fabric filter.</b> Bags or cartridges with reverse-pulse cleaning, which is the normal final
+        stage. Sized on the air-to-cloth ratio: the volume flow of air divided by the cloth area.</li>
+    </ul>
+
+    <div class="eq">
+      <span class="body">
+        <var>A</var><sub>f</sub> = <span class="frac"><span class="num"><var>Q</var></span><span class="den"><var>v</var><sub>f</sub></span></span>
+        &nbsp;<span class="units"><var>Q</var> in m&sup3;/s at filter conditions, <var>v</var><sub>f</sub> the air-to-cloth ratio in m/s</span>
+      </span>
+      <span class="tag">(5.15)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.15.</b> Air-to-cloth ratio for reverse-pulse filters.</caption>
+        <thead><tr><th>Dust</th><th><var>v</var><sub>f</sub> (m/s)</th><th>Equivalent (m/min)</th></tr></thead>
+        <tbody>
+          <tr><td>Coarse, free-flowing, granular</td><td class="num">0.030&ndash;0.040</td><td class="num">1.8&ndash;2.4</td></tr>
+          <tr><td>General industrial powder</td><td class="num">0.020&ndash;0.030</td><td class="num">1.2&ndash;1.8</td></tr>
+          <tr><td>Fine or cohesive powder, cement, fume</td><td class="num">0.010&ndash;0.020</td><td class="num">0.6&ndash;1.2</td></tr>
+          <tr><td>Sticky or hygroscopic powder</td><td class="num">0.008&ndash;0.015</td><td class="num">0.5&ndash;0.9</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Undersize the filter and the consequences arrive in order: the pressure drop across the medium rises,
+      the available pressure for conveying falls, the velocity falls, and the line blocks. A filter is
+      therefore part of the conveying calculation, not an accessory bolted on afterwards &mdash; which is
+      why <a href="#s9">&sect;5.9</a> carries a filter term in Eq.&nbsp;5.11. Allow
+      0.02&nbsp;to&nbsp;0.05&nbsp;bar for a clean filter and check what the supplier's curve says at the
+      dirty-filter condition.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.16.</b> Choosing between cyclone and filter.</caption>
+        <thead><tr><th>Situation</th><th>Arrangement</th></tr></thead>
+        <tbody>
+          <tr><td>Granular material, little fine dust</td><td>Cyclone alone, with a small vent filter</td></tr>
+          <tr><td>Powder with fines</td><td>Filter alone, mounted on the receiving silo</td></tr>
+          <tr><td>High loading with abrasive fines</td><td>Cyclone as pre-separator, then a filter &mdash; the cyclone protects the bags</td></tr>
+          <tr><td>Hot gas, above the filter medium limit</td><td>Cyclone, then cooling, then filter</td></tr>
+          <tr><td>Toxic or highly valuable product</td><td>Filter with a second safety filter downstream, monitored</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 5.16 -->
+    <h2 id="s16">5.16 Dense Phase and Plug Conveying</h2>
+
+    <p>Dense phase is not simply dilute phase run slowly. It is a different flow regime, it needs a
+      different feeder and a different pressure, and &mdash; crucially &mdash; it only works for materials
+      whose properties allow it.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.17.</b> The three dense-phase mechanisms, and what each needs from the material.</caption>
+        <thead><tr><th>Mechanism</th><th>How it moves</th><th>Material requirement</th><th>Typical products</th></tr></thead>
+        <tbody>
+          <tr><td><b>Fluidised dense phase</b></td><td>The material stays aerated and flows along the pipe bottom almost as a liquid</td>
+              <td>Good air retention: Geldart group&nbsp;A, and fine group&nbsp;C</td>
+              <td>Cement, fly ash, alumina, fine catalyst, flour</td></tr>
+          <tr><td><b>Plug or slug flow</b></td><td>Discrete plugs are pushed along, each with a pressure difference across it</td>
+              <td>High permeability so air can pass through a plug: group&nbsp;D</td>
+              <td>Pellets, grain, granulated sugar, coarse salt</td></tr>
+          <tr><td><b>Assisted plug flow</b></td><td>A bypass pipe or air-injection valves break long plugs before they lock</td>
+              <td>Materials that are neither permeable nor air-retentive</td>
+              <td>Granules with wide size distribution; many food powders</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The failure mode of plug flow is worth understanding, because it is the reason bypass lines exist. As
+      a plug grows longer, the pressure needed to push it rises; if it grows long enough, the pressure
+      required exceeds what the system can provide and the plug locks solid. A <b>bypass pipe</b> &mdash; a
+      small-bore internal or external line with ports along the main pipe &mdash; lets air short-circuit
+      past a growing plug and break it into shorter ones. An <b>air-knife</b> or booster arrangement does
+      the same by injecting air at intervals along the line.</p>
+
+    <p>What dense phase buys is velocity, and therefore everything velocity causes: at 3&nbsp;m/s instead of
+      25&nbsp;m/s, product degradation and bend wear largely disappear, the air volume per tonne falls by a
+      factor of three or four, and the filter gets much smaller. What it costs is pressure &mdash; a
+      compressor rather than a blower, thicker-walled pipe, a pressure vessel as the feeder &mdash; and
+      batch rather than continuous operation in most designs.</p>
+
+    <div class="callout">
+      <span class="label">When the answer is &ldquo;test it&rdquo;</span>
+      <p>Dense-phase conveyability cannot be read off a table. A permeability test and a de-aeration test
+        narrow the field, but the decision on a new material is made on a test rig with the real product,
+        the real distance and the real bends, because the same powder can convey beautifully at
+        2&nbsp;bar&nbsp;and 40&nbsp;m and refuse to move at 2&nbsp;bar and 80&nbsp;m. The honest design
+        answer, when asked for dense phase on an unfamiliar material, is a conveying trial &mdash; and
+        saying so is better engineering than a confident calculation.</p>
+    </div>
+
+    <!-- ============================================================ 5.17 -->
+    <h2 id="s17">5.17 Wear and Product Degradation</h2>
+
+    <p>Velocity causes both problems, and both scale far more steeply than linearly with it. Particle
+      kinetic energy goes as <var>U</var><sup>2</sup>, and erosive wear of a bend by hard particles is
+      commonly found to scale as <var>U</var><sup>2.5</sup> to <var>U</var><sup>4</sup>. Doubling the
+      velocity can therefore multiply bend wear by ten or more:</p>
+
+    <div class="eq">
+      <span class="body">
+        <span class="frac"><span class="num">wear rate<sub>2</sub></span><span class="den">wear rate<sub>1</sub></span></span>
+        = (<var>U</var><sub>2</sub>/<var>U</var><sub>1</sub>)<sup><var>n</var></sup>
+        &nbsp;<span class="units"><var>n</var> = 2.5&ndash;4 for erosive wear; <var>n</var> &asymp; 2&ndash;3 for particle breakage</span>
+      </span>
+      <span class="tag">(5.16)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.18.</b> Controlling wear and degradation.</caption>
+        <thead><tr><th>Measure</th><th>Effect</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Design at the lowest safe velocity, and step the pipeline</td><td>The single biggest effect on both wear and degradation</td><td>Careful design; slightly larger pipe downstream</td></tr>
+          <tr><td>Long-radius bends rather than short</td><td>Lower impact angle, gentler on product and bend</td><td>Space, and a higher equivalent length than a 45&deg; pair</td></tr>
+          <tr><td>Blind-tee bends</td><td>The trapped material takes the impact; very long life on abrasive duty</td><td>The highest pressure loss of any bend; unsuitable for sticky or perishable product</td></tr>
+          <tr><td>Wear-back or cast-basalt lined bends</td><td>Long life at high velocity</td><td>Cost and weight</td></tr>
+          <tr><td>Dense phase instead of dilute</td><td>Removes the cause rather than managing it</td><td>Compressor, blow tank, batch operation</td></tr>
+          <tr><td>Smooth-bore pipe, well-aligned joints</td><td>Fewer local impacts; less streaming wear</td><td>Installation discipline</td></tr>
+          <tr><td>Stainless or polished pipe for food duty</td><td>Prevents product build-up and contamination</td><td>Cost</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The degradation question has a measurable answer: convey a sample and sieve it. For plastic pellets
+      the symptom is "angel hair" and fines; for sugar it is dust and caramelised deposits on bends; for
+      coated fertiliser it is loss of coating and caking downstream. If the product specification includes a
+      fines limit, the conveying velocity is part of the quality system, not just the engineering.</p>
+
+    <!-- ============================================================ 5.18 -->
+    <h2 id="s18">5.18 Static Electricity and Explosion Risk</h2>
+
+    <p>A pneumatic line is a closed pipe carrying a dust cloud in air at high velocity, with millions of
+      particle-wall contacts per second. If the dust is combustible, four of the five conditions of
+      <a href="chapter4.html#s18">&sect;4.18</a> are present continuously, and the fifth &mdash; ignition
+      &mdash; is being manufactured by the flow itself in the form of static charge.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.19.</b> Ignition sources in a pneumatic system, and their controls.</caption>
+        <thead><tr><th>Source</th><th>Mechanism</th><th>Control</th></tr></thead>
+        <tbody>
+          <tr><td>Electrostatic charging of the solids</td><td>Particle-wall contact charges both; the charge accumulates on anything not earthed</td>
+              <td>Metal pipe, every section bonded and earthed, conductive hoses only, resistance checked on a schedule</td></tr>
+          <tr><td>Insulated conductor in the system</td><td>An unbonded flange, a plastic sight glass ring, an ungrounded filter cage builds a spark-capable charge</td>
+              <td>Bond everything; specify conductive or antistatic non-metal parts; test continuity after any maintenance</td></tr>
+          <tr><td>Tramp metal</td><td>A steel object entering the line makes sparks at a bend</td><td>Magnet or metal detector upstream of the feeder</td></tr>
+          <tr><td>Overheated blower or bearing</td><td>Hot surfaces above the dust's ignition temperature</td><td>Temperature monitoring, relief valve on the blower, filter on the blower inlet</td></tr>
+          <tr><td>Smouldering nest from previous operation</td><td>Product left in a dead leg self-heats</td><td>Avoid dead legs; clean-out and inspection; spark detection on high-risk duty</td></tr>
+          <tr><td>Mechanical friction in a plugged line</td><td>A rotary valve grinding against packed material</td><td>Blockage detection and interlocked shutdown</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Protection beyond prevention follows the same logic as for a bucket elevator: explosion venting on
+      the receiver and filter, flame isolation between the line and the silo, suppression where venting is
+      impossible, and &mdash; uniquely available to pneumatic systems &mdash; <b>inerting</b>. Because the
+      system is closed and the gas is already being handled, running it on nitrogen in a closed loop removes
+      the oxygen leg of the pentagon altogether. That is the standard answer for aluminium powder, sulphur
+      and many pharmaceutical products, and CEN/TR&nbsp;15281 is the guidance document.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.20.</b> The standards that apply.</caption>
+        <thead><tr><th>Standard</th><th>Scope</th></tr></thead>
+        <tbody>
+          <tr><td>VDI 3676</td><td>Pneumatic conveying: design fundamentals for gas-solid pipeline flow</td></tr>
+          <tr><td>VDI 2263</td><td>Dust fires and dust explosions: hazards, assessment, protective measures</td></tr>
+          <tr><td>CEN/TR 15281</td><td>Guidance on inerting for the prevention of explosions</td></tr>
+          <tr><td>EN 14491</td><td>Dust explosion venting protective systems</td></tr>
+          <tr><td>EN 14460 / EN 14373</td><td>Explosion-resistant equipment; explosion suppression systems</td></tr>
+          <tr><td>NFPA 654 / NFPA 652</td><td>Combustible dust fundamentals and the dust hazard analysis requirement</td></tr>
+          <tr><td>IEC 60079-32 / CLC/TR 50404</td><td>Electrostatic hazards: assessment and control</td></tr>
+          <tr><td>ATEX 2014/34/EU</td><td>Equipment for explosive atmospheres; zone classification inside the pipe</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 5.19 -->
+    <h2 id="s19">5.19 Commissioning and Troubleshooting</h2>
+
+    <p>A pneumatic system is commissioned with instruments, not with opinions. Two measurements tell you
+      almost everything: the pressure at the feed point, and the delivered rate.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.21.</b> Commissioning sequence.</caption>
+        <thead><tr><th class="num">Step</th><th>Action</th><th>What it tells you</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Run on air alone and record the pressure at the feed point</td><td>The air-only line loss; compare with Eq.&nbsp;5.7. A large discrepancy means the line is not what the drawing says</td></tr>
+          <tr><td class="num">2</td><td>Check the air volume against the blower curve at the measured pressure</td><td>Whether the air mover is delivering, and whether the velocity is what the design assumed</td></tr>
+          <tr><td class="num">3</td><td>Feed at a low rate and step the rate up, recording pressure at each step</td><td>The operating line on the state diagram of Figure&nbsp;5.3; where the pressure starts to climb steeply, you are approaching the minimum velocity</td></tr>
+          <tr><td class="num">4</td><td>Weigh the delivered material over a timed period</td><td>The actual rate, and with the air flow, the actual loading ratio</td></tr>
+          <tr><td class="num">5</td><td>Sieve a sample from the receiver against a sample from the feed hopper</td><td>The degradation the velocity is causing</td></tr>
+          <tr><td class="num">6</td><td>Record the pressure trend over a shift</td><td>Filter blinding, valve wear and build-up all show up as a slow drift</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.22.</b> Troubleshooting: symptom, probable cause, remedy.</caption>
+        <thead><tr><th>Symptom</th><th>Probable cause</th><th>Remedy</th></tr></thead>
+        <tbody>
+          <tr><td>Line blocks at start-up</td><td>Feeding before the air is established, or feeding too fast</td><td>Interlock: air first, then feeder; ramp the feed rate</td></tr>
+          <tr><td>Line blocks after a period of normal running</td><td>Velocity has fallen: filter blinding, valve wear, higher ambient temperature, or a partly closed valve</td>
+              <td>Measure the feed-point pressure and the air volume; compare with commissioning values</td></tr>
+          <tr><td>Blocks always at the same place</td><td>A bend too close to another, a sagging flexible hose, or a step that drops the velocity too far</td>
+              <td>Re-route to give 5&ndash;10&nbsp;m of straight pipe after each bend; re-check the step with Eq.&nbsp;5.13</td></tr>
+          <tr><td>Rate below design, pressure below design</td><td>Feeder not delivering: bridging in the hopper, worn rotor, low speed</td><td>Check the hopper and the valve, not the pipeline</td></tr>
+          <tr><td>Rate below design, pressure at or above design</td><td>The line is working harder than designed: leakage, wrong velocity, or an unexpected route length</td><td>Survey the actual route; measure leakage; recompute</td></tr>
+          <tr><td>Excessive fines or angel hair in the product</td><td>Velocity too high, especially at the discharge end</td><td>Step the pipeline; reduce the air flow to the minimum safe value; consider dense phase</td></tr>
+          <tr><td>Bend wearing through in weeks</td><td>Abrasive material at high velocity</td><td>Lower the velocity first, then line or replace the bend type &mdash; Eq.&nbsp;5.16 shows which matters more</td></tr>
+          <tr><td>Filter differential rising quickly</td><td>Cleaning system faulty, or air-to-cloth ratio too high</td><td>Check pulse valves and compressed air supply; recompute Eq.&nbsp;5.15</td></tr>
+          <tr><td>Product build-up in the pipe</td><td>Moisture, condensation on a cold line, or a sticky product</td><td>Insulate or trace-heat the line; dry the air; review the material's moisture</td></tr>
+          <tr><td>Blower relief valve lifting</td><td>Downstream restriction: blocked line, blinded filter, closed valve</td><td>Stop and find the restriction. A lifting relief valve is a warning, not a control device</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Clearing a blocked line, safely</span>
+      <p>A blocked conveying line is a pressure vessel full of compacted solids. Do not open a coupling to
+        &ldquo;have a look&rdquo;: isolate the air, vent the line through a designed vent point, confirm
+        zero pressure on a gauge, and only then break a joint &mdash; starting at the end nearest the
+        blockage, and never standing in line with the opening. The compressed air behind a plug has
+        enough stored energy to fire the plug out like a projectile.</p>
+    </div>
+
+    <!-- ============================================================ 5.20 -->
+    <h2 id="s20">5.20 Worked Design Example</h2>
+
+    <p>Polyethylene pellets are to be conveyed from a rail-car unloading hopper to a silo: 60&nbsp;m
+      horizontal, 15&nbsp;m vertical, three long-radius bends, 10&nbsp;t/h. Size a dilute-phase
+      positive-pressure system.</p>
+
+    <div class="worked">
+      <div class="table-wrap">
+        <table>
+          <caption><b>Table 5.23.</b> Design data.</caption>
+          <tbody>
+            <tr><th>Material</th><td>Polyethylene pellets, <var>d</var><sub>p</sub> &asymp; 3.5&nbsp;mm, free flowing, friable at high velocity</td></tr>
+            <tr><th>Particle / bulk density</th><td>920 / 550&nbsp;kg/m&sup3;</td></tr>
+            <tr><th>Required rate <var>m&#775;</var><sub>s</sub></th><td>10&nbsp;t/h = 2.778&nbsp;kg/s</td></tr>
+            <tr><th>Route</th><td>60&nbsp;m horizontal + 15&nbsp;m vertical + 3 long-radius bends</td></tr>
+            <tr><th>Air temperature</th><td>20&nbsp;&deg;C at the blower inlet; discharge to atmosphere at 1.0&nbsp;bar&nbsp;abs</td></tr>
+            <tr><th>Feeder</th><td>250&nbsp;mm rotary valve under the hopper</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="step">
+        <h4>Step 1 &mdash; Phase, system type and design velocity</h4>
+        <p>Pellets are Geldart group&nbsp;D: permeable, no air retention. Dense phase would be possible only
+          as plug flow with a bypass, and the duty is modest and continuous, so choose
+          <b>dilute phase, positive pressure, rotary valve feed</b>.</p>
+        <p>Table&nbsp;5.8 gives 16&ndash;20&nbsp;m/s minimum for plastic pellets, and Eq.&nbsp;5.2 with
+          <var>d</var><sub>p</sub> = 3&nbsp;mm, <var>D</var> = 100&nbsp;mm and <var>&mu;</var> = 10 gave
+          17.8&nbsp;m/s in <a href="#s6">&sect;5.6</a>. Take the design velocity at the feed point as
+          <b>20&nbsp;m/s</b>.</p>
+        <p class="result">Dilute phase &middot; positive pressure &middot; <var>U</var><sub>1</sub> = 20&nbsp;m/s</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 2 &mdash; First guess at the pressure, and the air mass flow</h4>
+        <p>Guess a line pressure drop of 0.6&nbsp;bar, so the feed point is at
+          <var>p</var><sub>1</sub> = 1.6&nbsp;bar&nbsp;abs and the receiver at
+          <var>p</var><sub>2</sub> = 1.0&nbsp;bar&nbsp;abs. From Eq.&nbsp;5.5,
+          <var>&rho;</var><sub>1</sub> = 160,000/(287&nbsp;&times;&nbsp;293) = 1.903&nbsp;kg/m&sup3; and
+          <var>&rho;</var><sub>2</sub> = 1.189&nbsp;kg/m&sup3;.</p>
+        <p>Take a 100&nbsp;mm bore: <var>A</var> = 0.007854&nbsp;m&sup2;. Then
+          <var>m&#775;</var><sub>g</sub> = <var>&rho;</var><sub>1</sub><var>AU</var><sub>1</sub> =
+          1.903&nbsp;&times;&nbsp;0.007854&nbsp;&times;&nbsp;20 = 0.2989&nbsp;kg/s.</p>
+        <p class="result"><var>m&#775;</var><sub>g</sub> = 0.299&nbsp;kg/s in a 100&nbsp;mm line</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 3 &mdash; Solids loading ratio and the exit velocity</h4>
+        <p><var>&mu;</var> = 2.778/0.2989 = <b>9.3</b>, which Table&nbsp;5.9 puts squarely in the
+          dilute-phase band &mdash; consistent with the assumption of step&nbsp;1.</p>
+        <p>From Eq.&nbsp;5.6 the exit velocity is
+          <var>U</var><sub>2</sub> = 20&nbsp;&times;&nbsp;1.6/1.0 = <b>32&nbsp;m/s</b>. That is high for
+          pellets, and step&nbsp;8 deals with it.</p>
+        <p class="result"><var>&mu;</var> = 9.3 &middot; <var>U</var><sub>2</sub> = 32&nbsp;m/s</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 4 &mdash; Equivalent length and mean conditions</h4>
+        <p>Three long-radius bends at 8&nbsp;m each (Table&nbsp;5.11):
+          <var>L</var><sub>eq</sub> = 60 + 15 + 24 = <b>99&nbsp;m</b>.</p>
+        <p>Mean density <var>&rho;</var><sub>m</sub> = (1.903 + 1.189)/2 = 1.546&nbsp;kg/m&sup3;, so the
+          mean velocity is <var>U</var><sub>m</sub> =
+          0.2989/(1.546&nbsp;&times;&nbsp;0.007854) = 24.6&nbsp;m/s and the dynamic pressure is
+          <var>&rho;</var><sub>m</sub><var>U</var><sub>m</sub><sup>2</sup>/2 = 468&nbsp;Pa.</p>
+        <p class="result"><var>L</var><sub>eq</sub> = 99&nbsp;m &middot; <var>U</var><sub>m</sub> = 24.6&nbsp;m/s</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 5 &mdash; Pressure drop, term by term</h4>
+        <p>With <var>L</var>/<var>D</var> = 990, <var>&lambda;</var> = 0.02,
+          <var>&lambda;</var><sub>s</sub> = 0.004 (Table&nbsp;5.10) and
+          <var>U</var><sub>s</sub> = 0.8<var>U</var><sub>m</sub> = 19.7&nbsp;m/s:</p>
+        <div class="table-wrap">
+          <table>
+            <caption><b>Table 5.24.</b> Pressure drop by component.</caption>
+            <thead><tr><th>Term</th><th>Equation</th><th>Pa</th><th>Share</th></tr></thead>
+            <tbody>
+              <tr><td>Solids friction</td><td>5.8</td><td class="num">17,240</td><td class="num">47&nbsp;%</td></tr>
+              <tr><td>Gas friction</td><td>5.7</td><td class="num">9,270</td><td class="num">25&nbsp;%</td></tr>
+              <tr><td>Solids acceleration</td><td>5.9</td><td class="num">6,970</td><td class="num">19&nbsp;%</td></tr>
+              <tr><td>Solids lift, 15&nbsp;m</td><td>5.10</td><td class="num">2,640</td><td class="num">7&nbsp;%</td></tr>
+              <tr><td>Gas acceleration and lift</td><td>5.9, 5.10</td><td class="num">700</td><td class="num">2&nbsp;%</td></tr>
+              <tr><th>Pipeline total</th><td>&nbsp;</td><th class="num">36,820</th><th class="num">0.368&nbsp;bar</th></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Add 0.05&nbsp;bar for the rotary valve and 0.05&nbsp;bar for the filter, then a 1.2 design
+          margin (Eq.&nbsp;5.11): (0.368 + 0.10)&nbsp;&times;&nbsp;1.2 = <b>0.56&nbsp;bar</b>. The guess
+          was 0.6&nbsp;bar, so the calculation has converged on the first pass and no second iteration is
+          needed.</p>
+        <p class="result">&Delta;<var>p</var><sub>total</sub> &asymp; 0.56&nbsp;bar, against 0.6 assumed &mdash; converged</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 6 &mdash; Air mover</h4>
+        <p>Volume at the blower inlet:
+          <var>Q</var> = <var>m&#775;</var><sub>g</sub>/<var>&rho;</var><sub>atm</sub> =
+          0.2989/1.189 = 0.251&nbsp;m&sup3;/s = <b>15.1&nbsp;m&sup3;/min</b>. Add the rotary valve
+          leakage of about 1.5&nbsp;m&sup3;/min from Table&nbsp;5.14, giving
+          <b>16.6&nbsp;m&sup3;/min</b> at 0.6&nbsp;bar&nbsp;g &mdash; squarely positive-displacement
+          blower territory (Table&nbsp;5.12).</p>
+        <p>Power from Eq.&nbsp;5.14:
+          <var>P</var> = 0.2989&nbsp;&times;&nbsp;287&nbsp;&times;&nbsp;293&nbsp;&times;&nbsp;ln(1.6)
+          = 11.8&nbsp;kW isothermal; at <var>&eta;</var> = 0.65 that is 18.2&nbsp;kW, so select a
+          <b>22&nbsp;kW</b> package.</p>
+        <p class="result">PD blower, 16.6&nbsp;m&sup3;/min at 0.6&nbsp;bar&nbsp;g, 22&nbsp;kW motor</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 7 &mdash; Filter</h4>
+        <p>Air at the receiver: <var>Q</var><sub>2</sub> = 0.2989/1.189 = 0.251&nbsp;m&sup3;/s. Pellets
+          generate coarse dust, so take <var>v</var><sub>f</sub> = 0.025&nbsp;m/s (Table&nbsp;5.15):
+          <var>A</var><sub>f</sub> = 0.251/0.025 = <b>10.1&nbsp;m&sup2;</b> of cloth.</p>
+        <p class="result">Reverse-pulse filter, 10&nbsp;m&sup2; cloth, on the silo</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 8 &mdash; Stepping the pipeline</h4>
+        <p>The exit velocity of 32&nbsp;m/s will chip pellets and produce angel hair. Take 28&nbsp;m/s as
+          the limit: from Eq.&nbsp;5.6 the velocity reaches 28&nbsp;m/s when the pressure has fallen to
+          20&nbsp;&times;&nbsp;1.6/28 = 1.14&nbsp;bar&nbsp;abs, roughly three-quarters of the way along the
+          route.</p>
+        <p>Step there. Going to 125&nbsp;mm would cut the velocity to
+          (100/125)<sup>2</sup>&nbsp;&times;&nbsp;28 = 17.9&nbsp;m/s, <em>below</em> the 20&nbsp;m/s the
+          pellets need &mdash; the line would block at the step. Going to <b>110&nbsp;mm</b> gives
+          0.826&nbsp;&times;&nbsp;28 = 23.1&nbsp;m/s, above the minimum and below the damage limit.</p>
+        <p class="result">Step 100&nbsp;mm &rarr; 110&nbsp;mm at about 1.14&nbsp;bar&nbsp;abs</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 9 &mdash; Protection and checks</h4>
+        <p>Polyethylene dust is combustible, so the system is earthed and bonded throughout with conductive
+          hose only, a magnet is fitted upstream of the rotary valve, the filter and receiver carry
+          explosion venting sized from the dust's test data, and the blower has a relief valve and
+          discharge temperature monitoring (<a href="#s18">&sect;5.18</a>).</p>
+        <p>Interlocks: air established before the feeder starts; feeder stops on low air flow, high line
+          pressure or high filter differential.</p>
+        <p class="result">Earthing, magnet, venting, relief valve, air-before-feeder interlock</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption><b>Table 5.25.</b> Design summary.</caption>
+          <tbody>
+            <tr><th>System</th><td>Dilute-phase positive pressure, rotary valve feed</td></tr>
+            <tr><th>Pipeline</th><td>100&nbsp;mm bore, stepped to 110&nbsp;mm; 99&nbsp;m equivalent length</td></tr>
+            <tr><th>Velocity</th><td>20&nbsp;m/s at the feed point, 23&nbsp;m/s at the discharge after stepping</td></tr>
+            <tr><th>Air</th><td>0.299&nbsp;kg/s; 16.6&nbsp;m&sup3;/min at the blower including valve leakage</td></tr>
+            <tr><th>Loading ratio</th><td><var>&mu;</var> = 9.3</td></tr>
+            <tr><th>Pressure</th><td>0.56&nbsp;bar&nbsp;g at the feed point</td></tr>
+            <tr><th>Blower</th><td>Positive displacement, 22&nbsp;kW, relief valve, silencer</td></tr>
+            <tr><th>Filter</th><td>10&nbsp;m&sup2; reverse-pulse, on the receiving silo</td></tr>
+            <tr><th>Energy</th><td>1.82&nbsp;kWh per tonne conveyed</td></tr>
+            <tr><th>Cross-check</th><td>A bucket elevator over the same 15&nbsp;m lift would spend about
+              0.05&nbsp;kWh/t (<a href="chapter4.html#s13">&sect;4.13</a>) &mdash; roughly a thirtieth
+              &mdash; but it would need a separate horizontal conveyor at each end, a transfer point, and a
+              structure to carry it. That is what the 1.82&nbsp;kWh/t is buying</td></tr>
+            <tr><th>Next step</th><td>Confirm the velocity and the degradation on a conveying trial with the
+              actual pellets before ordering, as <a href="#s1">&sect;5.1</a> recommends for any friable
+              product</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ============================================================ 5.21 -->
+    <h2 id="s21">5.21 Nomenclature</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 5.26.</b> Symbols used in this chapter.</caption>
+        <thead><tr><th>Symbol</th><th>Quantity</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td><var>A</var></td><td>Pipe cross-sectional area</td><td>m&sup2;</td></tr>
+          <tr><td><var>A</var><sub>f</sub></td><td>Filter cloth area</td><td>m&sup2;</td></tr>
+          <tr><td><var>D</var></td><td>Pipe bore</td><td>m</td></tr>
+          <tr><td><var>d</var><sub>p</sub></td><td>Particle size, median</td><td>m</td></tr>
+          <tr><td><var>g</var></td><td>Acceleration of gravity, 9.81</td><td>m/s&sup2;</td></tr>
+          <tr><td><var>H</var></td><td>Net vertical rise of the route</td><td>m</td></tr>
+          <tr><td><var>k</var></td><td>Design margin on pressure drop</td><td>&mdash;</td></tr>
+          <tr><td><var>L</var>, <var>L</var><sub>eq</sub></td><td>Route length; equivalent length including bends</td><td>m</td></tr>
+          <tr><td><var>m&#775;</var><sub>g</sub></td><td>Air mass flow</td><td>kg/s</td></tr>
+          <tr><td><var>m&#775;</var><sub>s</sub></td><td>Solids mass flow</td><td>kg/s</td></tr>
+          <tr><td><var>n</var></td><td>Velocity exponent for wear or breakage</td><td>&mdash;</td></tr>
+          <tr><td><var>P</var></td><td>Air mover power</td><td>kW</td></tr>
+          <tr><td><var>p</var><sub>1</sub>, <var>p</var><sub>2</sub></td><td>Absolute pressure at feed point and discharge</td><td>Pa</td></tr>
+          <tr><td><var>Q</var></td><td>Volume flow of air</td><td>m&sup3;/s</td></tr>
+          <tr><td><var>R</var></td><td>Gas constant for air, 287</td><td>J/(kg&middot;K)</td></tr>
+          <tr><td><var>T</var></td><td>Absolute temperature</td><td>K</td></tr>
+          <tr><td><var>U</var></td><td>Superficial gas velocity</td><td>m/s</td></tr>
+          <tr><td><var>U</var><sub>m</sub></td><td>Gas velocity at mean pressure</td><td>m/s</td></tr>
+          <tr><td><var>U</var><sub>salt</sub></td><td>Saltation velocity</td><td>m/s</td></tr>
+          <tr><td><var>U</var><sub>s</sub></td><td>Particle velocity</td><td>m/s</td></tr>
+          <tr><td><var>v</var><sub>f</sub></td><td>Air-to-cloth ratio</td><td>m/s</td></tr>
+          <tr><td><var>&alpha;</var>, <var>&beta;</var></td><td>Exponents in the Rizk correlation</td><td>&mdash;</td></tr>
+          <tr><td><var>&Delta;p</var></td><td>Pressure drop</td><td>Pa</td></tr>
+          <tr><td><var>&eta;</var></td><td>Air mover package efficiency</td><td>&mdash;</td></tr>
+          <tr><td><var>&lambda;</var></td><td>Gas friction factor</td><td>&mdash;</td></tr>
+          <tr><td><var>&lambda;</var><sub>s</sub></td><td>Solids friction factor</td><td>&mdash;</td></tr>
+          <tr><td><var>&mu;</var></td><td>Solids loading ratio (phase density)</td><td>&mdash;</td></tr>
+          <tr><td><var>&rho;</var><sub>g</sub>, <var>&rho;</var><sub>m</sub></td><td>Gas density; gas density at mean pressure</td><td>kg/m&sup3;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 5.22 -->
+    <h2 id="s22">5.22 Problems</h2>
+
+    <div class="callout rule">
+      <span class="label">Before you start</span>
+      <p>Try the <a href="quiz5.html">40-question self-check</a> first. It covers the same ground in
+        multiple-choice form with worked explanations, and it will show you which sections to re-read
+        before you spend time on these.</p>
+    </div>
+
+    <ol class="problems">
+      <li><b>Safety, first.</b> A conveying line has blocked. An operator proposes to break the coupling
+        nearest the blockage while the blower keeps running, &ldquo;so the air helps push the plug out&rdquo;.
+        State what will physically happen, and write the correct four-step procedure.</li>
+
+      <li><b>Safety, second.</b> Using the five conditions of <a href="chapter4.html#s18">&sect;4.18</a>,
+        explain why a pneumatic line carrying a combustible powder generates its own ignition source, and
+        state the one protective measure available to a pneumatic system that a bucket elevator cannot
+        use.</li>
+
+      <li>A system conveys 8&nbsp;t/h of solids with an air mass flow of 0.25&nbsp;kg/s. Find the solids
+        loading ratio and state the regime. <i>[Answer: <var>&mu;</var> = 8.9 &mdash; dilute phase]</i></li>
+
+      <li>A 150&nbsp;mm line carries air at 18&nbsp;m/s, 1.4&nbsp;bar&nbsp;abs and 20&nbsp;&deg;C. Find the
+        air density and the air mass flow.
+        <i>[Answer: <var>&rho;</var> = 1.665&nbsp;kg/m&sup3;, <var>A</var> = 0.01767&nbsp;m&sup2;,
+        <var>m&#775;</var><sub>g</sub> = 0.530&nbsp;kg/s]</i></li>
+
+      <li>The line in Problem&nbsp;4 discharges to atmosphere at 1.0&nbsp;bar&nbsp;abs. What is the exit
+        velocity, and why does it matter?
+        <i>[Answer: 25.2&nbsp;m/s; the discharge end is where wear and product degradation occur]</i></li>
+
+      <li>Estimate the saltation velocity for a 2&nbsp;mm granular material in an 80&nbsp;mm pipe at a
+        loading ratio of 12, using Eq.&nbsp;5.2.
+        <i>[Answer: <var>&alpha;</var> = 4.84, <var>&beta;</var> = 4.70,
+        &radic;(<var>gD</var>) = 0.886, <var>U</var><sub>salt</sub> = 16.1&nbsp;m/s, so design at about
+        20&nbsp;m/s]</i></li>
+
+      <li>A 100&nbsp;mm line is 80&nbsp;m long with mean air density 1.4&nbsp;kg/m&sup3; and mean velocity
+        25&nbsp;m/s. Find the gas friction pressure drop with <var>&lambda;</var> = 0.02.
+        <i>[Answer: dynamic pressure 437.5&nbsp;Pa, <var>L</var>/<var>D</var> = 800, &Delta;<var>p</var> =
+        7,000&nbsp;Pa]</i></li>
+
+      <li>For the same line at <var>&mu;</var> = 10 and <var>&lambda;</var><sub>s</sub> = 0.005, find the
+        solids friction pressure drop, and comment on the ratio to the gas friction term.
+        <i>[Answer: 17,500&nbsp;Pa &mdash; two and a half times the gas friction, which is the normal
+        picture]</i></li>
+
+      <li>A vertical section lifts 3&nbsp;kg/s of solids 20&nbsp;m in a 100&nbsp;mm pipe with a particle
+        velocity of 20&nbsp;m/s. Find the lift pressure drop for the solids.
+        <i>[Answer: 3,750&nbsp;Pa]</i></li>
+
+      <li>A blower must deliver 0.30&nbsp;kg/s of air from 1.0 to 1.8&nbsp;bar&nbsp;abs at
+        20&nbsp;&deg;C with a package efficiency of 0.65. Find the power.
+        <i>[Answer: 22.8&nbsp;kW]</i></li>
+
+      <li>If the system in Problem&nbsp;10 conveys 12&nbsp;t/h, what is the energy per tonne? Compare it
+        with the 0.109&nbsp;kWh/t of the bucket elevator in <a href="chapter4.html#s20">&sect;4.20</a> and
+        comment. <i>[Answer: 1.90&nbsp;kWh/t, about 17 times the bucket elevator]</i></li>
+
+      <li>A receiver handles 0.26&nbsp;m&sup3;/s of air carrying a fine powder. Size the filter cloth area
+        at an air-to-cloth ratio of 0.02&nbsp;m/s, and say what happens if you install half that area.
+        <i>[Answer: 13&nbsp;m&sup2;; at half the area the differential pressure rises, the pressure
+        available for conveying falls, the velocity falls and the line eventually blocks]</i></li>
+
+      <li>A 250&nbsp;mm rotary valve feeds a line at 0.6&nbsp;bar&nbsp;g. The conveying air requirement is
+        15&nbsp;m&sup3;/min. Using Table&nbsp;5.14, estimate the valve leakage and the blower duty, and
+        state what happens to the conveying velocity if the leakage is ignored.
+        <i>[Answer: about 1.5&nbsp;m&sup3;/min, so the blower needs 16.5&nbsp;m&sup3;/min; ignoring it
+        leaves the line running about 10&nbsp;% slow, eating half a 20&nbsp;% velocity margin]</i></li>
+
+      <li>A line runs at 18&nbsp;m/s at the feed point, where the pressure is 1.5&nbsp;bar&nbsp;abs. The
+        material must not exceed 26&nbsp;m/s. At what pressure must the pipeline be stepped, and what step
+        size is acceptable if the minimum conveying velocity is 17&nbsp;m/s?
+        <i>[Answer: the limit is reached at 18&nbsp;&times;&nbsp;1.5/26 = 1.04&nbsp;bar&nbsp;abs; a step
+        from 100 to 110&nbsp;mm gives 0.826&nbsp;&times;&nbsp;26 = 21.5&nbsp;m/s, acceptable, while 125&nbsp;mm
+        would give 16.6&nbsp;m/s, below the minimum]</i></li>
+
+      <li>A plant conveys cement 120&nbsp;m in dilute phase at 14&nbsp;m/s and wants to halve the energy
+        per tonne. Explain which changes could achieve that, in order of effectiveness, and what each one
+        costs.</li>
+
+      <li>Two powders are offered for the same pneumatic system: one is Geldart group&nbsp;A with good air
+        retention, the other group&nbsp;B with poor air retention but high permeability. State which
+        dense-phase mechanism suits each, and what happens if you apply the wrong one.</li>
+
+      <li>A bend wears through in eight weeks at 24&nbsp;m/s. Estimate the life at 18&nbsp;m/s if the wear
+        exponent is 3, and say why the answer should still be treated as an estimate.
+        <i>[Answer: (24/18)<sup>3</sup> = 2.37, so roughly 19&nbsp;weeks; the exponent itself is uncertain
+        between 2.5 and 4, and wear depends on the impact angle and the bend material as well]</i></li>
+
+      <li>A pharmaceutical plant must move a toxic, combustible powder from three reactors to one packing
+        line. Recommend a system type and justify it on containment, explosion protection and layout,
+        referring to Table&nbsp;5.4.</li>
+
+      <li>A system that has run correctly for two years starts blocking on hot afternoons. Give the likely
+        cause in terms of the blower characteristic and the gas law, and two ways to fix it.</li>
+
+      <li><b>Design problem.</b> Wheat flour (<var>&rho;</var><sub>bulk</sub> = 550&nbsp;kg/m&sup3;,
+        Geldart group&nbsp;C, combustible dust) must be conveyed at 6&nbsp;t/h from a bag-dump station to a
+        mixer 40&nbsp;m away horizontally and 10&nbsp;m up, with two bends, using a <em>vacuum</em> system
+        with a receiver and filter over the mixer. Work through steps&nbsp;1 to&nbsp;7 of Table&nbsp;5.3:
+        choose the phase and velocity from Table&nbsp;5.8, select a bore, find
+        <var>m&#775;</var><sub>g</sub> and <var>&mu;</var> at the mean vacuum condition, estimate the
+        pressure drop, size the exhauster and the filter, and list the explosion protection measures the
+        dust requires. <i>[Guide: at a mean pressure of 0.6&nbsp;bar&nbsp;abs the air density is
+        0.714&nbsp;kg/m&sup3;; a 125&nbsp;mm bore at 14&nbsp;m/s gives
+        <var>m&#775;</var><sub>g</sub> = 0.123&nbsp;kg/s and <var>&mu;</var> = 13.6, which is at the top of
+        the dilute band and acceptable for a fine powder]</i></li>
+    </ol>
+
+    <!-- ============================================================ 5.23 -->
+    <h2 id="s23">5.23 References</h2>
+
+    <ol class="refs">
+      <li>Mills, D., 2016. <em>Pneumatic Conveying Design Guide</em>, 3rd ed. Oxford:
+        Butterworth-Heinemann. &mdash; The standard practical reference; source of the design approach and
+        the conveying-trial philosophy of <a href="#s1">&sect;5.1</a>.</li>
+      <li>Klinzing, G. E., Rizk, F., Marcus, R. and Leung, L. S., 2010. <em>Pneumatic Conveying of
+        Solids: A Theoretical and Practical Approach</em>, 3rd ed. Dordrecht: Springer. &mdash; Theory of
+        gas-solid pipeline flow and the saltation correlations.</li>
+      <li>Rizk, F., 1973. <em>Pneumatic conveying at optimal operating conditions and a solution of
+        Barth's equation</em>. Proc. Pneumotransport 3, BHRA. &mdash; Origin of Eq.&nbsp;5.1.</li>
+      <li>Geldart, D., 1973. Types of gas fluidization. <em>Powder Technology</em>, 7(5):285&ndash;292.
+        &mdash; The classification of Table&nbsp;5.6.</li>
+      <li>Zenz, F. A. and Othmer, D. F., 1960. <em>Fluidization and Fluid-Particle Systems</em>. New York:
+        Reinhold. &mdash; The state diagram of Figure&nbsp;5.3.</li>
+      <li>Verein Deutscher Ingenieure, 2019. <em>VDI 3676: Pneumatic conveying &mdash; fundamentals</em>.
+        D&uuml;sseldorf: VDI.</li>
+      <li>Verein Deutscher Ingenieure, 2020. <em>VDI 2263: Dust fires and dust explosions</em>.
+        D&uuml;sseldorf: VDI.</li>
+      <li>CEN, 2006. <em>CEN/TR 15281: Guidance on inerting for the prevention of explosions</em>.
+        Brussels: CEN.</li>
+      <li>National Fire Protection Association, 2020. <em>NFPA 654: Standard for the Prevention of Fire
+        and Dust Explosions from the Manufacturing, Processing and Handling of Combustible
+        Particulate Solids</em>. Quincy, MA: NFPA.</li>
+      <li>IEC, 2014. <em>IEC 60079-32-1: Explosive atmospheres &mdash; electrostatic hazards,
+        guidance</em>. Geneva: IEC.</li>
+      <li>Woodcock, C. R. and Mason, J. S., 1987. <em>Bulk Solids Handling: An Introduction to the
+        Practice and Technology</em>. Glasgow: Leonard Hill. &mdash; Feeders, filtration and system
+        comparison.</li>
+      <li>Wypych, P. W., 2009. Pneumatic conveying of bulk solids: recent advances and future needs.
+        <em>Bulk Solids Handling</em>. &mdash; Scale-up, test-rig practice and the limits of correlations.</li>
+    </ol>
+
+    <div class="chapter-nav">
+      <span><a href="quiz4.html">&larr; Chapter 4 Self-Check</a></span>
+      <span><a href="quiz5.html">Chapter 5 Self-Check &rarr;</a></span>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Course</h3>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter5.html">Chapter 5: Pneumatic Conveying</a></li>
+        <li><a href="quiz5.html">Chapter 5: Self-Check</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Standards Referenced</h3>
+      <ul>
+        <li>VDI 3676 &mdash; Pneumatic conveying</li>
+        <li>VDI 2263 &mdash; Dust explosions</li>
+        <li>CEN/TR 15281 &mdash; Inerting</li>
+        <li>IEC 60079-32 &mdash; Electrostatics</li>
+      </ul>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Lecture notes for MHE 301. All rights reserved. Layout inspired by open courseware sites; content, branding
+        and code are original to this course.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Charatchai Yenphayab. All rights reserved. MHE 301 Materials Handling Engineering &mdash; course
+    notes, Semester 1 / 2026. No part of this site may be reproduced, adapted or redistributed without prior
+    written permission.
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
