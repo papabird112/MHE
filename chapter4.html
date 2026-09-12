@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 4: Bucket Elevators | MHE 301 Materials Handling Engineering</title>
+<meta name="description" content="Bucket elevator design: discharge types, the pole point, buckets and spacing, belt or chain, capacity, speed, power, tensions, take-up, and dust explosion protection.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">MHE</span>
+      <span class="logo-text">BAE-MHE<small>Biosystem and Agricultural Engineering, KMITL</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-nav">
+      <a href="index.html">About</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="chapter4.html">Lecture Notes</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="chapter4.html" class="active">EN</a>
+      <a href="chapter4-th.html" lang="th">ไทย</a>
+    </div>
+    <a class="btn-give" href="#s20">Worked Example</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MHE 301 <span>|</span> Chapter 4 <span>|</span> Lecture Notes</p>
+    <h1>Bucket Elevators</h1>
+    <p class="tagline">Vertical lifting of bulk solids: discharge types and the pole point, buckets and
+      spacing, belt or chain, capacity, power, tensions, and the dust explosion problem that comes with
+      the machine.</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="course-menu">
+      <h2>Course Menu</h2>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter1.html">Ch.&nbsp;1 &mdash; Equipment &amp; Selection</a></li>
+        <li><a href="quiz1.html">Ch.&nbsp;1 &mdash; Self-Check</a></li>
+        <li><a href="chapter2.html">Ch.&nbsp;2 &mdash; Screw Conveyors</a></li>
+        <li><a href="quiz2.html">Ch.&nbsp;2 &mdash; Self-Check</a></li>
+        <li><a href="chapter3.html">Ch.&nbsp;3 &mdash; Belt Conveyors</a></li>
+        <li><a href="quiz3.html">Ch.&nbsp;3 &mdash; Self-Check</a></li>
+        <li><a href="chapter4.html" class="active">Ch.&nbsp;4 &mdash; Bucket Elevators</a></li>
+        <li><a href="quiz4.html">Ch.&nbsp;4 &mdash; Self-Check</a></li>
+        <li><span class="muted">Ch.&nbsp;5 &mdash; Pneumatic Conveying<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;6 &mdash; Chain &amp; Apron Conveyors<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;7 &mdash; Cranes &amp; Hoists<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;8 &mdash; Industrial Trucks &amp; AGVs<em>Not yet published</em></span></li>
+        <li><span class="muted">Ch.&nbsp;9 &mdash; Storage &amp; Warehousing<em>Not yet published</em></span></li>
+      </ul>
+    </nav>
+
+    <section class="course-info">
+      <h2>Chapter Info</h2>
+      <dl>
+        <dt>Weeks</dt><dd>9</dd>
+        <dt>Problem Sets</dt><dd>PS 6</dd>
+        <dt>Design Basis</dt>
+        <dd>
+          <ul>
+            <li>CEMA 550</li>
+            <li>DIN 15234 / ISO 7119</li>
+            <li>NFPA 61 / EN 14491</li>
+          </ul>
+        </dd>
+        <dt>Key Skills</dt>
+        <dd>
+          <span class="pill">Capacity</span>
+          <span class="pill">Pole point</span>
+          <span class="pill">Power</span>
+          <span class="pill">Tensions</span>
+          <span class="pill">Explosion protection</span>
+        </dd>
+      </dl>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <p class="lead">A bucket elevator lifts bulk material straight up, in a footprint barely larger than the
+      casing itself. Nothing else moves a large tonnage vertically for so little power. This chapter builds
+      the design chain &mdash; choose the discharge type, size the buckets and spacing, pick the speed that
+      actually discharges, find the power and the tensions, and then deal with the dust, because the
+      elevator leg is the classic location of a grain dust explosion.</p>
+
+    <div class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">What a Bucket Elevator Is</a></li>
+        <li><a href="#s2">Advantages, Limitations and the Design Procedure</a></li>
+        <li><a href="#s3">Anatomy of a Bucket Elevator</a></li>
+        <li><a href="#s4">The Four Discharge Types</a></li>
+        <li><a href="#s5">The Pole Point: Predicting the Discharge</a></li>
+        <li><a href="#s6">Buckets: Styles, Materials and Spacing</a></li>
+        <li><a href="#s7">Belt or Chain?</a></li>
+        <li><a href="#s8">Casing, Head and Boot</a></li>
+        <li><a href="#s9">Feeding the Elevator: Dig and Flood Feed</a></li>
+        <li><a href="#s10">Material Characteristics That Decide the Design</a></li>
+        <li><a href="#s11">Capacity Calculation</a></li>
+        <li><a href="#s12">Speed Selection</a></li>
+        <li><a href="#s13">Power</a></li>
+        <li><a href="#s14">Tensions in a Belt Elevator</a></li>
+        <li><a href="#s15">Chain Pull in a Chain Elevator</a></li>
+        <li><a href="#s16">Shafts, Torque and the Starting Case</a></li>
+        <li><a href="#s17">Take-up and the Backstop</a></li>
+        <li><a href="#s18">Dust and Explosion Protection</a></li>
+        <li><a href="#s19">Safety and Maintenance</a></li>
+        <li><a href="#s20">Worked Design Example</a></li>
+        <li><a href="#s21">Nomenclature</a></li>
+        <li><a href="#s22">Problems</a></li>
+        <li><a href="#s23">References</a></li>
+      </ol>
+    </div>
+
+    <!-- ============================================================ 4.1 -->
+    <h2 id="s1">4.1 What a Bucket Elevator Is</h2>
+
+    <p>A bucket elevator is a series of buckets bolted to an endless belt or chain, running in a vertical
+      casing between a driven head pulley (or sprocket) at the top and a take-up pulley in the <em>boot</em>
+      at the bottom. The buckets pick the material up at the boot, carry it up the inside of one casing leg,
+      and throw or pour it out at the head. The empty buckets return down the other leg.</p>
+
+    <p>Two facts about that arrangement explain most of the machine's character. First, the material is
+      carried in discrete containers rather than in a continuous stream, so the elevator is indifferent to
+      lift height &mdash; a 40&nbsp;m machine works exactly like a 10&nbsp;m one, with more buckets in the
+      casing. Second, the only energy the machine <em>must</em> spend is the energy of lifting, and lifting
+      one tonne one metre takes 2.725&nbsp;W&nbsp;per&nbsp;t/h. That is why bucket elevators are still the
+      cheapest way to raise grain, cement, fertiliser or ash, and why the alternatives get chosen for
+      reasons other than energy.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.1.</b> Ways of moving bulk material vertically, and why a bucket elevator usually wins.</caption>
+        <thead>
+          <tr><th>Machine</th><th>Practical lift</th><th>Energy per tonne per metre lifted</th><th>Why it is chosen instead</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bucket elevator</td><td>To 60&nbsp;m, exceptionally 90&nbsp;m</td><td>Lowest: lifting work plus 10&ndash;30&nbsp;%</td><td>&mdash;</td></tr>
+          <tr><td>Vertical screw conveyor (<a href="chapter2.html#s19">&sect;2.19</a>)</td><td>To about 10&nbsp;m</td><td>3&ndash;6 times a bucket elevator</td><td>Totally enclosed, no dust, compact, self-feeding from a bin</td></tr>
+          <tr><td>Pneumatic conveying (Ch.&nbsp;5)</td><td>Unlimited, routing free</td><td>10&ndash;30 times a bucket elevator</td><td>Flexible routing, dust-tight, many pick-up and delivery points</td></tr>
+          <tr><td>Steep-angle belt or sandwich belt (<a href="chapter3.html#s10">&sect;3.10</a>)</td><td>Any, at up to 30&ndash;90&deg;</td><td>Close to a bucket elevator</td><td>Large lumps; continuous flow; no transfer at the bottom</td></tr>
+          <tr><td>Skip hoist</td><td>Any</td><td>Lifting work plus the skip's own weight</td><td>Very large lumps, batch operation, severe duty</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Note the first row of that table against the third. A pneumatic system can cost ten to thirty times as
+      much energy for the same lift, and it is still chosen every day &mdash; because routing, enclosure and
+      the number of delivery points are worth more to the plant than the electricity bill. That is
+      the two-stage selection logic of <a href="chapter1.html#s19">&sect;1.19</a> doing its work: technical
+      feasibility first, then total cost, and energy is only part of cost.</p>
+
+    <!-- ============================================================ 4.2 -->
+    <h2 id="s2">4.2 Advantages, Limitations and the Design Procedure</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.2.</b> What the bucket elevator gives, and what it asks in return.</caption>
+        <thead><tr><th>Advantages</th><th>Limitations</th></tr></thead>
+        <tbody>
+          <tr><td>Very low power per tonne lifted; the useful work dominates</td><td>Vertical only. Any horizontal travel needs another machine</td></tr>
+          <tr><td>Small footprint: the casing is barely wider than the buckets</td><td>Sensitive to feed rate. Starve it and capacity falls; flood it and the boot plugs</td></tr>
+          <tr><td>Capacity from a few t/h to over 1,000&nbsp;t/h</td><td>A dust explosion hazard by nature: fine dust, confinement, and moving steel</td></tr>
+          <tr><td>Enclosed, so spillage and dust escape are controllable</td><td>Cannot be inspected while running; faults are found by instruments or by noise</td></tr>
+          <tr><td>Lift heights to 60&nbsp;m in a single machine</td><td>A single failure &mdash; belt, chain or backstop &mdash; empties the casing into the boot</td></tr>
+          <tr><td>Gentle enough for grain at the right speed and bucket style</td><td>Not for large lumps: bucket size, not power, sets the limit</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The last limitation on the right deserves its own sentence, because it is what kills people. A bucket
+      elevator handling a combustible dust is a vertical, confined, dust-laden space containing a machine
+      that can generate sparks and hot bearings. <a href="#s18">&sect;4.18</a> treats it as a design problem
+      with standards attached, not as an operating precaution.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.3.</b> The design procedure, in the order the decisions actually have to be made.</caption>
+        <thead><tr><th class="num">Step</th><th>Decision</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Material, required capacity, lift height, and how the material arrives</td><td><a href="#s10">&sect;4.10</a></td></tr>
+          <tr><td class="num">2</td><td>Discharge type: centrifugal, continuous, positive or internal</td><td><a href="#s4">&sect;4.4</a></td></tr>
+          <tr><td class="num">3</td><td>Bucket style, size and spacing; belt or chain</td><td><a href="#s6">&sect;4.6</a>, <a href="#s7">&sect;4.7</a></td></tr>
+          <tr><td class="num">4</td><td>Capacity: does the chosen bucket and spacing deliver the tonnage?</td><td><a href="#s11">&sect;4.11</a></td></tr>
+          <tr><td class="num">5</td><td>Speed and head diameter: does the machine actually discharge?</td><td><a href="#s12">&sect;4.12</a>, <a href="#s5">&sect;4.5</a></td></tr>
+          <tr><td class="num">6</td><td>Power, tensions or chain pull, shaft torque, and the starting case</td><td><a href="#s13">&sect;4.13</a>&ndash;<a href="#s16">&sect;4.16</a></td></tr>
+          <tr><td class="num">7</td><td>Take-up, backstop, instrumentation and explosion protection</td><td><a href="#s17">&sect;4.17</a>, <a href="#s18">&sect;4.18</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Where this chapter sits</span>
+      <p>Chapters&nbsp;2 and&nbsp;3 sized machines that move material along. This one moves it up. The
+        method is the same in shape &mdash; capacity from a volume and a speed, power from the work done,
+        then a mechanical check on the element that carries the load &mdash; and two pieces are reused
+        outright: the Euler&ndash;Eytelwein drive limit of <a href="chapter3.html#s7">&sect;3.7</a> and the
+        belt strength selection of <a href="chapter3.html#s9">&sect;3.9</a>.</p>
+    </div>
+
+    <!-- ============================================================ 4.3 -->
+    <h2 id="s3">4.3 Anatomy of a Bucket Elevator</h2>
+
+    <figure>
+      <svg viewBox="0 0 900 480" role="img" aria-label="General arrangement of a bucket elevator showing boot, casing legs, head, drive and discharge">
+        <rect x="0" y="0" width="900" height="480" fill="#ffffff"/>
+
+        <!-- casing -->
+        <rect x="330" y="100" width="150" height="300" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+        <line x1="405" y1="100" x2="405" y2="400" stroke="#cfcfcf" stroke-width="1.4" stroke-dasharray="6 5"/>
+
+        <!-- head -->
+        <path d="M 330 100 L 330 70 A 75 60 0 0 1 480 70 L 480 100 Z" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+        <circle cx="405" cy="72" r="34" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+        <circle cx="405" cy="72" r="5" fill="#6f6f6f"/>
+        <!-- discharge chute -->
+        <path d="M 480 76 L 550 106 L 550 136 L 480 106 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+        <g fill="#c9a97a"><circle cx="504" cy="96" r="3.4"/><circle cx="520" cy="107" r="3"/><circle cx="534" cy="118" r="3.2"/></g>
+
+        <!-- boot -->
+        <path d="M 330 400 L 330 430 A 75 46 0 0 0 480 430 L 480 400 Z" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+        <circle cx="405" cy="426" r="26" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+        <circle cx="405" cy="426" r="4" fill="#6f6f6f"/>
+        <path d="M 338 422 A 70 40 0 0 0 472 422 L 472 440 A 70 30 0 0 1 338 440 Z" fill="#c9a97a" opacity="0.55"/>
+        <!-- inlet -->
+        <path d="M 262 362 L 330 392 L 330 416 L 262 386 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+        <g fill="#c9a97a"><circle cx="280" cy="374" r="3.2"/><circle cx="296" cy="382" r="3"/><circle cx="312" cy="392" r="3.4"/></g>
+
+        <!-- buckets: up leg (loaded) -->
+        <g stroke="#6f6f6f" stroke-width="1.8">
+          <g fill="#bfbfbf">
+            <path d="M 370 160 l 0 20 l 28 0 l 0 -20 z"/><path d="M 370 220 l 0 20 l 28 0 l 0 -20 z"/>
+            <path d="M 370 280 l 0 20 l 28 0 l 0 -20 z"/><path d="M 370 340 l 0 20 l 28 0 l 0 -20 z"/>
+          </g>
+          <g fill="#c9a97a">
+            <path d="M 371 162 l 0 10 l 26 0 l 0 -10 z"/><path d="M 371 222 l 0 10 l 26 0 l 0 -10 z"/>
+            <path d="M 371 282 l 0 10 l 26 0 l 0 -10 z"/><path d="M 371 342 l 0 10 l 26 0 l 0 -10 z"/>
+          </g>
+        </g>
+        <!-- buckets: down leg (empty) -->
+        <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.8">
+          <path d="M 412 190 l 0 -20 l 28 0 l 0 20 z"/><path d="M 412 250 l 0 -20 l 28 0 l 0 20 z"/>
+          <path d="M 412 310 l 0 -20 l 28 0 l 0 20 z"/><path d="M 412 370 l 0 -20 l 28 0 l 0 20 z"/>
+        </g>
+        <!-- belt lines -->
+        <line x1="398" y1="106" x2="398" y2="394" stroke="#2f2f2f" stroke-width="2.4"/>
+        <line x1="412" y1="106" x2="412" y2="394" stroke="#2f2f2f" stroke-width="2.4"/>
+        <!-- travel arrows and labels -->
+        <g stroke="#DF301C" stroke-width="2" fill="none">
+          <line x1="356" y1="300" x2="356" y2="250"/><path d="M 351 258 L 356 246 L 361 258"/>
+          <line x1="454" y1="250" x2="454" y2="300"/><path d="M 449 292 L 454 304 L 459 292"/>
+        </g>
+        <text x="356" y="326" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">up</text>
+        <text x="454" y="326" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">down</text>
+
+        <!-- drive -->
+        <rect x="510" y="40" width="54" height="40" rx="3" fill="#4b4540" stroke="#2f2f2f" stroke-width="2"/>
+        <text x="537" y="65" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">M</text>
+        <line x1="480" y1="62" x2="510" y2="62" stroke="#4b4540" stroke-width="3"/>
+        <!-- backstop on the drive side -->
+        <circle cx="494" cy="40" r="13" fill="#00B7CD" stroke="#00788A" stroke-width="2"/>
+        <path d="M 488 40 l 12 0 M 494 34 l 0 12" stroke="#00788A" stroke-width="1.8"/>
+        <!-- take-up movement -->
+        <g stroke="#00788A" stroke-width="1.8" fill="none">
+          <line x1="405" y1="458" x2="405" y2="470"/><path d="M 400 464 L 405 472 L 410 464"/>
+        </g>
+        <!-- inspection door -->
+        <rect x="332" y="240" width="16" height="30" fill="none" stroke="#00788A" stroke-width="1.8" stroke-dasharray="4 3"/>
+
+        <!-- LEFT callouts: circle, then text, then a leader from the end of the text -->
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">
+          <circle cx="60" cy="368" r="11" fill="#DF301C"/><text x="60" y="372" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+          <text x="78" y="372">inlet</text>
+          <circle cx="60" cy="428" r="11" fill="#DF301C"/><text x="60" y="432" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+          <text x="78" y="432">boot and take-up</text>
+          <circle cx="60" cy="296" r="11" fill="#DF301C"/><text x="60" y="300" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+          <text x="78" y="300">up-leg casing</text>
+          <circle cx="60" cy="254" r="11" fill="#DF301C"/><text x="60" y="258" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+          <text x="78" y="258">inspection door</text>
+          <circle cx="60" cy="212" r="11" fill="#DF301C"/><text x="60" y="216" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+          <text x="78" y="216">buckets on belt or chain</text>
+          <circle cx="60" cy="170" r="11" fill="#DF301C"/><text x="60" y="174" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">6</text>
+          <text x="78" y="174">down-leg (return) casing</text>
+        </g>
+        <g stroke="#726b64" stroke-width="1.1" fill="none">
+          <line x1="116" y1="368" x2="268" y2="372"/>
+          <line x1="186" y1="428" x2="332" y2="432"/>
+          <line x1="164" y1="296" x2="328" y2="300"/>
+          <line x1="176" y1="254" x2="330" y2="254"/>
+          <line x1="232" y1="212" x2="368" y2="228"/>
+          <line x1="232" y1="170" x2="410" y2="186"/>
+        </g>
+
+        <!-- RIGHT callouts -->
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">
+          <circle cx="700" cy="72" r="11" fill="#DF301C"/><text x="700" y="76" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">7</text>
+          <text x="718" y="76">head and head pulley</text>
+          <circle cx="700" cy="136" r="11" fill="#DF301C"/><text x="700" y="140" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">8</text>
+          <text x="718" y="140">discharge chute</text>
+          <circle cx="700" cy="200" r="11" fill="#DF301C"/><text x="700" y="204" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">9</text>
+          <text x="718" y="204">drive and reducer</text>
+          <circle cx="700" cy="264" r="11" fill="#DF301C"/><text x="700" y="268" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">10</text>
+          <text x="718" y="268">backstop</text>
+        </g>
+        <g stroke="#726b64" stroke-width="1.1" fill="none">
+          <line x1="686" y1="72" x2="486" y2="82"/>
+          <line x1="686" y1="136" x2="552" y2="124"/>
+          <line x1="686" y1="200" x2="566" y2="88"/>
+          <line x1="686" y1="264" x2="504" y2="52"/>
+        </g>
+      </svg>
+      <figcaption><b>Figure 4.1.</b> General arrangement of a belt-type centrifugal bucket elevator.
+        <b>1</b> inlet &middot; <b>2</b> boot with take-up &middot; <b>3</b> up-leg casing &middot;
+        <b>4</b> inspection door &middot; <b>5</b> buckets bolted to the belt &middot; <b>6</b> down-leg
+        casing &middot; <b>7</b> head and head pulley &middot; <b>8</b> discharge chute &middot;
+        <b>9</b> drive and reducer &middot; <b>10</b> backstop. Material enters at the boot, is lifted in
+        the up leg, and is thrown into the chute at the head.</figcaption>
+    </figure>
+
+    <p>Read the figure as a load path and a material path at the same time. The <em>material</em> path is
+      inlet&nbsp;&rarr;&nbsp;boot&nbsp;&rarr;&nbsp;bucket&nbsp;&rarr;&nbsp;up leg&nbsp;&rarr;&nbsp;head
+      &rarr;&nbsp;chute. The <em>load</em> path is head shaft&nbsp;&rarr;&nbsp;head pulley or
+      sprocket&nbsp;&rarr;&nbsp;belt or chain&nbsp;&rarr;&nbsp;bucket bolts&nbsp;&rarr;&nbsp;bucket. Every
+      mechanical failure in service is somewhere on the second path, and the bucket bolts are its weakest
+      link &mdash; which is why they are checked, torqued and logged rather than assumed.</p>
+
+    <div class="callout">
+      <span class="label">The part you cannot see</span>
+      <p>The boot is where the machine is loaded, where spilt material collects, and where a plug starts.
+        It is also the part nobody opens because it is at floor level behind a guard. A boot that is never
+        cleaned out fills with fines, the buckets start to drag through a compacted bed, the digging
+        resistance climbs, and the first sign is a tripped overload or a slipping belt. Design the boot with
+        a cleanout door, and put it on the maintenance schedule of <a href="#s19">&sect;4.19</a>.</p>
+    </div>
+
+    <!-- ============================================================ 4.4 -->
+    <h2 id="s4">4.4 The Four Discharge Types</h2>
+
+    <p>Everything about the machine follows from how the material is intended to leave the bucket at the
+      head. There are four answers, and they are not interchangeable.</p>
+
+    <figure>
+      <svg viewBox="0 0 800 330" role="img" aria-label="Centrifugal and continuous discharge compared at the head pulley">
+        <rect x="0" y="0" width="800" height="330" fill="#ffffff"/>
+
+        <!-- LEFT: centrifugal -->
+        <g transform="translate(0,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="middle">Centrifugal discharge &mdash; fast</text>
+          <circle cx="190" cy="150" r="70" fill="none" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="150" r="5" fill="#6f6f6f"/>
+          <!-- buckets around pulley -->
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.6">
+            <path d="M 176 78 l 28 0 l 0 -22 l -28 0 z"/>
+            <path d="M 262 138 l 0 24 l 22 0 l 0 -24 z"/>
+            <path d="M 176 222 l 28 0 l 0 22 l -28 0 z"/>
+            <path d="M 96 138 l 0 24 l -22 0 l 0 -24 z"/>
+          </g>
+          <!-- material thrown -->
+          <g fill="#c9a97a">
+            <circle cx="272" cy="128" r="4"/><circle cx="292" cy="120" r="4"/><circle cx="312" cy="118" r="4"/>
+            <circle cx="332" cy="124" r="4"/><circle cx="350" cy="136" r="4"/><circle cx="364" cy="152" r="4"/>
+          </g>
+          <path d="M 266 132 Q 320 108 372 162" stroke="#DF301C" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/>
+          <path d="M 366 150 L 374 164 L 360 166" fill="#DF301C"/>
+          <path d="M 380 150 L 420 150 L 420 240 L 380 240 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <text x="190" y="282" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">1.2&ndash;3.5 m/s &middot; spaced buckets</text>
+          <text x="190" y="300" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">material leaves on a free trajectory</text>
+        </g>
+
+        <!-- RIGHT: continuous -->
+        <g transform="translate(400,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="middle">Continuous discharge &mdash; slow</text>
+          <circle cx="190" cy="150" r="70" fill="none" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="150" r="5" fill="#6f6f6f"/>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.6">
+            <path d="M 162 80 l 56 0 l 0 -22 l -56 0 z"/>
+            <path d="M 260 124 l 0 52 l 22 0 l 0 -52 z"/>
+            <path d="M 162 220 l 56 0 l 0 22 l -56 0 z"/>
+            <path d="M 98 124 l 0 52 l -22 0 l 0 -52 z"/>
+          </g>
+          <!-- material poured over back of preceding bucket -->
+          <g fill="#c9a97a">
+            <circle cx="268" cy="186" r="4"/><circle cx="276" cy="200" r="4"/><circle cx="284" cy="214" r="4"/>
+            <circle cx="292" cy="228" r="4"/>
+          </g>
+          <path d="M 264 180 Q 286 210 300 246" stroke="#00788A" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/>
+          <path d="M 294 236 L 302 250 L 288 250" fill="#00788A"/>
+          <path d="M 300 250 L 344 250 L 344 300 L 300 300 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <text x="190" y="282" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">0.4&ndash;1.25 m/s &middot; continuous buckets</text>
+          <text x="190" y="300" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">the bucket back guides the flow</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 4.2.</b> The two common discharge types. In centrifugal discharge the bucket
+        throws the material clear on a free trajectory, which needs speed and spaced buckets. In continuous
+        discharge the material rolls over the inner lip and is guided down the back of the bucket in front,
+        which needs low speed and buckets mounted nose to tail.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.4.</b> The four discharge types and what each is for.</caption>
+        <thead>
+          <tr><th>Type</th><th>Speed</th><th>Bucket and spacing</th><th>Use it for</th><th>It fails when</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Centrifugal</b></td><td>1.2&ndash;3.5&nbsp;m/s</td><td>Spaced buckets, pitch 2&ndash;3 &times; projection</td>
+              <td>Free-flowing, non-fragile, mildly abrasive material: grain, sand, cement, fertiliser. The default</td>
+              <td>The material is fragile, sticky, or so light that it blows around inside the casing</td></tr>
+          <tr><td><b>Continuous</b></td><td>0.4&ndash;1.25&nbsp;m/s</td><td>Buckets nose to tail, no gap</td>
+              <td>Fragile material, hot material, large lumps, and any duty where degradation or dust must be minimised</td>
+              <td>Capacity per unit speed is needed; a continuous elevator is a larger machine for the same tonnage</td></tr>
+          <tr><td><b>Positive</b></td><td>0.3&ndash;0.6&nbsp;m/s</td><td>Spaced buckets on two chains, snubbed under the head</td>
+              <td>Sticky material that will not leave a bucket on its own: wet ash, filter cake, sludge</td>
+              <td>Anything else; it is slow, tall and expensive, and only justified by discharge certainty</td></tr>
+          <tr><td><b>Internal / super-capacity</b></td><td>0.5&ndash;1.0&nbsp;m/s</td><td>Very deep buckets between two chains, projecting inward</td>
+              <td>Very high tonnage at modest speed; mine and port duty, 500&ndash;2,000&nbsp;t/h</td>
+              <td>Headroom, cost or lump size do not justify it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The trade is visible in the speed column. Centrifugal discharge buys capacity with speed, and pays
+      for it in degradation, wear and dust. Continuous discharge buys gentleness with a bigger, slower
+      machine. Positive discharge buys certainty with a snub pulley and a great deal of height. Choosing the
+      type is step&nbsp;2 of Table&nbsp;4.3 precisely because every later number depends on it.</p>
+
+    <!-- ============================================================ 4.5 -->
+    <h2 id="s5">4.5 The Pole Point: Predicting the Discharge</h2>
+
+    <p>A designer who chooses &ldquo;centrifugal discharge&rdquo; has not yet made the machine discharge
+      centrifugally. Whether the material leaves the bucket over the outer lip, over the inner lip, or dribbles
+      down the casing is decided by one number: the balance between centrifugal force and gravity at the head.</p>
+
+    <p>Take a particle of mass <var>m</var> in a bucket travelling on a circle of radius <var>r</var> at
+      angular velocity <var>&omega;</var>. It needs a centripetal force <var>m&omega;</var><sup>2</sup><var>r</var>
+      to stay on that circle, and gravity supplies <var>mg</var>. Where the two are equal,</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>m&omega;</var><sup>2</sup><var>r</var><sub>p</sub> = <var>mg</var> &nbsp;&rarr;&nbsp;
+        <var>r</var><sub>p</sub> = <span class="frac"><span class="num"><var>g</var></span><span class="den"><var>&omega;</var><sup>2</sup></span></span>
+      </span>
+      <span class="tag">(4.1)</span>
+    </div>
+
+    <p>The radius <var>r</var><sub>p</sub> is the <b>pole point</b> distance: the distance from the head
+      shaft centre at which gravity exactly balances the centrifugal effect. Writing <var>&omega;</var> in
+      terms of head shaft speed <var>n</var> in rev/min gives the form used on drawings:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>r</var><sub>p</sub> = <span class="frac"><span class="num">895</span><span class="den"><var>n</var><sup>2</sup></span></span>
+        &nbsp;<span class="units">m, with <var>n</var> in rev/min</span>
+      </span>
+      <span class="tag">(4.2)</span>
+    </div>
+
+    <p>The constant is <var>g</var>&nbsp;&times;&nbsp;3600/4<var>&pi;</var><sup>2</sup> = 894.6, rounded to
+      895. Now compare <var>r</var><sub>p</sub> with the two radii of the bucket path: the inner radius
+      <var>r</var><sub>i</sub> (the belt or chain line at the head pulley) and the outer radius
+      <var>r</var><sub>o</sub> = <var>r</var><sub>i</sub> + bucket projection.</p>
+
+    <figure>
+      <svg viewBox="0 0 800 400" role="img" aria-label="Pole point construction at the head pulley, showing inner and outer bucket radii">
+        <rect x="0" y="0" width="800" height="400" fill="#ffffff"/>
+
+        <g transform="translate(200,200)">
+          <!-- outer bucket path and pulley -->
+          <circle cx="0" cy="0" r="140" fill="none" stroke="#6f6f6f" stroke-width="2" stroke-dasharray="7 5"/>
+          <circle cx="0" cy="0" r="80" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+          <circle cx="0" cy="0" r="6" fill="#4b4540"/>
+          <!-- bucket at top -->
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="2">
+            <path d="M -34 -80 l 68 0 l 0 -60 l -68 0 z"/>
+          </g>
+          <g fill="#c9a97a"><path d="M -31 -84 l 62 0 l 0 -24 l -62 0 z"/></g>
+
+          <!-- inner radius: vertical arrow to the belt line -->
+          <g stroke="#00788A" stroke-width="1.8">
+            <line x1="0" y1="0" x2="0" y2="-80"/>
+            <path d="M -5 -70 L 0 -80 L 5 -70" fill="none"/>
+          </g>
+          <text x="-12" y="-44" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="end">r</text>
+          <text x="-6" y="-40" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#00788A" text-anchor="end">i</text>
+
+          <!-- outer radius: arrow to the bucket lip -->
+          <g stroke="#726b64" stroke-width="1.6">
+            <line x1="0" y1="0" x2="99" y2="-99"/>
+            <path d="M 88 -95 L 99 -99 L 95 -88" fill="none"/>
+          </g>
+          <text x="150" y="-124" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#726b64">r</text>
+          <text x="157" y="-120" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#726b64">o</text>
+          <text x="150" y="-106" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64">bucket lip</text>
+          <line x1="106" y1="-106" x2="146" y2="-124" stroke="#726b64" stroke-width="1"/>
+
+          <!-- pole point -->
+          <g stroke="#DF301C" stroke-width="2.2">
+            <line x1="0" y1="0" x2="0" y2="56"/>
+            <path d="M -6 46 L 0 56 L 6 46" fill="none"/>
+          </g>
+          <circle cx="0" cy="56" r="5" fill="#DF301C"/>
+          <line x1="-60" y1="56" x2="60" y2="56" stroke="#DF301C" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="-16" y="88" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="end">r</text>
+          <text x="-10" y="92" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#DF301C" text-anchor="end">p</text>
+          <text x="-6" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#DF301C">= 895/n&sup2;</text>
+          <text x="0" y="172" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">the pole point: where gravity balances the centrifugal effect</text>
+        </g>
+
+        <!-- decision panel -->
+        <rect x="450" y="70" width="330" height="210" rx="4" fill="#f0fafc" stroke="#00B7CD" stroke-width="2"/>
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#1c1917">
+          <text x="615" y="100" font-size="13" font-weight="700" text-anchor="middle">Reading the pole point</text>
+          <text x="470" y="132" font-weight="700" fill="#DF301C">pole point inside the belt line</text>
+          <text x="470" y="150" fill="#4b4540">&rarr; centrifugal discharge, material thrown out</text>
+          <text x="470" y="184" font-weight="700" fill="#726b64">pole point outside the bucket lip</text>
+          <text x="470" y="202" fill="#4b4540">&rarr; gravity discharge, material poured out</text>
+          <text x="470" y="236" font-weight="700" fill="#4b4540">pole point between the two</text>
+          <text x="470" y="254" fill="#4b4540">&rarr; mixed discharge, trajectory uncertain</text>
+        </g>
+        <text x="615" y="304" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">fast shaft, small pole distance &rarr; throw</text>
+        <text x="615" y="322" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">slow shaft, large pole distance &rarr; pour</text>
+      </svg>
+      <figcaption><b>Figure 4.3.</b> The pole point construction. The pole point lies on the vertical
+        through the shaft centre at <var>r</var><sub>p</sub> = 895/<var>n</var><sup>2</sup> below it. Its
+        position relative to the inner and outer bucket radii decides whether the material is thrown out
+        over the outer lip or poured over the inner one.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.5.</b> Reading the pole point, and what to do when the answer is wrong.</caption>
+        <thead><tr><th>Condition</th><th>What happens</th><th>If that is not what you wanted</th></tr></thead>
+        <tbody>
+          <tr><td><var>r</var><sub>p</sub> &lt; <var>r</var><sub>i</sub></td>
+              <td>Centrifugal force dominates over the whole bucket. The load is thrown clear over the outer lip at the head</td>
+              <td>Too fast for a fragile material: reduce the speed, or use a larger head pulley at the same belt speed</td></tr>
+          <tr><td><var>r</var><sub>p</sub> &gt; <var>r</var><sub>o</sub></td>
+              <td>Gravity dominates. The load rolls out over the inner lip and must be guided &mdash; that is continuous discharge</td>
+              <td>Fit continuous buckets so each load lands on the back of the bucket in front, or raise the speed</td></tr>
+          <tr><td><var>r</var><sub>i</sub> &le; <var>r</var><sub>p</sub> &le; <var>r</var><sub>o</sub></td>
+              <td>Mixed discharge: part thrown, part poured, trajectory unpredictable. Material hits the casing, falls back down the up leg, and re-circulates</td>
+              <td>Move deliberately to one side or the other. This band is the classic cause of &ldquo;the elevator only does 70&nbsp;% of its rated capacity&rdquo;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">Why back-legging wastes power twice</span>
+      <p>Material that fails to clear the head falls back down the up leg, is picked up again by the next
+        buckets, and is lifted a second time. The tonnage on the belt is higher than the tonnage delivered,
+        so the power is paid twice for the same material and the delivered capacity falls. This is the same
+        re-conveying mechanism as fallback in an inclined screw conveyor
+        (<a href="chapter2.html#s19">&sect;2.19</a>), and it is diagnosed the same way &mdash; by measuring
+        the delivered rate, not the motor current.</p>
+    </div>
+
+    <!-- ============================================================ 4.6 -->
+    <h2 id="s6">4.6 Buckets: Styles, Materials and Spacing</h2>
+
+    <p>The bucket is the part that wears out, the part that decides the capacity, and the part that is
+      bolted through the load-carrying element. It deserves more attention than it usually gets.</p>
+
+    <figure>
+      <svg viewBox="0 0 780 300" role="img" aria-label="Bucket geometry showing width, projection, depth, spacing and the belt line">
+        <rect x="0" y="0" width="780" height="300" fill="#ffffff"/>
+
+        <!-- belt with three buckets in side view -->
+        <line x1="150" y1="40" x2="150" y2="250" stroke="#2f2f2f" stroke-width="4"/>
+        <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="2">
+          <path d="M 150 70 l 0 40 l 86 0 l 0 -26 q 0 -14 -16 -14 z"/>
+          <path d="M 150 150 l 0 40 l 86 0 l 0 -26 q 0 -14 -16 -14 z"/>
+        </g>
+        <g fill="#c9a97a">
+          <path d="M 153 96 l 0 11 l 80 0 l 0 -11 z"/>
+          <path d="M 153 176 l 0 11 l 80 0 l 0 -11 z"/>
+        </g>
+        <!-- bolts -->
+        <g fill="#4b4540"><circle cx="150" cy="80" r="4"/><circle cx="150" cy="100" r="4"/><circle cx="150" cy="160" r="4"/><circle cx="150" cy="180" r="4"/></g>
+
+        <!-- projection dimension, below the lower bucket -->
+        <g stroke="#DF301C" stroke-width="1.6">
+          <line x1="150" y1="212" x2="236" y2="212"/>
+          <path d="M 160 207 L 150 212 L 160 217" fill="none"/>
+          <path d="M 226 207 L 236 212 L 226 217" fill="none"/>
+          <line x1="236" y1="190" x2="236" y2="212" stroke-width="0.9" stroke-dasharray="3 3"/>
+        </g>
+        <text x="193" y="232" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">projection</text>
+
+        <!-- spacing dimension -->
+        <g stroke="#00788A" stroke-width="1.6">
+          <line x1="120" y1="70" x2="120" y2="150"/>
+          <path d="M 115 80 L 120 70 L 125 80" fill="none"/>
+          <path d="M 115 140 L 120 150 L 125 140" fill="none"/>
+        </g>
+        <text x="112" y="114" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#00788A" text-anchor="end">spacing s</text>
+
+        <!-- depth dimension on lower bucket -->
+        <g stroke="#726b64" stroke-width="1.4">
+          <line x1="252" y1="150" x2="252" y2="190"/>
+          <path d="M 247 158 L 252 150 L 257 158" fill="none"/>
+          <path d="M 247 182 L 252 190 L 257 182" fill="none"/>
+        </g>
+        <text x="262" y="174" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64">depth</text>
+
+        <!-- front view -->
+        <g transform="translate(430,0)">
+          <text x="130" y="34" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#4b4540" text-anchor="middle">front view</text>
+          <rect x="40" y="60" width="180" height="90" fill="#bfbfbf" stroke="#6f6f6f" stroke-width="2"/>
+          <rect x="44" y="96" width="172" height="50" fill="#c9a97a"/>
+          <line x1="128" y1="60" x2="128" y2="150" stroke="#cfcfcf" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <g stroke="#DF301C" stroke-width="1.6">
+            <line x1="40" y1="172" x2="220" y2="172"/>
+            <path d="M 50 167 L 40 172 L 50 177" fill="none"/>
+            <path d="M 210 167 L 220 172 L 210 177" fill="none"/>
+          </g>
+          <text x="130" y="192" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">bucket width</text>
+          <text x="130" y="222" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">belt width = bucket width + 25 to 50 mm</text>
+          <text x="130" y="242" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">water-level volume &asymp; 0.55&ndash;0.65 of W &times; P &times; D</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 4.4.</b> Bucket geometry. Width, projection and depth define the bucket;
+        spacing <var>s</var> and speed <var>v</var> then define the capacity. The bolts that hold the bucket
+        pass through the belt, which is why a bolted elevator belt is rated with a strength allowance for
+        its own holes.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.6.</b> Bucket styles and what each is for.</caption>
+        <thead><tr><th>Style</th><th>Shape</th><th>Discharge</th><th>Typical duty</th></tr></thead>
+        <tbody>
+          <tr><td>Style AA (deep, rounded back)</td><td>Deep with a generous radius</td><td>Centrifugal</td><td>The general-purpose grain and fertiliser bucket. Digs well, empties cleanly</td></tr>
+          <tr><td>Style AC (low front)</td><td>Shallower with a low front lip</td><td>Centrifugal</td><td>Free-flowing, heavy, slightly sticky material; easier discharge at lower speed</td></tr>
+          <tr><td>Low-front continuous</td><td>Front lip lowered; back extended to form a chute</td><td>Continuous</td><td>Fragile, hot or lumpy material, nose-to-tail mounting</td></tr>
+          <tr><td>Super-capacity</td><td>Very deep, mounted between two chains</td><td>Internal / gravity</td><td>High tonnage, mine and port duty</td></tr>
+          <tr><td>Plastic (HDPE, nylon, urethane)</td><td>Any of the above</td><td>Centrifugal or continuous</td><td>Grain and food duty: light, quiet, non-sparking, and it will not gouge a belt if it comes loose</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.7.</b> Bucket material against duty.</caption>
+        <thead><tr><th>Material</th><th>Use for</th><th>Watch out for</th></tr></thead>
+        <tbody>
+          <tr><td>Pressed mild steel</td><td>General industrial duty, abrasive material, temperatures to 200&nbsp;&deg;C</td><td>Corrosion, and sparks if it strikes the casing</td></tr>
+          <tr><td>Stainless steel</td><td>Food, pharmaceutical, fertiliser, wet duty</td><td>Cost, and fatigue cracking around the bolt holes</td></tr>
+          <tr><td>HDPE / polyethylene</td><td>Grain, seed, food; the standard in modern grain terminals</td><td>Temperature limit near 80&nbsp;&deg;C; static charge unless a conductive grade is used</td></tr>
+          <tr><td>Nylon</td><td>Sticky material; the surface releases better than steel</td><td>Moisture absorption and dimensional change</td></tr>
+          <tr><td>Urethane-lined or AR-steel</td><td>Highly abrasive duty: clinker, slag, sinter, sand</td><td>Weight, and therefore chain pull and power</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>Spacing.</b> For centrifugal discharge the buckets must be far enough apart that a thrown load
+      clears the bucket in front. The usual range is 2&nbsp;to&nbsp;3 times the projection, and never less
+      than about 1.5 times. Too close and the discharge from one bucket strikes the back of the next, which
+      throws material back into the casing; too far apart and capacity is lost for no reason. Continuous
+      buckets are the opposite case: they are mounted with no gap at all, because the back of each bucket is
+      the discharge chute for the one behind it.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.8.</b> Representative metric bucket sizes and water-level volumes.</caption>
+        <thead><tr><th>Width &times; projection &times; depth (mm)</th><th>Water level (L)</th><th>Usual belt width (mm)</th><th>Typical spacing, centrifugal (mm)</th></tr></thead>
+        <tbody>
+          <tr><td>160 &times; 100 &times; 110</td><td class="num">1.0</td><td class="num">200</td><td class="num">200&ndash;250</td></tr>
+          <tr><td>200 &times; 125 &times; 140</td><td class="num">2.0</td><td class="num">250</td><td class="num">250&ndash;300</td></tr>
+          <tr><td>250 &times; 150 &times; 160</td><td class="num">3.5</td><td class="num">300</td><td class="num">300&ndash;375</td></tr>
+          <tr><td>300 &times; 175 &times; 180</td><td class="num">5.5</td><td class="num">350</td><td class="num">350&ndash;425</td></tr>
+          <tr><td>350 &times; 180 &times; 190</td><td class="num">7.0</td><td class="num">400</td><td class="num">375&ndash;450</td></tr>
+          <tr><td>400 &times; 200 &times; 200</td><td class="num">10.0</td><td class="num">450</td><td class="num">400&ndash;500</td></tr>
+          <tr><td>500 &times; 250 &times; 250</td><td class="num">19.0</td><td class="num">550</td><td class="num">500&ndash;625</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Two warnings about that table. It is representative, not a catalogue: every manufacturer's buckets
+      differ, and the water-level volume is the number to design on, never the &ldquo;gross&rdquo; or
+      &ldquo;struck&rdquo; volume, which assumes a heap that no moving bucket retains. And the lump size a
+      bucket will accept is roughly a third of its projection for a mixture of lumps and fines, less for
+      lumps alone &mdash; the same reasoning as the lump class ratios in
+      <a href="chapter2.html#s14">&sect;2.14</a>.</p>
+
+    <!-- ============================================================ 4.7 -->
+    <h2 id="s7">4.7 Belt or Chain?</h2>
+
+    <p>The buckets hang on either a rubber belt or one or two strands of chain. The choice is made on
+      temperature, abrasiveness, lump size and lift, and it changes the head, the take-up and the
+      maintenance regime.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.9.</b> Belt against chain.</caption>
+        <thead><tr><th>&nbsp;</th><th>Belt (rubber, EP fabric or steel cord)</th><th>Chain (forged link or roller)</th></tr></thead>
+        <tbody>
+          <tr><th>Speed</th><td>Up to 3.5&nbsp;m/s &mdash; the fast option</td><td>Usually below 1.5&nbsp;m/s; chain wear rises steeply with speed</td></tr>
+          <tr><th>Temperature</th><td>Limited by the belt: about 80&nbsp;&deg;C standard, 150&nbsp;&deg;C with heat-resistant covers</td><td>To 400&nbsp;&deg;C and beyond; the usual choice for clinker, ash and sinter</td></tr>
+          <tr><th>Lump size</th><td>Small: a lump trapped between belt and pulley cuts the belt</td><td>Large lumps are acceptable; sprockets tolerate them</td></tr>
+          <tr><th>Noise and shock</th><td>Quiet, and the belt absorbs shock</td><td>Noisy, and every link engagement is a small impact</td></tr>
+          <tr><th>Elongation</th><td>Elastic plus permanent stretch; needs continuous take-up travel</td><td>Wear elongation; links are removed periodically instead</td></tr>
+          <tr><th>Failure mode</th><td>Tears from a trapped lump, or splice failure; the whole run drops</td><td>A single link or pin fails; the run drops the same way, but wear is visible in advance</td></tr>
+          <tr><th>Typical sector</th><td>Grain, food, fertiliser, light minerals</td><td>Cement, ash, ore, foundry, anything hot or coarse</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">The bolt holes matter</span>
+      <p>Bucket bolts pass through the belt, so an elevator belt is a belt with a line of holes punched
+        down its centre, or two lines near the edges. Manufacturers publish the strength of the belt as
+        supplied, and the designer's job is to keep the holes away from the edges, use the fastener the
+        maker specifies, and choose a belt class with margin &mdash; see
+        <a href="#s14">&sect;4.14</a>. Do not make the holes bigger than needed and never re-drill a belt
+        in the field without checking the remaining strength.</p>
+    </div>
+
+    <!-- ============================================================ 4.8 -->
+    <h2 id="s8">4.8 Casing, Head and Boot</h2>
+
+    <p>The casing is a dust enclosure, a guard, and in a dust explosion it is the pressure vessel. Its
+      design is not sheet-metal detailing.</p>
+
+    <ul>
+      <li><b>Casing sections</b> are usually 2&nbsp;to&nbsp;3&nbsp;m long, bolted with gaskets, and either
+        single (both legs in one casing) or twin (a separate casing per leg). Twin casings are used for
+        tall machines and where an explosion vent is needed on each leg.</li>
+      <li><b>Clearance</b> between the bucket lip and the casing wall is typically 25&nbsp;to&nbsp;50&nbsp;mm.
+        Less, and a bucket that shifts will strike the casing &mdash; a spark source. More, and the leg is
+        needlessly large, which matters for the explosion volume.</li>
+      <li><b>The head</b> carries the drive shaft, the head pulley or sprocket, the throat plate and the
+        discharge chute. The <em>position of the throat plate</em> sets where the thrown stream is cut off,
+        and it is adjustable on any decent machine, because the trajectory changes with speed and material.</li>
+      <li><b>The boot</b> holds the take-up, the inlet, and a cleanout. Boot design decides whether the
+        machine digs or is fed, which is the subject of the next section.</li>
+      <li><b>Inspection doors</b> at the head, at the boot, and at intervals up the legs. They are for
+        inspection when stopped and isolated, never when running.</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.10.</b> Casing and head clearances, and why each matters.</caption>
+        <thead><tr><th>Dimension</th><th>Typical value</th><th>What goes wrong at the wrong value</th></tr></thead>
+        <tbody>
+          <tr><td>Bucket lip to casing wall</td><td>25&ndash;50&nbsp;mm</td><td>Too small: contact, sparks, bucket loss. Too large: bigger explosion volume and more casing steel</td></tr>
+          <tr><td>Bucket to bucket, opposite legs</td><td>&ge; 50&nbsp;mm</td><td>A stretched belt lets the two runs touch; buckets are torn off</td></tr>
+          <tr><td>Head pulley lagging</td><td>Plain or grooved rubber</td><td>Slip at start-up; lagging is what makes the Euler limit of <a href="chapter3.html#s7">&sect;3.7</a> achievable</td></tr>
+          <tr><td>Throat plate position</td><td>Adjustable</td><td>Set wrong, the stream hits the plate and rebounds into the down leg</td></tr>
+          <tr><td>Boot clearance under the buckets</td><td>50&ndash;150&nbsp;mm</td><td>Too small, the buckets plough the boot floor; too large, material sits and packs</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.9 -->
+    <h2 id="s9">4.9 Feeding the Elevator: Dig and Flood Feed</h2>
+
+    <p>How material gets into the bucket is the most underrated decision in the machine, and it is where
+      most capacity complaints start.</p>
+
+    <figure>
+      <svg viewBox="0 0 780 300" role="img" aria-label="Dig feed and flood feed compared at the boot">
+        <rect x="0" y="0" width="780" height="300" fill="#ffffff"/>
+
+        <!-- LEFT: dig feed -->
+        <g transform="translate(0,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="middle">Dig feed &mdash; inlet above the boot pulley</text>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 126 182 A 64 48 0 0 0 254 182 Z" fill="#c9a97a" opacity="0.55"/>
+          <circle cx="190" cy="186" r="28" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="186" r="4" fill="#6f6f6f"/>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="none" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="none" stroke="#8f8f8f" stroke-width="2.5"/>
+          <!-- inlet chute high -->
+          <path d="M 66 108 L 120 132 L 120 156 L 66 132 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <g fill="#c9a97a"><circle cx="84" cy="120" r="3.2"/><circle cx="100" cy="130" r="3"/><circle cx="112" cy="140" r="3.2"/></g>
+          <!-- buckets digging -->
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.8">
+            <path d="M 160 176 l 0 22 l 26 0 l 0 -22 z"/>
+            <path d="M 160 130 l 0 22 l 26 0 l 0 -22 z"/>
+          </g>
+          <g fill="#c9a97a"><path d="M 161 190 l 0 7 l 24 0 l 0 -7 z"/><path d="M 161 144 l 0 7 l 24 0 l 0 -7 z"/></g>
+          <line x1="186" y1="96" x2="186" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <line x1="196" y1="96" x2="196" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <text x="190" y="256" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">the bucket scoops through a shallow bed</text>
+          <text x="190" y="274" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">self-regulating, but costs digging power</text>
+        </g>
+
+        <!-- RIGHT: flood feed -->
+        <g transform="translate(400,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="middle">Flood feed &mdash; inlet into the up leg</text>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 140 206 A 50 30 0 0 0 240 206 Z" fill="#c9a97a" opacity="0.4"/>
+          <circle cx="190" cy="186" r="28" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="186" r="4" fill="#6f6f6f"/>
+          <!-- inlet chute into up leg, in the direction of travel -->
+          <path d="M 60 96 L 120 96 L 120 128 L 60 128 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <g fill="#c9a97a"><circle cx="78" cy="106" r="3.2"/><circle cx="96" cy="112" r="3"/><circle cx="112" cy="118" r="3.2"/></g>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.8">
+            <path d="M 160 120 l 0 22 l 26 0 l 0 -22 z"/>
+            <path d="M 160 166 l 0 22 l 26 0 l 0 -22 z"/>
+          </g>
+          <g fill="#c9a97a"><path d="M 161 128 l 0 13 l 24 0 l 0 -13 z"/><path d="M 161 174 l 0 13 l 24 0 l 0 -13 z"/></g>
+          <line x1="186" y1="96" x2="186" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <line x1="196" y1="96" x2="196" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <text x="190" y="256" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">buckets are filled on the fly, boot stays clear</text>
+          <text x="190" y="274" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">needs a controlled feed rate, or it plugs</text>
+        </g>
+      </svg>
+      <figcaption><b>Figure 4.5.</b> The two feed arrangements. Dig feed lets the buckets scoop from a
+        shallow bed in the boot; flood feed delivers the material into the up leg so the buckets fill as
+        they pass. Almost every capacity complaint traces back to this drawing.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.11.</b> Feed arrangements compared.</caption>
+        <thead><tr><th>Arrangement</th><th>How it fills</th><th>Advantages</th><th>Costs and risks</th></tr></thead>
+        <tbody>
+          <tr><td><b>Dig (scoop) feed</b></td><td>Buckets scoop a bed of material in the boot</td>
+              <td>Self-regulating: the fill adapts to the supply. Simple chute. Tolerates a surging feed</td>
+              <td>Digging resistance adds 10&ndash;30&nbsp;% to the power; degrades fragile material; wears the bucket lip</td></tr>
+          <tr><td><b>Flood (loaded) feed</b></td><td>Material is delivered into the up leg, in the direction of travel</td>
+              <td>Little digging power, gentle on the product, higher fill factor achievable</td>
+              <td>The feed rate must be controlled. Over-feed and the boot fills and plugs; under-feed and capacity falls</td></tr>
+          <tr><td><b>Combination</b></td><td>Flood feed with a shallow dig bed as a buffer</td>
+              <td>The common industrial compromise: gentle most of the time, tolerant of surges</td>
+              <td>Needs the inlet geometry to be right; a badly aimed chute gives the worst of both</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Three rules follow, and they are worth more than any formula in this chapter. Feed <em>in the
+      direction of bucket travel</em>, never against it. Feed at a rate the machine can take, which means a
+      metering device upstream &mdash; often the screw feeder of <a href="chapter2.html#s20">&sect;2.20</a>.
+      And measure the delivered tonnage before blaming the elevator: an elevator fed at 60&nbsp;% will
+      deliver 60&nbsp;%, and nothing inside the casing is wrong.</p>
+
+    <!-- ============================================================ 4.10 -->
+    <h2 id="s10">4.10 Material Characteristics That Decide the Design</h2>
+
+    <p>The material code of <a href="chapter1.html#s5">&sect;1.5</a> and the CEMA code of
+      <a href="chapter2.html#s10">&sect;2.10</a> both apply here. What follows is what each characteristic
+      does to a bucket elevator specifically.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.12.</b> Material characteristics and their consequences for a bucket elevator.</caption>
+        <thead><tr><th>Characteristic</th><th>Consequence</th><th>Design response</th></tr></thead>
+        <tbody>
+          <tr><td>Bulk density &rho;</td><td>Sets the tonnage for a given bucket volume, and therefore the power and every tension</td>
+              <td>Design on the <em>maximum</em> density the material will reach, not the average</td></tr>
+          <tr><td>Free flowing</td><td>Fills and empties easily; high fill factor; centrifugal discharge works</td>
+              <td>The straightforward case: centrifugal, belt, style AA buckets</td></tr>
+          <tr><td>Sluggish or sticky</td><td>Will not leave the bucket; builds up inside it; capacity falls week by week</td>
+              <td>Continuous or positive discharge, nylon or urethane buckets, lower speed, and a plan for cleaning</td></tr>
+          <tr><td>Fragile (grain, malt, pellets, coated fertiliser)</td><td>Degrades at the dig, at the throw and at the impact in the chute</td>
+              <td>Continuous discharge, flood feed, low speed, plastic buckets, soft landing in the chute</td></tr>
+          <tr><td>Abrasive (sand, clinker, sinter, ash)</td><td>Wears bucket lips, casing at the impact point, and the chute</td>
+              <td>AR steel or urethane-lined buckets, wear plate in the chute, lower speed, generous casing clearance</td></tr>
+          <tr><td>Hot (&gt; 80&nbsp;&deg;C)</td><td>Belt and plastic buckets are out; casing expands; bearings run hot</td>
+              <td>Chain, steel buckets, expansion provision in the casing, bearing temperature monitoring</td></tr>
+          <tr><td>Dusty and combustible</td><td>The explosion problem of <a href="#s18">&sect;4.18</a></td>
+              <td>Explosion relief or suppression, ignition source control, dust extraction at the inlet and outlet</td></tr>
+          <tr><td>Aerating and light (flour, fines)</td><td>Blows out of the bucket in the casing draught; discharges unpredictably</td>
+              <td>Continuous buckets, lower speed, controlled casing air flow</td></tr>
+          <tr><td>Large lumps</td><td>Bucket projection, not power, is the limit; a trapped lump cuts a belt</td>
+              <td>Chain rather than belt; projection &ge; 3 times the largest lump; screen upstream</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.13.</b> Fill factor <var>&psi;</var> to design on.</caption>
+        <thead><tr><th>Material and feed</th><th><var>&psi;</var></th><th>Comment</th></tr></thead>
+        <tbody>
+          <tr><td>Free-flowing grain, flood fed, correct speed</td><td class="num">0.80&ndash;0.90</td><td>The best a real machine achieves</td></tr>
+          <tr><td>Free-flowing grain or sand, dig fed</td><td class="num">0.70&ndash;0.80</td><td>The usual design basis</td></tr>
+          <tr><td>Powder, dig fed</td><td class="num">0.60&ndash;0.75</td><td>Aeration and casing draught cost fill</td></tr>
+          <tr><td>Sluggish or sticky material</td><td class="num">0.50&ndash;0.65</td><td>And it falls further as build-up accumulates</td></tr>
+          <tr><td>Lumpy material, lumps to one third of projection</td><td class="num">0.50&ndash;0.65</td><td>Voids between lumps waste bucket volume</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Designing on 0.9 because the catalogue says the bucket holds 10&nbsp;L is the single most common
+      sizing error in this machine. A dig-fed elevator on a sluggish powder may run at 0.6, which is
+      two-thirds of the assumed capacity &mdash; and no amount of extra motor power will recover it, because
+      the limit is how much material is in the buckets, not how hard they are pulled.</p>
+
+    <!-- ============================================================ 4.11 -->
+    <h2 id="s11">4.11 Capacity Calculation</h2>
+
+    <p>The capacity of a bucket elevator is a volume per bucket times a number of buckets per second. That
+      is the whole idea; everything else is bookkeeping.</p>
+
+    <p>If the buckets are spaced <var>s</var> apart and travel at <var>v</var>, then <var>v</var>/<var>s</var>
+      buckets pass the head each second. Each carries a water-level volume <var>V</var><sub>b</sub> filled
+      to a fraction <var>&psi;</var>:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>Q</var><sub>v</sub> = 3600 <var>V</var><sub>b</sub> <var>&psi;</var>
+        <span class="frac"><span class="num"><var>v</var></span><span class="den"><var>s</var></span></span>
+        &nbsp;<span class="units">m&sup3;/h &mdash; <var>V</var><sub>b</sub> in m&sup3;, <var>v</var> in m/s, <var>s</var> in m</span>
+      </span>
+      <span class="tag">(4.3)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>Q</var><sub>m</sub> = <var>Q</var><sub>v</sub> <var>&rho;</var>
+        &nbsp;<span class="units">t/h &mdash; with <var>&rho;</var> in t/m&sup3;</span>
+      </span>
+      <span class="tag">(4.4)</span>
+    </div>
+
+    <p>Rearranged, the same expression answers the two questions a designer actually asks. Given a required
+      capacity and a chosen bucket, what spacing is needed? And given a machine that exists, what fill
+      factor is it achieving?</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>s</var> = <span class="frac"><span class="num">3600 <var>V</var><sub>b</sub> <var>&psi;</var> <var>v</var></span><span class="den"><var>Q</var><sub>v</sub></span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>&psi;</var> = <span class="frac"><span class="num"><var>Q</var><sub>v</sub> <var>s</var></span><span class="den">3600 <var>V</var><sub>b</sub> <var>v</var></span></span>
+      </span>
+      <span class="tag">(4.5)</span>
+    </div>
+
+    <p>The second form is a diagnostic tool. Measure the delivered tonnage on a real elevator, convert to
+      volume, and compute <var>&psi;</var>. If it comes out at 0.55 when the design assumed 0.75, the fault
+      is in the feed or in build-up inside the buckets &mdash; not in the drive, not in the belt, and no
+      amount of speed will fix it cleanly.</p>
+
+    <div class="callout">
+      <span class="label">Capacity in the CEMA form</span>
+      <p>The imperial statement of Eq.&nbsp;4.3 is <var>Q</var> = (bucket capacity in
+        ft&sup3; at water level) &times; (buckets per foot of belt) &times; (belt speed in ft/min) &times;
+        60, giving ft&sup3;/h. It is the same equation with the units folded in, and manufacturers'
+        tables are built from it. Both forms are quoted at water level, so a table that looks generous is
+        usually quoting gross capacity instead &mdash; check which.</p>
+    </div>
+
+    <!-- ============================================================ 4.12 -->
+    <h2 id="s12">4.12 Speed Selection</h2>
+
+    <p>Speed is not free to choose. It has to satisfy three separate conditions at once, and the third is
+      the one people forget.</p>
+
+    <ol>
+      <li><b>Capacity.</b> From Eq.&nbsp;4.3, <var>v</var> and <var>s</var> trade off directly: for a given
+        bucket and fill factor, capacity is proportional to <var>v</var>/<var>s</var>.</li>
+      <li><b>Material tolerance.</b> Table&nbsp;4.14 sets the ceiling. A fragile or abrasive material caps
+        the speed regardless of what capacity would like.</li>
+      <li><b>Discharge.</b> The pole point of Eq.&nbsp;4.2 must land on the right side of the bucket radii
+        for the discharge type chosen. Head diameter and shaft speed are linked to belt speed by</li>
+    </ol>
+
+    <div class="eq">
+      <span class="body">
+        <var>v</var> = <span class="frac"><span class="num"><var>&pi;</var> <var>D</var> <var>n</var></span><span class="den">60</span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>n</var> = <span class="frac"><span class="num">60 <var>v</var></span><span class="den"><var>&pi;</var> <var>D</var></span></span>
+        &nbsp;<span class="units"><var>D</var> in m, <var>n</var> in rev/min, <var>v</var> in m/s</span>
+      </span>
+      <span class="tag">(4.6)</span>
+    </div>
+
+    <p>This is the lever that resolves most conflicts. A material that must be lifted at 2&nbsp;m/s but
+      would be thrown too hard from a small head pulley can be run on a <em>larger</em> head pulley at the
+      same belt speed: the shaft turns more slowly, <var>r</var><sub>p</sub> grows, and the discharge moves
+      from violently centrifugal towards gentle. Speed and discharge mode are two different questions with
+      one shared variable.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.14.</b> Speed guidance by material and discharge type.</caption>
+        <thead><tr><th>Material</th><th>Centrifugal (m/s)</th><th>Continuous (m/s)</th><th>Reason for the limit</th></tr></thead>
+        <tbody>
+          <tr><td>Grain, seed, meal</td><td class="num">1.8&ndash;2.5</td><td class="num">0.6&ndash;1.0</td><td>Kernel damage and dust generation</td></tr>
+          <tr><td>Cement, fly ash, lime</td><td class="num">1.5&ndash;2.2</td><td class="num">0.5&ndash;1.0</td><td>Dust and aeration; fines blow out of the bucket</td></tr>
+          <tr><td>Sand, gravel, ore fines</td><td class="num">1.2&ndash;2.0</td><td class="num">0.5&ndash;0.9</td><td>Abrasion of lip and casing rises with speed</td></tr>
+          <tr><td>Fertiliser, granules, pellets</td><td class="num">1.5&ndash;2.2</td><td class="num">0.6&ndash;1.0</td><td>Degradation of the granule and its coating</td></tr>
+          <tr><td>Clinker, sinter, hot ash</td><td>not used</td><td class="num">0.4&ndash;0.8</td><td>Chain wear, heat, and lump impact</td></tr>
+          <tr><td>Wet or sticky material</td><td>not used</td><td class="num">0.3&ndash;0.6</td><td>Positive discharge; the load has to be given time to leave</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.13 -->
+    <h2 id="s13">4.13 Power</h2>
+
+    <p>Of all the machines in this course, the bucket elevator has the cleanest power calculation, because
+      the useful work is nearly the whole of it. Lifting <var>Q</var><sub>m</sub> tonnes per hour through
+      <var>H</var> metres requires</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>P</var><sub>lift</sub> = <span class="frac"><span class="num"><var>Q</var><sub>m</sub> <var>H</var> <var>g</var></span><span class="den">3.6</span></span>
+        &nbsp;<span class="units">W &mdash; <var>Q</var><sub>m</sub> in t/h, <var>H</var> in m</span>
+      </span>
+      <span class="tag">(4.7)</span>
+    </div>
+
+    <p>which is 2.725&nbsp;W for every t/h lifted one metre &mdash; a number worth memorising, because it
+      lets you check any elevator quotation in your head. A 120&nbsp;t/h machine lifting 30&nbsp;m needs
+      120&nbsp;&times;&nbsp;30&nbsp;&times;&nbsp;2.725 = 9.8&nbsp;kW of lifting power, so a 30&nbsp;kW motor
+      on that duty is either allowing for something specific or is simply wrong.</p>
+
+    <p>To the lifting power add the digging resistance at the boot and the mechanical losses, then divide by
+      the drive efficiency:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>P</var> = <span class="frac"><span class="num"><var>P</var><sub>lift</sub> <var>k</var><sub>s</sub></span><span class="den"><var>&eta;</var></span></span>
+        &nbsp;<span class="units"><var>k</var><sub>s</sub> = 1.1&ndash;1.3 flood fed, 1.2&ndash;1.5 dig fed</span>
+      </span>
+      <span class="tag">(4.8)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.15.</b> The scoop and loss factor <var>k</var><sub>s</sub>.</caption>
+        <thead><tr><th>Condition</th><th><var>k</var><sub>s</sub></th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Flood fed, free-flowing material, short lift</td><td class="num">1.10</td><td>Almost pure lifting work</td></tr>
+          <tr><td>Flood fed, powder, lift to 30&nbsp;m</td><td class="num">1.15&ndash;1.20</td><td>Some carry-back and casing friction</td></tr>
+          <tr><td>Dig fed, free-flowing material</td><td class="num">1.20&ndash;1.30</td><td>The common industrial case</td></tr>
+          <tr><td>Dig fed, sluggish or damp material</td><td class="num">1.30&ndash;1.50</td><td>Digging through a packed bed is expensive</td></tr>
+          <tr><td>Any elevator with known back-legging</td><td>&mdash;</td><td>Fix the discharge first; do not buy a bigger motor to lift the same material twice</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Drive efficiency <var>&eta;</var> follows the same rules as in <a href="chapter2.html#s15">&sect;2.15</a>:
+      about 0.94 for a helical reducer, 0.90 for a shaft-mount with a belt primary, and as low as 0.50 for a
+      high-ratio worm gear. Bucket elevators need large reductions &mdash; a 1,450&nbsp;rev/min motor driving
+      a 54&nbsp;rev/min head shaft is a ratio of 27 &mdash; so the temptation to fit a worm box is real, and
+      the efficiency penalty is paid for the life of the machine.</p>
+
+    <div class="callout">
+      <span class="label">A useful identity</span>
+      <p>Eq.&nbsp;4.7 can also be written <var>P</var><sub>lift</sub> = <var>F</var><sub>lift</sub> <var>v</var>,
+        where <var>F</var><sub>lift</sub> is the weight of the material hanging in the up leg
+        (Eq.&nbsp;4.10). The two forms must agree, and checking that they do catches a surprising number of
+        arithmetic slips: if power from the tonnage and power from the tension disagree, one of the two is
+        wrong.</p>
+    </div>
+
+    <!-- ============================================================ 4.14 -->
+    <h2 id="s14">4.14 Tensions in a Belt Elevator</h2>
+
+    <p>The belt of a bucket elevator carries the weight of the material in the up leg. The weight of the
+      belt and the empty buckets is the same on both sides and cancels, which is why the elevator is so
+      efficient and why the tension calculation is short.</p>
+
+    <p>The material in the up leg at any moment is the tonnage rate times the transit time
+      <var>H</var>/<var>v</var>:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>m</var><sub>up</sub> = <span class="frac"><span class="num"><var>Q</var><sub>m</sub> <var>H</var></span><span class="den">3.6 <var>v</var></span></span>
+        &nbsp;<span class="units">kg &mdash; <var>Q</var><sub>m</sub> in t/h</span>
+      </span>
+      <span class="tag">(4.9)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>F</var><sub>lift</sub> = <var>m</var><sub>up</sub> <var>g</var>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>F</var><sub>u</sub> = <var>F</var><sub>lift</sub> + <var>F</var><sub>dig</sub> + <var>F</var><sub>fric</sub>
+      </span>
+      <span class="tag">(4.10)</span>
+    </div>
+
+    <p>where <var>F</var><sub>u</sub> is the effective circumferential force at the head pulley, the same
+      quantity as in <a href="chapter3.html#s6">&sect;3.6</a>. The digging force
+      <var>F</var><sub>dig</sub> is taken as 10&ndash;30&nbsp;% of <var>F</var><sub>lift</sub> for a dig-fed
+      machine, following Table&nbsp;4.15, and <var>F</var><sub>fric</sub> covers bearing and seal friction,
+      which is small.</p>
+
+    <p>From there the belt analysis is identical to Chapter&nbsp;3. The slack side must be tight enough that
+      the drive does not slip, which is the Euler&ndash;Eytelwein limit:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var><sub>2</sub> &ge; <span class="frac"><span class="num"><var>F</var><sub>u</sub></span><span class="den">e<sup><var>&mu;&theta;</var></sup> &minus; 1</span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>T</var><sub>1</sub> = <var>F</var><sub>u</sub> + <var>T</var><sub>2</sub>
+      </span>
+      <span class="tag">(4.11)</span>
+    </div>
+
+    <p>With a lagged head pulley, <var>&mu;</var> &asymp; 0.35, and a bucket elevator has a
+      180&deg; wrap, so e<sup><var>&mu;&theta;</var></sup> = e<sup>0.35<var>&pi;</var></sup> = 3.00 and
+      <var>T</var><sub>2</sub> &ge; <var>F</var><sub>u</sub>/2.00. There is no way to increase the wrap on a
+      vertical machine &mdash; no snub pulley geometry helps much &mdash; so the take-up tension has to do
+      the whole job. That is why an elevator take-up is not a minor fitting.</p>
+
+    <p>The belt is then selected exactly as in <a href="chapter3.html#s9">&sect;3.9</a>, on tension per unit
+      width at the highest-tension point:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>k</var><sub>req</sub> = <span class="frac"><span class="num"><var>T</var><sub>1</sub> &middot; SF</span><span class="den"><var>B</var></span></span>
+        &nbsp;<span class="units">N/mm</span>
+      </span>
+      <span class="tag">(4.12)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.16.</b> Safety factors for elevator belts and chains.</caption>
+        <thead><tr><th>Element and duty</th><th>SF on breaking strength</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Elevator belt, fabric carcass, bolted buckets</td><td class="num">8&ndash;10</td><td>The bolt holes are already in the published rating; keep margin anyway</td></tr>
+          <tr><td>Elevator belt, steel cord</td><td class="num">7&ndash;8</td><td>High lifts and high tonnage</td></tr>
+          <tr><td>Elevator belt, hot or severe duty</td><td>Add 20&ndash;30&nbsp;%</td><td>Heat, frequent starts, sub-zero start-up</td></tr>
+          <tr><td>Forged link or roller chain</td><td class="num">8&ndash;10</td><td>On the chain maker's breaking load, per strand</td></tr>
+          <tr><td>Chain, shock loading or lumps</td><td class="num">10&ndash;12</td><td>Every sprocket engagement is an impact</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.15 -->
+    <h2 id="s15">4.15 Chain Pull in a Chain Elevator</h2>
+
+    <p>A chain elevator replaces the Euler analysis with something simpler and less forgiving: the chain
+      engages sprocket teeth, so it cannot slip, and the whole of <var>F</var><sub>u</sub> appears as chain
+      pull. With <var>z</var> strands sharing the load,</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>F</var><sub>chain</sub> = <span class="frac"><span class="num"><var>F</var><sub>u</sub></span><span class="den"><var>z</var></span></span> + <var>F</var><sub>0</sub>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>F</var><sub>break</sub> &ge; <var>F</var><sub>chain</sub> &middot; SF
+      </span>
+      <span class="tag">(4.13)</span>
+    </div>
+
+    <p>where <var>F</var><sub>0</sub> is a modest pre-tension from the take-up, enough to keep the chain
+      engaged and hanging straight. Three cautions come with a chain machine:</p>
+
+    <ul>
+      <li><b>Two strands do not share equally.</b> Manufacturing tolerance, wear and an off-centre load put
+        more on one strand than the other. Some designers apply a sharing factor of 0.6 rather than 0.5 per
+        strand, which is a 20&nbsp;% margin on the pull.</li>
+      <li><b>Wear elongation is the maintenance clock.</b> A chain that has stretched 2&nbsp;% no longer
+        matches its sprocket pitch and starts to climb the teeth. Links are removed and the take-up reset
+        &mdash; a scheduled job, not a breakdown repair.</li>
+      <li><b>Impact.</b> Each link entering the sprocket is a small collision, and the tooth count matters:
+        more teeth means a smaller angular step and less impact. Below about 10&nbsp;teeth the motion is
+        visibly jerky.</li>
+    </ul>
+
+    <!-- ============================================================ 4.16 -->
+    <h2 id="s16">4.16 Shafts, Torque and the Starting Case</h2>
+
+    <p>The head shaft carries the full torque of the drive, and the running torque follows the familiar
+      relation of <a href="chapter2.html#s17">&sect;2.17</a>:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var> = 9550 <span class="frac"><span class="num"><var>P</var></span><span class="den"><var>n</var></span></span>
+        &nbsp;<span class="units">N&middot;m &mdash; <var>P</var> in kW, <var>n</var> in rev/min</span>
+      </span>
+      <span class="tag">(4.14)</span>
+    </div>
+
+    <p>Because elevator head shafts turn slowly, that torque is large. A 15&nbsp;kW drive at 54&nbsp;rev/min
+      delivers 2,650&nbsp;N&middot;m &mdash; roughly the torque of a small truck engine at peak, applied to
+      a shaft you can put both hands around. Shaft diameter, key, hub and coupling all have to be checked
+      against it, and against the starting case, which is worse:</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var><sub>start</sub> = <var>k</var><sub>st</sub> <var>T</var><sub>run</sub>
+        &nbsp;<span class="units"><var>k</var><sub>st</sub> = 1.5 normal start, 2.0&ndash;2.5 starting a loaded or flooded machine</span>
+      </span>
+      <span class="tag">(4.15)</span>
+    </div>
+
+    <p>Two situations produce the high end of that range. Starting an elevator whose casing is still full of
+      material &mdash; after a power failure, for example &mdash; means lifting a fully loaded up leg from
+      rest. And starting with a boot full of settled material means digging through a compacted bed. Both
+      are ordinary events, not abuse, which is why elevators are routinely fitted with soft starters or
+      fluid couplings and why the drive is checked at <var>k</var><sub>st</sub> rather than at running
+      torque.</p>
+
+    <div class="callout">
+      <span class="label">The empty-the-casing question</span>
+      <p>Before restarting a stopped, loaded elevator, ask whether the machine can start at all. If it
+        cannot, the boot has to be emptied through the cleanout by hand, with the drive isolated. Designing
+        that door in, and the access to reach it, is a five-minute decision on a drawing that saves hours of
+        unsafe improvisation at three in the morning.</p>
+    </div>
+
+    <!-- ============================================================ 4.17 -->
+    <h2 id="s17">4.17 Take-up and the Backstop</h2>
+
+    <p>The take-up sits in the boot and does two jobs: it provides <var>T</var><sub>2</sub> so the drive
+      does not slip, and it absorbs the stretch of the belt or the wear elongation of the chain.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.17.</b> Take-up arrangements.</caption>
+        <thead><tr><th>Type</th><th>Principle</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td>Screw take-up</td><td>Threaded rods move the boot shaft down</td><td>The standard for short and medium belt elevators. Cheap; needs periodic adjustment</td></tr>
+          <tr><td>Gravity take-up</td><td>Counterweighted boot shaft or a weighted frame</td><td>Tall machines and steel cord belts. Tension is constant and automatic</td></tr>
+          <tr><td>Spring take-up</td><td>Pre-loaded springs on the boot shaft</td><td>Small machines, and chain elevators where only pre-tension is needed</td></tr>
+          <tr><td>Hydraulic or winch</td><td>Powered, with tension control</td><td>Very tall or high-tension machines; allows a different tension for starting</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Travel is sized on the same basis as in <a href="chapter3.html#s8">&sect;3.8</a>. The total belt
+      length is twice the centre distance, so</p>
+
+    <div class="eq">
+      <span class="body">
+        travel &asymp; 0.015 &times; 2<var>L</var> &nbsp;<span class="units">fabric belt; the boot shaft moves half of that</span>
+      </span>
+      <span class="tag">(4.16)</span>
+    </div>
+
+    <p>and 0.3&nbsp;% of 2<var>L</var> for a steel cord belt, plus 0.3&nbsp;to&nbsp;0.5&nbsp;m for
+      re-splicing. A 30&nbsp;m elevator therefore needs roughly a metre of belt allowance and half a metre
+      of shaft movement &mdash; which is why the boot is as deep as it is.</p>
+
+    <p><b>The backstop</b> is not optional on any elevator that can run backwards under load. Stop a loaded
+      machine and the weight of material in the up leg drives the belt in reverse; the buckets empty
+      themselves into the boot at speed, the boot packs solid, and the drive can be spun backwards fast
+      enough to destroy the reducer. A backstop &mdash; a ratchet or a sprag clutch on the head shaft or
+      the reducer &mdash; prevents all of that. Check it works. A seized backstop that has quietly failed is
+      discovered on the day the power drops out.</p>
+
+    <!-- ============================================================ 4.18 -->
+    <h2 id="s18">4.18 Dust and Explosion Protection</h2>
+
+    <p>A bucket elevator handling grain, flour, sugar, starch, coal, sulphur, aluminium powder or most
+      organic solids is a dust explosion hazard, and in the statistics of grain handling the elevator leg
+      is the single most common origin. This is not a footnote to the design; for combustible dusts it is
+      part of the design, and it is regulated.</p>
+
+    <p>An explosion needs five things at once &mdash; the &ldquo;explosion pentagon&rdquo;: combustible
+      dust, dispersion in air, oxygen, confinement, and an ignition source. A bucket elevator supplies the
+      first four by existing. Dust is generated at every dig and every discharge; the moving buckets
+      disperse it; the casing confines it; and the vertical leg is an ideal duct for a flame front to
+      accelerate along. Design therefore attacks the fifth item, and then assumes it will fail anyway.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.18.</b> The five conditions, and what design does about each.</caption>
+        <thead><tr><th>Condition</th><th>Present in an elevator because</th><th>Design response</th></tr></thead>
+        <tbody>
+          <tr><td>Combustible dust</td><td>The material itself</td><td>Establish <var>K</var><sub>St</sub> and minimum ignition energy by test; they set the protection design</td></tr>
+          <tr><td>Dispersion</td><td>Digging, throwing and impact at the chute</td><td>Aspirate the head and the boot; feed gently; avoid free fall in the chute</td></tr>
+          <tr><td>Oxygen</td><td>Air in the casing</td><td>Inerting only in special cases; normally accepted</td></tr>
+          <tr><td>Confinement</td><td>The casing is a closed duct</td><td>Explosion relief venting, or suppression, sized to the volume</td></tr>
+          <tr><td>Ignition</td><td>Friction, slipping belt, bucket striking casing, hot bearing, tramp metal, static</td><td>Instrumentation and bonding, as below &mdash; this is the controllable one</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.19.</b> Ignition sources and their controls.</caption>
+        <thead><tr><th>Source</th><th>Mechanism</th><th>Control</th></tr></thead>
+        <tbody>
+          <tr><td>Belt slip on the head pulley</td><td>Friction heats the belt and the lagging until it smoulders</td><td>Speed or motion sensor on the boot shaft, tripping on under-speed; correct <var>T</var><sub>2</sub></td></tr>
+          <tr><td>Belt or chain misalignment</td><td>The belt rubs the casing; buckets strike steel</td><td>Belt alignment (drift) switches both sides, high and low</td></tr>
+          <tr><td>Bearing failure</td><td>A dry or overloaded bearing reaches ignition temperature</td><td>Bearing temperature sensors on head and boot shafts, alarm and trip</td></tr>
+          <tr><td>Tramp metal</td><td>A steel object strikes the casing or is trapped, making sparks</td><td>Magnet or metal detector upstream of the inlet</td></tr>
+          <tr><td>Static discharge</td><td>Non-conductive belt and plastic buckets accumulate charge</td><td>Anti-static belt and conductive buckets; bond and earth the whole machine</td></tr>
+          <tr><td>Plugged boot or choked leg</td><td>Material packs, the belt slips, everything heats</td><td>Plug (choke) switch in the boot, interlocked with the feed</td></tr>
+          <tr><td>Hot work and smoking</td><td>External</td><td>Permit system; not a design feature, but part of the same risk register</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>Protection, not just prevention.</b> Because ignition control can never be complete, a combustible
+      dust elevator is also given a way to survive an explosion. The usual options, in the order they are
+      normally considered:</p>
+
+    <ul>
+      <li><b>Explosion relief venting</b> &mdash; rupture panels in the casing, sized to the casing volume
+        and the dust's <var>K</var><sub>St</sub> value, discharging to a safe place outdoors. The cheapest
+        and most common solution for an outdoor leg.</li>
+      <li><b>Flameless venting</b> &mdash; a vent with a flame arrester, for indoor machines where a
+        discharging fireball is unacceptable.</li>
+      <li><b>Explosion suppression</b> &mdash; pressure detectors trigger a suppressant charge within
+        milliseconds. Used where venting is impossible.</li>
+      <li><b>Isolation</b> &mdash; the leg is isolated from connected equipment so a flame front does not
+        propagate to a silo, which is where a small explosion becomes a large one.</li>
+      <li><b>Explosion-resistant construction</b> &mdash; a casing built to contain the pressure. Rare,
+        because it is heavy and expensive.</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.20.</b> The standards that govern this, and what each is for.</caption>
+        <thead><tr><th>Standard</th><th>Scope</th></tr></thead>
+        <tbody>
+          <tr><td>ANSI/CEMA B20.1</td><td>Safety standard for conveyors and related equipment: guarding, controls, warnings, lockout</td></tr>
+          <tr><td>CEMA 550</td><td>Classification and definitions of bulk materials for belt and bucket elevator selection</td></tr>
+          <tr><td>NFPA 61</td><td>Fire and dust explosion prevention in agricultural and food processing facilities</td></tr>
+          <tr><td>NFPA 654 / NFPA 652</td><td>Combustible dust fundamentals and the dust hazard analysis requirement</td></tr>
+          <tr><td>EN 14491</td><td>Dust explosion venting protective systems &mdash; European vent sizing</td></tr>
+          <tr><td>EN 14460 / EN 14373</td><td>Explosion-resistant equipment; explosion suppression systems</td></tr>
+          <tr><td>ATEX 2014/34/EU</td><td>Equipment for use in explosive atmospheres; zone classification of the casing interior</td></tr>
+          <tr><td>ISO/IEC 80079 series</td><td>Explosive atmospheres: equipment protection by construction</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">A dust hazard analysis is a design input</span>
+      <p>For a combustible dust, the vent area, the isolation and the instrumentation cannot be chosen from
+        a catalogue. They follow from the dust's own test data &mdash; explosion severity
+        <var>K</var><sub>St</sub>, maximum pressure, minimum ignition energy and minimum ignition
+        temperature &mdash; and from the casing volume. Establish those numbers at the start of the project,
+        not after the steel is ordered. A design that leaves them until commissioning has already decided
+        to do it badly.</p>
+    </div>
+
+    <!-- ============================================================ 4.19 -->
+    <h2 id="s19">4.19 Safety and Maintenance</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.21.</b> Safety provisions expected on a bucket elevator.</caption>
+        <thead><tr><th>Provision</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Backstop on the head shaft or reducer</td><td>Prevents reverse running of a loaded machine when it stops</td></tr>
+          <tr><td>Motion or under-speed sensor at the boot shaft</td><td>Detects belt slip, chain break and plugging &mdash; the commonest ignition precursors</td></tr>
+          <tr><td>Belt drift or alignment switches</td><td>Detects a belt rubbing the casing before it heats it</td></tr>
+          <tr><td>Bearing temperature monitoring, head and boot</td><td>Catches a failing bearing while it is still only hot</td></tr>
+          <tr><td>Plug switch in the boot, interlocked with the feed</td><td>Stops the feed before the boot packs solid</td></tr>
+          <tr><td>Guarded, interlocked inspection doors</td><td>The casing is a confined space with moving steel in it</td></tr>
+          <tr><td>Lockout / tagout on the isolator</td><td>Nothing is opened, cleared or adjusted on a live machine</td></tr>
+          <tr><td>Explosion venting or suppression where dust requires it</td><td><a href="#s18">&sect;4.18</a></td></tr>
+          <tr><td>Magnet or metal detector upstream</td><td>Removes tramp metal before it enters the casing</td></tr>
+          <tr><td>Start warning, audible and visual, with delay</td><td>The machine is tall and people work at several levels on it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>The three classic incidents.</b> First, a dust explosion in the leg, discussed above. Second,
+      someone reaching into the boot or the head to clear a blockage on a machine that was not isolated,
+      and being caught by a bucket. Third, a stored-energy incident: releasing belt tension without securing
+      the take-up, or opening a boot door on a casing still full of material that then runs out. All three
+      are eliminated by the same discipline &mdash; isolate, secure the stored energy, and empty before you
+      open &mdash; and all three keep happening.</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.22.</b> Troubleshooting: symptom, probable cause, remedy.</caption>
+        <thead><tr><th>Symptom</th><th>Probable cause</th><th>Remedy</th></tr></thead>
+        <tbody>
+          <tr><td>Delivered capacity below rating, motor current low</td><td>Under-feeding, or a low fill factor from a poor inlet</td>
+              <td>Measure the feed rate; check the inlet aim and the boot level; recompute <var>&psi;</var> from Eq.&nbsp;4.5</td></tr>
+          <tr><td>Delivered capacity low, motor current high</td><td>Back-legging: material failing to clear the head and being lifted twice</td>
+              <td>Check the pole point against Table&nbsp;4.5; adjust speed, head diameter or throat plate</td></tr>
+          <tr><td>Material in the down leg, spillage at the boot</td><td>Discharge partly missing the chute; throat plate set wrong</td><td>Reset the throat plate; verify the trajectory at actual speed</td></tr>
+          <tr><td>Belt slips at start, squeals</td><td><var>T</var><sub>2</sub> too low; worn lagging; starting a loaded machine</td>
+              <td>Tighten the take-up to the Eq.&nbsp;4.11 value; re-lag; fit a soft start</td></tr>
+          <tr><td>Boot plugs repeatedly</td><td>Over-feeding, wet material, or no cleanout discipline</td><td>Meter the feed; interlock the plug switch; clean the boot on schedule</td></tr>
+          <tr><td>Buckets lost or torn off</td><td>Bucket striking the casing; loose bolts; belt stretched so the two runs touch</td>
+              <td>Check clearances, re-torque bolts, reset the take-up, and look for the cause of the drift</td></tr>
+          <tr><td>Bucket lips worn away</td><td>Abrasive material and excessive digging</td><td>Move towards flood feed; AR or urethane lips; reduce speed</td></tr>
+          <tr><td>Chain noisy and climbing the sprocket</td><td>Wear elongation beyond about 2&nbsp;%</td><td>Remove links and reset take-up; replace sprockets if the tooth profile is hooked</td></tr>
+          <tr><td>Belt runs off to one side</td><td>Head or boot pulley out of square; uneven bucket loading</td>
+              <td>Square the shafts; check the inlet is central &mdash; the tracking logic of <a href="chapter3.html#s11">&sect;3.11</a> applies here too</td></tr>
+          <tr><td>Bearing hot</td><td>Contamination, overload, misalignment</td><td>Stop, investigate. A hot bearing in a dust leg is an ignition source, not a nuisance</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.23.</b> Maintenance schedule.</caption>
+        <thead><tr><th>Interval</th><th>Task</th></tr></thead>
+        <tbody>
+          <tr><td>Every shift</td><td>Listen at the boot and head; check the delivered rate; look for spillage and dust accumulation around the machine</td></tr>
+          <tr><td>Weekly</td><td>Check boot level and clean out; verify take-up position; confirm the feed is centred and in the direction of travel</td></tr>
+          <tr><td>Monthly</td><td>Bucket bolt torque check on a sample; bucket lip wear; chain elongation or belt splice condition; reducer oil level</td></tr>
+          <tr><td>Quarterly</td><td>Function test every safety device: backstop, motion sensor, drift switches, plug switch, temperature sensors; inspect vent panels</td></tr>
+          <tr><td>Annually</td><td>Full internal inspection with the machine isolated and emptied; casing thickness and clearance survey; bearing and reducer service; dust accumulation audit against the housekeeping standard</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.20 -->
+    <h2 id="s20">4.20 Worked Design Example</h2>
+
+    <p>A grain terminal needs to lift wheat from an intake conveyor into a silo distribution conveyor
+      30&nbsp;m above. Size the elevator.</p>
+
+    <div class="worked">
+      <div class="table-wrap">
+        <table>
+          <caption><b>Table 4.24.</b> Design data.</caption>
+          <tbody>
+            <tr><th>Material</th><td>Wheat, free flowing, food duty, non-abrasive</td></tr>
+            <tr><th>Bulk density <var>&rho;</var></th><td>750 kg/m&sup3; (0.75 t/m&sup3;)</td></tr>
+            <tr><th>Required capacity <var>Q</var><sub>m</sub></th><td>120 t/h</td></tr>
+            <tr><th>Lift <var>H</var></th><td>30 m, centre to centre</td></tr>
+            <tr><th>Feed</th><td>Chute into the up leg, with a shallow boot bed &mdash; combination feed</td></tr>
+            <tr><th>Service</th><td>Indoor leg, 16 h/day, wheat dust (combustible)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="step">
+        <h4>Step 1 &mdash; Volume flow required</h4>
+        <p><var>Q</var><sub>v</sub> = <var>Q</var><sub>m</sub>/<var>&rho;</var> = 120/0.75 =
+          160&nbsp;m&sup3;/h.</p>
+        <p class="result"><var>Q</var><sub>v</sub> = 160&nbsp;m&sup3;/h</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 2 &mdash; Discharge type, traction and buckets</h4>
+        <p>Wheat is free flowing and only mildly fragile, the duty is food-grade and the tonnage is
+          moderate: <b>centrifugal discharge</b> on a <b>belt</b>, with <b>HDPE buckets</b>
+          (Tables&nbsp;4.4, 4.6, 4.9). Plastic buckets are non-sparking, quiet, and will not gouge the belt
+          if one works loose &mdash; all three matter in a grain dust leg.</p>
+        <p class="result">Centrifugal &middot; belt &middot; HDPE buckets</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 3 &mdash; Bucket size and required bucket flow</h4>
+        <p>From Table&nbsp;4.8 take a 400&nbsp;&times;&nbsp;200&nbsp;&times;&nbsp;200&nbsp;mm bucket,
+          <var>V</var><sub>b</sub> = 10&nbsp;L = 0.010&nbsp;m&sup3;, on a 450&nbsp;mm belt. Table&nbsp;4.13
+          gives <var>&psi;</var> = 0.75 for free-flowing grain with a combination feed &mdash; deliberately
+          not the 0.85 that a perfect flood feed could reach.</p>
+        <p>Bucket volume flow needed = <var>Q</var><sub>v</sub>/<var>&psi;</var> = 160/0.75 =
+          213.3&nbsp;m&sup3;/h, so <var>v</var>/<var>s</var> = 213.3/(3600&nbsp;&times;&nbsp;0.010) =
+          5.93&nbsp;buckets/s.</p>
+        <p class="result"><var>V</var><sub>b</sub> = 10&nbsp;L, <var>&psi;</var> = 0.75,
+          <var>v</var>/<var>s</var> = 5.93&nbsp;s<sup>&minus;1</sup></p>
+      </div>
+
+      <div class="step">
+        <h4>Step 4 &mdash; Speed and spacing</h4>
+        <p>Table&nbsp;4.14 allows 1.8&ndash;2.5&nbsp;m/s for grain in centrifugal discharge. Take
+          <var>v</var> = 2.25&nbsp;m/s, which gives <var>s</var> = 2.25/5.93 = 0.379&nbsp;m. Select the
+          standard 375&nbsp;mm pitch.</p>
+        <p>Check the spacing against the bucket: 375/200 = 1.88 times the projection, inside the
+          1.5&ndash;3 range of <a href="#s6">&sect;4.6</a>. Recomputing the capacity at the selected values,
+          <var>Q</var><sub>v</sub> = 3600&nbsp;&times;&nbsp;(2.25/0.375)&nbsp;&times;&nbsp;0.010&nbsp;&times;&nbsp;0.75
+          = 162&nbsp;m&sup3;/h, so <var>Q</var><sub>m</sub> = 121.5&nbsp;t/h &mdash; 1.3&nbsp;% above the
+          requirement.</p>
+        <p class="result"><var>v</var> = 2.25&nbsp;m/s, <var>s</var> = 375&nbsp;mm, delivering
+          121.5&nbsp;t/h</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 5 &mdash; Head diameter and the pole point</h4>
+        <p>Take a 800&nbsp;mm head pulley. From Eq.&nbsp;4.6, <var>n</var> =
+          60&nbsp;&times;&nbsp;2.25/(<var>&pi;</var>&nbsp;&times;&nbsp;0.8) = 53.7&nbsp;rev/min. From
+          Eq.&nbsp;4.2, <var>r</var><sub>p</sub> = 895/53.7&sup2; = 0.310&nbsp;m.</p>
+        <p>The bucket path runs from <var>r</var><sub>i</sub> = 0.400&nbsp;m (the belt line) to
+          <var>r</var><sub>o</sub> = 0.400 + 0.200 = 0.600&nbsp;m. Since
+          <var>r</var><sub>p</sub> = 0.310&nbsp;m &lt; <var>r</var><sub>i</sub>, the pole point lies inside
+          the whole bucket and the discharge is properly centrifugal (Table&nbsp;4.5).</p>
+        <p class="result"><var>D</var> = 800&nbsp;mm, <var>n</var> = 53.7&nbsp;rev/min,
+          <var>r</var><sub>p</sub> = 0.310&nbsp;m &rarr; centrifugal &#10003;</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 6 &mdash; Power</h4>
+        <p><var>P</var><sub>lift</sub> = <var>Q</var><sub>m</sub><var>Hg</var>/3.6 =
+          120&nbsp;&times;&nbsp;30&nbsp;&times;&nbsp;9.81/3.6 = 9,810&nbsp;W = 9.81&nbsp;kW.</p>
+        <p>With a combination feed take <var>k</var><sub>s</sub> = 1.15 (Table&nbsp;4.15) and a helical
+          reducer at <var>&eta;</var> = 0.92:
+          <var>P</var> = 9.81&nbsp;&times;&nbsp;1.15/0.92 = 12.26&nbsp;kW.</p>
+        <p class="result">Select a <b>15&nbsp;kW</b> motor</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 7 &mdash; Tensions</h4>
+        <p>Material hanging in the up leg, Eq.&nbsp;4.9:
+          <var>m</var><sub>up</sub> = 120&nbsp;&times;&nbsp;30/(3.6&nbsp;&times;&nbsp;2.25) =
+          444&nbsp;kg, so <var>F</var><sub>lift</sub> = 444&nbsp;&times;&nbsp;9.81 = 4,360&nbsp;N.</p>
+        <p>Check against Step&nbsp;6: <var>F</var><sub>lift</sub><var>v</var> =
+          4,360&nbsp;&times;&nbsp;2.25 = 9,810&nbsp;W, identical to
+          <var>P</var><sub>lift</sub> &mdash; the identity of <a href="#s13">&sect;4.13</a> holds, so the
+          two chains of arithmetic agree.</p>
+        <p>Digging allowance 15&nbsp;%: <var>F</var><sub>dig</sub> = 654&nbsp;N, so
+          <var>F</var><sub>u</sub> = 5,014&nbsp;N. With a lagged pulley and 180&deg; wrap,
+          e<sup>0.35<var>&pi;</var></sup> = 3.00, so
+          <var>T</var><sub>2</sub> &ge; 5,014/2.00 = 2,503&nbsp;N and
+          <var>T</var><sub>1</sub> = 5,014 + 2,503 = 7,517&nbsp;N.</p>
+        <p class="result"><var>F</var><sub>u</sub> = 5,014&nbsp;N,
+          <var>T</var><sub>2</sub> = 2,503&nbsp;N, <var>T</var><sub>1</sub> = 7,517&nbsp;N</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 8 &mdash; Belt selection</h4>
+        <p>From Eq.&nbsp;4.12 with SF = 10 on a 450&nbsp;mm belt:
+          <var>k</var><sub>req</sub> = 7,517&nbsp;&times;&nbsp;10/450 = 167&nbsp;N/mm.</p>
+        <p>The next standard elevator belt above that is 250&nbsp;N/mm. Specify <b>315&nbsp;N/mm</b>
+          instead: the extra class covers the bucket bolt holes, allows one re-splice over the life of the
+          belt, and costs very little on a 64&nbsp;m length.</p>
+        <p class="result"><var>k</var><sub>req</sub> = 167&nbsp;N/mm &rarr; specify a 315&nbsp;N/mm belt,
+          450&nbsp;mm wide</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 9 &mdash; Torque, starting, take-up and protection</h4>
+        <p>Head shaft torque, Eq.&nbsp;4.14: <var>T</var> = 9550&nbsp;&times;&nbsp;15/53.7 =
+          2,667&nbsp;N&middot;m. At <var>k</var><sub>st</sub> = 2.0 for starting a loaded machine that is
+          5,334&nbsp;N&middot;m, so specify a soft starter or a fluid coupling and check the shaft, key and
+          coupling at the higher figure.</p>
+        <p>Take-up travel, Eq.&nbsp;4.16: total belt length 2<var>L</var> &asymp; 64&nbsp;m, so the
+          allowance is 0.015&nbsp;&times;&nbsp;64 = 0.96&nbsp;m of belt and 0.48&nbsp;m of boot shaft
+          movement. Specify 500&nbsp;mm of screw take-up travel.</p>
+        <p>Because wheat dust is combustible and the leg is indoors, the machine gets a backstop, a boot
+          motion sensor, belt drift switches, bearing temperature monitoring, a boot plug switch, an
+          upstream magnet, anti-static belt and conductive buckets, and flameless explosion venting sized
+          from the dust's own test data (<a href="#s18">&sect;4.18</a>).</p>
+        <p class="result"><var>T</var> = 2,667&nbsp;N&middot;m running, 5,334&nbsp;N&middot;m at start;
+          500&nbsp;mm take-up travel</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption><b>Table 4.25.</b> Design summary.</caption>
+          <tbody>
+            <tr><th>Machine</th><td>Belt-type centrifugal bucket elevator, 30 m lift</td></tr>
+            <tr><th>Buckets</th><td>400 &times; 200 &times; 200 mm HDPE, 10 L water level, 375 mm pitch</td></tr>
+            <tr><th>Belt</th><td>450 mm wide, 315 N/mm fabric carcass, anti-static</td></tr>
+            <tr><th>Speed</th><td>2.25 m/s &mdash; 800 mm head pulley at 53.7 rev/min</td></tr>
+            <tr><th>Capacity</th><td>121.5 t/h at <var>&psi;</var> = 0.75</td></tr>
+            <tr><th>Drive</th><td>15 kW, helical reducer, soft start, backstop</td></tr>
+            <tr><th>Tensions</th><td><var>T</var><sub>1</sub> = 7.5 kN, <var>T</var><sub>2</sub> = 2.5 kN</td></tr>
+            <tr><th>Energy</th><td>0.102 kWh per tonne lifted 30 m, at the motor shaft</td></tr>
+            <tr><th>Cross-check</th><td>A vertical screw conveyor on the same duty is impossible at 30 m
+              (<a href="chapter2.html#s19">&sect;2.19</a>); a pneumatic system would need roughly ten times
+              the energy (Table&nbsp;4.1). The bucket elevator is the right machine, which is why every
+              grain terminal in the world has one</td></tr>
+            <tr><th>Next step</th><td>Size the distribution conveyor at the top from
+              <a href="chapter3.html#s4">&sect;3.4</a>, and the intake feed from
+              <a href="chapter2.html#s20">&sect;2.20</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ============================================================ 4.21 -->
+    <h2 id="s21">4.21 Nomenclature</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>Table 4.26.</b> Symbols used in this chapter.</caption>
+        <thead><tr><th>Symbol</th><th>Quantity</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td><var>B</var></td><td>Belt width</td><td>mm</td></tr>
+          <tr><td><var>D</var></td><td>Head pulley or sprocket pitch diameter</td><td>m</td></tr>
+          <tr><td><var>F</var><sub>chain</sub></td><td>Chain pull per strand</td><td>N</td></tr>
+          <tr><td><var>F</var><sub>dig</sub></td><td>Digging (scooping) resistance at the boot</td><td>N</td></tr>
+          <tr><td><var>F</var><sub>lift</sub></td><td>Weight of the material in the up leg</td><td>N</td></tr>
+          <tr><td><var>F</var><sub>u</sub></td><td>Effective circumferential force at the head</td><td>N</td></tr>
+          <tr><td><var>g</var></td><td>Acceleration of gravity, 9.81</td><td>m/s&sup2;</td></tr>
+          <tr><td><var>H</var></td><td>Lift, centre to centre</td><td>m</td></tr>
+          <tr><td><var>k</var><sub>req</sub></td><td>Required belt rating, tension per unit width</td><td>N/mm</td></tr>
+          <tr><td><var>k</var><sub>s</sub></td><td>Scoop and loss factor</td><td>&mdash;</td></tr>
+          <tr><td><var>k</var><sub>st</sub></td><td>Starting torque factor</td><td>&mdash;</td></tr>
+          <tr><td><var>L</var></td><td>Centre distance, head to boot shaft</td><td>m</td></tr>
+          <tr><td><var>m</var><sub>up</sub></td><td>Mass of material in the up leg</td><td>kg</td></tr>
+          <tr><td><var>n</var></td><td>Head shaft speed</td><td>rev/min</td></tr>
+          <tr><td><var>P</var></td><td>Motor power required</td><td>kW</td></tr>
+          <tr><td><var>P</var><sub>lift</sub></td><td>Lifting power</td><td>W</td></tr>
+          <tr><td><var>Q</var><sub>m</sub></td><td>Mass capacity</td><td>t/h</td></tr>
+          <tr><td><var>Q</var><sub>v</sub></td><td>Volume capacity</td><td>m&sup3;/h</td></tr>
+          <tr><td><var>r</var><sub>i</sub>, <var>r</var><sub>o</sub></td><td>Inner and outer radius of the bucket path at the head</td><td>m</td></tr>
+          <tr><td><var>r</var><sub>p</sub></td><td>Pole point distance</td><td>m</td></tr>
+          <tr><td><var>s</var></td><td>Bucket spacing (pitch)</td><td>m</td></tr>
+          <tr><td>SF</td><td>Safety factor on breaking strength</td><td>&mdash;</td></tr>
+          <tr><td><var>T</var></td><td>Head shaft torque</td><td>N&middot;m</td></tr>
+          <tr><td><var>T</var><sub>1</sub>, <var>T</var><sub>2</sub></td><td>Tight-side and slack-side belt tension</td><td>N</td></tr>
+          <tr><td><var>v</var></td><td>Belt or chain speed</td><td>m/s</td></tr>
+          <tr><td><var>V</var><sub>b</sub></td><td>Bucket volume at water level</td><td>m&sup3;</td></tr>
+          <tr><td><var>z</var></td><td>Number of chain strands</td><td>&mdash;</td></tr>
+          <tr><td><var>&eta;</var></td><td>Drive efficiency</td><td>&mdash;</td></tr>
+          <tr><td><var>&mu;</var></td><td>Friction coefficient, belt on lagged pulley</td><td>&mdash;</td></tr>
+          <tr><td><var>&rho;</var></td><td>Bulk density</td><td>t/m&sup3;</td></tr>
+          <tr><td><var>&psi;</var></td><td>Bucket fill factor</td><td>&mdash;</td></tr>
+          <tr><td><var>&omega;</var></td><td>Head shaft angular velocity</td><td>rad/s</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.22 -->
+    <h2 id="s22">4.22 Problems</h2>
+
+    <div class="callout rule">
+      <span class="label">Before you start</span>
+      <p>Try the <a href="quiz4.html">40-question self-check</a> first. It covers the same ground in
+        multiple-choice form with worked explanations, and it will show you which sections to re-read before
+        you spend time on these.</p>
+    </div>
+
+    <ol class="problems">
+      <li><b>Safety, first.</b> A maintenance fitter proposes to clear a partly blocked boot by opening the
+        cleanout door while the elevator is running slowly, &ldquo;so the buckets keep the material
+        moving&rdquo;. Give three separate reasons why this must not happen, and state what the correct
+        procedure is.</li>
+
+      <li><b>Safety, second.</b> Explain, using the five conditions of Table&nbsp;4.18, why a grain elevator
+        leg is a more dangerous place than the silo it discharges into &mdash; and then explain why an
+        explosion in the leg frequently ends up destroying the silo anyway.</li>
+
+      <li>A bucket elevator has 8&nbsp;L buckets at 300&nbsp;mm pitch running at 1.6&nbsp;m/s, handling a
+        material of bulk density 800&nbsp;kg/m&sup3; at a fill factor of 0.70. Find the volume and mass
+        capacity. <i>[Answer: 107.5&nbsp;m&sup3;/h, 86.0&nbsp;t/h]</i></li>
+
+      <li>Maize (<var>&rho;</var> = 750&nbsp;kg/m&sup3;) is to be lifted at 200&nbsp;t/h using 14&nbsp;L
+        buckets at a fill factor of 0.80 and a speed of 2.4&nbsp;m/s. What bucket spacing is required?
+        <i>[Answer: <var>Q</var><sub>v</sub> = 266.7&nbsp;m&sup3;/h, 6.61&nbsp;buckets/s,
+        <var>s</var> = 0.363&nbsp;m &rarr; select 350&nbsp;mm and re-check the capacity]</i></li>
+
+      <li>An elevator head shaft turns at 45&nbsp;rev/min. The head pulley is 1.0&nbsp;m diameter and the
+        buckets project 250&nbsp;mm. Find the pole point distance and state the discharge mode.
+        <i>[Answer: <var>r</var><sub>p</sub> = 0.442&nbsp;m; <var>r</var><sub>i</sub> = 0.50&nbsp;m, so
+        <var>r</var><sub>p</sub> &lt; <var>r</var><sub>i</sub> &rarr; centrifugal]</i></li>
+
+      <li>For the same head as Problem&nbsp;5, what is the highest shaft speed and the corresponding belt
+        speed that would give a purely gravity (continuous) discharge?
+        <i>[Answer: <var>r</var><sub>p</sub> &gt; <var>r</var><sub>o</sub> = 0.75&nbsp;m requires
+        <var>n</var> &lt; 34.5&nbsp;rev/min, i.e. <var>v</var> &lt; 1.81&nbsp;m/s]</i></li>
+
+      <li>An elevator lifts 90&nbsp;t/h through 24&nbsp;m. It is dig fed
+        (<var>k</var><sub>s</sub> = 1.2) and the drive efficiency is 0.90. Find the lifting power and the
+        motor power required. <i>[Answer: 5.89&nbsp;kW lifting, 7.85&nbsp;kW required &rarr; select
+        9.2&nbsp;or&nbsp;11&nbsp;kW]</i></li>
+
+      <li>For the elevator of Problem&nbsp;7 running at 1.8&nbsp;m/s, find the mass of material in the up
+        leg and the resulting lifting force. <i>[Answer: 333&nbsp;kg, 3,270&nbsp;N]</i></li>
+
+      <li>Continuing Problems&nbsp;7 and&nbsp;8: take the digging resistance as 15&nbsp;% of the lifting
+        force and the head pulley as lagged with a 180&deg; wrap. Find <var>F</var><sub>u</sub>,
+        <var>T</var><sub>2</sub> and <var>T</var><sub>1</sub>.
+        <i>[Answer: 3,760&nbsp;N, 1,878&nbsp;N, 5,638&nbsp;N]</i></li>
+
+      <li>The belt in Problem&nbsp;9 is 400&nbsp;mm wide with bolted buckets. Using a safety factor of 10,
+        find the required belt rating, and say what you would actually specify.
+        <i>[Answer: 141&nbsp;N/mm; specify the next standard class up, with margin for the bolt holes]</i></li>
+
+      <li>The same duty is to be built as a chain elevator with two strands, using a safety factor of 8 on
+        the chain breaking load. What breaking load must each chain have, and what would change if you
+        allowed for unequal load sharing between strands?
+        <i>[Answer: 1,880&nbsp;N per strand &rarr; 15.0&nbsp;kN minimum; a 0.6 sharing factor raises it to
+        18.0&nbsp;kN]</i></li>
+
+      <li>An 11&nbsp;kW drive turns the head shaft at 40&nbsp;rev/min. Find the running torque. Then state
+        what torque the shaft, key and coupling should be checked against if the machine can be started
+        with a loaded casing. <i>[Answer: 2,626&nbsp;N&middot;m running; check at 2.0&ndash;2.5 times, i.e.
+        5,250&ndash;6,570&nbsp;N&middot;m]</i></li>
+
+      <li>An existing elevator with 10&nbsp;L buckets at 400&nbsp;mm pitch runs at 2.0&nbsp;m/s and
+        delivers a measured 75&nbsp;t/h of a material of density 700&nbsp;kg/m&sup3;. What fill factor is it
+        achieving, and what does that tell you?
+        <i>[Answer: <var>Q</var><sub>v</sub> = 107.1&nbsp;m&sup3;/h against a bucket flow of
+        180&nbsp;m&sup3;/h, so <var>&psi;</var> = 0.60 &mdash; the machine is under-filled; look at the feed
+        and at build-up inside the buckets, not at the drive]</i></li>
+
+      <li>A 42&nbsp;m fabric-belt elevator is being designed. How much take-up travel should the boot
+        provide, and how far does the boot shaft move?
+        <i>[Answer: 2<var>L</var> &asymp; 88&nbsp;m, allowance 1.32&nbsp;m of belt, shaft movement
+        0.66&nbsp;m, plus 0.3&ndash;0.5&nbsp;m for re-splicing]</i></li>
+
+      <li>An 8&nbsp;kW elevator drive turns at 45&nbsp;rev/min. Find the running torque, and the torque at a
+        starting factor of 2.5. Comment on what that means for the coupling selection.
+        <i>[Answer: 1,698&nbsp;N&middot;m and 4,245&nbsp;N&middot;m; the coupling is chosen on the starting
+        figure, not the running one]</i></li>
+
+      <li>A malting plant must lift germinated barley &mdash; fragile, damp and slightly sticky &mdash; at
+        40&nbsp;t/h through 18&nbsp;m. Choose the discharge type, the traction element, the bucket material
+        and the speed range, and justify each choice from the tables in this chapter.</li>
+
+      <li>A cement plant lifts clinker at 180&nbsp;&deg;C. State what this rules out, what it forces, and
+        three specific provisions you would add that a grain elevator would not need.</li>
+
+      <li>An existing elevator delivers 60&nbsp;t/h at 1.5&nbsp;m/s with a 700&nbsp;mm head pulley and
+        200&nbsp;mm bucket projection. Production asks for 80&nbsp;t/h and suggests simply raising the speed
+        to 2.0&nbsp;m/s. Compute the pole point before and after, and explain what will actually happen to
+        the machine. <i>[Answer: <var>n</var> goes from 40.9 to 54.6&nbsp;rev/min and
+        <var>r</var><sub>p</sub> from 0.534&nbsp;m to 0.301&nbsp;m; with
+        <var>r</var><sub>i</sub> = 0.35&nbsp;m and <var>r</var><sub>o</sub> = 0.55&nbsp;m, the machine moves
+        from mixed discharge into proper centrifugal discharge, so the capacity may improve by more than the
+        speed ratio alone &mdash; but power rises by 80/60 = 1.33 and the drive must be checked]</i></li>
+
+      <li>Show that lifting one tonne through 30&nbsp;m costs about 0.082&nbsp;kWh of useful work, and about
+        0.109&nbsp;kWh at the motor shaft for <var>k</var><sub>s</sub> = 1.2 and
+        <var>&eta;</var> = 0.9. Compare with a dilute-phase pneumatic system at 1&ndash;4&nbsp;kWh per tonne
+        and comment on when the pneumatic system is nevertheless the right choice.</li>
+
+      <li><b>Design problem.</b> Soybean meal (<var>&rho;</var> = 640&nbsp;kg/m&sup3;, free flowing,
+        mildly dusty) must be lifted at 45&nbsp;t/h through 18&nbsp;m, flood fed from a screw feeder. Work
+        through steps&nbsp;1 to&nbsp;9 of Table&nbsp;4.3: choose the discharge type and traction, select a
+        bucket from Table&nbsp;4.8, find the spacing at a sensible speed, verify the pole point for a
+        600&nbsp;mm head pulley, then find the power, the tensions, the belt rating and the take-up travel.
+        <i>[Guide: <var>Q</var><sub>v</sub> = 70.3&nbsp;m&sup3;/h; with 6&nbsp;L buckets,
+        <var>&psi;</var> = 0.75 and <var>v</var> = 1.8&nbsp;m/s, <var>s</var> = 0.415&nbsp;m;
+        <var>n</var> = 57.3&nbsp;rev/min gives <var>r</var><sub>p</sub> = 0.273&nbsp;m against
+        <var>r</var><sub>i</sub> = 0.30&nbsp;m, so centrifugal; <var>P</var><sub>lift</sub> = 2.21&nbsp;kW
+        and <var>P</var> = 2.94&nbsp;kW at <var>k</var><sub>s</sub> = 1.2, <var>&eta;</var> = 0.9]</i></li>
+    </ol>
+
+    <!-- ============================================================ 4.23 -->
+    <h2 id="s23">4.23 References</h2>
+
+    <ol class="refs">
+      <li>Conveyor Equipment Manufacturers Association, 2015. <em>Bucket Elevators</em>, CEMA
+        Publication&nbsp;550. Naples, FL: CEMA. &mdash; Bucket styles, capacities and the imperial capacity
+        method behind Eq.&nbsp;4.3.</li>
+      <li>Conveyor Equipment Manufacturers Association, 2021. <em>ANSI/CEMA B20.1: Safety Standard for
+        Conveyors and Related Equipment</em>. &mdash; Guarding, controls and lockout provisions of
+        <a href="#s19">&sect;4.19</a>.</li>
+      <li>Deutsches Institut f&uuml;r Normung, 1989. <em>DIN 15234: Continuous mechanical handling
+        equipment &mdash; bucket elevators, design principles</em>. Berlin: DIN.</li>
+      <li>International Organization for Standardization, 1981. <em>ISO 7119: Continuous mechanical
+        handling equipment for loose bulk materials &mdash; screw conveyors and bucket elevators: design
+        rules for drive power</em>. Geneva: ISO.</li>
+      <li>National Fire Protection Association, 2020. <em>NFPA 61: Standard for the Prevention of Fires
+        and Dust Explosions in Agricultural and Food Processing Facilities</em>. Quincy, MA: NFPA.</li>
+      <li>National Fire Protection Association, 2019. <em>NFPA 652: Standard on the Fundamentals of
+        Combustible Dust</em>. Quincy, MA: NFPA. &mdash; The dust hazard analysis requirement referred to in
+        <a href="#s18">&sect;4.18</a>.</li>
+      <li>European Committee for Standardization, 2012. <em>EN 14491: Dust explosion venting protective
+        systems</em>. Brussels: CEN.</li>
+      <li>Eckhoff, R. K., 2003. <em>Dust Explosions in the Process Industries</em>, 3rd ed. Amsterdam:
+        Gulf Professional Publishing. &mdash; The standard technical treatment of
+        <var>K</var><sub>St</sub>, venting and suppression.</li>
+      <li>Colijn, H., 1985. <em>Mechanical Conveyors for Bulk Solids</em>. Amsterdam: Elsevier. &mdash;
+        Classical derivation of the pole point and discharge trajectories.</li>
+      <li>Fayed, M. E. and Skocir, T. S., 1997. <em>Mechanical Conveyors: Selection and Operation</em>.
+        Lancaster, PA: Technomic. &mdash; Comparative selection of vertical handling machines,
+        Table&nbsp;4.1.</li>
+      <li>Woodcock, C. R. and Mason, J. S., 1987. <em>Bulk Solids Handling: An Introduction to the
+        Practice and Technology</em>. Glasgow: Leonard Hill. &mdash; Fill factors, feed arrangements and
+        the digging allowance.</li>
+      <li>McGlinchey, D. (ed.), 2008. <em>Bulk Solids Handling: Equipment Selection and Operation</em>.
+        Oxford: Blackwell. &mdash; Practical selection criteria and troubleshooting.</li>
+    </ol>
+
+    <div class="chapter-nav">
+      <span><a href="quiz3.html">&larr; Chapter 3 Self-Check</a></span>
+      <span><a href="quiz4.html">Chapter 4 Self-Check &rarr;</a></span>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Course</h3>
+      <ul>
+        <li><a href="index.html">Course Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="chapter4.html">Chapter 4: Bucket Elevators</a></li>
+        <li><a href="quiz4.html">Chapter 4: Self-Check</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Standards Referenced</h3>
+      <ul>
+        <li>CEMA 550 &mdash; Bucket elevators</li>
+        <li>DIN 15234 / ISO 7119</li>
+        <li>NFPA 61 / 652 &mdash; Combustible dust</li>
+        <li>EN 14491 &mdash; Explosion venting</li>
+      </ul>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Lecture notes for MHE 301. All rights reserved. Layout inspired by open courseware sites; content, branding
+        and code are original to this course.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Charatchai Yenphayab. All rights reserved. MHE 301 Materials Handling Engineering &mdash; course
+    notes, Semester 1 / 2026. No part of this site may be reproduced, adapted or redistributed without prior
+    written permission.
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

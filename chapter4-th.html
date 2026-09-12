@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บทที่ 4: กระพ้อลำเลียง | MHE 301 วิศวกรรมการขนถ่ายวัสดุ</title>
+<meta name="description" content="การออกแบบกระพ้อลำเลียง: ชนิดการปล่อยวัสดุและจุดขั้ว กระพ้อและระยะห่าง สายพานหรือโซ่ อัตราการลำเลียง กำลังขับ แรงดึง ชุดปรับความตึง และการป้องกันการระเบิดของฝุ่น">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index-th.html">
+      <span class="logo-mark">MHE</span>
+      <span class="logo-text">BAE-MHE<small>วิศวกรรมระบบชีวภาพและเกษตร สจล.</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-nav">
+      <a href="index-th.html">เกี่ยวกับรายวิชา</a>
+      <a href="syllabus-th.html">ประมวลรายวิชา</a>
+      <a href="calendar-th.html">ปฏิทินการเรียน</a>
+      <a href="chapter4-th.html">เอกสารประกอบการสอน</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="chapter4.html">EN</a>
+      <a href="chapter4-th.html" class="active">ไทย</a>
+    </div>
+    <a class="btn-give" href="#s20">ตัวอย่างการออกแบบ</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MHE 301 <span>|</span> บทที่ 4 <span>|</span> เอกสารประกอบการสอน</p>
+    <h1>กระพ้อลำเลียง</h1>
+    <p class="tagline">การยกวัสดุเทกองในแนวดิ่ง: ชนิดการปล่อยวัสดุและจุดขั้ว กระพ้อและระยะห่าง
+      การเลือกระหว่างสายพานกับโซ่ อัตราการลำเลียง กำลังขับ แรงดึง
+      และปัญหาการระเบิดของฝุ่นที่มาพร้อมกับเครื่องจักรชนิดนี้</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="course-menu">
+      <h2>เมนูรายวิชา</h2>
+      <ul>
+        <li><a href="index-th.html">หน้าหลักรายวิชา</a></li>
+        <li><a href="syllabus-th.html">ประมวลรายวิชา</a></li>
+        <li><a href="calendar-th.html">ปฏิทินการเรียน</a></li>
+        <li><a href="chapter1-th.html">บทที่&nbsp;1 &mdash; อุปกรณ์ขนถ่ายและการเลือกใช้</a></li>
+        <li><a href="quiz1-th.html">บทที่&nbsp;1 &mdash; แบบทดสอบทบทวน</a></li>
+        <li><a href="chapter2-th.html">บทที่&nbsp;2 &mdash; เกลียวลำเลียง</a></li>
+        <li><a href="quiz2-th.html">บทที่&nbsp;2 &mdash; แบบทดสอบทบทวน</a></li>
+        <li><a href="chapter3-th.html">บทที่&nbsp;3 &mdash; สายพานลำเลียง</a></li>
+        <li><a href="quiz3-th.html">บทที่&nbsp;3 &mdash; แบบทดสอบทบทวน</a></li>
+        <li><a href="chapter4-th.html" class="active">บทที่&nbsp;4 &mdash; กระพ้อลำเลียง</a></li>
+        <li><a href="quiz4-th.html">บทที่&nbsp;4 &mdash; แบบทดสอบทบทวน</a></li>
+        <li><span class="muted">บทที่&nbsp;5 &mdash; การลำเลียงด้วยลม<em>ยังไม่เผยแพร่</em></span></li>
+        <li><span class="muted">บทที่&nbsp;6 &mdash; โซ่ลำเลียงและสายพานแผ่นเหล็ก<em>ยังไม่เผยแพร่</em></span></li>
+        <li><span class="muted">บทที่&nbsp;7 &mdash; ปั้นจั่นและเครื่องยก<em>ยังไม่เผยแพร่</em></span></li>
+        <li><span class="muted">บทที่&nbsp;8 &mdash; รถอุตสาหกรรมและ AGV<em>ยังไม่เผยแพร่</em></span></li>
+        <li><span class="muted">บทที่&nbsp;9 &mdash; การจัดเก็บและคลังสินค้า<em>ยังไม่เผยแพร่</em></span></li>
+      </ul>
+    </nav>
+
+    <section class="course-info">
+      <h2>ข้อมูลบทเรียน</h2>
+      <dl>
+        <dt>สัปดาห์</dt><dd>9</dd>
+        <dt>แบบฝึกหัด</dt><dd>ชุดที่ 6</dd>
+        <dt>มาตรฐานอ้างอิง</dt>
+        <dd>
+          <ul>
+            <li>CEMA 550</li>
+            <li>DIN 15234 / ISO 7119</li>
+            <li>NFPA 61 / EN 14491</li>
+          </ul>
+        </dd>
+        <dt>ทักษะสำคัญ</dt>
+        <dd>
+          <span class="pill">อัตราการลำเลียง</span>
+          <span class="pill">จุดขั้ว</span>
+          <span class="pill">กำลังขับ</span>
+          <span class="pill">แรงดึง</span>
+          <span class="pill">การป้องกันการระเบิด</span>
+        </dd>
+      </dl>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <p class="lead">กระพ้อลำเลียงยกวัสดุเทกองขึ้นตรง ๆ ในแนวดิ่ง โดยใช้พื้นที่ติดตั้งแทบไม่มากกว่าตัวเรือนของมันเอง
+      และไม่มีเครื่องจักรใดยกวัสดุปริมาณมากขึ้นที่สูงด้วยกำลังน้อยเท่านี้ บทนี้วางลำดับการออกแบบทั้งเส้น
+      คือเลือกชนิดการปล่อยวัสดุ กำหนดขนาดกระพ้อและระยะห่าง เลือกความเร็วที่ปล่อยวัสดุได้จริง
+      หากำลังขับและแรงดึง แล้วจัดการกับฝุ่น เพราะขาของกระพ้อลำเลียงคือตำแหน่งคลาสสิกของการระเบิดฝุ่นธัญพืช</p>
+
+    <div class="toc">
+      <h2>สารบัญเนื้อหา</h2>
+      <ol>
+        <li><a href="#s1">กระพ้อลำเลียงคืออะไร</a></li>
+        <li><a href="#s2">จุดแข็ง ข้อจำกัด และขั้นตอนการออกแบบ</a></li>
+        <li><a href="#s3">ส่วนประกอบของกระพ้อลำเลียง</a></li>
+        <li><a href="#s4">การปล่อยวัสดุสี่ชนิด</a></li>
+        <li><a href="#s5">จุดขั้ว: การทำนายรูปแบบการปล่อยวัสดุ</a></li>
+        <li><a href="#s6">กระพ้อ: รูปแบบ วัสดุ และระยะห่าง</a></li>
+        <li><a href="#s7">สายพานหรือโซ่</a></li>
+        <li><a href="#s8">ตัวเรือน ส่วนหัว และส่วนฐานล่าง</a></li>
+        <li><a href="#s9">การป้อนวัสดุ: แบบตักและแบบท่วม</a></li>
+        <li><a href="#s10">คุณลักษณะวัสดุที่เป็นตัวกำหนดการออกแบบ</a></li>
+        <li><a href="#s11">การคำนวณอัตราการลำเลียง</a></li>
+        <li><a href="#s12">การเลือกความเร็ว</a></li>
+        <li><a href="#s13">กำลังขับ</a></li>
+        <li><a href="#s14">แรงดึงในกระพ้อลำเลียงแบบสายพาน</a></li>
+        <li><a href="#s15">แรงดึงโซ่ในกระพ้อลำเลียงแบบโซ่</a></li>
+        <li><a href="#s16">เพลา แรงบิด และกรณีออกตัว</a></li>
+        <li><a href="#s17">ชุดปรับความตึงและเบรกกันถอยหลัง</a></li>
+        <li><a href="#s18">ฝุ่นและการป้องกันการระเบิด</a></li>
+        <li><a href="#s19">ความปลอดภัยและการบำรุงรักษา</a></li>
+        <li><a href="#s20">ตัวอย่างการออกแบบ</a></li>
+        <li><a href="#s21">สัญลักษณ์</a></li>
+        <li><a href="#s22">แบบฝึกหัด</a></li>
+        <li><a href="#s23">เอกสารอ้างอิง</a></li>
+      </ol>
+    </div>
+
+    <!-- ============================================================ 4.1 -->
+    <h2 id="s1">4.1 กระพ้อลำเลียงคืออะไร</h2>
+
+    <p>กระพ้อลำเลียงคือชุดกระพ้อที่ยึดด้วยสลักเกลียวเข้ากับสายพานหรือโซ่ที่ต่อเป็นวงรอบ
+      เดินอยู่ในตัวเรือนแนวดิ่งระหว่างพูลเลย์หัว (หรือเฟืองโซ่) ที่ถูกขับอยู่ด้านบน
+      กับพูลเลย์ชุดปรับความตึงใน<em>ส่วนฐานล่าง (บูท)</em> ด้านล่าง กระพ้อตักวัสดุขึ้นที่บูท
+      ยกขึ้นไปตามขาขึ้นด้านในตัวเรือน แล้วเหวี่ยงหรือเทวัสดุออกที่ส่วนหัว
+      ส่วนกระพ้อที่ว่างแล้วก็เดินลงกลับมาตามขาลงอีกด้านหนึ่ง</p>
+
+    <p>ข้อเท็จจริงสองข้อของการจัดวางแบบนี้อธิบายลักษณะของเครื่องได้เกือบทั้งหมด ข้อแรก
+      วัสดุถูกขนในภาชนะแยกกันเป็นใบ ๆ ไม่ใช่เป็นสายต่อเนื่อง กระพ้อลำเลียงจึงไม่แคร์ความสูงที่ยก
+      เครื่องสูง 40&nbsp;ม. ทำงานเหมือนเครื่องสูง 10&nbsp;ม. เพียงมีจำนวนกระพ้อในตัวเรือนมากขึ้น ข้อที่สอง
+      พลังงานเดียวที่เครื่อง<em>จำเป็น</em>ต้องจ่ายคือพลังงานยก และการยกหนึ่งตันขึ้นหนึ่งเมตรใช้เพียง
+      2.725&nbsp;W ต่อ&nbsp;t/h นี่คือเหตุผลที่กระพ้อลำเลียงยังเป็นวิธีที่ถูกที่สุดในการยกธัญพืช ปูนซีเมนต์
+      ปุ๋ย หรือเถ้า และเป็นเหตุผลที่ทางเลือกอื่นถูกเลือกด้วยเหตุผลอื่นที่ไม่ใช่พลังงาน</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.1</b> วิธีขนวัสดุเทกองขึ้นในแนวดิ่ง และเหตุใดกระพ้อลำเลียงจึงมักชนะ</caption>
+        <thead>
+          <tr><th>เครื่องจักร</th><th>ความสูงที่ใช้งานได้</th><th>พลังงานต่อตันต่อเมตรที่ยก</th><th>เหตุผลที่เลือกตัวอื่นแทน</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>กระพ้อลำเลียง</td><td>ถึง 60&nbsp;ม. กรณีพิเศษถึง 90&nbsp;ม.</td><td>ต่ำสุด: งานยกบวกอีก 10&ndash;30&nbsp;%</td><td>&mdash;</td></tr>
+          <tr><td>เกลียวลำเลียงแนวดิ่ง (<a href="chapter2-th.html#s19">&sect;2.19</a>)</td><td>ถึงราว 10&nbsp;ม.</td><td>3&ndash;6 เท่าของกระพ้อลำเลียง</td><td>ปิดมิดชิดทั้งหมด ไม่มีฝุ่น กระชับ และป้อนตัวเองจากถังได้</td></tr>
+          <tr><td>การลำเลียงด้วยลม (บทที่&nbsp;5)</td><td>ไม่จำกัด วางแนวท่ออิสระ</td><td>10&ndash;30 เท่าของกระพ้อลำเลียง</td><td>วางแนวได้อิสระ ปิดสนิทกันฝุ่น มีจุดรับและจุดจ่ายได้หลายจุด</td></tr>
+          <tr><td>สายพานมุมชันหรือสายพานประกบ (<a href="chapter3-th.html#s10">&sect;3.10</a>)</td><td>ได้ทุกความสูง ที่มุม 30&ndash;90&deg;</td><td>ใกล้เคียงกระพ้อลำเลียง</td><td>ก้อนวัสดุใหญ่ การไหลต่อเนื่อง ไม่ต้องถ่ายวัสดุที่ด้านล่าง</td></tr>
+          <tr><td>กระเช้ายก (skip hoist)</td><td>ได้ทุกความสูง</td><td>งานยกบวกน้ำหนักกระเช้าเอง</td><td>ก้อนวัสดุใหญ่มาก ทำงานเป็นชุด งานหนักรุนแรง</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>ลองอ่านแถวแรกของตารางเทียบกับแถวที่สาม ระบบลำเลียงด้วยลมอาจกินพลังงานสิบถึงสามสิบเท่าสำหรับการยก
+      ระยะเดียวกัน แล้วก็ยังถูกเลือกใช้อยู่ทุกวัน เพราะการวางแนวท่อ ความมิดชิด และจำนวนจุดจ่ายวัสดุ
+      มีค่าต่อโรงงานมากกว่าค่าไฟฟ้า นี่คือตรรกะการคัดเลือกสองขั้นของ
+      <a href="chapter1-th.html#s19">&sect;1.19</a> ที่กำลังทำงาน คือดูความเป็นไปได้ทางเทคนิคก่อน
+      แล้วจึงดูต้นทุนรวม และพลังงานเป็นเพียงส่วนหนึ่งของต้นทุน</p>
+
+    <!-- ============================================================ 4.2 -->
+    <h2 id="s2">4.2 จุดแข็ง ข้อจำกัด และขั้นตอนการออกแบบ</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.2</b> สิ่งที่กระพ้อลำเลียงให้ และสิ่งที่มันเรียกร้องเป็นการตอบแทน</caption>
+        <thead><tr><th>จุดแข็ง</th><th>ข้อจำกัด</th></tr></thead>
+        <tbody>
+          <tr><td>ใช้กำลังต่อตันที่ยกต่ำมาก งานที่เป็นประโยชน์เป็นสัดส่วนหลัก</td><td>ได้แนวดิ่งเท่านั้น การเดินทางแนวราบต้องใช้เครื่องอื่น</td></tr>
+          <tr><td>ใช้พื้นที่น้อย ตัวเรือนกว้างกว่ากระพ้อเพียงเล็กน้อย</td><td>ไวต่ออัตราการป้อน ป้อนน้อยอัตราการลำเลียงตก ป้อนท่วมบูทอุดตัน</td></tr>
+          <tr><td>อัตราการลำเลียงตั้งแต่ไม่กี่ t/h ไปจนเกิน 1,000&nbsp;t/h</td><td>เป็นอันตรายจากการระเบิดของฝุ่นโดยธรรมชาติ คือมีฝุ่นละเอียด พื้นที่ปิด และเหล็กที่เคลื่อนไหว</td></tr>
+          <tr><td>ปิดมิดชิด จึงควบคุมการหล่นและการฟุ้งของฝุ่นได้</td><td>ตรวจสอบขณะเดินเครื่องไม่ได้ ต้องรู้ความผิดปกติจากเครื่องมือวัดหรือจากเสียง</td></tr>
+          <tr><td>ยกได้สูงถึง 60&nbsp;ม. ในเครื่องเดียว</td><td>ความเสียหายจุดเดียว ไม่ว่าสายพาน โซ่ หรือเบรกกันถอยหลัง ทำให้วัสดุทั้งตัวเรือนไหลลงบูท</td></tr>
+          <tr><td>นุ่มนวลพอสำหรับธัญพืชเมื่อใช้ความเร็วและรูปแบบกระพ้อที่ถูกต้อง</td><td>ไม่เหมาะกับก้อนใหญ่ ขนาดกระพ้อเป็นตัวจำกัด ไม่ใช่กำลังขับ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>ข้อจำกัดข้อหนึ่งในคอลัมน์ขวาสมควรได้ประโยคของตัวเอง เพราะมันคือข้อที่ทำให้คนตาย
+      กระพ้อลำเลียงที่ขนวัสดุซึ่งฝุ่นติดไฟได้ คือพื้นที่ปิดในแนวดิ่งที่เต็มไปด้วยฝุ่น
+      และมีเครื่องจักรที่สร้างประกายไฟและแบริ่งร้อนได้อยู่ข้างใน <a href="#s18">&sect;4.18</a>
+      จึงจัดการเรื่องนี้ในฐานะปัญหาการออกแบบที่มีมาตรฐานกำกับ ไม่ใช่ข้อควรระวังในการเดินเครื่อง</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.3</b> ขั้นตอนการออกแบบ เรียงตามลำดับที่ต้องตัดสินใจจริง</caption>
+        <thead><tr><th class="num">ขั้น</th><th>การตัดสินใจ</th><th>ดูที่</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>ชนิดวัสดุ อัตราการลำเลียงที่ต้องการ ความสูงที่ยก และวัสดุมาถึงในลักษณะใด</td><td><a href="#s10">&sect;4.10</a></td></tr>
+          <tr><td class="num">2</td><td>ชนิดการปล่อยวัสดุ: แรงเหวี่ยง ต่อเนื่อง บังคับ หรือปล่อยภายใน</td><td><a href="#s4">&sect;4.4</a></td></tr>
+          <tr><td class="num">3</td><td>รูปแบบ ขนาดและระยะห่างของกระพ้อ และเลือกสายพานหรือโซ่</td><td><a href="#s6">&sect;4.6</a>, <a href="#s7">&sect;4.7</a></td></tr>
+          <tr><td class="num">4</td><td>อัตราการลำเลียง: กระพ้อและระยะห่างที่เลือกให้อัตราการขนถ่ายได้ตามต้องการหรือไม่</td><td><a href="#s11">&sect;4.11</a></td></tr>
+          <tr><td class="num">5</td><td>ความเร็วและเส้นผ่านศูนย์กลางพูลเลย์หัว: เครื่องปล่อยวัสดุได้จริงหรือไม่</td><td><a href="#s12">&sect;4.12</a>, <a href="#s5">&sect;4.5</a></td></tr>
+          <tr><td class="num">6</td><td>กำลังขับ แรงดึงหรือแรงดึงโซ่ แรงบิดที่เพลา และกรณีออกตัว</td><td><a href="#s13">&sect;4.13</a>&ndash;<a href="#s16">&sect;4.16</a></td></tr>
+          <tr><td class="num">7</td><td>ชุดปรับความตึง เบรกกันถอยหลัง เครื่องมือวัด และการป้องกันการระเบิด</td><td><a href="#s17">&sect;4.17</a>, <a href="#s18">&sect;4.18</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">บทนี้อยู่ตำแหน่งใด</span>
+      <p>บทที่&nbsp;2 และบทที่&nbsp;3 กำหนดขนาดเครื่องจักรที่พาวัสดุไปตามแนว บทนี้ยกวัสดุขึ้น
+        วิธีการมีรูปร่างเดียวกัน คือหาอัตราการลำเลียงจากปริมาตรกับความเร็ว หากำลังจากงานที่ทำ
+        แล้วตรวจทางกลที่ชิ้นส่วนซึ่งรับภาระ และมีสองส่วนที่นำมาใช้ซ้ำตรง ๆ คือขีดจำกัดการขับ
+        ออยเลอร์&ndash;ไอเทลไวน์ของ <a href="chapter3-th.html#s7">&sect;3.7</a>
+        และการเลือกความแข็งแรงสายพานของ <a href="chapter3-th.html#s9">&sect;3.9</a></p>
+    </div>
+
+    <!-- ============================================================ 4.3 -->
+    <h2 id="s3">4.3 ส่วนประกอบของกระพ้อลำเลียง</h2>
+
+    <figure>
+      <svg viewBox="0 0 900 480" role="img" aria-label="ภาพรวมของกระพ้อลำเลียงแสดงบูท ตัวเรือน ส่วนหัว ชุดขับ และช่องปล่อยวัสดุ">
+        <rect x="0" y="0" width="900" height="480" fill="#ffffff"/>
+
+        <rect x="330" y="100" width="150" height="300" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+        <line x1="405" y1="100" x2="405" y2="400" stroke="#cfcfcf" stroke-width="1.4" stroke-dasharray="6 5"/>
+
+        <path d="M 330 100 L 330 70 A 75 60 0 0 1 480 70 L 480 100 Z" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+        <circle cx="405" cy="72" r="34" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+        <circle cx="405" cy="72" r="5" fill="#6f6f6f"/>
+        <path d="M 480 76 L 550 106 L 550 136 L 480 106 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+        <g fill="#c9a97a"><circle cx="504" cy="96" r="3.4"/><circle cx="520" cy="107" r="3"/><circle cx="534" cy="118" r="3.2"/></g>
+
+        <path d="M 330 400 L 330 430 A 75 46 0 0 0 480 430 L 480 400 Z" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+        <circle cx="405" cy="426" r="26" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+        <circle cx="405" cy="426" r="4" fill="#6f6f6f"/>
+        <path d="M 338 422 A 70 40 0 0 0 472 422 L 472 440 A 70 30 0 0 1 338 440 Z" fill="#c9a97a" opacity="0.55"/>
+        <path d="M 262 362 L 330 392 L 330 416 L 262 386 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+        <g fill="#c9a97a"><circle cx="280" cy="374" r="3.2"/><circle cx="296" cy="382" r="3"/><circle cx="312" cy="392" r="3.4"/></g>
+
+        <g stroke="#6f6f6f" stroke-width="1.8">
+          <g fill="#bfbfbf">
+            <path d="M 370 160 l 0 20 l 28 0 l 0 -20 z"/><path d="M 370 220 l 0 20 l 28 0 l 0 -20 z"/>
+            <path d="M 370 280 l 0 20 l 28 0 l 0 -20 z"/><path d="M 370 340 l 0 20 l 28 0 l 0 -20 z"/>
+          </g>
+          <g fill="#c9a97a">
+            <path d="M 371 162 l 0 10 l 26 0 l 0 -10 z"/><path d="M 371 222 l 0 10 l 26 0 l 0 -10 z"/>
+            <path d="M 371 282 l 0 10 l 26 0 l 0 -10 z"/><path d="M 371 342 l 0 10 l 26 0 l 0 -10 z"/>
+          </g>
+        </g>
+        <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.8">
+          <path d="M 412 190 l 0 -20 l 28 0 l 0 20 z"/><path d="M 412 250 l 0 -20 l 28 0 l 0 20 z"/>
+          <path d="M 412 310 l 0 -20 l 28 0 l 0 20 z"/><path d="M 412 370 l 0 -20 l 28 0 l 0 20 z"/>
+        </g>
+        <line x1="398" y1="106" x2="398" y2="394" stroke="#2f2f2f" stroke-width="2.4"/>
+        <line x1="412" y1="106" x2="412" y2="394" stroke="#2f2f2f" stroke-width="2.4"/>
+        <g stroke="#DF301C" stroke-width="2" fill="none">
+          <line x1="356" y1="300" x2="356" y2="250"/><path d="M 351 258 L 356 246 L 361 258"/>
+          <line x1="454" y1="250" x2="454" y2="300"/><path d="M 449 292 L 454 304 L 459 292"/>
+        </g>
+        <text x="356" y="326" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">ขึ้น</text>
+        <text x="454" y="326" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">ลง</text>
+
+        <rect x="510" y="40" width="54" height="40" rx="3" fill="#4b4540" stroke="#2f2f2f" stroke-width="2"/>
+        <text x="537" y="65" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">M</text>
+        <line x1="480" y1="62" x2="510" y2="62" stroke="#4b4540" stroke-width="3"/>
+        <circle cx="494" cy="40" r="13" fill="#00B7CD" stroke="#00788A" stroke-width="2"/>
+        <path d="M 488 40 l 12 0 M 494 34 l 0 12" stroke="#00788A" stroke-width="1.8"/>
+        <g stroke="#00788A" stroke-width="1.8" fill="none">
+          <line x1="405" y1="458" x2="405" y2="470"/><path d="M 400 464 L 405 472 L 410 464"/>
+        </g>
+        <rect x="332" y="240" width="16" height="30" fill="none" stroke="#00788A" stroke-width="1.8" stroke-dasharray="4 3"/>
+
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">
+          <circle cx="60" cy="368" r="11" fill="#DF301C"/><text x="60" y="372" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+          <text x="78" y="372">ช่องป้อนเข้า</text>
+          <circle cx="60" cy="428" r="11" fill="#DF301C"/><text x="60" y="432" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+          <text x="78" y="432">บูทและชุดปรับความตึง</text>
+          <circle cx="60" cy="296" r="11" fill="#DF301C"/><text x="60" y="300" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+          <text x="78" y="300">ตัวเรือนขาขึ้น</text>
+          <circle cx="60" cy="254" r="11" fill="#DF301C"/><text x="60" y="258" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+          <text x="78" y="258">ช่องตรวจสอบ</text>
+          <circle cx="60" cy="212" r="11" fill="#DF301C"/><text x="60" y="216" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+          <text x="78" y="216">กระพ้อบนสายพานหรือโซ่</text>
+          <circle cx="60" cy="170" r="11" fill="#DF301C"/><text x="60" y="174" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">6</text>
+          <text x="78" y="174">ตัวเรือนขาลง</text>
+        </g>
+        <g stroke="#726b64" stroke-width="1.1" fill="none">
+          <line x1="150" y1="368" x2="268" y2="372"/>
+          <line x1="212" y1="428" x2="332" y2="432"/>
+          <line x1="158" y1="296" x2="328" y2="300"/>
+          <line x1="152" y1="254" x2="330" y2="254"/>
+          <line x1="222" y1="212" x2="368" y2="228"/>
+          <line x1="152" y1="170" x2="410" y2="186"/>
+        </g>
+
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">
+          <circle cx="700" cy="72" r="11" fill="#DF301C"/><text x="700" y="76" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">7</text>
+          <text x="718" y="76">ส่วนหัวและพูลเลย์หัว</text>
+          <circle cx="700" cy="136" r="11" fill="#DF301C"/><text x="700" y="140" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">8</text>
+          <text x="718" y="140">ช่องปล่อยวัสดุ</text>
+          <circle cx="700" cy="200" r="11" fill="#DF301C"/><text x="700" y="204" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">9</text>
+          <text x="718" y="204">ชุดขับและชุดทดรอบ</text>
+          <circle cx="700" cy="264" r="11" fill="#DF301C"/><text x="700" y="268" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">10</text>
+          <text x="718" y="268">เบรกกันถอยหลัง</text>
+        </g>
+        <g stroke="#726b64" stroke-width="1.1" fill="none">
+          <line x1="686" y1="72" x2="486" y2="82"/>
+          <line x1="686" y1="136" x2="552" y2="124"/>
+          <line x1="686" y1="200" x2="566" y2="88"/>
+          <line x1="686" y1="264" x2="504" y2="52"/>
+        </g>
+      </svg>
+      <figcaption><b>รูปที่ 4.1</b> ภาพรวมของกระพ้อลำเลียงแบบสายพานที่ปล่อยวัสดุด้วยแรงเหวี่ยง
+        <b>1</b> ช่องป้อนเข้า &middot; <b>2</b> บูทพร้อมชุดปรับความตึง &middot; <b>3</b> ตัวเรือนขาขึ้น &middot;
+        <b>4</b> ช่องตรวจสอบ &middot; <b>5</b> กระพ้อที่ยึดกับสายพาน &middot; <b>6</b> ตัวเรือนขาลง &middot;
+        <b>7</b> ส่วนหัวและพูลเลย์หัว &middot; <b>8</b> ช่องปล่อยวัสดุ &middot; <b>9</b> ชุดขับและชุดทดรอบ &middot;
+        <b>10</b> เบรกกันถอยหลัง วัสดุเข้าที่บูท ถูกยกขึ้นในขาขึ้น แล้วถูกเหวี่ยงออกเข้าช่องปล่อยที่ส่วนหัว</figcaption>
+    </figure>
+
+    <p>ให้อ่านรูปนี้เป็นทั้งเส้นทางของภาระและเส้นทางของวัสดุพร้อมกัน เส้นทาง<em>วัสดุ</em> คือ
+      ช่องป้อน&nbsp;&rarr;&nbsp;บูท&nbsp;&rarr;&nbsp;กระพ้อ&nbsp;&rarr;&nbsp;ขาขึ้น&nbsp;&rarr;&nbsp;ส่วนหัว
+      &rarr;&nbsp;ช่องปล่อย ส่วนเส้นทาง<em>ภาระ</em> คือ เพลาหัว&nbsp;&rarr;&nbsp;พูลเลย์หัวหรือเฟืองโซ่
+      &rarr;&nbsp;สายพานหรือโซ่&nbsp;&rarr;&nbsp;สลักเกลียวยึดกระพ้อ&nbsp;&rarr;&nbsp;ตัวกระพ้อ
+      ความเสียหายทางกลทุกกรณีในการใช้งานอยู่บนเส้นทางที่สอง และสลักเกลียวยึดกระพ้อคือข้อที่อ่อนแอที่สุด
+      จึงต้องตรวจ ขันตามค่าทอร์ก และบันทึกไว้ ไม่ใช่คิดเอาว่าคงเรียบร้อย</p>
+
+    <div class="callout">
+      <span class="label">ส่วนที่มองไม่เห็น</span>
+      <p>บูทเป็นจุดที่เครื่องรับวัสดุเข้า เป็นที่ที่วัสดุร่วงไปกอง และเป็นจุดที่การอุดตันเริ่มต้น
+        และยังเป็นส่วนที่ไม่มีใครเปิดดู เพราะอยู่ระดับพื้นหลังการ์ดกัน บูทที่ไม่เคยทำความสะอาด
+        จะเต็มไปด้วยวัสดุละเอียด กระพ้อเริ่มลากผ่านชั้นวัสดุที่อัดแน่น แรงต้านการตักสูงขึ้น
+        และสัญญาณแรกที่เห็นคือรีเลย์โอเวอร์โหลดทริปหรือสายพานสลิป
+        ให้ออกแบบบูทให้มีช่องทำความสะอาด และใส่ไว้ในแผนบำรุงรักษาของ <a href="#s19">&sect;4.19</a></p>
+    </div>
+
+    <!-- ============================================================ 4.4 -->
+    <h2 id="s4">4.4 การปล่อยวัสดุสี่ชนิด</h2>
+
+    <p>ทุกอย่างของเครื่องนี้สืบเนื่องมาจากว่าเราตั้งใจให้วัสดุออกจากกระพ้อที่ส่วนหัวอย่างไร
+      คำตอบมีสี่แบบ และทั้งสี่แบบใช้แทนกันไม่ได้</p>
+
+    <figure>
+      <svg viewBox="0 0 800 330" role="img" aria-label="เปรียบเทียบการปล่อยวัสดุแบบแรงเหวี่ยงกับแบบต่อเนื่องที่พูลเลย์หัว">
+        <rect x="0" y="0" width="800" height="330" fill="#ffffff"/>
+
+        <g transform="translate(0,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="middle">แบบแรงเหวี่ยง &mdash; เร็ว</text>
+          <circle cx="190" cy="150" r="70" fill="none" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="150" r="5" fill="#6f6f6f"/>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.6">
+            <path d="M 176 78 l 28 0 l 0 -22 l -28 0 z"/>
+            <path d="M 262 138 l 0 24 l 22 0 l 0 -24 z"/>
+            <path d="M 176 222 l 28 0 l 0 22 l -28 0 z"/>
+            <path d="M 96 138 l 0 24 l -22 0 l 0 -24 z"/>
+          </g>
+          <g fill="#c9a97a">
+            <circle cx="272" cy="128" r="4"/><circle cx="292" cy="120" r="4"/><circle cx="312" cy="118" r="4"/>
+            <circle cx="332" cy="124" r="4"/><circle cx="350" cy="136" r="4"/><circle cx="364" cy="152" r="4"/>
+          </g>
+          <path d="M 266 132 Q 320 108 372 162" stroke="#DF301C" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/>
+          <path d="M 366 150 L 374 164 L 360 166" fill="#DF301C"/>
+          <path d="M 380 150 L 420 150 L 420 240 L 380 240 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <text x="190" y="282" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">1.2&ndash;3.5 m/s &middot; กระพ้อเว้นระยะ</text>
+          <text x="190" y="300" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">วัสดุออกไปตามวิถีอิสระ</text>
+        </g>
+
+        <g transform="translate(400,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="middle">แบบต่อเนื่อง &mdash; ช้า</text>
+          <circle cx="190" cy="150" r="70" fill="none" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="150" r="5" fill="#6f6f6f"/>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.6">
+            <path d="M 162 80 l 56 0 l 0 -22 l -56 0 z"/>
+            <path d="M 260 124 l 0 52 l 22 0 l 0 -52 z"/>
+            <path d="M 162 220 l 56 0 l 0 22 l -56 0 z"/>
+            <path d="M 98 124 l 0 52 l -22 0 l 0 -52 z"/>
+          </g>
+          <g fill="#c9a97a">
+            <circle cx="268" cy="186" r="4"/><circle cx="276" cy="200" r="4"/><circle cx="284" cy="214" r="4"/>
+            <circle cx="292" cy="228" r="4"/>
+          </g>
+          <path d="M 264 180 Q 286 210 300 246" stroke="#00788A" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/>
+          <path d="M 294 236 L 302 250 L 288 250" fill="#00788A"/>
+          <path d="M 300 250 L 344 250 L 344 300 L 300 300 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <text x="190" y="282" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">0.4&ndash;1.25 m/s &middot; กระพ้อชิดกัน</text>
+          <text x="190" y="300" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">หลังกระพ้อทำหน้าที่นำทางการไหล</text>
+        </g>
+      </svg>
+      <figcaption><b>รูปที่ 4.2</b> การปล่อยวัสดุสองแบบที่พบบ่อย แบบแรงเหวี่ยงกระพ้อจะเหวี่ยงวัสดุออกไปตามวิถีอิสระ
+        ซึ่งต้องใช้ความเร็วและต้องเว้นระยะกระพ้อ ส่วนแบบต่อเนื่องวัสดุจะกลิ้งข้ามขอบด้านในแล้วถูกนำทาง
+        ลงไปตามหลังของกระพ้อใบข้างหน้า ซึ่งต้องใช้ความเร็วต่ำและติดตั้งกระพ้อชิดกันแบบหัวต่อท้าย</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.4</b> การปล่อยวัสดุสี่ชนิดและใช้กับอะไร</caption>
+        <thead>
+          <tr><th>ชนิด</th><th>ความเร็ว</th><th>กระพ้อและระยะห่าง</th><th>ใช้กับ</th><th>ล้มเหลวเมื่อ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>แรงเหวี่ยง</b></td><td>1.2&ndash;3.5&nbsp;m/s</td><td>กระพ้อเว้นระยะ พิตช์ 2&ndash;3 เท่าของระยะยื่น</td>
+              <td>วัสดุไหลดี ไม่เปราะ กัดสึกปานกลาง เช่น ธัญพืช ทราย ปูนซีเมนต์ ปุ๋ย เป็นค่าตั้งต้น</td>
+              <td>วัสดุเปราะ เหนียว หรือเบามากจนฟุ้งไปทั่วตัวเรือน</td></tr>
+          <tr><td><b>ต่อเนื่อง</b></td><td>0.4&ndash;1.25&nbsp;m/s</td><td>กระพ้อชิดกันหัวต่อท้าย ไม่มีช่องว่าง</td>
+              <td>วัสดุเปราะ วัสดุร้อน ก้อนใหญ่ และงานที่ต้องลดการแตกหักหรือฝุ่นให้น้อยที่สุด</td>
+              <td>ต้องการอัตราการลำเลียงสูงต่อความเร็วหนึ่งหน่วย เพราะแบบต่อเนื่องเป็นเครื่องที่ใหญ่กว่าที่อัตราเท่ากัน</td></tr>
+          <tr><td><b>บังคับ</b></td><td>0.3&ndash;0.6&nbsp;m/s</td><td>กระพ้อเว้นระยะบนโซ่สองเส้น มีพูลเลย์กดใต้ส่วนหัว</td>
+              <td>วัสดุเหนียวที่ไม่ยอมออกจากกระพ้อเอง เช่น เถ้าเปียก กากตะกอน สลัดจ์</td>
+              <td>ใช้กับอย่างอื่น เพราะช้า สูง และแพง คุ้มค่าเฉพาะเมื่อต้องการความมั่นใจในการปล่อยวัสดุ</td></tr>
+          <tr><td><b>ปล่อยภายใน / ความจุสูงพิเศษ</b></td><td>0.5&ndash;1.0&nbsp;m/s</td><td>กระพ้อลึกมากระหว่างโซ่สองเส้น ยื่นเข้าด้านใน</td>
+              <td>อัตราการขนถ่ายสูงมากที่ความเร็วไม่มาก งานเหมืองและท่าเรือ 500&ndash;2,000&nbsp;t/h</td>
+              <td>ความสูงห้อง ราคา หรือขนาดก้อนวัสดุไม่คุ้มกับการใช้แบบนี้</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>การแลกเปลี่ยนมองเห็นได้จากคอลัมน์ความเร็ว การปล่อยแบบแรงเหวี่ยงซื้ออัตราการลำเลียงด้วยความเร็ว
+      และจ่ายด้วยการแตกหัก การสึกหรอ และฝุ่น การปล่อยแบบต่อเนื่องซื้อความนุ่มนวลด้วยเครื่องที่ใหญ่และช้ากว่า
+      การปล่อยแบบบังคับซื้อความมั่นใจด้วยพูลเลย์กดและความสูงที่เพิ่มขึ้นมาก การเลือกชนิดจึงเป็นขั้นที่&nbsp;2
+      ของตารางที่&nbsp;4.3 เพราะทุกตัวเลขที่ตามมาขึ้นกับข้อนี้</p>
+
+    <!-- ============================================================ 4.5 -->
+    <h2 id="s5">4.5 จุดขั้ว: การทำนายรูปแบบการปล่อยวัสดุ</h2>
+
+    <p>ผู้ออกแบบที่เลือก &ldquo;การปล่อยแบบแรงเหวี่ยง&rdquo; ยังไม่ได้ทำให้เครื่องปล่อยวัสดุแบบแรงเหวี่ยง
+      วัสดุจะออกจากกระพ้อข้ามขอบนอก ข้ามขอบใน หรือไหลเรี่ยลงมาตามตัวเรือน ถูกตัดสินด้วยตัวเลขเพียงตัวเดียว
+      คือสมดุลระหว่างแรงหนีศูนย์กลางกับแรงโน้มถ่วงที่ส่วนหัว</p>
+
+    <p>พิจารณาอนุภาคมวล <var>m</var> ในกระพ้อที่เดินทางบนวงกลมรัศมี <var>r</var> ด้วยความเร็วเชิงมุม
+      <var>&omega;</var> อนุภาคต้องได้รับแรงเข้าสู่ศูนย์กลาง
+      <var>m&omega;</var><sup>2</sup><var>r</var> จึงจะอยู่บนวงกลมนั้นได้ และแรงโน้มถ่วงให้มาได้
+      <var>mg</var> ที่ตำแหน่งซึ่งทั้งสองเท่ากัน</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>m&omega;</var><sup>2</sup><var>r</var><sub>p</sub> = <var>mg</var> &nbsp;&rarr;&nbsp;
+        <var>r</var><sub>p</sub> = <span class="frac"><span class="num"><var>g</var></span><span class="den"><var>&omega;</var><sup>2</sup></span></span>
+      </span>
+      <span class="tag">(4.1)</span>
+    </div>
+
+    <p>รัศมี <var>r</var><sub>p</sub> คือระยะ<b>จุดขั้ว</b> (pole point) ซึ่งก็คือระยะจากศูนย์เพลาหัว
+      ที่แรงโน้มถ่วงสมดุลกับผลของแรงหนีศูนย์กลางพอดี เมื่อเขียน <var>&omega;</var> ในรูปความเร็วรอบ
+      ของเพลาหัว <var>n</var> หน่วยรอบต่อนาที จะได้รูปที่ใช้กันบนแบบ</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>r</var><sub>p</sub> = <span class="frac"><span class="num">895</span><span class="den"><var>n</var><sup>2</sup></span></span>
+        &nbsp;<span class="units">ม. โดย <var>n</var> หน่วยรอบต่อนาที</span>
+      </span>
+      <span class="tag">(4.2)</span>
+    </div>
+
+    <p>ค่าคงที่มาจาก <var>g</var>&nbsp;&times;&nbsp;3600/4<var>&pi;</var><sup>2</sup> = 894.6 ปัดเป็น 895
+      จากนั้นให้เทียบ <var>r</var><sub>p</sub> กับรัศมีสองค่าของเส้นทางกระพ้อ คือรัศมีด้านใน
+      <var>r</var><sub>i</sub> (แนวสายพานหรือโซ่ที่พูลเลย์หัว) และรัศมีด้านนอก
+      <var>r</var><sub>o</sub> = <var>r</var><sub>i</sub> + ระยะยื่นของกระพ้อ</p>
+
+    <figure>
+      <svg viewBox="0 0 800 400" role="img" aria-label="การเขียนจุดขั้วที่พูลเลย์หัว แสดงรัศมีด้านในและด้านนอกของกระพ้อ">
+        <rect x="0" y="0" width="800" height="400" fill="#ffffff"/>
+
+        <g transform="translate(200,200)">
+          <circle cx="0" cy="0" r="140" fill="none" stroke="#6f6f6f" stroke-width="2" stroke-dasharray="7 5"/>
+          <circle cx="0" cy="0" r="80" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
+          <circle cx="0" cy="0" r="6" fill="#4b4540"/>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="2">
+            <path d="M -34 -80 l 68 0 l 0 -60 l -68 0 z"/>
+          </g>
+          <g fill="#c9a97a"><path d="M -31 -84 l 62 0 l 0 -24 l -62 0 z"/></g>
+
+          <g stroke="#00788A" stroke-width="1.8">
+            <line x1="0" y1="0" x2="0" y2="-80"/>
+            <path d="M -5 -70 L 0 -80 L 5 -70" fill="none"/>
+          </g>
+          <text x="-12" y="-44" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="end">r</text>
+          <text x="-6" y="-40" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#00788A" text-anchor="end">i</text>
+
+          <g stroke="#726b64" stroke-width="1.6">
+            <line x1="0" y1="0" x2="99" y2="-99"/>
+            <path d="M 88 -95 L 99 -99 L 95 -88" fill="none"/>
+          </g>
+          <text x="150" y="-124" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#726b64">r</text>
+          <text x="157" y="-120" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#726b64">o</text>
+          <text x="150" y="-106" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64">ขอบกระพ้อ</text>
+          <line x1="106" y1="-106" x2="146" y2="-124" stroke="#726b64" stroke-width="1"/>
+
+          <g stroke="#DF301C" stroke-width="2.2">
+            <line x1="0" y1="0" x2="0" y2="56"/>
+            <path d="M -6 46 L 0 56 L 6 46" fill="none"/>
+          </g>
+          <circle cx="0" cy="56" r="5" fill="#DF301C"/>
+          <line x1="-60" y1="56" x2="60" y2="56" stroke="#DF301C" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="-16" y="88" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="end">r</text>
+          <text x="-10" y="92" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#DF301C" text-anchor="end">p</text>
+          <text x="-6" y="88" font-family="Segoe UI, sans-serif" font-size="12" fill="#DF301C">= 895/n&sup2;</text>
+          <text x="0" y="172" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">จุดขั้ว: ตำแหน่งที่แรงโน้มถ่วงสมดุลกับผลของแรงหนีศูนย์กลาง</text>
+        </g>
+
+        <rect x="450" y="70" width="330" height="210" rx="4" fill="#f0fafc" stroke="#00B7CD" stroke-width="2"/>
+        <g font-family="Segoe UI, sans-serif" font-size="12" fill="#1c1917">
+          <text x="615" y="100" font-size="13" font-weight="700" text-anchor="middle">การอ่านจุดขั้ว</text>
+          <text x="470" y="132" font-weight="700" fill="#DF301C">จุดขั้วอยู่ในแนวสายพาน</text>
+          <text x="470" y="150" fill="#4b4540">&rarr; ปล่อยแบบแรงเหวี่ยง วัสดุถูกเหวี่ยงออก</text>
+          <text x="470" y="184" font-weight="700" fill="#726b64">จุดขั้วอยู่นอกขอบกระพ้อ</text>
+          <text x="470" y="202" fill="#4b4540">&rarr; ปล่อยด้วยแรงโน้มถ่วง วัสดุถูกเทออก</text>
+          <text x="470" y="236" font-weight="700" fill="#4b4540">จุดขั้วอยู่ระหว่างสองค่านั้น</text>
+          <text x="470" y="254" fill="#4b4540">&rarr; ปล่อยแบบผสม วิถีไม่แน่นอน</text>
+        </g>
+        <text x="615" y="304" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">เพลาเร็ว ระยะจุดขั้วสั้น &rarr; เหวี่ยงออก</text>
+        <text x="615" y="322" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">เพลาช้า ระยะจุดขั้วยาว &rarr; เทออก</text>
+      </svg>
+      <figcaption><b>รูปที่ 4.3</b> การเขียนจุดขั้ว จุดขั้วอยู่บนแนวดิ่งที่ผ่านศูนย์เพลา
+        ต่ำลงมาเป็นระยะ <var>r</var><sub>p</sub> = 895/<var>n</var><sup>2</sup>
+        ตำแหน่งของมันเทียบกับรัศมีด้านในและด้านนอกของกระพ้อเป็นตัวตัดสินว่าวัสดุจะถูกเหวี่ยงออกข้ามขอบนอก
+        หรือถูกเทออกข้ามขอบใน</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.5</b> การอ่านจุดขั้ว และจะทำอย่างไรเมื่อคำตอบไม่ใช่ที่ต้องการ</caption>
+        <thead><tr><th>เงื่อนไข</th><th>เกิดอะไรขึ้น</th><th>ถ้านั่นไม่ใช่สิ่งที่ต้องการ</th></tr></thead>
+        <tbody>
+          <tr><td><var>r</var><sub>p</sub> &lt; <var>r</var><sub>i</sub></td>
+              <td>แรงหนีศูนย์กลางเป็นตัวครอบครองทั้งความลึกของกระพ้อ วัสดุถูกเหวี่ยงออกพ้นขอบนอกที่ส่วนหัว</td>
+              <td>เร็วเกินไปสำหรับวัสดุเปราะ ให้ลดความเร็วรอบ หรือใช้พูลเลย์หัวใหญ่ขึ้นที่ความเร็วสายพานเท่าเดิม</td></tr>
+          <tr><td><var>r</var><sub>p</sub> &gt; <var>r</var><sub>o</sub></td>
+              <td>แรงโน้มถ่วงเป็นตัวครอบครอง วัสดุกลิ้งออกข้ามขอบในและต้องมีตัวนำทาง นั่นคือการปล่อยแบบต่อเนื่อง</td>
+              <td>ติดตั้งกระพ้อแบบต่อเนื่องเพื่อให้วัสดุแต่ละใบตกลงบนหลังของกระพ้อใบข้างหน้า หรือเพิ่มความเร็ว</td></tr>
+          <tr><td><var>r</var><sub>i</sub> &le; <var>r</var><sub>p</sub> &le; <var>r</var><sub>o</sub></td>
+              <td>ปล่อยแบบผสม บางส่วนถูกเหวี่ยง บางส่วนถูกเท วิถีคาดเดาไม่ได้ วัสดุกระทบตัวเรือน ตกกลับลงมาในขาขึ้น และวนกลับมาใหม่</td>
+              <td>ให้ย้ายไปอยู่ข้างใดข้างหนึ่งอย่างชัดเจน ช่วงนี้คือสาเหตุคลาสสิกของอาการ &ldquo;กระพ้อทำได้แค่ 70&nbsp;% ของพิกัด&rdquo;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">ทำไมการตกกลับจึงเสียกำลังสองครั้ง</span>
+      <p>วัสดุที่ออกจากส่วนหัวไม่พ้นจะตกกลับลงมาในขาขึ้น ถูกกระพ้อใบถัดไปตักขึ้นอีก และถูกยกเป็นครั้งที่สอง
+        อัตราวัสดุบนสายพานจึงสูงกว่าอัตราที่จ่ายออกได้จริง เท่ากับจ่ายค่ากำลังสองครั้งสำหรับวัสดุก้อนเดียวกัน
+        และอัตราการจ่ายที่ได้ก็ลดลง กลไกนี้คือกลไกเดียวกับการไหลย้อนในเกลียวลำเลียงแนวเอียง
+        (<a href="chapter2-th.html#s19">&sect;2.19</a>) และวินิจฉัยด้วยวิธีเดียวกัน คือวัดอัตราที่จ่ายออกได้จริง
+        ไม่ใช่ดูกระแสมอเตอร์</p>
+    </div>
+
+    <!-- ============================================================ 4.6 -->
+    <h2 id="s6">4.6 กระพ้อ: รูปแบบ วัสดุ และระยะห่าง</h2>
+
+    <p>กระพ้อคือชิ้นส่วนที่สึกหมดก่อน เป็นชิ้นส่วนที่กำหนดอัตราการลำเลียง และเป็นชิ้นส่วนที่ยึดทะลุผ่าน
+      ชิ้นส่วนที่รับภาระ จึงสมควรได้รับความใส่ใจมากกว่าที่มักได้รับกันอยู่</p>
+
+    <figure>
+      <svg viewBox="0 0 780 300" role="img" aria-label="เรขาคณิตของกระพ้อแสดงความกว้าง ระยะยื่น ความลึก ระยะห่าง และแนวสายพาน">
+        <rect x="0" y="0" width="780" height="300" fill="#ffffff"/>
+
+        <line x1="150" y1="40" x2="150" y2="250" stroke="#2f2f2f" stroke-width="4"/>
+        <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="2">
+          <path d="M 150 70 l 0 40 l 86 0 l 0 -26 q 0 -14 -16 -14 z"/>
+          <path d="M 150 150 l 0 40 l 86 0 l 0 -26 q 0 -14 -16 -14 z"/>
+        </g>
+        <g fill="#c9a97a">
+          <path d="M 153 96 l 0 11 l 80 0 l 0 -11 z"/>
+          <path d="M 153 176 l 0 11 l 80 0 l 0 -11 z"/>
+        </g>
+        <g fill="#4b4540"><circle cx="150" cy="80" r="4"/><circle cx="150" cy="100" r="4"/><circle cx="150" cy="160" r="4"/><circle cx="150" cy="180" r="4"/></g>
+
+        <g stroke="#DF301C" stroke-width="1.6">
+          <line x1="150" y1="212" x2="236" y2="212"/>
+          <path d="M 160 207 L 150 212 L 160 217" fill="none"/>
+          <path d="M 226 207 L 236 212 L 226 217" fill="none"/>
+          <line x1="236" y1="190" x2="236" y2="212" stroke-width="0.9" stroke-dasharray="3 3"/>
+        </g>
+        <text x="193" y="232" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">ระยะยื่น</text>
+
+        <g stroke="#00788A" stroke-width="1.6">
+          <line x1="120" y1="70" x2="120" y2="150"/>
+          <path d="M 115 80 L 120 70 L 125 80" fill="none"/>
+          <path d="M 115 140 L 120 150 L 125 140" fill="none"/>
+        </g>
+        <text x="112" y="114" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#00788A" text-anchor="end">ระยะห่าง s</text>
+
+        <g stroke="#726b64" stroke-width="1.4">
+          <line x1="252" y1="150" x2="252" y2="190"/>
+          <path d="M 247 158 L 252 150 L 257 158" fill="none"/>
+          <path d="M 247 182 L 252 190 L 257 182" fill="none"/>
+        </g>
+        <text x="262" y="174" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64">ความลึก</text>
+
+        <g transform="translate(430,0)">
+          <text x="130" y="34" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#4b4540" text-anchor="middle">ภาพด้านหน้า</text>
+          <rect x="40" y="60" width="180" height="90" fill="#bfbfbf" stroke="#6f6f6f" stroke-width="2"/>
+          <rect x="44" y="96" width="172" height="50" fill="#c9a97a"/>
+          <line x1="128" y1="60" x2="128" y2="150" stroke="#cfcfcf" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <g stroke="#DF301C" stroke-width="1.6">
+            <line x1="40" y1="172" x2="220" y2="172"/>
+            <path d="M 50 167 L 40 172 L 50 177" fill="none"/>
+            <path d="M 210 167 L 220 172 L 210 177" fill="none"/>
+          </g>
+          <text x="130" y="192" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">ความกว้างกระพ้อ</text>
+          <text x="130" y="222" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">ความกว้างสายพาน = ความกว้างกระพ้อ + 25 ถึง 50 มม.</text>
+          <text x="130" y="242" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">ความจุระดับน้ำ &asymp; 0.55&ndash;0.65 ของ W &times; P &times; D</text>
+        </g>
+      </svg>
+      <figcaption><b>รูปที่ 4.4</b> เรขาคณิตของกระพ้อ ความกว้าง ระยะยื่นและความลึกเป็นตัวนิยามกระพ้อ
+        จากนั้นระยะห่าง <var>s</var> กับความเร็ว <var>v</var> จึงนิยามอัตราการลำเลียง
+        สลักเกลียวที่ยึดกระพ้อเจาะทะลุสายพาน นั่นคือเหตุผลที่สายพานกระพ้อแบบยึดสลักเกลียว
+        ถูกกำหนดพิกัดความแข็งแรงโดยเผื่อรูของตัวเองไว้แล้ว</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.6</b> รูปแบบกระพ้อและใช้กับอะไร</caption>
+        <thead><tr><th>รูปแบบ</th><th>รูปทรง</th><th>การปล่อยวัสดุ</th><th>งานที่เหมาะ</th></tr></thead>
+        <tbody>
+          <tr><td>แบบ AA (ลึก หลังโค้ง)</td><td>ลึกและมีรัศมีหลังกว้าง</td><td>แรงเหวี่ยง</td><td>กระพ้อสารพัดประโยชน์สำหรับธัญพืชและปุ๋ย ตักดี เทออกเกลี้ยง</td></tr>
+          <tr><td>แบบ AC (ขอบหน้าต่ำ)</td><td>ตื้นกว่าและขอบหน้าต่ำ</td><td>แรงเหวี่ยง</td><td>วัสดุไหลดี หนัก หรือเหนียวเล็กน้อย ปล่อยวัสดุง่ายขึ้นที่ความเร็วต่ำกว่า</td></tr>
+          <tr><td>แบบต่อเนื่องขอบหน้าต่ำ</td><td>ขอบหน้าต่ำลง หลังยืดยาวออกเป็นรางนำวัสดุ</td><td>ต่อเนื่อง</td><td>วัสดุเปราะ ร้อน หรือเป็นก้อน ติดตั้งชิดกันหัวต่อท้าย</td></tr>
+          <tr><td>แบบความจุสูงพิเศษ</td><td>ลึกมาก ติดตั้งระหว่างโซ่สองเส้น</td><td>ปล่อยภายใน / แรงโน้มถ่วง</td><td>อัตราการขนถ่ายสูง งานเหมืองและท่าเรือ</td></tr>
+          <tr><td>พลาสติก (HDPE ไนลอน ยูรีเทน)</td><td>ได้ทุกรูปแบบข้างต้น</td><td>แรงเหวี่ยงหรือต่อเนื่อง</td><td>ธัญพืชและงานอาหาร เบา เสียงเงียบ ไม่เกิดประกายไฟ และไม่ครูดสายพานถ้าหลุด</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.7</b> วัสดุของกระพ้อเทียบกับลักษณะงาน</caption>
+        <thead><tr><th>วัสดุ</th><th>ใช้กับ</th><th>สิ่งที่ต้องระวัง</th></tr></thead>
+        <tbody>
+          <tr><td>เหล็กกล้าอ่อนขึ้นรูป</td><td>งานอุตสาหกรรมทั่วไป วัสดุกัดสึก อุณหภูมิถึง 200&nbsp;&deg;C</td><td>การกัดกร่อน และประกายไฟหากไปกระทบตัวเรือน</td></tr>
+          <tr><td>เหล็กกล้าไร้สนิม</td><td>อาหาร ยา ปุ๋ย งานเปียก</td><td>ราคา และการแตกร้าวจากความล้าบริเวณรูสลักเกลียว</td></tr>
+          <tr><td>HDPE / พอลิเอทิลีน</td><td>ธัญพืช เมล็ดพันธุ์ อาหาร เป็นมาตรฐานของท่าเรือธัญพืชยุคใหม่</td><td>จำกัดอุณหภูมิราว 80&nbsp;&deg;C และไฟฟ้าสถิตถ้าไม่ใช้เกรดนำไฟฟ้า</td></tr>
+          <tr><td>ไนลอน</td><td>วัสดุเหนียว ผิวปล่อยวัสดุได้ดีกว่าเหล็ก</td><td>ดูดความชื้นและขนาดเปลี่ยน</td></tr>
+          <tr><td>บุยูรีเทนหรือเหล็ก AR</td><td>งานกัดสึกรุนแรง เช่น ปูนเม็ด ตะกรัน ซินเทอร์ ทราย</td><td>น้ำหนัก ซึ่งทำให้แรงดึงโซ่และกำลังขับเพิ่มขึ้น</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>ระยะห่าง</b> สำหรับการปล่อยแบบแรงเหวี่ยง กระพ้อต้องห่างกันพอที่วัสดุที่ถูกเหวี่ยงออก
+      จะพ้นกระพ้อใบข้างหน้า ช่วงที่ใช้กันคือ 2&nbsp;ถึง&nbsp;3 เท่าของระยะยื่น และไม่ควรน้อยกว่าราว
+      1.5 เท่า ถ้าชิดเกินไป วัสดุที่ปล่อยจากใบหนึ่งจะกระทบหลังของใบถัดไป ซึ่งเหวี่ยงวัสดุกลับเข้าตัวเรือน
+      ถ้าห่างเกินไปก็เสียอัตราการลำเลียงไปเปล่า ๆ กระพ้อแบบต่อเนื่องเป็นกรณีตรงข้าม
+      คือติดตั้งชิดกันโดยไม่มีช่องว่างเลย เพราะหลังของกระพ้อแต่ละใบคือรางปล่อยวัสดุของใบที่อยู่ข้างหลังมัน</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.8</b> ขนาดกระพ้อระบบเมตริกและความจุระดับน้ำโดยทั่วไป</caption>
+        <thead><tr><th>กว้าง &times; ระยะยื่น &times; ลึก (มม.)</th><th>ความจุระดับน้ำ (ล.)</th><th>ความกว้างสายพานที่ใช้ (มม.)</th><th>ระยะห่างทั่วไป แบบแรงเหวี่ยง (มม.)</th></tr></thead>
+        <tbody>
+          <tr><td>160 &times; 100 &times; 110</td><td class="num">1.0</td><td class="num">200</td><td class="num">200&ndash;250</td></tr>
+          <tr><td>200 &times; 125 &times; 140</td><td class="num">2.0</td><td class="num">250</td><td class="num">250&ndash;300</td></tr>
+          <tr><td>250 &times; 150 &times; 160</td><td class="num">3.5</td><td class="num">300</td><td class="num">300&ndash;375</td></tr>
+          <tr><td>300 &times; 175 &times; 180</td><td class="num">5.5</td><td class="num">350</td><td class="num">350&ndash;425</td></tr>
+          <tr><td>350 &times; 180 &times; 190</td><td class="num">7.0</td><td class="num">400</td><td class="num">375&ndash;450</td></tr>
+          <tr><td>400 &times; 200 &times; 200</td><td class="num">10.0</td><td class="num">450</td><td class="num">400&ndash;500</td></tr>
+          <tr><td>500 &times; 250 &times; 250</td><td class="num">19.0</td><td class="num">550</td><td class="num">500&ndash;625</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>มีข้อเตือนสองข้อเกี่ยวกับตารางนี้ ข้อแรก มันเป็นค่าตัวแทน ไม่ใช่แคตตาล็อก
+      กระพ้อของผู้ผลิตแต่ละรายต่างกัน และความจุระดับน้ำคือค่าที่ต้องใช้ออกแบบ ไม่ใช่ความจุ
+      &ldquo;รวมยอด&rdquo; หรือ &ldquo;ปาดเรียบ&rdquo; ซึ่งสมมติว่ามีวัสดุกองพูนที่กระพ้อซึ่งกำลังเคลื่อนที่
+      ไม่อาจเก็บไว้ได้ ข้อที่สอง ขนาดก้อนวัสดุที่กระพ้อรับได้อยู่ราวหนึ่งในสามของระยะยื่น
+      สำหรับส่วนผสมที่มีทั้งก้อนและวัสดุละเอียด และน้อยกว่านั้นถ้าเป็นก้อนล้วน
+      ซึ่งเป็นตรรกะเดียวกับอัตราส่วนชั้นขนาดก้อนใน <a href="chapter2-th.html#s14">&sect;2.14</a></p>
+
+    <!-- ============================================================ 4.7 -->
+    <h2 id="s7">4.7 สายพานหรือโซ่</h2>
+
+    <p>กระพ้อถูกแขวนไว้บนสายพานยางหรือบนโซ่หนึ่งหรือสองเส้น การเลือกตัดสินจากอุณหภูมิ การกัดสึก
+      ขนาดก้อนวัสดุ และความสูงที่ยก และการเลือกนี้เปลี่ยนทั้งส่วนหัว ชุดปรับความตึง และแนวทางการบำรุงรักษา</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.9</b> สายพานเทียบกับโซ่</caption>
+        <thead><tr><th>&nbsp;</th><th>สายพาน (ยาง ผ้าใบ EP หรือลวดสลิง)</th><th>โซ่ (ข้อทุบขึ้นรูปหรือโซ่ลูกกลิ้ง)</th></tr></thead>
+        <tbody>
+          <tr><th>ความเร็ว</th><td>ถึง 3.5&nbsp;m/s เป็นตัวเลือกที่เร็ว</td><td>มักต่ำกว่า 1.5&nbsp;m/s เพราะการสึกของโซ่เพิ่มขึ้นชันตามความเร็ว</td></tr>
+          <tr><th>อุณหภูมิ</th><td>จำกัดด้วยสายพาน ราว 80&nbsp;&deg;C แบบมาตรฐาน และ 150&nbsp;&deg;C เมื่อใช้ยางทนความร้อน</td><td>ถึง 400&nbsp;&deg;C หรือมากกว่า เป็นตัวเลือกปกติสำหรับปูนเม็ด เถ้า และซินเทอร์</td></tr>
+          <tr><th>ขนาดก้อน</th><td>เล็ก ก้อนที่ติดระหว่างสายพานกับพูลเลย์จะบาดสายพาน</td><td>รับก้อนใหญ่ได้ เฟืองโซ่ทนได้</td></tr>
+          <tr><th>เสียงและแรงกระแทก</th><td>เงียบ และสายพานดูดซับแรงกระแทก</td><td>เสียงดัง และการขบข้อโซ่แต่ละครั้งคือแรงกระแทกเล็ก ๆ</td></tr>
+          <tr><th>การยืดตัว</th><td>ยืดแบบยืดหยุ่นบวกยืดถาวร ต้องมีระยะปรับความตึงต่อเนื่อง</td><td>ยืดจากการสึก แก้โดยถอดข้อโซ่ออกเป็นระยะแทน</td></tr>
+          <tr><th>รูปแบบความเสียหาย</th><td>ฉีกจากก้อนที่ติด หรือรอยต่อขาด ทำให้ทั้งเส้นร่วงลง</td><td>ข้อหรือสลักเดียวขาด ผลก็ร่วงลงเหมือนกัน แต่การสึกมองเห็นล่วงหน้าได้</td></tr>
+          <tr><th>อุตสาหกรรมที่ใช้</th><td>ธัญพืช อาหาร ปุ๋ย แร่เบา</td><td>ปูนซีเมนต์ เถ้า แร่ งานหล่อ และทุกอย่างที่ร้อนหรือหยาบ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">รูสลักเกลียวมีความหมาย</span>
+      <p>สลักเกลียวยึดกระพ้อเจาะทะลุสายพาน สายพานกระพ้อจึงเป็นสายพานที่มีแถวรูเจาะอยู่กลางเส้น
+        หรือสองแถวใกล้ขอบ ผู้ผลิตประกาศความแข็งแรงของสายพานตามที่ส่งมอบ
+        และหน้าที่ของผู้ออกแบบคือให้รูอยู่ห่างจากขอบ ใช้ตัวยึดตามที่ผู้ผลิตกำหนด
+        และเลือกชั้นความแข็งแรงที่มีเผื่อ ดู <a href="#s14">&sect;4.14</a>
+        อย่าเจาะรูใหญ่กว่าที่จำเป็น และอย่าเจาะสายพานเพิ่มหน้างานโดยไม่ตรวจความแข็งแรงที่เหลือ</p>
+    </div>
+
+    <!-- ============================================================ 4.8 -->
+    <h2 id="s8">4.8 ตัวเรือน ส่วนหัว และส่วนฐานล่าง</h2>
+
+    <p>ตัวเรือนเป็นทั้งเครื่องกันฝุ่น เป็นการ์ดความปลอดภัย และในกรณีฝุ่นระเบิด มันคือภาชนะรับความดัน
+      การออกแบบตัวเรือนจึงไม่ใช่เพียงงานเขียนแบบแผ่นเหล็ก</p>
+
+    <ul>
+      <li><b>ท่อนตัวเรือน</b> มักยาว 2&nbsp;ถึง&nbsp;3&nbsp;ม. ยึดด้วยสลักเกลียวและมีปะเก็น
+        และเป็นได้ทั้งแบบเดี่ยว (สองขาอยู่ในตัวเรือนเดียว) หรือแบบคู่ (แยกตัวเรือนต่อขา)
+        ตัวเรือนแบบคู่ใช้กับเครื่องที่สูงและกรณีที่ต้องมีช่องระบายแรงระเบิดในแต่ละขา</li>
+      <li><b>ระยะห่าง</b> ระหว่างขอบกระพ้อกับผนังตัวเรือนปกติอยู่ 25&nbsp;ถึง&nbsp;50&nbsp;มม.
+        น้อยกว่านั้น กระพ้อที่เคลื่อนตำแหน่งจะไปกระทบตัวเรือน ซึ่งเป็นแหล่งประกายไฟ
+        มากกว่านั้น ขาก็ใหญ่เกินจำเป็น ซึ่งสำคัญเพราะเกี่ยวกับปริมาตรที่จะเกิดการระเบิด</li>
+      <li><b>ส่วนหัว</b> รับเพลาขับ พูลเลย์หัวหรือเฟืองโซ่ แผ่นคอ และช่องปล่อยวัสดุ
+        <em>ตำแหน่งของแผ่นคอ</em> เป็นตัวกำหนดว่าสายวัสดุที่ถูกเหวี่ยงออกจะถูกตัดที่จุดใด
+        และในเครื่องที่ดีทุกเครื่องมันปรับได้ เพราะวิถีเปลี่ยนตามความเร็วและชนิดวัสดุ</li>
+      <li><b>บูท</b> เป็นที่อยู่ของชุดปรับความตึง ช่องป้อนเข้า และช่องทำความสะอาด
+        การออกแบบบูทเป็นตัวตัดสินว่าเครื่องจะตักวัสดุหรือถูกป้อนวัสดุ ซึ่งเป็นเรื่องของหัวข้อถัดไป</li>
+      <li><b>ช่องตรวจสอบ</b> ที่ส่วนหัว ที่บูท และเป็นระยะไปตามขา มีไว้เพื่อตรวจสอบเมื่อหยุดเครื่อง
+        และล็อกเอาต์แล้ว ไม่ใช่ขณะเดินเครื่อง</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.10</b> ระยะห่างของตัวเรือนและส่วนหัว และเหตุผลที่แต่ละค่าสำคัญ</caption>
+        <thead><tr><th>ระยะ</th><th>ค่าทั่วไป</th><th>อะไรเสียหายเมื่อค่าผิด</th></tr></thead>
+        <tbody>
+          <tr><td>ขอบกระพ้อถึงผนังตัวเรือน</td><td>25&ndash;50&nbsp;มม.</td><td>น้อยเกินไป: กระทบกัน เกิดประกายไฟ กระพ้อหลุด มากเกินไป: ปริมาตรระเบิดใหญ่ขึ้นและใช้เหล็กมากขึ้น</td></tr>
+          <tr><td>กระพ้อถึงกระพ้อระหว่างสองขา</td><td>&ge; 50&nbsp;มม.</td><td>สายพานที่ยืดตัวทำให้สองด้านมาแตะกัน กระพ้อถูกฉีกหลุด</td></tr>
+          <tr><td>ยางหุ้มพูลเลย์หัว</td><td>ยางเรียบหรือยางเซาะร่อง</td><td>สลิปขณะออกตัว ยางหุ้มคือสิ่งที่ทำให้ขีดจำกัดออยเลอร์ของ <a href="chapter3-th.html#s7">&sect;3.7</a> เป็นไปได้</td></tr>
+          <tr><td>ตำแหน่งแผ่นคอ</td><td>ปรับได้</td><td>ตั้งผิด สายวัสดุจะกระทบแผ่นแล้วสะท้อนลงขาลง</td></tr>
+          <tr><td>ระยะใต้กระพ้อในบูท</td><td>50&ndash;150&nbsp;มม.</td><td>น้อยเกินไป กระพ้อไถพื้นบูท มากเกินไป วัสดุนอนค้างและอัดแน่น</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.9 -->
+    <h2 id="s9">4.9 การป้อนวัสดุ: แบบตักและแบบท่วม</h2>
+
+    <p>วิธีที่วัสดุเข้าไปอยู่ในกระพ้อเป็นการตัดสินใจที่ถูกมองข้ามมากที่สุดในเครื่องนี้
+      และเป็นจุดที่ข้อร้องเรียนเรื่องอัตราการลำเลียงเกือบทั้งหมดเริ่มต้น</p>
+
+    <figure>
+      <svg viewBox="0 0 780 300" role="img" aria-label="เปรียบเทียบการป้อนแบบตักกับแบบท่วมที่บูท">
+        <rect x="0" y="0" width="780" height="300" fill="#ffffff"/>
+
+        <g transform="translate(0,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#DF301C" text-anchor="middle">ป้อนแบบตัก &mdash; ช่องป้อนอยู่เหนือพูลเลย์บูท</text>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 126 182 A 64 48 0 0 0 254 182 Z" fill="#c9a97a" opacity="0.55"/>
+          <circle cx="190" cy="186" r="28" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="186" r="4" fill="#6f6f6f"/>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="none" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 66 108 L 120 132 L 120 156 L 66 132 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <g fill="#c9a97a"><circle cx="84" cy="120" r="3.2"/><circle cx="100" cy="130" r="3"/><circle cx="112" cy="140" r="3.2"/></g>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.8">
+            <path d="M 160 176 l 0 22 l 26 0 l 0 -22 z"/>
+            <path d="M 160 130 l 0 22 l 26 0 l 0 -22 z"/>
+          </g>
+          <g fill="#c9a97a"><path d="M 161 190 l 0 7 l 24 0 l 0 -7 z"/><path d="M 161 144 l 0 7 l 24 0 l 0 -7 z"/></g>
+          <line x1="186" y1="96" x2="186" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <line x1="196" y1="96" x2="196" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <text x="190" y="256" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">กระพ้อตักผ่านชั้นวัสดุตื้น ๆ</text>
+          <text x="190" y="274" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">ปรับตัวเองได้ แต่จ่ายค่ากำลังในการตัก</text>
+        </g>
+
+        <g transform="translate(400,0)">
+          <text x="190" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#00788A" text-anchor="middle">ป้อนแบบท่วม &mdash; ช่องป้อนเข้าขาขึ้น</text>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="#faf8f3" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 140 206 A 50 30 0 0 0 240 206 Z" fill="#c9a97a" opacity="0.4"/>
+          <circle cx="190" cy="186" r="28" fill="#dcdcdc" stroke="#6f6f6f" stroke-width="2.5"/>
+          <circle cx="190" cy="186" r="4" fill="#6f6f6f"/>
+          <path d="M 120 90 L 260 90 L 260 190 A 70 52 0 0 1 120 190 Z" fill="none" stroke="#8f8f8f" stroke-width="2.5"/>
+          <path d="M 60 96 L 120 96 L 120 128 L 60 128 Z" fill="#FFF1D1" stroke="#c9a97a" stroke-width="2"/>
+          <g fill="#c9a97a"><circle cx="78" cy="106" r="3.2"/><circle cx="96" cy="112" r="3"/><circle cx="112" cy="118" r="3.2"/></g>
+          <g fill="#bfbfbf" stroke="#6f6f6f" stroke-width="1.8">
+            <path d="M 160 120 l 0 22 l 26 0 l 0 -22 z"/>
+            <path d="M 160 166 l 0 22 l 26 0 l 0 -22 z"/>
+          </g>
+          <g fill="#c9a97a"><path d="M 161 128 l 0 13 l 24 0 l 0 -13 z"/><path d="M 161 174 l 0 13 l 24 0 l 0 -13 z"/></g>
+          <line x1="186" y1="96" x2="186" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <line x1="196" y1="96" x2="196" y2="170" stroke="#2f2f2f" stroke-width="2.4"/>
+          <text x="190" y="256" font-family="Segoe UI, sans-serif" font-size="11" fill="#4b4540" text-anchor="middle">กระพ้อถูกเติมขณะเคลื่อนผ่าน บูทจึงโล่ง</text>
+          <text x="190" y="274" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">ต้องควบคุมอัตราการป้อน ไม่เช่นนั้นจะอุดตัน</text>
+        </g>
+      </svg>
+      <figcaption><b>รูปที่ 4.5</b> การป้อนวัสดุสองแบบ การป้อนแบบตักให้กระพ้อตักวัสดุจากชั้นตื้น ๆ ในบูท
+        ส่วนการป้อนแบบท่วมส่งวัสดุเข้าไปในขาขึ้นเพื่อให้กระพ้อเติมตัวเองขณะเคลื่อนผ่าน
+        ข้อร้องเรียนเรื่องอัตราการลำเลียงเกือบทุกกรณีสาวกลับมาถึงรูปนี้</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.11</b> เปรียบเทียบวิธีการป้อนวัสดุ</caption>
+        <thead><tr><th>วิธี</th><th>เติมกระพ้ออย่างไร</th><th>ข้อดี</th><th>ต้นทุนและความเสี่ยง</th></tr></thead>
+        <tbody>
+          <tr><td><b>ป้อนแบบตัก</b></td><td>กระพ้อตักชั้นวัสดุที่อยู่ในบูท</td>
+              <td>ปรับตัวเอง อัตราการบรรจุเปลี่ยนตามปริมาณที่ป้อนเข้า รางป้อนเรียบง่าย ทนการป้อนที่ไม่สม่ำเสมอ</td>
+              <td>แรงต้านการตักเพิ่มกำลัง 10&ndash;30&nbsp;% ทำให้วัสดุเปราะแตกหัก และทำให้ขอบกระพ้อสึก</td></tr>
+          <tr><td><b>ป้อนแบบท่วม</b></td><td>ส่งวัสดุเข้าไปในขาขึ้นตามทิศที่กระพ้อเคลื่อนที่</td>
+              <td>แทบไม่มีกำลังส่วนการตัก นุ่มนวลกับผลิตภัณฑ์ และทำอัตราการบรรจุได้สูงกว่า</td>
+              <td>ต้องควบคุมอัตราการป้อน ป้อนเกินบูทเต็มและอุดตัน ป้อนน้อยอัตราการลำเลียงตก</td></tr>
+          <tr><td><b>ผสมทั้งสองแบบ</b></td><td>ป้อนแบบท่วมโดยมีชั้นวัสดุตื้น ๆ ในบูทเป็นบัฟเฟอร์</td>
+              <td>เป็นการประนีประนอมที่ใช้กันทั่วไปในอุตสาหกรรม คือนุ่มนวลเป็นส่วนใหญ่และทนการป้อนพุ่งได้</td>
+              <td>ต้องออกแบบเรขาคณิตของช่องป้อนให้ถูก รางที่เล็งผิดจะได้ข้อเสียของทั้งสองแบบ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>จากตารางนี้ได้กฎสามข้อ ซึ่งมีค่ามากกว่าสูตรใด ๆ ในบทนี้ ข้อแรก ป้อนวัสดุ<em>ไปตามทิศที่กระพ้อเคลื่อนที่</em>
+      ห้ามป้อนย้อนทิศ ข้อที่สอง ป้อนด้วยอัตราที่เครื่องรับได้ ซึ่งหมายถึงต้องมีอุปกรณ์จ่ายวัสดุที่ควบคุมได้
+      ที่ต้นทาง ซึ่งมักเป็นเกลียวป้อนของ <a href="chapter2-th.html#s20">&sect;2.20</a> และข้อที่สาม
+      วัดอัตราที่จ่ายออกได้จริงก่อนจะไปโทษกระพ้อลำเลียง เพราะกระพ้อที่ถูกป้อนเพียง 60&nbsp;%
+      ก็จะจ่ายออกได้ 60&nbsp;% โดยที่ไม่มีอะไรผิดเลยในตัวเรือน</p>
+
+    <!-- ============================================================ 4.10 -->
+    <h2 id="s10">4.10 คุณลักษณะวัสดุที่เป็นตัวกำหนดการออกแบบ</h2>
+
+    <p>รหัสวัสดุของ <a href="chapter1-th.html#s5">&sect;1.5</a> และรหัส CEMA ของ
+      <a href="chapter2-th.html#s10">&sect;2.10</a> ใช้ได้ที่นี่ทั้งคู่ ต่อไปนี้คือสิ่งที่คุณลักษณะแต่ละข้อ
+      ทำกับกระพ้อลำเลียงโดยเฉพาะ</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.12</b> คุณลักษณะวัสดุและผลที่มีต่อกระพ้อลำเลียง</caption>
+        <thead><tr><th>คุณลักษณะ</th><th>ผลที่เกิด</th><th>การตอบสนองในการออกแบบ</th></tr></thead>
+        <tbody>
+          <tr><td>ความหนาแน่นรวม &rho;</td><td>กำหนดอัตราเป็นตันที่ได้จากปริมาตรกระพ้อค่าหนึ่ง จึงกำหนดกำลังและแรงดึงทุกค่า</td>
+              <td>ออกแบบด้วยความหนาแน่น<em>สูงสุด</em>ที่วัสดุจะไปถึง ไม่ใช่ค่าเฉลี่ย</td></tr>
+          <tr><td>ไหลได้ดี</td><td>เติมและเทออกง่าย อัตราการบรรจุสูง การปล่อยแบบแรงเหวี่ยงใช้ได้</td>
+              <td>กรณีตรงไปตรงมา คือแรงเหวี่ยง สายพาน กระพ้อแบบ AA</td></tr>
+          <tr><td>ไหลเฉื่อยหรือเหนียว</td><td>ไม่ยอมออกจากกระพ้อ พอกอยู่ข้างใน อัตราการลำเลียงลดลงทุกสัปดาห์</td>
+              <td>ปล่อยแบบต่อเนื่องหรือแบบบังคับ กระพ้อไนลอนหรือยูรีเทน ลดความเร็ว และต้องมีแผนทำความสะอาด</td></tr>
+          <tr><td>เปราะ (ธัญพืช ข้าวมอลต์ เม็ดอาหารสัตว์ ปุ๋ยเคลือบผิว)</td><td>แตกหักตั้งแต่ตอนตัก ตอนเหวี่ยง และตอนกระทบในรางปล่อย</td>
+              <td>ปล่อยแบบต่อเนื่อง ป้อนแบบท่วม ความเร็วต่ำ กระพ้อพลาสติก และให้วัสดุตกลงอย่างนุ่มนวลในราง</td></tr>
+          <tr><td>กัดสึก (ทราย ปูนเม็ด ซินเทอร์ เถ้า)</td><td>ทำให้ขอบกระพ้อ ตัวเรือนที่จุดกระทบ และรางปล่อยสึก</td>
+              <td>กระพ้อเหล็ก AR หรือบุยูรีเทน แผ่นกันสึกในราง ลดความเร็ว และเผื่อระยะตัวเรือนให้มากขึ้น</td></tr>
+          <tr><td>ร้อน (เกิน 80&nbsp;&deg;C)</td><td>สายพานและกระพ้อพลาสติกใช้ไม่ได้ ตัวเรือนขยายตัว แบริ่งร้อน</td>
+              <td>ใช้โซ่ กระพ้อเหล็ก เผื่อการขยายตัวในตัวเรือน และติดตั้งการตรวจวัดอุณหภูมิแบริ่ง</td></tr>
+          <tr><td>ฝุ่นมากและติดไฟได้</td><td>ปัญหาการระเบิดของ <a href="#s18">&sect;4.18</a></td>
+              <td>ระบายแรงระเบิดหรือระบบระงับการระเบิด ควบคุมแหล่งจุดติดไฟ และดูดฝุ่นที่ช่องป้อนและช่องปล่อย</td></tr>
+          <tr><td>เติมอากาศได้และเบา (แป้ง วัสดุละเอียด)</td><td>ฟุ้งออกจากกระพ้อตามกระแสอากาศในตัวเรือน และปล่อยวัสดุไม่แน่นอน</td>
+              <td>กระพ้อแบบต่อเนื่อง ลดความเร็ว และควบคุมการไหลของอากาศในตัวเรือน</td></tr>
+          <tr><td>ก้อนขนาดใหญ่</td><td>ระยะยื่นของกระพ้อเป็นตัวจำกัด ไม่ใช่กำลังขับ และก้อนที่ติดจะบาดสายพาน</td>
+              <td>ใช้โซ่แทนสายพาน ระยะยื่น &ge; 3 เท่าของก้อนใหญ่สุด และคัดขนาดที่ต้นทาง</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.13</b> ตัวประกอบการบรรจุ <var>&psi;</var> ที่ควรใช้ออกแบบ</caption>
+        <thead><tr><th>วัสดุและวิธีป้อน</th><th><var>&psi;</var></th><th>หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><td>ธัญพืชไหลดี ป้อนแบบท่วม ความเร็วถูกต้อง</td><td class="num">0.80&ndash;0.90</td><td>ดีที่สุดที่เครื่องจริงทำได้</td></tr>
+          <tr><td>ธัญพืชหรือทรายที่ไหลดี ป้อนแบบตัก</td><td class="num">0.70&ndash;0.80</td><td>เกณฑ์ออกแบบที่ใช้กันทั่วไป</td></tr>
+          <tr><td>ผงละเอียด ป้อนแบบตัก</td><td class="num">0.60&ndash;0.75</td><td>การเติมอากาศและกระแสลมในตัวเรือนทำให้เสียการบรรจุ</td></tr>
+          <tr><td>วัสดุไหลเฉื่อยหรือเหนียว</td><td class="num">0.50&ndash;0.65</td><td>และจะลดลงอีกเมื่อมีวัสดุพอกสะสม</td></tr>
+          <tr><td>วัสดุเป็นก้อน ก้อนถึงหนึ่งในสามของระยะยื่น</td><td class="num">0.50&ndash;0.65</td><td>ช่องว่างระหว่างก้อนทำให้เสียปริมาตรกระพ้อ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>การออกแบบด้วย 0.9 เพราะแคตตาล็อกบอกว่ากระพ้อจุ 10&nbsp;ล. คือความผิดพลาดในการกำหนดขนาด
+      ที่พบบ่อยที่สุดของเครื่องนี้ กระพ้อลำเลียงที่ป้อนแบบตักด้วยผงที่ไหลเฉื่อยอาจเดินที่ 0.6
+      ซึ่งเท่ากับสองในสามของอัตราการลำเลียงที่สมมติไว้ และการเพิ่มกำลังมอเตอร์เท่าไรก็กู้คืนไม่ได้
+      เพราะขีดจำกัดอยู่ที่ว่ามีวัสดุอยู่ในกระพ้อเท่าใด ไม่ใช่ว่ากระพ้อถูกดึงแรงเท่าใด</p>
+
+    <!-- ============================================================ 4.11 -->
+    <h2 id="s11">4.11 การคำนวณอัตราการลำเลียง</h2>
+
+    <p>อัตราการลำเลียงของกระพ้อลำเลียงคือปริมาตรต่อกระพ้อคูณจำนวนกระพ้อที่ผ่านไปต่อวินาที
+      นั่นคือแนวคิดทั้งหมด ส่วนที่เหลือเป็นเพียงการจัดหน่วยให้ถูก</p>
+
+    <p>ถ้ากระพ้อวางห่างกัน <var>s</var> และเคลื่อนที่ด้วยความเร็ว <var>v</var> จะมีกระพ้อผ่านส่วนหัว
+      <var>v</var>/<var>s</var> ใบต่อวินาที แต่ละใบบรรจุปริมาตรระดับน้ำ <var>V</var><sub>b</sub>
+      โดยเติมได้เป็นสัดส่วน <var>&psi;</var></p>
+
+    <div class="eq">
+      <span class="body">
+        <var>Q</var><sub>v</sub> = 3600 <var>V</var><sub>b</sub> <var>&psi;</var>
+        <span class="frac"><span class="num"><var>v</var></span><span class="den"><var>s</var></span></span>
+        &nbsp;<span class="units">ม.&sup3;/ชม. &mdash; <var>V</var><sub>b</sub> หน่วย ม.&sup3;, <var>v</var> หน่วย m/s, <var>s</var> หน่วย ม.</span>
+      </span>
+      <span class="tag">(4.3)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>Q</var><sub>m</sub> = <var>Q</var><sub>v</sub> <var>&rho;</var>
+        &nbsp;<span class="units">t/h &mdash; เมื่อ <var>&rho;</var> หน่วย t/m&sup3;</span>
+      </span>
+      <span class="tag">(4.4)</span>
+    </div>
+
+    <p>เมื่อจัดรูปใหม่ สมการเดียวกันนี้ตอบคำถามสองข้อที่ผู้ออกแบบถามจริง คือเมื่อรู้อัตราการลำเลียง
+      ที่ต้องการและเลือกกระพ้อแล้ว ต้องใช้ระยะห่างเท่าใด และเมื่อมีเครื่องอยู่แล้ว
+      เครื่องนั้นทำอัตราการบรรจุได้เท่าใด</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>s</var> = <span class="frac"><span class="num">3600 <var>V</var><sub>b</sub> <var>&psi;</var> <var>v</var></span><span class="den"><var>Q</var><sub>v</sub></span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>&psi;</var> = <span class="frac"><span class="num"><var>Q</var><sub>v</sub> <var>s</var></span><span class="den">3600 <var>V</var><sub>b</sub> <var>v</var></span></span>
+      </span>
+      <span class="tag">(4.5)</span>
+    </div>
+
+    <p>รูปที่สองเป็นเครื่องมือวินิจฉัย ให้วัดอัตราที่จ่ายออกได้จริงของกระพ้อลำเลียงตัวจริง แปลงเป็นปริมาตร
+      แล้วคำนวณ <var>&psi;</var> ถ้าออกมา 0.55 ขณะที่ออกแบบไว้ 0.75 ความผิดพลาดอยู่ที่การป้อนวัสดุ
+      หรือที่วัสดุพอกอยู่ในกระพ้อ ไม่ใช่ที่ชุดขับ ไม่ใช่ที่สายพาน และการเพิ่มความเร็วก็แก้ได้ไม่หมดจด</p>
+
+    <div class="callout">
+      <span class="label">อัตราการลำเลียงในรูปของ CEMA</span>
+      <p>รูปหน่วยอังกฤษของสมการที่&nbsp;4.3 คือ <var>Q</var> = (ความจุกระพ้อระดับน้ำ หน่วย ft&sup3;)
+        &times; (จำนวนกระพ้อต่อฟุตของสายพาน) &times; (ความเร็วสายพาน หน่วย ft/min) &times; 60
+        ซึ่งให้ผลเป็น ft&sup3;/h เป็นสมการเดียวกันที่ยุบหน่วยเข้าไปไว้แล้ว
+        และตารางของผู้ผลิตก็สร้างจากสมการนี้ ทั้งสองรูปอ้างความจุระดับน้ำ
+        ดังนั้นตารางที่ดูใจกว้างเป็นพิเศษมักกำลังอ้างความจุรวมยอด ให้ตรวจว่าเป็นค่าใด</p>
+    </div>
+
+    <!-- ============================================================ 4.12 -->
+    <h2 id="s12">4.12 การเลือกความเร็ว</h2>
+
+    <p>ความเร็วไม่ใช่ค่าที่เลือกได้ตามใจ มันต้องสอดคล้องเงื่อนไขสามข้อพร้อมกัน และข้อที่สามคือข้อที่คนมักลืม</p>
+
+    <ol>
+      <li><b>อัตราการลำเลียง</b> จากสมการที่&nbsp;4.3 <var>v</var> กับ <var>s</var> แลกกันโดยตรง
+        เพราะที่กระพ้อและอัตราการบรรจุค่าหนึ่ง อัตราการลำเลียงแปรผันตรงกับ <var>v</var>/<var>s</var></li>
+      <li><b>ความทนของวัสดุ</b> ตารางที่&nbsp;4.14 เป็นตัวกำหนดเพดาน วัสดุเปราะหรือกัดสึก
+        จะจำกัดความเร็วไม่ว่าอัตราการลำเลียงจะต้องการเท่าใด</li>
+      <li><b>การปล่อยวัสดุ</b> จุดขั้วตามสมการที่&nbsp;4.2 ต้องตกอยู่ด้านที่ถูกต้องของรัศมีกระพ้อ
+        ตามชนิดการปล่อยที่เลือก โดยเส้นผ่านศูนย์กลางส่วนหัวกับความเร็วรอบเพลาเชื่อมกับความเร็วสายพานด้วย</li>
+    </ol>
+
+    <div class="eq">
+      <span class="body">
+        <var>v</var> = <span class="frac"><span class="num"><var>&pi;</var> <var>D</var> <var>n</var></span><span class="den">60</span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>n</var> = <span class="frac"><span class="num">60 <var>v</var></span><span class="den"><var>&pi;</var> <var>D</var></span></span>
+        &nbsp;<span class="units"><var>D</var> หน่วย ม., <var>n</var> หน่วยรอบต่อนาที, <var>v</var> หน่วย m/s</span>
+      </span>
+      <span class="tag">(4.6)</span>
+    </div>
+
+    <p>นี่คือคานงัดที่ใช้แก้ความขัดแย้งได้เกือบทุกกรณี วัสดุที่ต้องยกด้วยความเร็ว 2&nbsp;m/s
+      แต่จะถูกเหวี่ยงแรงเกินไปถ้าใช้พูลเลย์หัวเล็ก สามารถเดินบนพูลเลย์หัวที่<em>ใหญ่ขึ้น</em>
+      ที่ความเร็วสายพานเท่าเดิม เพลาจะหมุนช้าลง <var>r</var><sub>p</sub> โตขึ้น
+      และการปล่อยวัสดุเลื่อนจากแบบแรงเหวี่ยงรุนแรงมาทางนุ่มนวล ความเร็วกับรูปแบบการปล่อยวัสดุ
+      เป็นคำถามสองข้อที่ต่างกันแต่ใช้ตัวแปรร่วมกันตัวหนึ่ง</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.14</b> แนวทางความเร็วตามชนิดวัสดุและชนิดการปล่อยวัสดุ</caption>
+        <thead><tr><th>วัสดุ</th><th>แรงเหวี่ยง (m/s)</th><th>ต่อเนื่อง (m/s)</th><th>เหตุผลของขีดจำกัด</th></tr></thead>
+        <tbody>
+          <tr><td>ธัญพืช เมล็ดพันธุ์ อาหารบด</td><td class="num">1.8&ndash;2.5</td><td class="num">0.6&ndash;1.0</td><td>เมล็ดแตกและเกิดฝุ่น</td></tr>
+          <tr><td>ปูนซีเมนต์ เถ้าลอย ปูนขาว</td><td class="num">1.5&ndash;2.2</td><td class="num">0.5&ndash;1.0</td><td>ฝุ่นและการเติมอากาศ วัสดุละเอียดฟุ้งออกจากกระพ้อ</td></tr>
+          <tr><td>ทราย กรวด แร่ละเอียด</td><td class="num">1.2&ndash;2.0</td><td class="num">0.5&ndash;0.9</td><td>การกัดสึกของขอบกระพ้อและตัวเรือนเพิ่มตามความเร็ว</td></tr>
+          <tr><td>ปุ๋ย เม็ดวัสดุ เพลเลต</td><td class="num">1.5&ndash;2.2</td><td class="num">0.6&ndash;1.0</td><td>การแตกหักของเม็ดและผิวเคลือบ</td></tr>
+          <tr><td>ปูนเม็ด ซินเทอร์ เถ้าร้อน</td><td>ไม่ใช้</td><td class="num">0.4&ndash;0.8</td><td>การสึกของโซ่ ความร้อน และแรงกระแทกจากก้อน</td></tr>
+          <tr><td>วัสดุเปียกหรือเหนียว</td><td>ไม่ใช้</td><td class="num">0.3&ndash;0.6</td><td>ปล่อยแบบบังคับ ต้องให้เวลาวัสดุออกจากกระพ้อ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.13 -->
+    <h2 id="s13">4.13 กำลังขับ</h2>
+
+    <p>ในบรรดาเครื่องจักรทั้งหมดของรายวิชานี้ กระพ้อลำเลียงมีการคำนวณกำลังที่สะอาดที่สุด
+      เพราะงานที่เป็นประโยชน์เป็นเกือบทั้งหมดของกำลัง การยก <var>Q</var><sub>m</sub> ตันต่อชั่วโมง
+      ขึ้นไป <var>H</var> เมตร ต้องใช้</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>P</var><sub>lift</sub> = <span class="frac"><span class="num"><var>Q</var><sub>m</sub> <var>H</var> <var>g</var></span><span class="den">3.6</span></span>
+        &nbsp;<span class="units">W &mdash; <var>Q</var><sub>m</sub> หน่วย t/h, <var>H</var> หน่วย ม.</span>
+      </span>
+      <span class="tag">(4.7)</span>
+    </div>
+
+    <p>ซึ่งเท่ากับ 2.725&nbsp;W ต่อทุก t/h ที่ยกขึ้นหนึ่งเมตร เป็นตัวเลขที่ควรจำ
+      เพราะช่วยให้ตรวจใบเสนอราคากระพ้อลำเลียงได้ในหัว เครื่อง 120&nbsp;t/h ที่ยก 30&nbsp;ม. ต้องใช้
+      120&nbsp;&times;&nbsp;30&nbsp;&times;&nbsp;2.725 = 9.8&nbsp;kW เป็นกำลังยก ดังนั้นมอเตอร์ 30&nbsp;kW
+      สำหรับงานนี้ก็เป็นได้สองอย่าง คือกำลังเผื่อไว้เพื่อเหตุผลเฉพาะบางอย่าง หรือคิดผิดไปเลย</p>
+
+    <p>จากกำลังยก ให้บวกแรงต้านการตักที่บูทและการสูญเสียทางกล แล้วหารด้วยประสิทธิภาพชุดขับ</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>P</var> = <span class="frac"><span class="num"><var>P</var><sub>lift</sub> <var>k</var><sub>s</sub></span><span class="den"><var>&eta;</var></span></span>
+        &nbsp;<span class="units"><var>k</var><sub>s</sub> = 1.1&ndash;1.3 ป้อนแบบท่วม, 1.2&ndash;1.5 ป้อนแบบตัก</span>
+      </span>
+      <span class="tag">(4.8)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.15</b> ตัวประกอบการตักและการสูญเสีย <var>k</var><sub>s</sub></caption>
+        <thead><tr><th>สภาพการทำงาน</th><th><var>k</var><sub>s</sub></th><th>หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><td>ป้อนแบบท่วม วัสดุไหลดี ยกไม่สูง</td><td class="num">1.10</td><td>แทบเป็นงานยกล้วน ๆ</td></tr>
+          <tr><td>ป้อนแบบท่วม ผงละเอียด ยกถึง 30&nbsp;ม.</td><td class="num">1.15&ndash;1.20</td><td>มีวัสดุติดกลับและแรงเสียดทานในตัวเรือนบ้าง</td></tr>
+          <tr><td>ป้อนแบบตัก วัสดุไหลดี</td><td class="num">1.20&ndash;1.30</td><td>กรณีอุตสาหกรรมที่พบทั่วไป</td></tr>
+          <tr><td>ป้อนแบบตัก วัสดุไหลเฉื่อยหรือชื้น</td><td class="num">1.30&ndash;1.50</td><td>การตักผ่านชั้นวัสดุที่อัดแน่นมีราคาแพง</td></tr>
+          <tr><td>เครื่องที่ทราบว่ามีวัสดุตกกลับ</td><td>&mdash;</td><td>ให้แก้การปล่อยวัสดุก่อน อย่าซื้อมอเตอร์ใหญ่ขึ้นเพื่อยกวัสดุเดิมซ้ำสองครั้ง</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>ประสิทธิภาพชุดขับ <var>&eta;</var> เป็นไปตามกฎเดียวกับใน <a href="chapter2-th.html#s15">&sect;2.15</a>
+      คือราว 0.94 สำหรับชุดทดเกียร์เฮลิคอล 0.90 สำหรับชุดสวมเพลาที่มีสายพานเป็นชุดแรก
+      และต่ำถึง 0.50 สำหรับเกียร์เวิร์มอัตราทดสูง กระพ้อลำเลียงต้องการอัตราทดมาก
+      เพราะมอเตอร์ 1,450&nbsp;รอบ/นาที ขับเพลาหัวที่ 54&nbsp;รอบ/นาที คืออัตราทด 27
+      ความยั่วยวนที่จะใส่กล่องเกียร์เวิร์มจึงมีจริง และค่าปรับด้านประสิทธิภาพก็จ่ายไปตลอดอายุเครื่อง</p>
+
+    <div class="callout">
+      <span class="label">เอกลักษณ์ที่ใช้ตรวจงานได้</span>
+      <p>สมการที่&nbsp;4.7 เขียนได้อีกแบบเป็น <var>P</var><sub>lift</sub> =
+        <var>F</var><sub>lift</sub> <var>v</var> โดย <var>F</var><sub>lift</sub>
+        คือน้ำหนักของวัสดุที่ห้อยอยู่ในขาขึ้น (สมการที่&nbsp;4.10) ทั้งสองรูปต้องให้ผลเท่ากัน
+        และการตรวจว่าเท่ากันจริงจับความผิดพลาดทางเลขคณิตได้มากอย่างน่าประหลาด
+        ถ้ากำลังที่ได้จากอัตราเป็นตันไม่เท่ากับกำลังที่ได้จากแรงดึง ก็มีข้อใดข้อหนึ่งผิด</p>
+    </div>
+
+    <!-- ============================================================ 4.14 -->
+    <h2 id="s14">4.14 แรงดึงในกระพ้อลำเลียงแบบสายพาน</h2>
+
+    <p>สายพานของกระพ้อลำเลียงรับน้ำหนักของวัสดุที่อยู่ในขาขึ้น ส่วนน้ำหนักของสายพานและกระพ้อเปล่า
+      มีเท่ากันทั้งสองด้านจึงหักกลบกันไป นี่คือเหตุผลที่เครื่องนี้มีประสิทธิภาพสูง
+      และเหตุผลที่การคำนวณแรงดึงสั้น</p>
+
+    <p>วัสดุที่อยู่ในขาขึ้นในขณะใดขณะหนึ่งเท่ากับอัตราเป็นตันคูณเวลาเดินทาง <var>H</var>/<var>v</var></p>
+
+    <div class="eq">
+      <span class="body">
+        <var>m</var><sub>up</sub> = <span class="frac"><span class="num"><var>Q</var><sub>m</sub> <var>H</var></span><span class="den">3.6 <var>v</var></span></span>
+        &nbsp;<span class="units">กก. &mdash; <var>Q</var><sub>m</sub> หน่วย t/h</span>
+      </span>
+      <span class="tag">(4.9)</span>
+    </div>
+
+    <div class="eq">
+      <span class="body">
+        <var>F</var><sub>lift</sub> = <var>m</var><sub>up</sub> <var>g</var>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>F</var><sub>u</sub> = <var>F</var><sub>lift</sub> + <var>F</var><sub>dig</sub> + <var>F</var><sub>fric</sub>
+      </span>
+      <span class="tag">(4.10)</span>
+    </div>
+
+    <p>โดย <var>F</var><sub>u</sub> คือแรงรอบวงที่พูลเลย์หัว ซึ่งเป็นปริมาณเดียวกับใน
+      <a href="chapter3-th.html#s6">&sect;3.6</a> แรงตัก <var>F</var><sub>dig</sub>
+      ใช้ค่า 10&ndash;30&nbsp;% ของ <var>F</var><sub>lift</sub> สำหรับเครื่องที่ป้อนแบบตัก
+      ตามตารางที่&nbsp;4.15 และ <var>F</var><sub>fric</sub> ครอบคลุมแรงเสียดทานของแบริ่งและซีล
+      ซึ่งมีค่าน้อย</p>
+
+    <p>จากจุดนั้น การวิเคราะห์สายพานเหมือนกับบทที่&nbsp;3 ทุกประการ ด้านหย่อนต้องตึงพอที่ชุดขับจะไม่สลิป
+      ซึ่งคือขีดจำกัดออยเลอร์&ndash;ไอเทลไวน์</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var><sub>2</sub> &ge; <span class="frac"><span class="num"><var>F</var><sub>u</sub></span><span class="den">e<sup><var>&mu;&theta;</var></sup> &minus; 1</span></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>T</var><sub>1</sub> = <var>F</var><sub>u</sub> + <var>T</var><sub>2</sub>
+      </span>
+      <span class="tag">(4.11)</span>
+    </div>
+
+    <p>เมื่อพูลเลย์หัวหุ้มยาง <var>&mu;</var> &asymp; 0.35 และกระพ้อลำเลียงมีมุมโอบ 180&deg;
+      จึงได้ e<sup><var>&mu;&theta;</var></sup> = e<sup>0.35<var>&pi;</var></sup> = 3.00 และ
+      <var>T</var><sub>2</sub> &ge; <var>F</var><sub>u</sub>/2.00
+      ในเครื่องแนวดิ่งไม่มีทางเพิ่มมุมโอบได้ เพราะการจัดวางพูลเลย์กดช่วยได้น้อยมาก
+      แรงดึงจากชุดปรับความตึงจึงต้องรับงานทั้งหมดเอง นั่นคือเหตุผลที่ชุดปรับความตึงของกระพ้อลำเลียง
+      ไม่ใช่อุปกรณ์ประกอบเล็ก ๆ</p>
+
+    <p>จากนั้นเลือกสายพานด้วยวิธีเดียวกับ <a href="chapter3-th.html#s9">&sect;3.9</a> ทุกประการ
+      คือคิดจากแรงดึงต่อหน่วยความกว้างที่จุดที่แรงดึงสูงสุด</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>k</var><sub>req</sub> = <span class="frac"><span class="num"><var>T</var><sub>1</sub> &middot; SF</span><span class="den"><var>B</var></span></span>
+        &nbsp;<span class="units">N/mm</span>
+      </span>
+      <span class="tag">(4.12)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.16</b> ตัวประกอบความปลอดภัยของสายพานและโซ่กระพ้อ</caption>
+        <thead><tr><th>ชิ้นส่วนและลักษณะงาน</th><th>SF บนความแข็งแรงขาด</th><th>หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><td>สายพานกระพ้อ โครงผ้าใบ ยึดกระพ้อด้วยสลักเกลียว</td><td class="num">8&ndash;10</td><td>รูสลักเกลียวถูกคิดรวมในพิกัดที่ประกาศแล้ว แต่ควรเผื่อไว้อีก</td></tr>
+          <tr><td>สายพานกระพ้อ โครงลวดสลิง</td><td class="num">7&ndash;8</td><td>งานยกสูงและอัตราการขนถ่ายสูง</td></tr>
+          <tr><td>สายพานกระพ้อ งานร้อนหรือรุนแรง</td><td>เพิ่ม 20&ndash;30&nbsp;%</td><td>ความร้อน การออกตัวบ่อย การออกตัวที่อุณหภูมิต่ำกว่าศูนย์</td></tr>
+          <tr><td>โซ่ข้อทุบขึ้นรูปหรือโซ่ลูกกลิ้ง</td><td class="num">8&ndash;10</td><td>คิดบนภาระขาดตามที่ผู้ผลิตโซ่ระบุ ต่อหนึ่งเส้น</td></tr>
+          <tr><td>โซ่ งานที่มีแรงกระแทกหรือมีก้อนวัสดุ</td><td class="num">10&ndash;12</td><td>การขบเฟืองโซ่ทุกครั้งคือแรงกระแทก</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.15 -->
+    <h2 id="s15">4.15 แรงดึงโซ่ในกระพ้อลำเลียงแบบโซ่</h2>
+
+    <p>กระพ้อลำเลียงแบบโซ่แทนการวิเคราะห์ออยเลอร์ด้วยอะไรที่ง่ายกว่าและให้อภัยน้อยกว่า
+      คือโซ่ขบกับฟันเฟือง จึงสลิปไม่ได้ และ <var>F</var><sub>u</sub> ทั้งก้อนปรากฏเป็นแรงดึงโซ่
+      เมื่อมีโซ่ <var>z</var> เส้นแบ่งภาระกัน</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>F</var><sub>chain</sub> = <span class="frac"><span class="num"><var>F</var><sub>u</sub></span><span class="den"><var>z</var></span></span> + <var>F</var><sub>0</sub>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <var>F</var><sub>break</sub> &ge; <var>F</var><sub>chain</sub> &middot; SF
+      </span>
+      <span class="tag">(4.13)</span>
+    </div>
+
+    <p>โดย <var>F</var><sub>0</sub> คือแรงดึงตั้งต้นเล็ก ๆ จากชุดปรับความตึง
+      มากพอที่จะให้โซ่ขบฟันอยู่และห้อยตรง เครื่องแบบโซ่มาพร้อมข้อควรระวังสามข้อ</p>
+
+    <ul>
+      <li><b>โซ่สองเส้นไม่ได้แบ่งภาระเท่ากัน</b> ความคลาดเคลื่อนในการผลิต การสึก
+        และภาระที่เยื้องศูนย์ ทำให้เส้นหนึ่งรับมากกว่าอีกเส้น ผู้ออกแบบบางรายจึงใช้ตัวประกอบการแบ่งภาระ
+        0.6 ต่อเส้นแทน 0.5 ซึ่งเท่ากับเผื่อไว้ 20&nbsp;%</li>
+      <li><b>การยืดจากการสึกคือนาฬิกาบำรุงรักษา</b> โซ่ที่ยืดไป 2&nbsp;%
+        จะไม่ตรงกับพิตช์ของเฟืองอีกต่อไปและเริ่มไต่ฟัน ทางแก้คือถอดข้อโซ่ออกและตั้งชุดปรับความตึงใหม่
+        ซึ่งเป็นงานตามแผน ไม่ใช่งานซ่อมฉุกเฉิน</li>
+      <li><b>แรงกระแทก</b> ข้อโซ่ทุกข้อที่เข้าขบเฟืองคือการชนเล็ก ๆ และจำนวนฟันมีผล
+        ฟันมากขึ้นหมายถึงก้าวเชิงมุมเล็กลงและแรงกระแทกน้อยลง ต่ำกว่าราว 10 ฟัน
+        การเคลื่อนที่จะกระตุกจนเห็นได้ชัด</li>
+    </ul>
+
+    <!-- ============================================================ 4.16 -->
+    <h2 id="s16">4.16 เพลา แรงบิด และกรณีออกตัว</h2>
+
+    <p>เพลาหัวรับแรงบิดทั้งหมดของชุดขับ และแรงบิดขณะเดินเครื่องเป็นไปตามความสัมพันธ์ที่คุ้นเคยจาก
+      <a href="chapter2-th.html#s17">&sect;2.17</a></p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var> = 9550 <span class="frac"><span class="num"><var>P</var></span><span class="den"><var>n</var></span></span>
+        &nbsp;<span class="units">N&middot;m &mdash; <var>P</var> หน่วย kW, <var>n</var> หน่วยรอบต่อนาที</span>
+      </span>
+      <span class="tag">(4.14)</span>
+    </div>
+
+    <p>เนื่องจากเพลาหัวของกระพ้อลำเลียงหมุนช้า แรงบิดนั้นจึงมีค่ามาก ชุดขับ 15&nbsp;kW ที่
+      54&nbsp;รอบ/นาที ให้แรงบิด 2,650&nbsp;N&middot;m ซึ่งใกล้เคียงแรงบิดสูงสุดของเครื่องยนต์รถกระบะเล็ก
+      แต่กระทำกับเพลาที่เราโอบด้วยสองมือได้ ขนาดเพลา ลิ่ม ดุม และคัปปลิงทั้งหมดต้องตรวจกับค่านี้
+      และตรวจกับกรณีออกตัวซึ่งหนักกว่า</p>
+
+    <div class="eq">
+      <span class="body">
+        <var>T</var><sub>start</sub> = <var>k</var><sub>st</sub> <var>T</var><sub>run</sub>
+        &nbsp;<span class="units"><var>k</var><sub>st</sub> = 1.5 ออกตัวปกติ, 2.0&ndash;2.5 ออกตัวเมื่อเครื่องมีวัสดุเต็มหรือบูทท่วม</span>
+      </span>
+      <span class="tag">(4.15)</span>
+    </div>
+
+    <p>มีสองสถานการณ์ที่ทำให้ได้ค่าปลายบนของช่วงนั้น การออกตัวกระพ้อลำเลียงที่ตัวเรือนยังมีวัสดุอยู่เต็ม
+      เช่นหลังไฟดับ หมายถึงต้องยกขาขึ้นที่มีวัสดุเต็มจากสภาวะหยุดนิ่ง
+      และการออกตัวเมื่อบูทเต็มไปด้วยวัสดุที่นอนอัดตัว หมายถึงต้องตักผ่านชั้นที่แน่น
+      ทั้งสองกรณีเป็นเหตุการณ์ธรรมดา ไม่ใช่การใช้งานผิดวิธี นั่นคือเหตุผลที่กระพ้อลำเลียง
+      ติดตั้งซอฟต์สตาร์ตเตอร์หรือคัปปลิงของไหลเป็นเรื่องปกติ และเหตุผลที่ตรวจชุดขับที่
+      <var>k</var><sub>st</sub> ไม่ใช่ที่แรงบิดขณะเดินเครื่อง</p>
+
+    <div class="callout">
+      <span class="label">คำถามเรื่องการเทวัสดุออกจากตัวเรือน</span>
+      <p>ก่อนออกตัวกระพ้อลำเลียงที่หยุดอยู่โดยมีวัสดุเต็ม ให้ถามก่อนว่าเครื่องจะออกตัวได้หรือไม่
+        ถ้าออกตัวไม่ได้ ก็ต้องเอาวัสดุออกจากบูทผ่านช่องทำความสะอาดด้วยมือ โดยตัดแยกระบบขับแล้ว
+        การออกแบบช่องนั้นไว้และทำทางเข้าถึงให้ได้ เป็นการตัดสินใจห้านาทีบนแบบ
+        ที่ประหยัดเวลาการแก้ปัญหาแบบไม่ปลอดภัยตอนสามนาฬิกาไปได้หลายชั่วโมง</p>
+    </div>
+
+    <!-- ============================================================ 4.17 -->
+    <h2 id="s17">4.17 ชุดปรับความตึงและเบรกกันถอยหลัง</h2>
+
+    <p>ชุดปรับความตึงอยู่ในบูทและทำงานสองอย่าง คือให้แรงดึง <var>T</var><sub>2</sub>
+      เพื่อไม่ให้ชุดขับสลิป และดูดซับการยืดตัวของสายพานหรือการยืดจากการสึกของโซ่</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.17</b> รูปแบบชุดปรับความตึง</caption>
+        <thead><tr><th>ชนิด</th><th>หลักการ</th><th>การใช้งาน</th></tr></thead>
+        <tbody>
+          <tr><td>แบบเกลียว</td><td>แกนเกลียวเลื่อนเพลาบูทลงล่าง</td><td>มาตรฐานของกระพ้อลำเลียงแบบสายพานที่สั้นและปานกลาง ราคาถูก แต่ต้องปรับเป็นระยะ</td></tr>
+          <tr><td>แบบตุ้มถ่วง</td><td>ถ่วงน้ำหนักที่เพลาบูทหรือที่โครงเลื่อน</td><td>เครื่องที่สูงและสายพานลวดสลิง แรงดึงคงที่และปรับตัวเองอัตโนมัติ</td></tr>
+          <tr><td>แบบสปริง</td><td>สปริงอัดไว้ที่เพลาบูท</td><td>เครื่องขนาดเล็ก และกระพ้อแบบโซ่ที่ต้องการเพียงแรงดึงตั้งต้น</td></tr>
+          <tr><td>แบบไฮดรอลิกหรือกว้าน</td><td>ใช้กำลังขับพร้อมควบคุมแรงดึง</td><td>เครื่องที่สูงมากหรือแรงดึงสูงมาก ตั้งแรงดึงตอนออกตัวต่างจากตอนเดินเครื่องได้</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>ระยะเผื่อคิดบนหลักเดียวกับ <a href="chapter3-th.html#s8">&sect;3.8</a>
+      ความยาวสายพานทั้งเส้นเท่ากับสองเท่าของระยะระหว่างศูนย์ จึงได้</p>
+
+    <div class="eq">
+      <span class="body">
+        ระยะเผื่อ &asymp; 0.015 &times; 2<var>L</var> &nbsp;<span class="units">สายพานผ้าใบ โดยเพลาบูทเคลื่อนที่ครึ่งหนึ่งของค่านี้</span>
+      </span>
+      <span class="tag">(4.16)</span>
+    </div>
+
+    <p>และ 0.3&nbsp;% ของ 2<var>L</var> สำหรับสายพานลวดสลิง บวกอีก 0.3&nbsp;ถึง&nbsp;0.5&nbsp;ม.
+      สำหรับการต่อสายพานใหม่ กระพ้อลำเลียงสูง 30&nbsp;ม. จึงต้องเผื่อความยาวสายพานราวหนึ่งเมตร
+      และระยะเคลื่อนที่ของเพลาราวครึ่งเมตร นั่นคือเหตุผลที่บูทลึกอย่างที่เห็น</p>
+
+    <p><b>เบรกกันถอยหลัง</b> ไม่ใช่ของเลือกติดในกระพ้อลำเลียงทุกตัวที่สามารถไหลย้อนกลับได้เมื่อมีวัสดุ
+      ถ้าหยุดเครื่องที่มีวัสดุเต็ม น้ำหนักของวัสดุในขาขึ้นจะขับสายพานย้อนกลับ
+      กระพ้อจะเทตัวเองลงบูทด้วยความเร็ว บูทอัดแน่น และชุดขับอาจถูกหมุนย้อนเร็วพอที่จะทำลายชุดทดรอบได้
+      เบรกกันถอยหลัง ซึ่งเป็นกลไกล็อกทางเดียวที่เพลาหัวหรือที่ชุดทดรอบ ป้องกันเรื่องทั้งหมดนี้
+      และต้องตรวจว่ามันยังทำงานอยู่ เบรกกันถอยหลังที่ติดตายและเสียไปอย่างเงียบ ๆ
+      จะถูกค้นพบในวันที่ไฟดับ</p>
+
+    <!-- ============================================================ 4.18 -->
+    <h2 id="s18">4.18 ฝุ่นและการป้องกันการระเบิด</h2>
+
+    <p>กระพ้อลำเลียงที่ขนธัญพืช แป้ง น้ำตาล สตาร์ช ถ่านหิน กำมะถัน ผงอะลูมิเนียม
+      หรือของแข็งอินทรีย์เกือบทุกชนิด เป็นอันตรายจากการระเบิดของฝุ่น และในสถิติของการขนถ่ายธัญพืช
+      ขาของกระพ้อลำเลียงเป็นจุดต้นเหตุที่พบบ่อยที่สุด เรื่องนี้ไม่ใช่เชิงอรรถของการออกแบบ
+      สำหรับฝุ่นที่ติดไฟได้ มันเป็นส่วนหนึ่งของการออกแบบ และมีกฎหมายกำกับ</p>
+
+    <p>การระเบิดต้องมีองค์ประกอบห้าอย่างพร้อมกัน เรียกว่า &ldquo;ห้าเหลี่ยมการระเบิด&rdquo; คือ
+      ฝุ่นที่ติดไฟได้ การกระจายตัวในอากาศ ออกซิเจน พื้นที่ปิด และแหล่งจุดติดไฟ
+      กระพ้อลำเลียงให้สี่อย่างแรกมาโดยการมีอยู่ของมันเอง ฝุ่นเกิดขึ้นทุกครั้งที่ตักและทุกครั้งที่ปล่อยวัสดุ
+      กระพ้อที่เคลื่อนที่ทำให้ฝุ่นกระจาย ตัวเรือนทำหน้าที่กักขัง และขาแนวดิ่งเป็นท่อในอุดมคติ
+      ให้แนวเปลวไฟเร่งตัวไปตามทาง การออกแบบจึงมุ่งโจมตีองค์ประกอบที่ห้า
+      แล้วสมมติต่อว่ามันจะล้มเหลวอยู่ดี</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.18</b> องค์ประกอบห้าอย่างและสิ่งที่การออกแบบทำกับแต่ละข้อ</caption>
+        <thead><tr><th>องค์ประกอบ</th><th>มีอยู่ในกระพ้อลำเลียงเพราะ</th><th>การตอบสนองในการออกแบบ</th></tr></thead>
+        <tbody>
+          <tr><td>ฝุ่นที่ติดไฟได้</td><td>ตัววัสดุเอง</td><td>ต้องหาค่า <var>K</var><sub>St</sub> และพลังงานจุดติดไฟต่ำสุดด้วยการทดสอบ ทั้งสองค่าเป็นตัวกำหนดการออกแบบระบบป้องกัน</td></tr>
+          <tr><td>การกระจายตัว</td><td>การตัก การเหวี่ยง และการกระทบในรางปล่อย</td><td>ดูดอากาศที่ส่วนหัวและที่บูท ป้อนวัสดุอย่างนุ่มนวล เลี่ยงการตกอิสระในราง</td></tr>
+          <tr><td>ออกซิเจน</td><td>อากาศในตัวเรือน</td><td>การแทนที่ด้วยก๊าซเฉื่อยใช้เฉพาะกรณีพิเศษ โดยปกติยอมรับตามสภาพ</td></tr>
+          <tr><td>พื้นที่ปิด</td><td>ตัวเรือนเป็นท่อปิด</td><td>ช่องระบายแรงระเบิด หรือระบบระงับการระเบิด ที่คำนวณขนาดจากปริมาตร</td></tr>
+          <tr><td>แหล่งจุดติดไฟ</td><td>แรงเสียดทาน สายพานสลิป กระพ้อกระทบตัวเรือน แบริ่งร้อน เศษโลหะ ไฟฟ้าสถิต</td><td>เครื่องมือวัดและการต่อลงดินตามด้านล่าง นี่คือข้อที่ควบคุมได้</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.19</b> แหล่งจุดติดไฟและการควบคุม</caption>
+        <thead><tr><th>แหล่ง</th><th>กลไก</th><th>การควบคุม</th></tr></thead>
+        <tbody>
+          <tr><td>สายพานสลิปที่พูลเลย์หัว</td><td>แรงเสียดทานทำให้สายพานและยางหุ้มร้อนจนคุไฟ</td><td>เซนเซอร์ความเร็วหรือการเคลื่อนไหวที่เพลาบูท ทริปเมื่อความเร็วต่ำกว่าเกณฑ์ และตั้ง <var>T</var><sub>2</sub> ให้ถูกต้อง</td></tr>
+          <tr><td>สายพานหรือโซ่เยื้องแนว</td><td>สายพานเสียดตัวเรือน กระพ้อกระทบเหล็ก</td><td>สวิตช์ตรวจการเยื้องแนวสายพานทั้งสองข้าง ทั้งสูงและต่ำ</td></tr>
+          <tr><td>แบริ่งเสียหาย</td><td>แบริ่งที่ขาดการหล่อลื่นหรือรับภาระเกินร้อนถึงอุณหภูมิจุดติดไฟ</td><td>เซนเซอร์อุณหภูมิแบริ่งที่เพลาหัวและเพลาบูท ทั้งแจ้งเตือนและทริป</td></tr>
+          <tr><td>เศษโลหะปนมา</td><td>ชิ้นเหล็กกระทบตัวเรือนหรือถูกขัดจนเกิดประกายไฟ</td><td>แม่เหล็กหรือเครื่องตรวจโลหะก่อนถึงช่องป้อน</td></tr>
+          <tr><td>การคายประจุไฟฟ้าสถิต</td><td>สายพานที่ไม่นำไฟฟ้าและกระพ้อพลาสติกสะสมประจุ</td><td>สายพานป้องกันไฟฟ้าสถิตและกระพ้อชนิดนำไฟฟ้า ต่อประสานและต่อลงดินทั้งเครื่อง</td></tr>
+          <tr><td>บูทอุดตันหรือขาแน่น</td><td>วัสดุอัดตัว สายพานสลิป ทุกอย่างร้อนขึ้น</td><td>สวิตช์ตรวจการอุดตันในบูท อินเตอร์ล็อกกับระบบป้อนวัสดุ</td></tr>
+          <tr><td>งานที่ใช้ความร้อนและการสูบบุหรี่</td><td>มาจากภายนอก</td><td>ระบบใบอนุญาตทำงาน ไม่ใช่คุณลักษณะการออกแบบ แต่อยู่ในทะเบียนความเสี่ยงเดียวกัน</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>ป้องกันความเสียหาย ไม่ใช่แค่ป้องกันการเกิด</b> เพราะการควบคุมแหล่งจุดติดไฟไม่อาจสมบูรณ์ได้
+      กระพ้อลำเลียงที่ขนฝุ่นติดไฟจึงต้องมีทางรอดจากการระเบิดด้วย ทางเลือกที่พิจารณาตามลำดับปกติคือ</p>
+
+    <ul>
+      <li><b>ช่องระบายแรงระเบิด</b> คือแผงที่แตกออกได้บนตัวเรือน คำนวณขนาดจากปริมาตรตัวเรือน
+        และค่า <var>K</var><sub>St</sub> ของฝุ่น ระบายออกไปในที่ปลอดภัยนอกอาคาร
+        เป็นวิธีที่ถูกที่สุดและใช้กันมากที่สุดสำหรับขาที่อยู่ภายนอกอาคาร</li>
+      <li><b>ช่องระบายแบบไร้เปลวไฟ</b> คือช่องระบายที่มีตัวดับเปลว สำหรับเครื่องในอาคาร
+        ที่ยอมให้มีลูกไฟพุ่งออกมาไม่ได้</li>
+      <li><b>ระบบระงับการระเบิด</b> เซนเซอร์ความดันสั่งปล่อยสารระงับภายในเวลาระดับมิลลิวินาที
+        ใช้เมื่อการระบายทำไม่ได้</li>
+      <li><b>การแยกระบบ</b> แยกขาออกจากอุปกรณ์ที่ต่ออยู่ เพื่อไม่ให้แนวเปลวไฟลามไปถึงไซโล
+        ซึ่งเป็นจุดที่การระเบิดเล็กกลายเป็นการระเบิดใหญ่</li>
+      <li><b>ตัวเรือนที่ทนแรงระเบิด</b> คือตัวเรือนที่สร้างให้รับความดันไว้ได้
+        พบไม่บ่อยเพราะหนักและแพง</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.20</b> มาตรฐานที่กำกับเรื่องนี้ และขอบเขตของแต่ละฉบับ</caption>
+        <thead><tr><th>มาตรฐาน</th><th>ขอบเขต</th></tr></thead>
+        <tbody>
+          <tr><td>ANSI/CEMA B20.1</td><td>มาตรฐานความปลอดภัยของเครื่องลำเลียงและอุปกรณ์ที่เกี่ยวข้อง การ์ด ระบบควบคุม ป้ายเตือน และการล็อกเอาต์</td></tr>
+          <tr><td>CEMA 550</td><td>การจำแนกและนิยามวัสดุเทกองสำหรับการเลือกสายพานลำเลียงและกระพ้อลำเลียง</td></tr>
+          <tr><td>NFPA 61</td><td>การป้องกันอัคคีภัยและการระเบิดของฝุ่นในสถานประกอบการเกษตรและแปรรูปอาหาร</td></tr>
+          <tr><td>NFPA 654 / NFPA 652</td><td>หลักพื้นฐานของฝุ่นที่ติดไฟได้ และข้อกำหนดให้ทำการวิเคราะห์อันตรายจากฝุ่น</td></tr>
+          <tr><td>EN 14491</td><td>ระบบป้องกันด้วยการระบายแรงระเบิดของฝุ่น เป็นเกณฑ์คำนวณขนาดช่องระบายของยุโรป</td></tr>
+          <tr><td>EN 14460 / EN 14373</td><td>อุปกรณ์ที่ทนแรงระเบิด และระบบระงับการระเบิด</td></tr>
+          <tr><td>ATEX 2014/34/EU</td><td>อุปกรณ์สำหรับใช้ในบรรยากาศที่ระเบิดได้ และการจัดโซนภายในตัวเรือน</td></tr>
+          <tr><td>ISO/IEC ชุด 80079</td><td>บรรยากาศที่ระเบิดได้: การป้องกันอุปกรณ์ด้วยการออกแบบโครงสร้าง</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="label">การวิเคราะห์อันตรายจากฝุ่นเป็นข้อมูลนำเข้าของการออกแบบ</span>
+      <p>สำหรับฝุ่นที่ติดไฟได้ พื้นที่ช่องระบาย การแยกระบบ และเครื่องมือวัด เลือกจากแคตตาล็อกไม่ได้
+        ทั้งหมดสืบเนื่องจากข้อมูลทดสอบของฝุ่นตัวนั้นเอง คือความรุนแรงการระเบิด
+        <var>K</var><sub>St</sub> ความดันสูงสุด พลังงานจุดติดไฟต่ำสุด และอุณหภูมิจุดติดไฟต่ำสุด
+        ประกอบกับปริมาตรตัวเรือน ให้หาตัวเลขเหล่านี้ตั้งแต่เริ่มโครงการ ไม่ใช่หลังสั่งเหล็กแล้ว
+        การออกแบบที่ปล่อยเรื่องนี้ไว้ถึงตอนทดลองเดินเครื่อง คือการตัดสินใจไปแล้วว่าจะทำมันอย่างไม่ดี</p>
+    </div>
+
+    <!-- ============================================================ 4.19 -->
+    <h2 id="s19">4.19 ความปลอดภัยและการบำรุงรักษา</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.21</b> อุปกรณ์ความปลอดภัยที่กระพ้อลำเลียงควรมี</caption>
+        <thead><tr><th>อุปกรณ์</th><th>เหตุผล</th></tr></thead>
+        <tbody>
+          <tr><td>เบรกกันถอยหลังที่เพลาหัวหรือชุดทดรอบ</td><td>ป้องกันการไหลย้อนของเครื่องที่มีวัสดุเต็มเมื่อหยุดเครื่อง</td></tr>
+          <tr><td>เซนเซอร์การเคลื่อนไหวหรือความเร็วต่ำที่เพลาบูท</td><td>ตรวจจับสายพานสลิป โซ่ขาด และการอุดตัน ซึ่งเป็นสัญญาณนำของการจุดติดไฟที่พบบ่อยที่สุด</td></tr>
+          <tr><td>สวิตช์ตรวจการเยื้องแนวสายพาน</td><td>ตรวจจับสายพานที่เสียดตัวเรือนก่อนที่มันจะทำให้ร้อน</td></tr>
+          <tr><td>การตรวจวัดอุณหภูมิแบริ่ง ทั้งหัวและบูท</td><td>จับแบริ่งที่กำลังเสียขณะที่ยังเพียงร้อนอยู่</td></tr>
+          <tr><td>สวิตช์ตรวจการอุดตันในบูท อินเตอร์ล็อกกับการป้อน</td><td>หยุดการป้อนก่อนบูทจะอัดแน่น</td></tr>
+          <tr><td>ช่องตรวจสอบที่มีการ์ดและอินเตอร์ล็อก</td><td>ตัวเรือนคือพื้นที่ปิดที่มีเหล็กเคลื่อนไหวอยู่ข้างใน</td></tr>
+          <tr><td>ล็อกเอาต์และแท็กเอาต์ที่สวิตช์ตัดตอน</td><td>ห้ามเปิด เขี่ย หรือปรับตั้งบนเครื่องที่ยังมีไฟ</td></tr>
+          <tr><td>ช่องระบายแรงระเบิดหรือระบบระงับตามที่ฝุ่นกำหนด</td><td><a href="#s18">&sect;4.18</a></td></tr>
+          <tr><td>แม่เหล็กหรือเครื่องตรวจโลหะที่ต้นทาง</td><td>คัดเศษโลหะออกก่อนที่จะเข้าตัวเรือน</td></tr>
+          <tr><td>สัญญาณเตือนก่อนออกตัว ทั้งเสียงและแสง พร้อมหน่วงเวลา</td><td>เครื่องสูงและมีคนทำงานอยู่หลายระดับบนตัวเครื่อง</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>อุบัติเหตุคลาสสิกสามกรณี</b> กรณีแรก คือการระเบิดของฝุ่นในขา ซึ่งกล่าวไว้ข้างต้น กรณีที่สอง
+      คือมีคนเอามือเข้าไปในบูทหรือส่วนหัวเพื่อเขี่ยวัสดุอุดตันบนเครื่องที่ไม่ได้ตัดแยกระบบ
+      แล้วถูกกระพ้อเกี่ยว กรณีที่สาม เป็นอุบัติเหตุจากพลังงานสะสม คือปล่อยแรงดึงสายพาน
+      โดยไม่ยึดชุดปรับความตึงไว้ หรือเปิดช่องบูทของตัวเรือนที่ยังมีวัสดุเต็มแล้ววัสดุไหลทะลักออกมา
+      ทั้งสามกรณีป้องกันได้ด้วยวินัยเดียวกัน คือตัดแยกระบบ ยึดพลังงานสะสมให้มั่น
+      และเอาวัสดุออกก่อนเปิด และทั้งสามกรณีก็ยังเกิดขึ้นเรื่อย ๆ</p>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.22</b> การแก้ปัญหา: อาการ สาเหตุที่เป็นไปได้ และวิธีแก้</caption>
+        <thead><tr><th>อาการ</th><th>สาเหตุที่เป็นไปได้</th><th>วิธีแก้</th></tr></thead>
+        <tbody>
+          <tr><td>อัตราที่จ่ายออกต่ำกว่าพิกัด กระแสมอเตอร์ต่ำ</td><td>ป้อนวัสดุน้อยเกินไป หรืออัตราการบรรจุต่ำเพราะช่องป้อนไม่ดี</td>
+              <td>วัดอัตราการป้อน ตรวจการเล็งของช่องป้อนและระดับวัสดุในบูท แล้วคำนวณ <var>&psi;</var> ใหม่จากสมการที่&nbsp;4.5</td></tr>
+          <tr><td>อัตราที่จ่ายออกต่ำ แต่กระแสมอเตอร์สูง</td><td>วัสดุตกกลับ คือออกจากส่วนหัวไม่พ้นและถูกยกซ้ำสองครั้ง</td>
+              <td>ตรวจจุดขั้วเทียบกับตารางที่&nbsp;4.5 แล้วปรับความเร็ว เส้นผ่านศูนย์กลางส่วนหัว หรือแผ่นคอ</td></tr>
+          <tr><td>มีวัสดุในขาลง และวัสดุหล่นที่บูท</td><td>วัสดุที่ปล่อยออกบางส่วนไม่เข้าราง แผ่นคอตั้งผิด</td><td>ตั้งแผ่นคอใหม่ และตรวจวิถีวัสดุที่ความเร็วใช้งานจริง</td></tr>
+          <tr><td>สายพานสลิปตอนออกตัว มีเสียงเอี๊ยด</td><td><var>T</var><sub>2</sub> ต่ำเกินไป ยางหุ้มสึก หรือออกตัวขณะมีวัสดุเต็ม</td>
+              <td>ขันชุดปรับความตึงให้ถึงค่าตามสมการที่&nbsp;4.11 หุ้มยางใหม่ ติดตั้งซอฟต์สตาร์ต</td></tr>
+          <tr><td>บูทอุดตันซ้ำ ๆ</td><td>ป้อนวัสดุมากเกินไป วัสดุเปียก หรือไม่มีวินัยในการทำความสะอาด</td><td>ควบคุมอัตราการป้อน อินเตอร์ล็อกสวิตช์ตรวจการอุดตัน และทำความสะอาดบูทตามแผน</td></tr>
+          <tr><td>กระพ้อหลุดหรือถูกฉีกหลุด</td><td>กระพ้อกระทบตัวเรือน สลักเกลียวหลวม หรือสายพานยืดจนสองด้านมาแตะกัน</td>
+              <td>ตรวจระยะห่าง ขันสลักเกลียวใหม่ ตั้งชุดปรับความตึง และหาสาเหตุของการเยื้องแนว</td></tr>
+          <tr><td>ขอบกระพ้อสึกหมด</td><td>วัสดุกัดสึกและการตักที่หนักเกินไป</td><td>ปรับไปทางป้อนแบบท่วม ใช้ขอบเหล็ก AR หรือยูรีเทน และลดความเร็ว</td></tr>
+          <tr><td>โซ่เสียงดังและไต่ฟันเฟือง</td><td>ยืดจากการสึกเกินราว 2&nbsp;%</td><td>ถอดข้อโซ่ออกและตั้งชุดปรับความตึงใหม่ เปลี่ยนเฟืองถ้าฟันสึกเป็นตะขอ</td></tr>
+          <tr><td>สายพานวิ่งออกด้านข้าง</td><td>พูลเลย์หัวหรือบูทวางไม่ได้ฉาก หรือวัสดุในกระพ้อไม่สมดุล</td>
+              <td>ปรับเพลาให้ได้ฉาก ตรวจว่าช่องป้อนอยู่กลาง เพราะตรรกะการปรับแนวของ <a href="chapter3-th.html#s11">&sect;3.11</a> ใช้ได้ที่นี่ด้วย</td></tr>
+          <tr><td>แบริ่งร้อน</td><td>สิ่งสกปรกเข้า ภาระเกิน หรือการเยื้องแนว</td><td>หยุดเครื่องและหาสาเหตุ แบริ่งร้อนในขาที่มีฝุ่นคือแหล่งจุดติดไฟ ไม่ใช่เรื่องน่ารำคาญ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.23</b> แผนการบำรุงรักษา</caption>
+        <thead><tr><th>ความถี่</th><th>งานที่ทำ</th></tr></thead>
+        <tbody>
+          <tr><td>ทุกกะ</td><td>ฟังเสียงที่บูทและส่วนหัว ตรวจอัตราที่จ่ายออก มองหาวัสดุหล่นและฝุ่นสะสมรอบเครื่อง</td></tr>
+          <tr><td>ทุกสัปดาห์</td><td>ตรวจระดับวัสดุในบูทและทำความสะอาด ตรวจตำแหน่งชุดปรับความตึง ยืนยันว่าการป้อนอยู่กลางและไปตามทิศที่เคลื่อนที่</td></tr>
+          <tr><td>ทุกเดือน</td><td>ตรวจทอร์กสลักเกลียวยึดกระพ้อแบบสุ่ม ตรวจการสึกของขอบกระพ้อ ตรวจการยืดของโซ่หรือสภาพรอยต่อสายพาน ตรวจระดับน้ำมันชุดทดรอบ</td></tr>
+          <tr><td>ทุกไตรมาส</td><td>ทดสอบการทำงานของอุปกรณ์ความปลอดภัยทุกตัว คือเบรกกันถอยหลัง เซนเซอร์การเคลื่อนไหว สวิตช์เยื้องแนว สวิตช์อุดตัน และเซนเซอร์อุณหภูมิ พร้อมตรวจแผงระบายแรงระเบิด</td></tr>
+          <tr><td>ทุกปี</td><td>ตรวจสอบภายในทั้งหมดโดยตัดแยกระบบและเอาวัสดุออกหมดแล้ว สำรวจความหนาตัวเรือนและระยะห่าง บำรุงรักษาแบริ่งและชุดทดรอบ และตรวจสอบฝุ่นสะสมเทียบกับเกณฑ์สุขลักษณะ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.20 -->
+    <h2 id="s20">4.20 ตัวอย่างการออกแบบ</h2>
+
+    <p>ท่าเรือธัญพืชต้องยกข้าวสาลีจากสายพานลำเลียงรับเข้า ขึ้นไปยังสายพานกระจายวัสดุเหนือไซโล
+      ที่ความสูง 30&nbsp;ม. ให้กำหนดขนาดกระพ้อลำเลียง</p>
+
+    <div class="worked">
+      <div class="table-wrap">
+        <table>
+          <caption><b>ตารางที่ 4.24</b> ข้อมูลการออกแบบ</caption>
+          <tbody>
+            <tr><th>วัสดุ</th><td>ข้าวสาลี ไหลดี งานอาหาร ไม่กัดสึก</td></tr>
+            <tr><th>ความหนาแน่นรวม <var>&rho;</var></th><td>750 กก./ม.&sup3; (0.75 t/m&sup3;)</td></tr>
+            <tr><th>อัตราการลำเลียงที่ต้องการ <var>Q</var><sub>m</sub></th><td>120 t/h</td></tr>
+            <tr><th>ความสูงที่ยก <var>H</var></th><td>30 ม. วัดระหว่างศูนย์พูลเลย์</td></tr>
+            <tr><th>การป้อนวัสดุ</th><td>รางป้อนเข้าขาขึ้น โดยมีชั้นวัสดุตื้น ๆ ในบูท เป็นการป้อนแบบผสม</td></tr>
+            <tr><th>ลักษณะการใช้งาน</th><td>ขาอยู่ในอาคาร เดินเครื่อง 16 ชม./วัน ฝุ่นข้าวสาลีติดไฟได้</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 1 &mdash; อัตราการลำเลียงเชิงปริมาตรที่ต้องการ</h4>
+        <p><var>Q</var><sub>v</sub> = <var>Q</var><sub>m</sub>/<var>&rho;</var> = 120/0.75 =
+          160&nbsp;ม.&sup3;/ชม.</p>
+        <p class="result"><var>Q</var><sub>v</sub> = 160&nbsp;ม.&sup3;/ชม.</p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 2 &mdash; ชนิดการปล่อยวัสดุ ตัวรับภาระ และกระพ้อ</h4>
+        <p>ข้าวสาลีไหลดีและเปราะเพียงเล็กน้อย งานเป็นเกรดอาหาร และอัตราการขนถ่ายอยู่ระดับกลาง จึงเลือก
+          <b>การปล่อยแบบแรงเหวี่ยง</b> บน<b>สายพาน</b> พร้อม<b>กระพ้อ HDPE</b>
+          (ตารางที่&nbsp;4.4, 4.6, 4.9) กระพ้อพลาสติกไม่เกิดประกายไฟ เสียงเงียบ
+          และไม่ครูดสายพานถ้าหลุดออกมา ทั้งสามข้อมีความหมายทั้งหมดในขาที่มีฝุ่นธัญพืช</p>
+        <p class="result">แรงเหวี่ยง &middot; สายพาน &middot; กระพ้อ HDPE</p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 3 &mdash; ขนาดกระพ้อและอัตราการลำเลียงเชิงปริมาตรของกระพ้อที่ต้องการ</h4>
+        <p>จากตารางที่&nbsp;4.8 เลือกกระพ้อ 400&nbsp;&times;&nbsp;200&nbsp;&times;&nbsp;200&nbsp;มม.
+          <var>V</var><sub>b</sub> = 10&nbsp;ล. = 0.010&nbsp;ม.&sup3; บนสายพานกว้าง 450&nbsp;มม.
+          ตารางที่&nbsp;4.13 ให้ <var>&psi;</var> = 0.75 สำหรับธัญพืชไหลดีที่ป้อนแบบผสม
+          ซึ่งเป็นการตั้งใจไม่ใช้ค่า 0.85 ที่การป้อนแบบท่วมสมบูรณ์แบบทำได้</p>
+        <p>ปริมาตรกระพ้อที่ต้องผ่านต่อชั่วโมง = <var>Q</var><sub>v</sub>/<var>&psi;</var> = 160/0.75 =
+          213.3&nbsp;ม.&sup3;/ชม. ดังนั้น <var>v</var>/<var>s</var> =
+          213.3/(3600&nbsp;&times;&nbsp;0.010) = 5.93&nbsp;กระพ้อ/วินาที</p>
+        <p class="result"><var>V</var><sub>b</sub> = 10&nbsp;ล., <var>&psi;</var> = 0.75,
+          <var>v</var>/<var>s</var> = 5.93&nbsp;s<sup>&minus;1</sup></p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 4 &mdash; ความเร็วและระยะห่าง</h4>
+        <p>ตารางที่&nbsp;4.14 ให้ช่วง 1.8&ndash;2.5&nbsp;m/s สำหรับธัญพืชในการปล่อยแบบแรงเหวี่ยง
+          เลือก <var>v</var> = 2.25&nbsp;m/s จะได้ <var>s</var> = 2.25/5.93 = 0.379&nbsp;ม.
+          เลือกพิตช์มาตรฐาน 375&nbsp;มม.</p>
+        <p>ตรวจระยะห่างเทียบกับกระพ้อ: 375/200 = 1.88 เท่าของระยะยื่น อยู่ในช่วง 1.5&ndash;3
+          ของ <a href="#s6">&sect;4.6</a> เมื่อคำนวณอัตราการลำเลียงใหม่ที่ค่าที่เลือก
+          <var>Q</var><sub>v</sub> =
+          3600&nbsp;&times;&nbsp;(2.25/0.375)&nbsp;&times;&nbsp;0.010&nbsp;&times;&nbsp;0.75
+          = 162&nbsp;ม.&sup3;/ชม. จึงได้ <var>Q</var><sub>m</sub> = 121.5&nbsp;t/h
+          ซึ่งสูงกว่าที่ต้องการ 1.3&nbsp;%</p>
+        <p class="result"><var>v</var> = 2.25&nbsp;m/s, <var>s</var> = 375&nbsp;มม.
+          ได้ 121.5&nbsp;t/h</p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 5 &mdash; เส้นผ่านศูนย์กลางส่วนหัวและจุดขั้ว</h4>
+        <p>เลือกพูลเลย์หัว 800&nbsp;มม. จากสมการที่&nbsp;4.6 <var>n</var> =
+          60&nbsp;&times;&nbsp;2.25/(<var>&pi;</var>&nbsp;&times;&nbsp;0.8) = 53.7&nbsp;รอบ/นาที
+          และจากสมการที่&nbsp;4.2 <var>r</var><sub>p</sub> = 895/53.7&sup2; = 0.310&nbsp;ม.</p>
+        <p>เส้นทางกระพ้อวิ่งจาก <var>r</var><sub>i</sub> = 0.400&nbsp;ม. (แนวสายพาน) ถึง
+          <var>r</var><sub>o</sub> = 0.400 + 0.200 = 0.600&nbsp;ม. เนื่องจาก
+          <var>r</var><sub>p</sub> = 0.310&nbsp;ม. &lt; <var>r</var><sub>i</sub>
+          จุดขั้วจึงอยู่ในกระพ้อทั้งใบ และการปล่อยวัสดุเป็นแบบแรงเหวี่ยงอย่างถูกต้อง (ตารางที่&nbsp;4.5)</p>
+        <p class="result"><var>D</var> = 800&nbsp;มม., <var>n</var> = 53.7&nbsp;รอบ/นาที,
+          <var>r</var><sub>p</sub> = 0.310&nbsp;ม. &rarr; แรงเหวี่ยง &#10003;</p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 6 &mdash; กำลังขับ</h4>
+        <p><var>P</var><sub>lift</sub> = <var>Q</var><sub>m</sub><var>Hg</var>/3.6 =
+          120&nbsp;&times;&nbsp;30&nbsp;&times;&nbsp;9.81/3.6 = 9,810&nbsp;W = 9.81&nbsp;kW</p>
+        <p>สำหรับการป้อนแบบผสมใช้ <var>k</var><sub>s</sub> = 1.15 (ตารางที่&nbsp;4.15)
+          และชุดทดเกียร์เฮลิคอลที่ <var>&eta;</var> = 0.92 ได้
+          <var>P</var> = 9.81&nbsp;&times;&nbsp;1.15/0.92 = 12.26&nbsp;kW</p>
+        <p class="result">เลือกมอเตอร์ <b>15&nbsp;kW</b></p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 7 &mdash; แรงดึง</h4>
+        <p>วัสดุที่ห้อยอยู่ในขาขึ้น ตามสมการที่&nbsp;4.9:
+          <var>m</var><sub>up</sub> = 120&nbsp;&times;&nbsp;30/(3.6&nbsp;&times;&nbsp;2.25) =
+          444&nbsp;กก. จึงได้ <var>F</var><sub>lift</sub> = 444&nbsp;&times;&nbsp;9.81 =
+          4,360&nbsp;N</p>
+        <p>ตรวจกับขั้นที่&nbsp;6: <var>F</var><sub>lift</sub><var>v</var> =
+          4,360&nbsp;&times;&nbsp;2.25 = 9,810&nbsp;W เท่ากับ <var>P</var><sub>lift</sub> พอดี
+          เอกลักษณ์ของ <a href="#s13">&sect;4.13</a> จึงเป็นจริง แสดงว่าการคำนวณสองสายสอดคล้องกัน</p>
+        <p>เผื่อแรงตัก 15&nbsp;%: <var>F</var><sub>dig</sub> = 654&nbsp;N จึงได้
+          <var>F</var><sub>u</sub> = 5,014&nbsp;N เมื่อพูลเลย์หุ้มยางและมุมโอบ 180&deg;
+          ได้ e<sup>0.35<var>&pi;</var></sup> = 3.00 ดังนั้น
+          <var>T</var><sub>2</sub> &ge; 5,014/2.00 = 2,503&nbsp;N และ
+          <var>T</var><sub>1</sub> = 5,014 + 2,503 = 7,517&nbsp;N</p>
+        <p class="result"><var>F</var><sub>u</sub> = 5,014&nbsp;N,
+          <var>T</var><sub>2</sub> = 2,503&nbsp;N, <var>T</var><sub>1</sub> = 7,517&nbsp;N</p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 8 &mdash; การเลือกสายพาน</h4>
+        <p>จากสมการที่&nbsp;4.12 โดยใช้ SF = 10 บนสายพานกว้าง 450&nbsp;มม.:
+          <var>k</var><sub>req</sub> = 7,517&nbsp;&times;&nbsp;10/450 = 167&nbsp;N/mm</p>
+        <p>สายพานกระพ้อมาตรฐานตัวถัดไปที่สูงกว่าค่านี้คือ 250&nbsp;N/mm แต่ให้ระบุ
+          <b>315&nbsp;N/mm</b> แทน เพราะชั้นที่สูงขึ้นหนึ่งขั้นครอบคลุมรูสลักเกลียวยึดกระพ้อ
+          เผื่อการต่อสายพานใหม่หนึ่งครั้งตลอดอายุการใช้งาน และมีค่าใช้จ่ายเพิ่มน้อยมาก
+          บนความยาว 64&nbsp;ม.</p>
+        <p class="result"><var>k</var><sub>req</sub> = 167&nbsp;N/mm &rarr; ระบุสายพาน
+          315&nbsp;N/mm กว้าง 450&nbsp;มม.</p>
+      </div>
+
+      <div class="step">
+        <h4>ขั้นที่ 9 &mdash; แรงบิด การออกตัว ชุดปรับความตึง และการป้องกัน</h4>
+        <p>แรงบิดที่เพลาหัว ตามสมการที่&nbsp;4.14: <var>T</var> = 9550&nbsp;&times;&nbsp;15/53.7 =
+          2,667&nbsp;N&middot;m ที่ <var>k</var><sub>st</sub> = 2.0 สำหรับการออกตัวเครื่องที่มีวัสดุเต็ม
+          จะได้ 5,334&nbsp;N&middot;m จึงต้องระบุซอฟต์สตาร์ตเตอร์หรือคัปปลิงของไหล
+          และตรวจเพลา ลิ่ม และคัปปลิงที่ค่าที่สูงกว่านี้</p>
+        <p>ระยะเผื่อชุดปรับความตึง ตามสมการที่&nbsp;4.16: ความยาวสายพานทั้งเส้น 2<var>L</var>
+          &asymp; 64&nbsp;ม. ดังนั้นระยะเผื่อคือ 0.015&nbsp;&times;&nbsp;64 = 0.96&nbsp;ม. ของความยาวสายพาน
+          และเพลาบูทเคลื่อนที่ 0.48&nbsp;ม. จึงระบุระยะปรับของชุดปรับความตึงแบบเกลียวไว้ 500&nbsp;มม.</p>
+        <p>เนื่องจากฝุ่นข้าวสาลีติดไฟได้และขาอยู่ในอาคาร เครื่องนี้จึงต้องมีเบรกกันถอยหลัง
+          เซนเซอร์การเคลื่อนไหวที่บูท สวิตช์ตรวจการเยื้องแนวสายพาน การตรวจวัดอุณหภูมิแบริ่ง
+          สวิตช์ตรวจการอุดตันในบูท แม่เหล็กคัดโลหะที่ต้นทาง สายพานป้องกันไฟฟ้าสถิตและกระพ้อนำไฟฟ้า
+          และช่องระบายแรงระเบิดแบบไร้เปลวไฟที่คำนวณขนาดจากข้อมูลทดสอบของฝุ่นเอง
+          (<a href="#s18">&sect;4.18</a>)</p>
+        <p class="result"><var>T</var> = 2,667&nbsp;N&middot;m ขณะเดินเครื่อง และ
+          5,334&nbsp;N&middot;m ขณะออกตัว ระยะปรับความตึง 500&nbsp;มม.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption><b>ตารางที่ 4.25</b> สรุปผลการออกแบบ</caption>
+          <tbody>
+            <tr><th>เครื่องจักร</th><td>กระพ้อลำเลียงแบบสายพาน ปล่อยวัสดุด้วยแรงเหวี่ยง ยก 30 ม.</td></tr>
+            <tr><th>กระพ้อ</th><td>400 &times; 200 &times; 200 มม. วัสดุ HDPE ความจุระดับน้ำ 10 ล. พิตช์ 375 มม.</td></tr>
+            <tr><th>สายพาน</th><td>กว้าง 450 มม. โครงผ้าใบ 315 N/mm ชนิดป้องกันไฟฟ้าสถิต</td></tr>
+            <tr><th>ความเร็ว</th><td>2.25 m/s &mdash; พูลเลย์หัว 800 มม. ที่ 53.7 รอบ/นาที</td></tr>
+            <tr><th>อัตราการลำเลียง</th><td>121.5 t/h ที่ <var>&psi;</var> = 0.75</td></tr>
+            <tr><th>ชุดขับ</th><td>15 kW ชุดทดเกียร์เฮลิคอล ซอฟต์สตาร์ต และเบรกกันถอยหลัง</td></tr>
+            <tr><th>แรงดึง</th><td><var>T</var><sub>1</sub> = 7.5 kN, <var>T</var><sub>2</sub> = 2.5 kN</td></tr>
+            <tr><th>พลังงาน</th><td>0.102 kWh ต่อตันที่ยกขึ้น 30 ม. วัดที่เพลามอเตอร์</td></tr>
+            <tr><th>การตรวจเทียบ</th><td>เกลียวลำเลียงแนวดิ่งทำงานนี้ที่ 30 ม. ไม่ได้เลย
+              (<a href="chapter2-th.html#s19">&sect;2.19</a>) และระบบลำเลียงด้วยลมจะใช้พลังงานราวสิบเท่า
+              (ตารางที่&nbsp;4.1) กระพ้อลำเลียงจึงเป็นเครื่องที่ถูกต้องสำหรับงานนี้
+              ซึ่งเป็นเหตุผลที่ท่าเรือธัญพืชทุกแห่งในโลกมีเครื่องนี้</td></tr>
+            <tr><th>ขั้นถัดไป</th><td>กำหนดขนาดสายพานกระจายวัสดุด้านบนจาก
+              <a href="chapter3-th.html#s4">&sect;3.4</a> และอุปกรณ์ป้อนวัสดุรับเข้าจาก
+              <a href="chapter2-th.html#s20">&sect;2.20</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ============================================================ 4.21 -->
+    <h2 id="s21">4.21 สัญลักษณ์</h2>
+
+    <div class="table-wrap">
+      <table>
+        <caption><b>ตารางที่ 4.26</b> สัญลักษณ์ที่ใช้ในบทนี้</caption>
+        <thead><tr><th>สัญลักษณ์</th><th>ปริมาณ</th><th>หน่วย</th></tr></thead>
+        <tbody>
+          <tr><td><var>B</var></td><td>ความกว้างสายพาน</td><td>มม.</td></tr>
+          <tr><td><var>D</var></td><td>เส้นผ่านศูนย์กลางพิตช์ของพูลเลย์หัวหรือเฟืองโซ่</td><td>ม.</td></tr>
+          <tr><td><var>F</var><sub>chain</sub></td><td>แรงดึงโซ่ต่อเส้น</td><td>N</td></tr>
+          <tr><td><var>F</var><sub>dig</sub></td><td>แรงต้านการตักที่บูท</td><td>N</td></tr>
+          <tr><td><var>F</var><sub>lift</sub></td><td>น้ำหนักของวัสดุในขาขึ้น</td><td>N</td></tr>
+          <tr><td><var>F</var><sub>u</sub></td><td>แรงรอบวงที่ส่วนหัว</td><td>N</td></tr>
+          <tr><td><var>g</var></td><td>ความเร่งโน้มถ่วง 9.81</td><td>ม./วินาที&sup2;</td></tr>
+          <tr><td><var>H</var></td><td>ความสูงที่ยก วัดระหว่างศูนย์</td><td>ม.</td></tr>
+          <tr><td><var>k</var><sub>req</sub></td><td>พิกัดสายพานที่ต้องการ แรงดึงต่อหน่วยความกว้าง</td><td>N/mm</td></tr>
+          <tr><td><var>k</var><sub>s</sub></td><td>ตัวประกอบการตักและการสูญเสีย</td><td>&mdash;</td></tr>
+          <tr><td><var>k</var><sub>st</sub></td><td>ตัวประกอบแรงบิดขณะออกตัว</td><td>&mdash;</td></tr>
+          <tr><td><var>L</var></td><td>ระยะระหว่างศูนย์เพลาหัวกับเพลาบูท</td><td>ม.</td></tr>
+          <tr><td><var>m</var><sub>up</sub></td><td>มวลของวัสดุในขาขึ้น</td><td>กก.</td></tr>
+          <tr><td><var>n</var></td><td>ความเร็วรอบเพลาหัว</td><td>รอบ/นาที</td></tr>
+          <tr><td><var>P</var></td><td>กำลังมอเตอร์ที่ต้องการ</td><td>kW</td></tr>
+          <tr><td><var>P</var><sub>lift</sub></td><td>กำลังยก</td><td>W</td></tr>
+          <tr><td><var>Q</var><sub>m</sub></td><td>อัตราการลำเลียงเชิงมวล</td><td>t/h</td></tr>
+          <tr><td><var>Q</var><sub>v</sub></td><td>อัตราการลำเลียงเชิงปริมาตร</td><td>ม.&sup3;/ชม.</td></tr>
+          <tr><td><var>r</var><sub>i</sub>, <var>r</var><sub>o</sub></td><td>รัศมีด้านในและด้านนอกของเส้นทางกระพ้อที่ส่วนหัว</td><td>ม.</td></tr>
+          <tr><td><var>r</var><sub>p</sub></td><td>ระยะจุดขั้ว</td><td>ม.</td></tr>
+          <tr><td><var>s</var></td><td>ระยะห่างกระพ้อ (พิตช์)</td><td>ม.</td></tr>
+          <tr><td>SF</td><td>ตัวประกอบความปลอดภัยบนความแข็งแรงขาด</td><td>&mdash;</td></tr>
+          <tr><td><var>T</var></td><td>แรงบิดที่เพลาหัว</td><td>N&middot;m</td></tr>
+          <tr><td><var>T</var><sub>1</sub>, <var>T</var><sub>2</sub></td><td>แรงดึงด้านตึงและด้านหย่อนของสายพาน</td><td>N</td></tr>
+          <tr><td><var>v</var></td><td>ความเร็วสายพานหรือโซ่</td><td>m/s</td></tr>
+          <tr><td><var>V</var><sub>b</sub></td><td>ปริมาตรกระพ้อที่ระดับน้ำ</td><td>ม.&sup3;</td></tr>
+          <tr><td><var>z</var></td><td>จำนวนเส้นโซ่</td><td>&mdash;</td></tr>
+          <tr><td><var>&eta;</var></td><td>ประสิทธิภาพชุดขับ</td><td>&mdash;</td></tr>
+          <tr><td><var>&mu;</var></td><td>สัมประสิทธิ์ความเสียดทานระหว่างสายพานกับพูลเลย์หุ้มยาง</td><td>&mdash;</td></tr>
+          <tr><td><var>&rho;</var></td><td>ความหนาแน่นรวม</td><td>t/m&sup3;</td></tr>
+          <tr><td><var>&psi;</var></td><td>ตัวประกอบการบรรจุกระพ้อ</td><td>&mdash;</td></tr>
+          <tr><td><var>&omega;</var></td><td>ความเร็วเชิงมุมของเพลาหัว</td><td>rad/s</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================================ 4.22 -->
+    <h2 id="s22">4.22 แบบฝึกหัด</h2>
+
+    <div class="callout rule">
+      <span class="label">ก่อนเริ่มทำ</span>
+      <p>ลองทำ<a href="quiz4-th.html">แบบทดสอบทบทวน 40 ข้อ</a>ก่อน แบบทดสอบครอบคลุมเนื้อหาเดียวกัน
+        ในรูปปรนัยพร้อมคำอธิบายเฉลย และจะบอกได้ว่าควรกลับไปอ่านหัวข้อใดก่อนลงมือทำแบบฝึกหัดเหล่านี้</p>
+    </div>
+
+    <ol class="problems">
+      <li><b>ความปลอดภัย ข้อแรก</b> ช่างซ่อมบำรุงเสนอจะเขี่ยวัสดุที่อุดตันบางส่วนในบูท
+        โดยเปิดช่องทำความสะอาดขณะที่กระพ้อลำเลียงยังเดินอยู่ช้า ๆ &ldquo;เพื่อให้กระพ้อช่วยพาวัสดุออกไป&rdquo;
+        จงให้เหตุผลสามข้อที่แยกจากกันว่าเหตุใดจึงต้องไม่ทำเช่นนี้ และระบุว่าขั้นตอนที่ถูกต้องคืออะไร</li>
+
+      <li><b>ความปลอดภัย ข้อที่สอง</b> จงอธิบายด้วยองค์ประกอบห้าอย่างของตารางที่&nbsp;4.18 ว่าเหตุใด
+        ขาของกระพ้อลำเลียงธัญพืชจึงเป็นจุดที่อันตรายกว่าไซโลที่มันจ่ายวัสดุลงไป
+        แล้วอธิบายต่อว่าเหตุใดการระเบิดในขาจึงมักลงเอยด้วยการทำลายไซโลไปด้วย</li>
+
+      <li>กระพ้อลำเลียงตัวหนึ่งใช้กระพ้อ 8&nbsp;ล. ที่พิตช์ 300&nbsp;มม. เดินที่ 1.6&nbsp;m/s
+        ขนวัสดุที่มีความหนาแน่นรวม 800&nbsp;กก./ม.&sup3; ที่ตัวประกอบการบรรจุ 0.70
+        จงหาอัตราการลำเลียงเชิงปริมาตรและเชิงมวล <i>[คำตอบ: 107.5&nbsp;ม.&sup3;/ชม., 86.0&nbsp;t/h]</i></li>
+
+      <li>ต้องยกข้าวโพด (<var>&rho;</var> = 750&nbsp;กก./ม.&sup3;) ที่อัตรา 200&nbsp;t/h
+        โดยใช้กระพ้อ 14&nbsp;ล. ที่ตัวประกอบการบรรจุ 0.80 และความเร็ว 2.4&nbsp;m/s
+        ต้องใช้ระยะห่างกระพ้อเท่าใด
+        <i>[คำตอบ: <var>Q</var><sub>v</sub> = 266.7&nbsp;ม.&sup3;/ชม., 6.61&nbsp;กระพ้อ/วินาที,
+        <var>s</var> = 0.363&nbsp;ม. &rarr; เลือก 350&nbsp;มม. แล้วตรวจอัตราการลำเลียงใหม่]</i></li>
+
+      <li>เพลาหัวของกระพ้อลำเลียงหมุนที่ 45&nbsp;รอบ/นาที พูลเลย์หัวเส้นผ่านศูนย์กลาง 1.0&nbsp;ม.
+        และกระพ้อมีระยะยื่น 250&nbsp;มม. จงหาระยะจุดขั้วและระบุรูปแบบการปล่อยวัสดุ
+        <i>[คำตอบ: <var>r</var><sub>p</sub> = 0.442&nbsp;ม.; <var>r</var><sub>i</sub> = 0.50&nbsp;ม.
+        ดังนั้น <var>r</var><sub>p</sub> &lt; <var>r</var><sub>i</sub> &rarr; แรงเหวี่ยง]</i></li>
+
+      <li>สำหรับส่วนหัวเดียวกับข้อ&nbsp;5 ความเร็วรอบเพลาสูงสุดและความเร็วสายพานที่สอดคล้องกัน
+        ที่จะให้การปล่อยวัสดุด้วยแรงโน้มถ่วง (แบบต่อเนื่อง) ล้วน ๆ เป็นเท่าใด
+        <i>[คำตอบ: ต้องให้ <var>r</var><sub>p</sub> &gt; <var>r</var><sub>o</sub> = 0.75&nbsp;ม.
+        จึงต้องมี <var>n</var> &lt; 34.5&nbsp;รอบ/นาที หรือ <var>v</var> &lt; 1.81&nbsp;m/s]</i></li>
+
+      <li>กระพ้อลำเลียงยกวัสดุ 90&nbsp;t/h ขึ้นไป 24&nbsp;ม. ป้อนแบบตัก
+        (<var>k</var><sub>s</sub> = 1.2) และประสิทธิภาพชุดขับ 0.90 จงหากำลังยกและกำลังมอเตอร์ที่ต้องการ
+        <i>[คำตอบ: กำลังยก 5.89&nbsp;kW, ต้องการ 7.85&nbsp;kW &rarr; เลือก 9.2 หรือ 11&nbsp;kW]</i></li>
+
+      <li>สำหรับกระพ้อลำเลียงในข้อ&nbsp;7 ที่เดินด้วยความเร็ว 1.8&nbsp;m/s
+        จงหามวลของวัสดุในขาขึ้นและแรงยกที่เกิดขึ้น <i>[คำตอบ: 333&nbsp;กก., 3,270&nbsp;N]</i></li>
+
+      <li>ต่อจากข้อ&nbsp;7 และ&nbsp;8: ให้แรงต้านการตักเท่ากับ 15&nbsp;% ของแรงยก
+        และพูลเลย์หัวหุ้มยางโดยมีมุมโอบ 180&deg; จงหา <var>F</var><sub>u</sub>,
+        <var>T</var><sub>2</sub> และ <var>T</var><sub>1</sub>
+        <i>[คำตอบ: 3,760&nbsp;N, 1,878&nbsp;N, 5,638&nbsp;N]</i></li>
+
+      <li>สายพานในข้อ&nbsp;9 กว้าง 400&nbsp;มม. และยึดกระพ้อด้วยสลักเกลียว
+        ถ้าใช้ตัวประกอบความปลอดภัย 10 จงหาพิกัดสายพานที่ต้องการ และบอกว่าท่านจะระบุค่าใดในทางปฏิบัติ
+        <i>[คำตอบ: 141&nbsp;N/mm; ให้ระบุชั้นมาตรฐานถัดไปที่สูงขึ้น เพื่อเผื่อรูสลักเกลียว]</i></li>
+
+      <li>งานเดียวกันนี้จะสร้างเป็นกระพ้อลำเลียงแบบโซ่สองเส้น โดยใช้ตัวประกอบความปลอดภัย 8
+        บนภาระขาดของโซ่ โซ่แต่ละเส้นต้องมีภาระขาดเท่าใด และจะเปลี่ยนไปอย่างไรถ้าเผื่อว่า
+        โซ่สองเส้นแบ่งภาระไม่เท่ากัน
+        <i>[คำตอบ: 1,880&nbsp;N ต่อเส้น &rarr; ภาระขาดอย่างน้อย 15.0&nbsp;kN
+        ถ้าใช้ตัวประกอบการแบ่งภาระ 0.6 จะเพิ่มเป็น 18.0&nbsp;kN]</i></li>
+
+      <li>ชุดขับ 11&nbsp;kW หมุนเพลาหัวที่ 40&nbsp;รอบ/นาที จงหาแรงบิดขณะเดินเครื่อง
+        แล้วระบุว่าเพลา ลิ่ม และคัปปลิงควรถูกตรวจที่แรงบิดเท่าใด ถ้าเครื่องอาจถูกออกตัวขณะมีวัสดุเต็ม
+        <i>[คำตอบ: 2,626&nbsp;N&middot;m ขณะเดินเครื่อง; ตรวจที่ 2.0&ndash;2.5 เท่า คือ
+        5,250&ndash;6,570&nbsp;N&middot;m]</i></li>
+
+      <li>กระพ้อลำเลียงที่มีอยู่เดิมใช้กระพ้อ 10&nbsp;ล. ที่พิตช์ 400&nbsp;มม. เดินที่ 2.0&nbsp;m/s
+        และวัดได้ว่าจ่ายวัสดุความหนาแน่น 700&nbsp;กก./ม.&sup3; ได้ 75&nbsp;t/h
+        เครื่องนี้ทำตัวประกอบการบรรจุได้เท่าใด และค่านั้นบอกอะไร
+        <i>[คำตอบ: <var>Q</var><sub>v</sub> = 107.1&nbsp;ม.&sup3;/ชม. เทียบกับปริมาตรกระพ้อที่ผ่านไป
+        180&nbsp;ม.&sup3;/ชม. ดังนั้น <var>&psi;</var> = 0.60 คือเครื่องถูกเติมไม่เต็ม
+        ให้ไปดูการป้อนวัสดุและวัสดุที่พอกในกระพ้อ ไม่ใช่ไปดูชุดขับ]</i></li>
+
+      <li>กำลังออกแบบกระพ้อลำเลียงแบบสายพานผ้าใบสูง 42&nbsp;ม.
+        บูทควรเผื่อระยะปรับความตึงเท่าใด และเพลาบูทเคลื่อนที่ไปเท่าใด
+        <i>[คำตอบ: 2<var>L</var> &asymp; 88&nbsp;ม. ระยะเผื่อ 1.32&nbsp;ม. ของความยาวสายพาน
+        เพลาเคลื่อนที่ 0.66&nbsp;ม. บวกอีก 0.3&ndash;0.5&nbsp;ม. สำหรับการต่อสายพานใหม่]</i></li>
+
+      <li>ชุดขับกระพ้อลำเลียง 8&nbsp;kW หมุนที่ 45&nbsp;รอบ/นาที จงหาแรงบิดขณะเดินเครื่อง
+        และแรงบิดที่ตัวประกอบการออกตัว 2.5 แล้วให้ความเห็นว่าค่านั้นมีความหมายอย่างไรต่อการเลือกคัปปลิง
+        <i>[คำตอบ: 1,698&nbsp;N&middot;m และ 4,245&nbsp;N&middot;m
+        คัปปลิงเลือกจากค่าขณะออกตัว ไม่ใช่ค่าขณะเดินเครื่อง]</i></li>
+
+      <li>โรงงานมอลต์ต้องยกข้าวบาร์เลย์ที่งอกแล้ว ซึ่งเปราะ ชื้น และเหนียวเล็กน้อย
+        ที่อัตรา 40&nbsp;t/h ขึ้นไป 18&nbsp;ม. จงเลือกชนิดการปล่อยวัสดุ ตัวรับภาระ วัสดุของกระพ้อ
+        และช่วงความเร็ว พร้อมให้เหตุผลของแต่ละข้อจากตารางในบทนี้</li>
+
+      <li>โรงงานปูนซีเมนต์ยกปูนเม็ดที่อุณหภูมิ 180&nbsp;&deg;C จงระบุว่าเงื่อนไขนี้ตัดอะไรออกไป
+        บังคับอะไร และท่านจะเพิ่มมาตรการเฉพาะสามข้อใดที่กระพ้อลำเลียงธัญพืชไม่ต้องมี</li>
+
+      <li>กระพ้อลำเลียงที่มีอยู่เดิมจ่ายวัสดุได้ 60&nbsp;t/h ที่ 1.5&nbsp;m/s
+        โดยใช้พูลเลย์หัว 700&nbsp;มม. และกระพ้อระยะยื่น 200&nbsp;มม. ฝ่ายผลิตขอ 80&nbsp;t/h
+        และเสนอให้เพิ่มความเร็วเป็น 2.0&nbsp;m/s เฉย ๆ จงคำนวณจุดขั้วก่อนและหลัง
+        แล้วอธิบายว่าจะเกิดอะไรขึ้นกับเครื่องจริง ๆ
+        <i>[คำตอบ: <var>n</var> เปลี่ยนจาก 40.9 เป็น 54.6&nbsp;รอบ/นาที และ
+        <var>r</var><sub>p</sub> จาก 0.534&nbsp;ม. เป็น 0.301&nbsp;ม. เมื่อ
+        <var>r</var><sub>i</sub> = 0.35&nbsp;ม. และ <var>r</var><sub>o</sub> = 0.55&nbsp;ม.
+        เครื่องจะย้ายจากการปล่อยแบบผสมเข้าสู่การปล่อยแบบแรงเหวี่ยงอย่างแท้จริง
+        อัตราการลำเลียงจึงอาจดีขึ้นมากกว่าอัตราส่วนความเร็วอย่างเดียว
+        แต่กำลังเพิ่มขึ้นตาม 80/60 = 1.33 และต้องตรวจชุดขับด้วย]</i></li>
+
+      <li>จงแสดงว่าการยกหนึ่งตันขึ้นไป 30&nbsp;ม. ใช้งานที่เป็นประโยชน์ราว 0.082&nbsp;kWh
+        และราว 0.109&nbsp;kWh ที่เพลามอเตอร์เมื่อ <var>k</var><sub>s</sub> = 1.2 และ
+        <var>&eta;</var> = 0.9 แล้วเปรียบเทียบกับระบบลำเลียงด้วยลมเฟสเจือจางที่ใช้
+        1&ndash;4&nbsp;kWh ต่อตัน และให้ความเห็นว่าเมื่อใดระบบลำเลียงด้วยลมจึงยังเป็นทางเลือกที่ถูกต้อง</li>
+
+      <li><b>โจทย์ออกแบบ</b> กากถั่วเหลือง (<var>&rho;</var> = 640&nbsp;กก./ม.&sup3; ไหลดี
+        มีฝุ่นเล็กน้อย) ต้องถูกยกที่อัตรา 45&nbsp;t/h ขึ้นไป 18&nbsp;ม. โดยป้อนแบบท่วมจากเกลียวป้อน
+        จงทำตามขั้นที่&nbsp;1 ถึง&nbsp;9 ของตารางที่&nbsp;4.3 คือเลือกชนิดการปล่อยวัสดุและตัวรับภาระ
+        เลือกกระพ้อจากตารางที่&nbsp;4.8 หาระยะห่างที่ความเร็วที่เหมาะสม ตรวจจุดขั้วสำหรับพูลเลย์หัว
+        600&nbsp;มม. แล้วหากำลังขับ แรงดึง พิกัดสายพาน และระยะเผื่อชุดปรับความตึง
+        <i>[แนวทาง: <var>Q</var><sub>v</sub> = 70.3&nbsp;ม.&sup3;/ชม.; ถ้าใช้กระพ้อ 6&nbsp;ล.
+        <var>&psi;</var> = 0.75 และ <var>v</var> = 1.8&nbsp;m/s จะได้ <var>s</var> = 0.415&nbsp;ม.;
+        <var>n</var> = 57.3&nbsp;รอบ/นาที ให้ <var>r</var><sub>p</sub> = 0.273&nbsp;ม. เทียบกับ
+        <var>r</var><sub>i</sub> = 0.30&nbsp;ม. จึงเป็นแรงเหวี่ยง;
+        <var>P</var><sub>lift</sub> = 2.21&nbsp;kW และ <var>P</var> = 2.94&nbsp;kW ที่
+        <var>k</var><sub>s</sub> = 1.2, <var>&eta;</var> = 0.9]</i></li>
+    </ol>
+
+    <!-- ============================================================ 4.23 -->
+    <h2 id="s23">4.23 เอกสารอ้างอิง</h2>
+
+    <ol class="refs">
+      <li>Conveyor Equipment Manufacturers Association, 2015. <em>Bucket Elevators</em>, CEMA
+        Publication&nbsp;550. Naples, FL: CEMA. &mdash; รูปแบบกระพ้อ ความจุ
+        และวิธีคำนวณอัตราการลำเลียงในหน่วยอังกฤษที่อยู่เบื้องหลังสมการที่&nbsp;4.3</li>
+      <li>Conveyor Equipment Manufacturers Association, 2021. <em>ANSI/CEMA B20.1: Safety Standard for
+        Conveyors and Related Equipment</em>. &mdash; ข้อกำหนดเรื่องการ์ด ระบบควบคุม
+        และการล็อกเอาต์ของ <a href="#s19">&sect;4.19</a></li>
+      <li>Deutsches Institut f&uuml;r Normung, 1989. <em>DIN 15234: Continuous mechanical handling
+        equipment &mdash; bucket elevators, design principles</em>. Berlin: DIN.</li>
+      <li>International Organization for Standardization, 1981. <em>ISO 7119: Continuous mechanical
+        handling equipment for loose bulk materials &mdash; screw conveyors and bucket elevators: design
+        rules for drive power</em>. Geneva: ISO.</li>
+      <li>National Fire Protection Association, 2020. <em>NFPA 61: Standard for the Prevention of Fires
+        and Dust Explosions in Agricultural and Food Processing Facilities</em>. Quincy, MA: NFPA.</li>
+      <li>National Fire Protection Association, 2019. <em>NFPA 652: Standard on the Fundamentals of
+        Combustible Dust</em>. Quincy, MA: NFPA. &mdash; ข้อกำหนดให้ทำการวิเคราะห์อันตรายจากฝุ่น
+        ที่อ้างถึงใน <a href="#s18">&sect;4.18</a></li>
+      <li>European Committee for Standardization, 2012. <em>EN 14491: Dust explosion venting protective
+        systems</em>. Brussels: CEN.</li>
+      <li>Eckhoff, R. K., 2003. <em>Dust Explosions in the Process Industries</em>, 3rd ed. Amsterdam:
+        Gulf Professional Publishing. &mdash; ตำราหลักทางเทคนิคเรื่อง <var>K</var><sub>St</sub>
+        การระบายแรงระเบิด และการระงับการระเบิด</li>
+      <li>Colijn, H., 1985. <em>Mechanical Conveyors for Bulk Solids</em>. Amsterdam: Elsevier. &mdash;
+        การพิสูจน์จุดขั้วและวิถีการปล่อยวัสดุแบบคลาสสิก</li>
+      <li>Fayed, M. E. and Skocir, T. S., 1997. <em>Mechanical Conveyors: Selection and Operation</em>.
+        Lancaster, PA: Technomic. &mdash; การเปรียบเทียบเครื่องขนถ่ายแนวดิ่งในตารางที่&nbsp;4.1</li>
+      <li>Woodcock, C. R. and Mason, J. S., 1987. <em>Bulk Solids Handling: An Introduction to the
+        Practice and Technology</em>. Glasgow: Leonard Hill. &mdash; ตัวประกอบการบรรจุ วิธีการป้อนวัสดุ
+        และค่าเผื่อแรงตัก</li>
+      <li>McGlinchey, D. (ed.), 2008. <em>Bulk Solids Handling: Equipment Selection and Operation</em>.
+        Oxford: Blackwell. &mdash; เกณฑ์การเลือกใช้งานจริงและการแก้ปัญหา</li>
+    </ol>
+
+    <div class="chapter-nav">
+      <span><a href="quiz3-th.html">&larr; แบบทดสอบทบทวนบทที่ 3</a></span>
+      <span><a href="quiz4-th.html">แบบทดสอบทบทวนบทที่ 4 &rarr;</a></span>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>รายวิชา</h3>
+      <ul>
+        <li><a href="index-th.html">หน้าหลักรายวิชา</a></li>
+        <li><a href="syllabus-th.html">ประมวลรายวิชา</a></li>
+        <li><a href="calendar-th.html">ปฏิทินการเรียน</a></li>
+        <li><a href="chapter4-th.html">บทที่ 4: กระพ้อลำเลียง</a></li>
+        <li><a href="quiz4-th.html">บทที่ 4: แบบทดสอบทบทวน</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>มาตรฐานที่อ้างอิง</h3>
+      <ul>
+        <li>CEMA 550 &mdash; กระพ้อลำเลียง</li>
+        <li>DIN 15234 / ISO 7119</li>
+        <li>NFPA 61 / 652 &mdash; ฝุ่นที่ติดไฟได้</li>
+        <li>EN 14491 &mdash; การระบายแรงระเบิด</li>
+      </ul>
+    </div>
+    <div>
+      <h3>เกี่ยวกับเอกสารนี้</h3>
+      <p>เอกสารประกอบการสอนรายวิชา MHE 301 สงวนลิขสิทธิ์ทั้งหมด รูปแบบหน้าเว็บได้แรงบันดาลใจจากเว็บไซต์
+        สื่อการสอนแบบเปิด ส่วนเนื้อหา ตราสัญลักษณ์ และโค้ดทั้งหมดจัดทำขึ้นเองสำหรับรายวิชานี้</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2569 ผศ.จรัสชัย เย็นพยับ สงวนลิขสิทธิ์ทั้งหมด MHE 301 วิศวกรรมการขนถ่ายวัสดุ &mdash;
+    เอกสารประกอบการสอน ภาคเรียนที่ 1 / ปีการศึกษา 2569 ห้ามทำซ้ำ ดัดแปลง หรือเผยแพร่ส่วนหนึ่งส่วนใด
+    ของเว็บไซต์นี้โดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษรล่วงหน้า
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
