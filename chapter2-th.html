@@ -332,7 +332,7 @@
     <h2 id="s4">2.4 เรขาคณิตของเกลียว: เส้นผ่านศูนย์กลาง พิตช์ และมือ</h2>
 
     <figure>
-      <svg viewBox="0 0 840 380" role="img" aria-label="เรขาคณิตของเกลียว: เส้นผ่านศูนย์กลาง พิตช์ ความหนาใบ เส้นผ่านศูนย์กลางท่อ และระยะห่างแนวรัศมี">
+      <svg viewBox="0 0 920 380" role="img" aria-label="เรขาคณิตของเกลียว: เส้นผ่านศูนย์กลาง พิตช์ ความหนาใบ เส้นผ่านศูนย์กลางท่อ และระยะห่างแนวรัศมี">
         <rect x="0" y="0" width="840" height="380" fill="#ffffff"/>
         <rect x="90" y="150" width="500" height="22" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
         <g fill="#dcdcdc" stroke="#6f6f6f" stroke-width="1.8">
@@ -344,15 +344,16 @@
           <path d="M 430 172 q 30 64 60 0 z"/>
           <path d="M 490 150 q 30 -64 60 0 z"/>
         </g>
+        <!-- screw dia dimension: arrowheads on the flight tips -->
         <g stroke="#DF301C" stroke-width="1.6">
-          <line x1="74" y1="86" x2="74" y2="236"/>
-          <path d="M 69 96 L 74 86 L 79 96" fill="none"/>
-          <path d="M 69 226 L 74 236 L 79 226" fill="none"/>
-          <line x1="74" y1="86" x2="130" y2="86" stroke-width="0.9" stroke-dasharray="3 3"/>
-          <line x1="74" y1="236" x2="130" y2="236" stroke-width="0.9" stroke-dasharray="3 3"/>
+          <line x1="74" y1="118" x2="74" y2="204"/>
+          <path d="M 69 128 L 74 118 L 79 128" fill="none"/>
+          <path d="M 69 194 L 74 204 L 79 194" fill="none"/>
+          <line x1="74" y1="118" x2="166" y2="118" stroke-width="0.9" stroke-dasharray="3 3"/>
+          <line x1="74" y1="204" x2="226" y2="204" stroke-width="0.9" stroke-dasharray="3 3"/>
         </g>
-        <text x="60" y="140" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C" text-anchor="end">D</text>
-        <text x="74" y="258" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">เส้น ศก. เกลียว</text>
+        <text x="60" y="166" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C" text-anchor="end">D</text>
+        <text x="74" y="228" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="middle">เส้น ศก. เกลียว</text>
         <g stroke="#00788A" stroke-width="1.6">
           <line x1="250" y1="268" x2="370" y2="268"/>
           <path d="M 260 263 L 250 268 L 260 273" fill="none"/>
@@ -371,18 +372,31 @@
         <text x="548" y="218" font-family="Segoe UI, sans-serif" font-size="12" fill="#726b64" text-anchor="end">d &mdash; เส้น ศก. ท่อ</text>
         <line x1="520" y1="104" x2="560" y2="76" stroke="#4b4540" stroke-width="1.2"/>
         <text x="566" y="72" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">t &mdash; ความหนาใบเกลียว</text>
-        <g transform="translate(690,190)">
+        <!-- cross-section, right -->
+        <g transform="translate(700,190)">
           <path d="M -84 -78 L -84 0 A 84 84 0 0 0 84 0 L 84 -78" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
           <circle cx="0" cy="0" r="70" fill="none" stroke="#6f6f6f" stroke-width="2" stroke-dasharray="5 4"/>
           <circle cx="0" cy="0" r="22" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
-          <g stroke="#DF301C" stroke-width="1.6">
-            <line x1="0" y1="-22" x2="0" y2="-84"/>
-            <path d="M -5 -30 L 0 -22 L 5 -30" fill="none"/>
-            <path d="M -5 -76 L 0 -84 L 5 -76" fill="none"/>
+
+          <!-- radial clearance: pipe surface to trough wall, on a radius -->
+          <g stroke="#DF301C" stroke-width="1.6" fill="none">
+            <line x1="15.6" y1="15.6" x2="59.4" y2="59.4"/>
+            <path d="M 19.4 23.7 L 15.6 15.6 L 23.7 19.4"/>
+            <path d="M 55.6 51.2 L 59.4 59.4 L 51.2 55.6"/>
+            <line x1="59.4" y1="59.4" x2="96" y2="96" stroke-width="0.9" stroke-dasharray="3 3"/>
           </g>
-          <text x="0" y="-92" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">ระยะห่างแนวรัศมี</text>
-          <text x="0" y="116" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">ภาพตัดขวางของราง</text>
-          <text x="0" y="132" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">ปลายใบห่างจากรางราว 12 มม.</text>
+          <text x="100" y="104" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C">ระยะห่างแนวรัศมี</text>
+
+          <!-- flight tip clearance: flight circle to trough wall, on a radius -->
+          <g stroke="#00788A" stroke-width="1.6" fill="none">
+            <path d="M -53.0 46.0 L -46.0 53.0"/>
+            <path d="M -62.9 55.9 L -55.9 62.9"/>
+            <line x1="-49.5" y1="49.5" x2="-59.4" y2="59.4" stroke-width="2.4"/>
+            <line x1="-59.4" y1="59.4" x2="-96" y2="96" stroke-width="0.9" stroke-dasharray="3 3"/>
+          </g>
+          <text x="-100" y="104" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#00788A" text-anchor="end">ระยะห่างปลายใบกับราง &asymp; 12 มม.</text>
+
+          <text x="0" y="130" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">ภาพตัดขวางของราง</text>
         </g>
       </svg>
       <figcaption><b>รูปที่ 2.2</b> สี่มิติที่นิยามเกลียวหนึ่งตัว ได้แก่ เส้นผ่านศูนย์กลางภายนอก <var>D</var>

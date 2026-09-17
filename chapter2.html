@@ -367,7 +367,7 @@
     <h2 id="s4">2.4 Screw Geometry: Diameter, Pitch and Hand</h2>
 
     <figure>
-      <svg viewBox="0 0 840 380" role="img" aria-label="Screw geometry: diameter, pitch, flight thickness, pipe OD and radial clearance">
+      <svg viewBox="0 0 920 380" role="img" aria-label="Screw geometry: diameter, pitch, flight thickness, pipe OD and radial clearance">
         <rect x="0" y="0" width="840" height="380" fill="#ffffff"/>
 
         <!-- side elevation -->
@@ -383,15 +383,16 @@
         </g>
 
         <!-- screw dia dimension -->
+        <!-- screw dia dimension: arrowheads on the flight tips -->
         <g stroke="#DF301C" stroke-width="1.6">
-          <line x1="74" y1="86" x2="74" y2="236"/>
-          <path d="M 69 96 L 74 86 L 79 96" fill="none"/>
-          <path d="M 69 226 L 74 236 L 79 226" fill="none"/>
-          <line x1="74" y1="86" x2="130" y2="86" stroke-width="0.9" stroke-dasharray="3 3"/>
-          <line x1="74" y1="236" x2="130" y2="236" stroke-width="0.9" stroke-dasharray="3 3"/>
+          <line x1="74" y1="118" x2="74" y2="204"/>
+          <path d="M 69 128 L 74 118 L 79 128" fill="none"/>
+          <path d="M 69 194 L 74 204 L 79 194" fill="none"/>
+          <line x1="74" y1="118" x2="166" y2="118" stroke-width="0.9" stroke-dasharray="3 3"/>
+          <line x1="74" y1="204" x2="226" y2="204" stroke-width="0.9" stroke-dasharray="3 3"/>
         </g>
-        <text x="60" y="140" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C" text-anchor="end">D</text>
-        <text x="60" y="158" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="end">screw dia.</text>
+        <text x="60" y="157" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#DF301C" text-anchor="end">D</text>
+        <text x="60" y="175" font-family="Segoe UI, sans-serif" font-size="11" fill="#DF301C" text-anchor="end">screw dia.</text>
 
         <!-- pitch dimension -->
         <g stroke="#00788A" stroke-width="1.6">
@@ -418,19 +419,30 @@
         <text x="566" y="72" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540">t &mdash; flight thickness</text>
 
         <!-- cross-section, right -->
-        <g transform="translate(690,190)">
+        <g transform="translate(700,190)">
           <path d="M -84 -78 L -84 0 A 84 84 0 0 0 84 0 L 84 -78" fill="#f4f1ea" stroke="#8f8f8f" stroke-width="2.5"/>
           <circle cx="0" cy="0" r="70" fill="none" stroke="#6f6f6f" stroke-width="2" stroke-dasharray="5 4"/>
           <circle cx="0" cy="0" r="22" fill="#cfcfcf" stroke="#8f8f8f" stroke-width="2"/>
-          <!-- radial clearance arrow -->
-          <g stroke="#DF301C" stroke-width="1.6">
-            <line x1="0" y1="-22" x2="0" y2="-84"/>
-            <path d="M -5 -30 L 0 -22 L 5 -30" fill="none"/>
-            <path d="M -5 -76 L 0 -84 L 5 -76" fill="none"/>
+
+          <!-- radial clearance: pipe surface to trough wall, on a radius -->
+          <g stroke="#DF301C" stroke-width="1.6" fill="none">
+            <line x1="15.6" y1="15.6" x2="59.4" y2="59.4"/>
+            <path d="M 19.4 23.7 L 15.6 15.6 L 23.7 19.4"/>
+            <path d="M 55.6 51.2 L 59.4 59.4 L 51.2 55.6"/>
+            <line x1="59.4" y1="59.4" x2="96" y2="96" stroke-width="0.9" stroke-dasharray="3 3"/>
           </g>
-          <text x="0" y="-92" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C" text-anchor="middle">radial clearance</text>
-          <text x="0" y="116" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">section through the trough</text>
-          <text x="0" y="132" font-family="Segoe UI, sans-serif" font-size="11" fill="#726b64" text-anchor="middle">flight tip runs about 12 mm off the trough</text>
+          <text x="100" y="104" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#DF301C">radial clearance</text>
+
+          <!-- flight tip clearance: flight circle to trough wall, on a radius -->
+          <g stroke="#00788A" stroke-width="1.6" fill="none">
+            <path d="M -53.0 46.0 L -46.0 53.0"/>
+            <path d="M -62.9 55.9 L -55.9 62.9"/>
+            <line x1="-49.5" y1="49.5" x2="-59.4" y2="59.4" stroke-width="2.4"/>
+            <line x1="-59.4" y1="59.4" x2="-96" y2="96" stroke-width="0.9" stroke-dasharray="3 3"/>
+          </g>
+          <text x="-100" y="104" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#00788A" text-anchor="end">flight tip clearance &asymp; 12 mm</text>
+
+          <text x="0" y="130" font-family="Segoe UI, sans-serif" font-size="12" fill="#4b4540" text-anchor="middle">section through the trough</text>
         </g>
       </svg>
       <figcaption><b>Figure 2.2.</b> The four dimensions that define a screw: outside diameter <var>D</var>,
